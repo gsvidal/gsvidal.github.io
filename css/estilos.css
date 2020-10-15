@@ -1,0 +1,116 @@
+:root {
+  --width-height-circulo-externo: 80px;
+  --width-height-radius-circulo-externo: 40px;
+
+}
+*{
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  min-height: 750px;
+  margin: 0 auto;
+  font-family: 'Poppins', sans-serif;
+  
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 80%;
+  
+}
+
+.sector-circular {
+  width: var(--width-height-circulo-externo);
+  height: var(--width-height-circulo-externo);
+    
+  border-bottom: 1px solid blue;
+  border-top: 1px solid green;
+  border-left: 1px solid red;
+  border-right: 1px solid purple;
+
+  border-radius: var(--width-height-radius-circulo-externo);
+
+  transform: rotate(45deg);
+
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+}
+
+.contenedor-projects {
+  position: relative;
+  width: auto;
+  height: auto;
+  display: grid;
+  grid-template-columns: 140px 140px ;
+  grid-template-rows: 140px 140px ;
+  gap: 30px;
+  justify-content: center;
+  align-content: center;
+  position: absolute;
+  top: center;
+  left: center;
+  z-index: 1;
+}
+.title-projects {
+  /* margin-right: auto;
+  margin-left: auto; */
+  position:absolute;
+  top: -40px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+
+.project {
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/");
+  background: rgb(255, 0, 0,0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.project img {
+  width: 100%;
+  /* Transparencia: */
+  opacity:0.9;
+  
+}
+.older-projects {
+  position:absolute;
+  bottom: -150px;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+.older-projects span{
+  font-size: 1.8rem;
+}
+.p1 img {
+
+  /* width: 150%; */
+
+}
+
+@media screen and (min-width: 800px) {
+
+  
+
+
+}
