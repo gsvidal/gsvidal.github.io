@@ -13,6 +13,8 @@ html {
 }
 body {
   font-size: 2rem;
+  background-color: #450db2;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,24 +34,31 @@ body {
   
 }
 
-.sector-circular {
-  width: var(--width-height-circulo-externo);
-  height: var(--width-height-circulo-externo);
-    
-  border-bottom: 1px solid blue;
-  border-top: 1px solid green;
-  border-left: 1px solid red;
-  border-right: 1px solid purple;
+.gif-central {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 2;
+  /* cursor: pointer; */
+}
+.gif-central-image-animacion {
+    width: 100%;
 
-  border-radius: var(--width-height-radius-circulo-externo);
-
-  transform: rotate(45deg);
-
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
 }
 
+
+/* Colocar un script que cuando se le hace hover a algunos de los recen projects la animacion se detenga(poner addClassList(overImage) a .gif-central-image y remove cuando ya no haya hover */
+.overImage {
+  z-index: 0;
+}
+
+.gif-central-image {
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  z-index: 0;
+
+}
 .contenedor-projects {
   position: relative;
   width: auto;
@@ -57,7 +66,7 @@ body {
   display: grid;
   grid-template-columns: 140px 140px ;
   grid-template-rows: 140px 140px ;
-  gap: 30px;
+  gap: 70px;
   justify-content: center;
   align-content: center;
   position: absolute;
@@ -79,8 +88,8 @@ body {
 .project {
   width: 100%;
   height: 100%;
-  background-image: url("../images/");
-  background: rgb(255, 0, 0,0.05);
+  /* background-image: url("../images/"); */
+  /* background: rgba(255, 0, 0, 0.1); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,25 +99,57 @@ body {
   width: 100%;
   /* Transparencia: */
   opacity:0.9;
-  
+  vertical-align: middle;
+}
+.project img:hover {
+  width: 140%;
+  position: relative;
+  left: -30px;
+
 }
 .older-projects {
   position:absolute;
-  bottom: -150px;
+  bottom: -200px;
   left: 0;
   right: 0;
   text-align: center;
 }
 .older-projects span{
   font-size: 1.8rem;
+  
 }
-.p1 img {
+.older-projects ul{
+  margin: 10px;
+  list-style-type: none;
+}
 
-  /* width: 150%; */
+.older-projects a{
+  display: inline-block;
+  font-size: 1.7rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  /* height: 50px; */
+  /* padding: 3px; */
+}
+.older-projects a:hover{
+  font-size: 2rem;
+  
+}
+.p3 img {
+  /* position: relative;
+  top: -20px; */
+}
+
+
+@media screen and (min-width: 375px) {
+
+  
+
 
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
 
   
 
