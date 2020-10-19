@@ -1,8 +1,4 @@
-:root {
-  --width-height-circulo-externo: 80px;
-  --width-height-radius-circulo-externo: 40px;
 
-}
 *{
   box-sizing:border-box;
   margin: 0;
@@ -10,148 +6,184 @@
 }
 html {
   font-size: 62.5%;
-}
-body {
-  font-size: 2rem;
-  background-color: #450db2;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  min-height: 750px;
-  margin: 0 auto;
-  font-family: 'Poppins', sans-serif;
-  
-}
-.main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 80%;
-  
-}
 
-.gif-central {
-  width: 80px;
-  height: 80px;
-  position: absolute;
-  z-index: 2;
-  /* cursor: pointer; */
 }
-.gif-central-image-animacion {
+  body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    background-color: #450db2;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;margin-top: 200px;
+    width: 100vw;
+    max-width: 700px;
+    
+    /* height: 100vh; */
+    min-height: 1300px;
+    background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); background-repeat: no-repeat; 
+    background-size: 280px,150px, 150px, 100%;
+    background-position: top -50px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left;
+  
+  }
+  header {
+    
+
+  }
+  .logo-container{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 85px;
+  }
+  .logo-image {
     width: 100%;
+    vertical-align: middle;
+  }
 
-}
+  #switch_button_container {
+    
+    width: 80px;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    /* border: 1px solid rgb(77, 77, 77); */
+    position: absolute;
+    top: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
-
-/* Colocar un script que cuando se le hace hover a algunos de los recen projects la animacion se detenga(poner addClassList(overImage) a .gif-central-image y remove cuando ya no haya hover */
-.overImage {
-  z-index: 0;
-}
-
-.gif-central-image {
-  width: 100%;
-  position: absolute;
-  left: 0px;
-  z-index: 0;
-
-}
-.contenedor-projects {
-  position: relative;
-  width: auto;
-  height: auto;
-  display: grid;
-  grid-template-columns: 140px 140px ;
-  grid-template-rows: 140px 140px ;
-  gap: 70px;
-  justify-content: center;
-  align-content: center;
-  position: absolute;
-  top: center;
-  left: center;
-  z-index: 1;
-}
-.title-projects {
-  /* margin-right: auto;
-  margin-left: auto; */
-  position:absolute;
-  top: -40px;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-
-.project {
-  width: 100%;
-  height: 100%;
-  /* background-image: url("../images/"); */
-  /* background: rgba(255, 0, 0, 0.1); */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-.project img {
-  width: 100%;
-  /* Transparencia: */
-  opacity:0.9;
-  vertical-align: middle;
-}
-.project img:hover {
-  width: 140%;
-  position: relative;
-  left: -30px;
-
-}
-.older-projects {
-  position:absolute;
-  bottom: -200px;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-.older-projects span{
-  font-size: 1.8rem;
+  }
+  #switch_button {
+    width: 30px;
+    height: 30px;
+    background-color: #450db2;
+    border-radius: 15px;
+    margin-left: 5px;
+    position: relative;
+    left: 0px;
+    transition: .25s;
+  }
   
-}
-.older-projects ul{
-  margin: 10px;
-  list-style-type: none;
-}
 
-.older-projects a{
-  display: inline-block;
-  font-size: 1.7rem;
-  cursor: pointer;
-  text-decoration: none;
-  color: white;
-  /* height: 50px; */
-  /* padding: 3px; */
-}
-.older-projects a:hover{
-  font-size: 2rem;
+  .contenedor-projects {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* height: 1200px; */
+    padding-bottom: 131px;
+    /* width: 100%; */
+
+  }
+  .contenedor-projects span {
+    margin-bottom: 40px;
+    text-shadow: 0 0 5px;
+  }
+  .project {
+    width: 90%;
+
+  }
+  .project a {
+    height: 0;
+  }
+  .project p {
+    font-size: 1.4rem;
+    color: white;
+    text-align: center;
+  }
+  .p4 p {
+    position: relative;
+    left: -8px;
+  }
+
+  .p1, .p3 {
+    position: relative;
+    left: -45px;
+  }
+  .p2, .p4 {
+    position: relative;
+    left: 45px;
+  }
+ 
+  .project img {
+    /* border: 1px solid #b8a5f2; */
+    box-shadow: 0px 10px 5px -5px #b8a5f2;
+    border-radius: 15px;
+    width: 60%;
+    vertical-align: middle;
+    margin: 10% 20% 5% 20%;
+  }
+  .p4 img{
+    box-shadow: -13px 16px 7px -12px #b8a5f2;
+  }
+  .p2 img,.p3 img{
+    box-shadow: 0px 5px 5px 1px #b8a5f2;
+  }
+  .older-projects-list {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .older-projects-list span {
+    font-size: 2.2rem;
+    display: block;
+    margin: 30px;
+    margin-top: 90px;
+  }
+  .older-projects-list ul {
+    list-style: none;
+  }
+  .older-projects {
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-weight: normal;
+  }
+
+  /* JS Light-Dark mode */
+  #body.light-dark-mode {
+    background-color: white;
+    color: #450db2;
+  }
+  .older-projects.light-dark-mode {
+    color: #450db2;
+  }
+
+  #switch_button_container.light-dark-mode {
+    background-color: #450db2;
+  }
+  #switch_button.light-dark-mode {
+    background-color: white;
+    left: 40px;
+  }
+  .logo-image.light-dark-mode {
+    filter: brightness(0) saturate(100%) invert(17%) sepia(34%) saturate(4665%) hue-rotate(249deg) brightness(107%) contrast(132%);
+  }
+
   
-}
-.p3 img {
-  /* position: relative;
-  top: -20px; */
-}
-
 
 @media screen and (min-width: 375px) {
 
-  
+.contenedor-projects {
+    padding-bottom: 131px;
+  }
+}
+@media screen and (min-width: 500px) {
 
+  body {
+
+    background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); background-repeat: no-repeat; 
+    background-size: 280px,30%, 30%, 100%;
+
+  }
 
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1024px) {
 
-  
 
 
 }
