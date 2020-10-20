@@ -89,11 +89,14 @@ html {
   }
   .project a {
     height: 0;
+    text-decoration: none;
+
   }
-  .project p {
+  .project_name {
     font-size: 1.4rem;
     color: white;
     text-align: center;
+
   }
   .p4 p {
     position: relative;
@@ -162,7 +165,9 @@ html {
   .logo-image.light-dark-mode {
     filter: brightness(0) saturate(100%) invert(17%) sepia(34%) saturate(4665%) hue-rotate(249deg) brightness(107%) contrast(132%);
   }
-
+  .project_name.light-dark-mode {
+    color: #450db2;
+  }
   
 
 @media screen and (min-width: 375px) {
