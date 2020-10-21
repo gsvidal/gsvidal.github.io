@@ -22,18 +22,12 @@ html {
     margin-top: 130px;
     width: 100vw;
     max-width: 700px;
-    
-    /* height: 100vh; */
-    /* min-height: 1700px; */background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); background-repeat: no-repeat; 
+    background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); background-repeat: no-repeat; 
     background-size: 280px,150px, 150px, 100%;
     background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left;
-    
-  
+     
   }
-  header {
-    
 
-  }
   .logo-container{
     position: absolute;
     top: 20px;
@@ -47,7 +41,6 @@ html {
   .logo-image-animacion {
     width: 113%;
     height: 113%;
-    /* display: none; */
     position: relative;
     top: -89px;
     left: -4px;
@@ -58,7 +51,7 @@ html {
     text-align: justify;
     text-align-last: center;
     margin-bottom: 70px;
-    /*  */
+
   }
   .bienvenida p {
     font-size: 1.9rem;
@@ -71,10 +64,6 @@ html {
     height: 40px;
     background-color: white;
     border-radius: 20px;
-    /* border: 1px solid rgb(77, 77, 77); */
-    /* position: absolute; */
-    /* top: 100px; */
-
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -91,7 +80,6 @@ html {
     transition: .25s;
   }
   
-
   .contenedor-projects {
     display: flex;
     flex-direction: column;
@@ -141,7 +129,7 @@ html {
   }
  
   .project img {
-    /* border: 1px solid #b8a5f2; */
+
     box-shadow: 0px 10px 5px -5px #b8a5f2;
     border-radius: 15px;
     width: 60%;
@@ -184,7 +172,6 @@ html {
     font-size: 2.2rem;
   }
 
-  /* JS Light-Dark mode */
   #body.light-dark-mode {
     background-color: white;
     color: #450db2;
@@ -192,12 +179,6 @@ html {
     background-size: 280px,150px, 150px, 100%, 240%;
     background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left, top 40vh right -95vw;
   }
-  /* #body.light-dark-mode.grayBGmobile {
-    background-image: none;
-    background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); background-repeat: no-repeat; 
-    background-size: 280px,150px, 150px, 100%;
-    background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left;
-  } */
   .older-projects.light-dark-mode {
     color: #450db2;
   }
@@ -227,15 +208,10 @@ html {
 @media screen and (min-width: 500px) {
 
   body {
-
-    /* background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); background-repeat: no-repeat;  */
     background-size: 280px,30%, 30%, 100%;
-
   }
   .project_name {
     font-size: 1.6rem;
-
-
   }
   
 }
@@ -292,7 +268,6 @@ html {
 @media screen and (min-width: 1024px){
 
  body {
-  /* margin-left: 35%; */
   min-width: 100%;
   flex-wrap: nowrap;
   align-items: flex-start;
@@ -303,8 +278,7 @@ html {
   background-position: top -200px left -250px , bottom left;
 
  }
- /* header {
- } */
+
  .contenedor-projects {
    position: relative;
  }
@@ -345,11 +319,6 @@ html {
 }
 
 @media screen and (min-width: 1440px){
-
-  body {
-    /* background-position: top left, bottom -7vw left; */
-
-  }
 
   .bienvenida {
     position: relative;

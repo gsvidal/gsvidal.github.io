@@ -27,7 +27,6 @@ function light_dark_mode() {
 
   logoAnim.classList.toggle("light-dark-mode");
 
-  // pName.classList.toggle("light-dark-mode")
 
   for(i=0; i<olderProjects.length; i++){
     olderProjects[i].classList.toggle("light-dark-mode");
