@@ -6,9 +6,8 @@ const switch_button_container = document.getElementById("switch_button_container
 const switch_button = document.getElementById("switch_button");
 
 const logo = document.querySelector(".logo-image");
-// const pName = document.querySelector(".project_name")
-// const olderProjects = document.query(".older-projects")
 
+const logoAnim = document.querySelector(".logo-image-animacion");
 
 var i;
 var olderProjects = document.querySelectorAll(".older-projects")
@@ -25,6 +24,8 @@ function light_dark_mode() {
   switch_button_container.classList.toggle("light-dark-mode");
 
   logo.classList.toggle("light-dark-mode");
+
+  logoAnim.classList.toggle("light-dark-mode");
 
   // pName.classList.toggle("light-dark-mode")
 
