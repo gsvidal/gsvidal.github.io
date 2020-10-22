@@ -278,8 +278,6 @@ html {
   margin-left: 0;
   margin-right: 0;
   min-height: 1000px;
-  background-size: 123%, 100%;
-  background-position: top -200px left -220px , bottom left;
 
  }
 
@@ -337,9 +335,10 @@ html {
 
 @media screen and (min-width: 1440px){
 
+
   .bienvenida {
     position: relative;
-    top: 180px;
+    top: 195px;
     margin: 43.2px;
     
     margin-left: 3%;
@@ -364,4 +363,12 @@ html {
     margin-top: 187px;
   }
  
+}
+
+@media screen and (min-width: 1921px){
+
+body {
+  /* background-size: 85%; */
+  background-position:  top -500px left, bottom -150px left;
+}
 }
