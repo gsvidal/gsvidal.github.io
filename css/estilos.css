@@ -242,6 +242,9 @@ html {
   .bienvenida {
     width: 95%;
   }
+  .bienvenida p {
+    margin-bottom: 80px;
+  }
   
   .contenedor-projects {
     max-width: 720px;
@@ -273,9 +276,9 @@ html {
   align-items: flex-start;
   margin-left: 0;
   margin-right: 0;
-  min-height: 1200px;
-  background-size: 123%;
-  background-position: top -200px left -250px , bottom left;
+  min-height: 1000px;
+  background-size: 123%, 100%;
+  background-position: top -200px left -220px , bottom left;
 
  }
 
@@ -284,8 +287,8 @@ html {
  }
  .logo-container {
   position: absolute;
-  top: 280px;
-  left: 290px;
+  top: 45%;
+  left: 40%;
 
  }
 
@@ -301,10 +304,15 @@ html {
    display: flex;
    align-items: center;
  }
-
+ .p2 .project_name {
+   top: 6px;
+ }
+ /* .p4 .project_name {
+   top: 25px;
+ } */
 
  #switch_button_container {
-   position: absolute;
+  position: absolute;
   top: 50px;
   left: 5%;
  }
@@ -312,8 +320,9 @@ html {
  .older-projects-list {
    width: 100%;
    position: absolute;
-   top: 800px;
+   top: 550px;
    left: 0;
+   margin-top: 13%;
  }
 
 }
@@ -331,5 +340,12 @@ html {
   .bienvenida p {
     font-size: 3rem;
   }
+  .p2 .project_name {
+    top: 10px;
+  }
+  .older-projects-list {
 
+    margin-top: 187px;
+  }
+ 
 }
