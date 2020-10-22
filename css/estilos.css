@@ -6,6 +6,7 @@
 }
 html {
   font-size: 62.5%;
+  /* width: 100vw; */
 
 }
   body {
@@ -20,7 +21,7 @@ html {
     align-items: center;
     margin: 0 auto;
     margin-top: 130px;
-    width: 100vw;
+    /* width: 100vw; */
     max-width: 700px;
     background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); background-repeat: no-repeat; 
     background-size: 280px,150px, 150px, 100%;
@@ -91,7 +92,7 @@ html {
     display: inherit;
     flex-direction: inherit;
     align-items: inherit;
-
+    justify-items: center;
   }
   .contenedor-projects span {
     margin-bottom: 40px;
@@ -114,22 +115,19 @@ html {
     text-align: center;
 
   }
-  .project p {
+
+  .p4 .project-name {
     position: relative;
-    left: 12px;
-  }
-  .p4 p {
-    position: relative;
-    left: 7px;
+    left: -2px;
   }
 
   .p1, .p3 {
     position: relative;
-    left: -70px;
+    left: -60px;
   }
   .p2, .p4 {
     position: relative;
-    left: 40px;
+    left: 50px;
   }
  
   .project img {
@@ -138,7 +136,7 @@ html {
     border-radius: 15px;
     width: 70%;
     vertical-align: middle;
-    margin: 10% 20% 5% 20%;
+    margin: 10% 15% 5% 15%;
 
   }
   .project img:hover {
@@ -263,15 +261,10 @@ html {
     width: 90%;
   }
   .project img {
+    position: static;
     width: 60%;
-  }
-  .p2 .project_name {
-    position: relative;
-    top: 10px;
-  }
-  .p4 .project_name {
-    position: relative;
-    top: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
   }
 
 }
@@ -292,18 +285,20 @@ html {
 
  .contenedor-projects {
    position: relative;
-   margin-right: 20px;
+   margin-right: 25px;
+   min-width: 550px;
    
  }
  .logo-container {
   position: absolute;
   top: 47%;
-  left: 40%;
+  left: 43%;
 
  }
 
  .bienvenida {
    height: 250px;
+   /* width: 470px; */
    position: relative;
    top: 215px;
    margin: 3%;
@@ -315,11 +310,14 @@ html {
    align-items: center;
  }
  .p2 .project_name {
+   position:relative;
    top: 6px;
  }
- /* .p4 .project_name {
-   top: 25px;
- } */
+
+ .p4 .project_name {
+  position:relative;
+   top: 14px;
+ }
 
  #switch_button_container {
   position: absolute;
@@ -347,11 +345,19 @@ html {
     margin-left: 3%;
     max-width: 613px;
   }
+  .logo-container {
+    top: 45%;
+    left: 44%;
+  
+   }
   .bienvenida p {
     font-size: 3rem;
   }
   .p2 .project_name {
     top: 10px;
+  }
+  .p4 .project_name {
+    top: 20px;
   }
   .older-projects-list {
 
