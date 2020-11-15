@@ -61,7 +61,10 @@ html {
   .bienvenida strong {
     color: rgb(255, 204, 1);
   }
-
+  .bienvenida img {
+    position: relative;
+    display: none;
+  }
   #switch_button_container {
     
     width: 80px;
@@ -104,6 +107,7 @@ html {
   .project {
     width: 65%;
     margin: 0;
+    margin-bottom: 10px;
     padding-bottom: auto;
   }
 
@@ -124,7 +128,7 @@ html {
     left: -2px;
   }
 
-  .p1, .p3 {
+  .p1, .p3, .p5 {
     position: relative;
     left: -60px;
   }
@@ -148,14 +152,22 @@ html {
 
   }
 
-  .p4 img{
+  .p4 img {
     box-shadow: -13px 16px 7px -12px #b8a5f2;
   }
-  .p2 img,.p3 img{
+  .p2 img,.p3 img {
     box-shadow: 0px 5px 5px 1px #b8a5f2;
+  }
+  .projects-container-grid .p5 {
+    width: 265px;
+    height: 50px;
+  }
+  .p5 img {
+    box-shadow: none;
   }
   .older-projects-list {
     text-align: center;
+    margin-top: 100px;
     margin-bottom: 100px;
   }
   .older-projects-list span {
@@ -237,11 +249,10 @@ html {
     color: #450db2;
     background-image: none;
     background-image: url("../images/desktopBG1.svg"), url("../images/desktopBG2.svg");
-
     background-size: 100%;
     background-position: top left, bottom left;
   }
- .logo-image-animacion {
+  .logo-image-animacion {
     display:none
   }
   .bienvenida {
@@ -250,7 +261,6 @@ html {
   .bienvenida p {
     margin-bottom: 80px;
   }
-  
   .contenedor-projects {
     max-width: 720px;
   }
@@ -269,6 +279,10 @@ html {
     margin-left: 20%;
     margin-right: 20%;
   }
+  .p5 {
+   position: relative;
+   left: 180px; 
+  }
 
 }
 
@@ -280,7 +294,7 @@ html {
   align-items: flex-start;
   margin-left: 0;
   margin-right: 0;
-  min-height: 1000px;
+  height: 1200px;
 
  }
 
@@ -291,17 +305,17 @@ html {
    
  }
  .logo-container {
+  display: none;
   position: absolute;
-  top: 47%;
-  left: 43%;
-
+  top: 37%;
+  left: calc(50% - 42.5px);
  }
 
  .bienvenida {
    height: 250px;
    /* width: 470px; */
    position: relative;
-   top: 215px;
+   top: 315px;
    margin: 3%;
    margin-top: 0;
    margin-bottom: 0;
@@ -310,6 +324,14 @@ html {
    display: flex;
    align-items: center;
  }
+ .bienvenida img {
+  display: block;
+  position: absolute;
+  top: -220px;
+  left: calc(50% - 75px);
+  width: 150px;
+  height: 150px;
+}
  .p2 .project_name {
    position:relative;
    top: 6px;
@@ -319,7 +341,11 @@ html {
   position:relative;
    top: 14px;
  }
-
+ .p5 {
+   position: absolute;
+   bottom: -40px;
+   left: calc(50% - 132.5px)
+ }
  #switch_button_container {
   position: absolute;
   top: 50px;
@@ -331,29 +357,35 @@ html {
    position: absolute;
    top: 550px;
    left: 0;
-   margin-top: 13%;
+   margin-top: 350px;
  }
 
 }
+@media screen and (min-width: 1300px){
+  .older-projects-list {
+    margin-top: 27%;
+  }
+
+}
+
 
 @media screen and (min-width: 1440px){
 
-
   .bienvenida {
     position: relative;
-    top: 195px;
+    top: 315px;
+    left: 20px;
     margin: 43.2px;
-    
-    margin-left: 3%;
-    max-width: 613px;
+    min-width: 633px;
   }
-  .logo-container {
-    top: 45%;
-    left: 44%;
-  
-   }
   .bienvenida p {
     font-size: 3rem;
+  }
+  .bienvenida img {
+    top: -260px;
+    left: calc(50% - 75px);
+    width: 150px;
+    height: 150px;
   }
   .p2 .project_name {
     top: 10px;
@@ -362,16 +394,18 @@ html {
     top: 20px;
   }
   .older-projects-list {
-
-    margin-top: 187px;
+    margin-top: 420px;
   }
  
 }
 
 @media screen and (min-width: 1921px){
 
-body {
-  /* background-size: 85%; */
-  background-position:  top -500px left, bottom -150px left;
-}
+  body {
+    background-position:  top -200px left, bottom -50px left;
+    height: 1200px;
+  }
+  .bienvenida img {
+    top: -290px;
+  }
 }
