@@ -103,6 +103,7 @@ html {
   .contenedor-projects span {
     margin-bottom: 40px;
     text-shadow: 0 0 5px;
+
   }
   .project {
     width: 65%;
@@ -174,10 +175,15 @@ html {
     font-size: 2.2rem;
     display: block;
     margin: 30px;
+    text-shadow: 0 0 5px;
+
 
   }
   .older-projects-list ul {
     list-style: none;
+  }
+  .older-projects-list ul li {
+    margin: 15px;
   }
   .older-projects {
     text-decoration: none;
@@ -185,8 +191,19 @@ html {
     font-size: 2rem;
     font-weight: normal;
   }
+  .older-projects img {
+    vertical-align: middle;
+  }
+  
   .older-projects:hover {
     font-size: 2.2rem;
+  }
+
+  .older-projects img:hover {
+    width: 100px;
+  }
+  .older-projects.huddle img:hover {
+    width: 145px;
   }
 
   #body.light-dark-mode {
@@ -215,6 +232,9 @@ html {
   }
   .logo-image-animacion.light-dark-mode {
     display: none;
+  }
+  .older-projects-images.light-dark-mode {
+    filter: brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(6209%) hue-rotate(261deg) brightness(67%) contrast(114%);
   }
   
 

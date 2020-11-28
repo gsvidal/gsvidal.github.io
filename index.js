@@ -11,6 +11,7 @@ const logoAnim = document.querySelector(".logo-image-animacion");
 
 var i;
 var olderProjects = document.querySelectorAll(".older-projects")
+var olderProjectsImages = document.querySelectorAll(".older-projects-images")
 var pName = document.querySelectorAll(".project_name")
 
 
@@ -31,6 +32,11 @@ function light_dark_mode() {
   for(i=0; i<olderProjects.length; i++){
     olderProjects[i].classList.toggle("light-dark-mode");
   }
+
+  for(i=0; i<olderProjectsImages.length; i++){
+    olderProjectsImages[i].classList.toggle("light-dark-mode");
+  }
+
   for(i=0; i<pName.length; i++){
     pName[i].classList.toggle("light-dark-mode");
   }
