@@ -400,9 +400,10 @@ html {
   }
   .bienvenida p {
     font-size: 3rem;
+    margin-bottom: 155px;
   }
   .bienvenida img {
-    top: -260px;
+    top: -355px;
     left: calc(50% - 75px);
     width: 150px;
     height: 150px;
@@ -425,7 +426,5 @@ html {
     background-position:  top -200px left, bottom -50px left;
     height: 1200px;
   }
-  .bienvenida img {
-    top: -290px;
-  }
+
 }
