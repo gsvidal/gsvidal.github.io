@@ -1,0 +1,200 @@
+/* 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+Orden de las propiedades de los selectores:
+1. Posicionamiento: static, relative, absolute, display, etc
+2. Modelo caja: content(width,height,min/max) , padding, border, margin
+3. Tipografía: font-family, font-size, font-weight, line-height etc.
+4. Visuales: color, background,  border-radius, box-shadows, gradient, etc.
+5. Otros: reglas CSS (calc()), etc. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  /* font-family: 'PT Serif', serif;
+  font-weight: 400; */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  font-size: 2rem;
+}
+h1 {
+  padding: 30px 40px 20px 30px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  background: url("../images/bgh1.png") center/cover no-repeat;
+}
+h2 {
+  font-size: 2rem;
+}
+.topicsTitle {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 200;
+  text-align: center;
+  padding: 80px 40px;
+}
+.topicsTitle a {
+text-decoration: none;
+}
+#topicsTitleJS {
+  background:  #fff8b6 url("../images/js-logo.png") left top/90px no-repeat;
+}
+#topicsTitleHTML {
+  background: #ffc8b0 url("../images/html-logo.png") left top/90px no-repeat;;
+}
+#topicsTitleCSS {
+  background: #A8D0F0 url("../images/css-logo.png") left top/90px no-repeat;
+}
+.topicsTitle li {
+  /* Al darle la siguiente línea puedo hacer crecer con hover y no mover el resto de elementos */
+  line-height: 2.8rem;
+}
+.topicsTitle ol {
+  /* Para borrar los números de la lista ordenada: */
+  list-style: none;
+}
+.topicsTitle a {
+  display: inline-block;
+  margin: 15px;
+}
+.topicsTitle a:hover {
+  font-size: 2.2rem;
+}
+#topicsTitleJS a{
+  color: #a79600;
+}
+#topicsTitleHTML a{
+  color: #a33100;
+}
+#topicsTitleCSS a{
+  color: #00559b;
+}
+.quiz {
+  padding: 30px;
+  text-align: center;
+  color: #288000;
+  background-color: #C3DEB7;
+
+}
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #34009c;
+  background-color: #c0b7d4;
+}
+/* strong {
+  font-weight: 700;
+} */
+footer .contact {
+  display: flex;
+  justify-content: center;
+}
+footer .contact img {
+  margin: 12px;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+
+    font-size: 2.2rem;
+  }
+  h1 {
+    padding: 50px 100px 30px 70px;
+    font-size: 4rem;
+    background: url("../images/bgh1.png") top -60px left/cover no-repeat;
+  }  
+  h2 {
+    font-size: 2.2rem;
+  }
+  .topicsTitle {
+    padding: 150px 200px;
+  }
+  .topicsTitle a:hover {
+    font-size: 2.5rem;
+  }
+  /* #topicsTitleJS {
+    background-size: 10%;
+  }
+  #topicsTitleHTML {
+    background-size: 10%;
+  }
+  #topicsTitleCSS {
+    background-size: 10%;
+  } */
+  .quiz {
+    padding: 100px;
+  }
+  footer {
+    padding: 75px;
+  }
+  footer .contact img {
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+
+    font-size: 2.2rem;
+  }
+  h1 {
+    padding: 50px 100px 30px 70px;
+    font-size: 6.5rem;
+    background: url("../images/bgh1.png") top -60px left/cover no-repeat;
+  }  
+  h2 {
+    font-size: 2.2rem;
+  }
+  .topicsTitle {
+    padding: 150px 200px;
+  }
+  .topicsTitle a:hover {
+    font-size: 2.5rem;
+  }
+  #topicsTitleJS {
+    background-size: 10%;
+  }
+  #topicsTitleHTML {
+    background-size: 10%;
+  }
+  #topicsTitleCSS {
+    background-size: 10%;
+  }
+  .quiz {
+    padding: 100px;
+  }
+  footer {
+    padding: 75px;
+  }
+  footer .contact img {
+    margin: 20px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  #topicsTitleJS {
+    background-size: 150px;
+  }
+  #topicsTitleHTML {
+    background-size: 150px;
+  }
+  #topicsTitleCSS {
+    background-size: 150px;
+  }
+}

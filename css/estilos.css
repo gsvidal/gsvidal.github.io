@@ -58,8 +58,35 @@ html {
     font-size: 1.9rem;
     margin-bottom: 30px;
   }
-  .bienvenida strong {
+  .bienvenida strong, .blog {
     color: rgb(255, 204, 1);
+  }
+  .bienvenida .descripcion_blog {
+    line-height: 4rem;
+    margin: 0;
+
+  }
+ .beforeMiBlog {
+    display: inline;
+    position: relative;
+ }
+  .beforeMiBlog .blog {
+    position: relative;
+    width: 100px;
+
+  }
+  .blog .click {
+    display: inline;
+    width: 25px;
+    height: 30px;
+    position: absolute;
+    top: 23px;
+    left: 25px;
+  }
+
+  .blog {
+    text-decoration: none;
+    /* font-size: 2.3rem; */
   }
   .bienvenida img {
     position: relative;
@@ -332,18 +359,19 @@ html {
  }
 
  .bienvenida {
+   /* display: block; */
    height: 250px;
    /* width: 470px; */
    position: relative;
-   top: 315px;
+   top: 250px;
    margin: 3%;
    margin-top: 0;
    margin-bottom: 0;
    margin-left: 5%;
    max-width: 613px;
-   display: flex;
-   align-items: center;
+
  }
+ 
  .bienvenida img {
   display: block;
   position: absolute;
@@ -352,6 +380,22 @@ html {
   width: 150px;
   height: 150px;
 }
+ .bienvenida .descripcion_blog {
+  position: absolute;
+  top: 250px;
+ }
+ .beforeMiBlog {
+  top: 80px;
+}
+ .blog .click {
+   width: 30px;
+   height: 35px;
+
+ }
+ /* .descripcion_blog .beforeMiBlog {
+  top: 150px;
+ } */
+
  .p2 .project_name {
    position:relative;
    top: 6px;
@@ -381,6 +425,13 @@ html {
  }
 
 }
+
+@media screen and (min-width: 1285px){
+  .beforeMiBlog {
+    top: 110px;
+  }
+}
+
 @media screen and (min-width: 1300px){
   .older-projects-list {
     margin-top: 27%;
@@ -389,24 +440,44 @@ html {
 }
 
 
+
 @media screen and (min-width: 1440px){
 
   .bienvenida {
     position: relative;
-    top: 315px;
+    top: 325px;
     left: 20px;
     margin: 43.2px;
     min-width: 633px;
   }
   .bienvenida p {
+    position: relative;
+    top: -190px;
     font-size: 3rem;
     margin-bottom: 155px;
   }
   .bienvenida img {
-    top: -355px;
+    top: -385px;
     left: calc(50% - 75px);
     width: 150px;
     height: 150px;
+  }
+  .descripcion_blog {
+    line-height: 4.6rem;
+  }
+  .bienvenida .descripcion_blog {
+    position: absolute;
+    top: 190px;
+   }
+   .beforeMiBlog {
+    top: 80px;
+  }
+  .beforeMiBlog .click {
+    /* position: relative; */
+    top: 40px;
+    width: 45px;
+    height: 50px;
+
   }
   .p2 .project_name {
     top: 10px;
