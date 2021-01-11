@@ -33,12 +33,51 @@ body {
   font-weight: 200;
   font-size: 2rem;
 }
+.construction {
+  /* Descomentar cuando esté lista la web */
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0,0.65)
+}
+.construction p {
+  margin-top: calc(50vh - 120px);
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 8rem;
+}
+.construction strong {
+  font-size: 6rem;
+}
+.capacidad_barra {
+  width:300px;
+  height: 18px;
+  background-color: hsl(229, 57%, 11%); 
+  margin: 15px calc(50vw - 150px);
+  margin-top: 30px;
+  border: 3px solid hsl(229, 57%, 11%);
+  border-radius: 7.5px;
+}
+.capacidad_barra_full {
+  width:30%;
+  height: 12px;
+  background-image: linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 7.5px;
+  display: flex;align-items: center;
+  justify-content: flex-end;
+}
+
 h1 {
   padding: 30px 40px 20px 30px;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 3rem;
-  background: url("../images/bgh1.png") center/cover no-repeat;
+  background: url("https://i.imgur.com/vNgQ0MR.png") center/cover no-repeat;
 }
 h2 {
   font-size: 2rem;
@@ -53,13 +92,13 @@ h2 {
 text-decoration: none;
 }
 #topicsTitleJS {
-  background:  #fff8b6 url("../images/js-logo.png") left top/90px no-repeat;
+  background:  #fff8b6 url("https://i.imgur.com/ZhxrYXc.png") left top/90px no-repeat;
 }
 #topicsTitleHTML {
-  background: #ffc8b0 url("../images/html-logo.png") left top/90px no-repeat;;
+  background: #ffc8b0 url("https://i.imgur.com/G7lMafd.png") left top/90px no-repeat;;
 }
 #topicsTitleCSS {
-  background: #A8D0F0 url("../images/css-logo.png") left top/90px no-repeat;
+  background: #A8D0F0 url("https://i.imgur.com/TD6QrB3.png") left top/90px no-repeat;
 }
 .topicsTitle li {
   /* Al darle la siguiente línea puedo hacer crecer con hover y no mover el resto de elementos */
