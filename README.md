@@ -1,2 +1,2 @@
-# Hola bienvenid@ 
-## Check my 1st Portafolio out --> [HERE!](gsvidal.github.io)
+# Hi 👋🏼, thanks for stopping by
+## Check out my brand new [Portfolio](gsvidal.github.io)
