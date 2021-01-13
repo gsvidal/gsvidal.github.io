@@ -35,24 +35,25 @@ body {
 }
 .construction {
   /* Descomentar cuando esté lista la web */
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   text-align: center;
-  background-color: rgba(0, 0, 0,0.65)
+  background-color: rgba(0, 0, 0,0.65);
+  z-index: 2;
 }
 .construction p {
-  margin-top: calc(50vh - 120px);
+  margin-top: calc(50vh - 170px);
   color: white;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 700;
-  line-height: 8rem;
+  line-height: 6rem;
 }
 .construction strong {
-  font-size: 6rem;
+  font-size: 3rem;
 }
 .capacidad_barra {
   width:300px;
@@ -77,7 +78,8 @@ h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 3rem;
-  background: url("https://i.imgur.com/vNgQ0MR.png") center/cover no-repeat;
+  background: url("https://i.imgur.com/TANm3FX.png") center/cover no-repeat;
+/* Revisar como pasa el topicsInfo por debajo del h1 bg una vez que reviva imgur */
 }
 h2 {
   font-size: 2rem;
@@ -90,6 +92,8 @@ h2 {
 }
 .topicsTitle a {
 text-decoration: none;
+position: relative;
+z-index: 1;
 }
 #topicsTitleJS {
   background:  #fff8b6 url("https://i.imgur.com/ZhxrYXc.png") left top/90px no-repeat;
@@ -124,6 +128,27 @@ text-decoration: none;
 #topicsTitleCSS a{
   color: #00559b;
 }
+
+.topicsInfo {
+  position: absolute;
+  /* El top determina desde donde va a aparecer el topicsInfo */
+  top: -1005px;
+  padding: 50px 0;
+  font-family: 'PT Serif', serif;
+  background-color: rgba(255, 255, 255,.3);
+  /* transition:linear 1s; */
+  z-index: -5;
+  
+}
+.topicsInfo.showHide {
+  /* display: block; */
+  transition: .75s;
+  top: 0px;
+  z-index: 0;
+  position: relative;
+  /* color: white; */
+}
+
 .quiz {
   padding: 30px;
   text-align: center;
@@ -137,9 +162,7 @@ footer {
   color: #34009c;
   background-color: #c0b7d4;
 }
-/* strong {
-  font-weight: 700;
-} */
+
 footer .contact {
   display: flex;
   justify-content: center;
@@ -162,20 +185,11 @@ footer .contact img {
     font-size: 2.2rem;
   }
   .topicsTitle {
-    padding: 150px 200px;
+    padding: 150px 70px;
   }
   .topicsTitle a:hover {
     font-size: 2.5rem;
   }
-  /* #topicsTitleJS {
-    background-size: 10%;
-  }
-  #topicsTitleHTML {
-    background-size: 10%;
-  }
-  #topicsTitleCSS {
-    background-size: 10%;
-  } */
   .quiz {
     padding: 100px;
   }
@@ -199,6 +213,16 @@ footer .contact img {
   }  
   h2 {
     font-size: 2.2rem;
+  }
+  .construction p {
+    margin-top: calc(50vh - 170px);
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 8rem;
+  }
+  .construction strong {
+    font-size: 6rem;
   }
   .topicsTitle {
     padding: 150px 200px;
