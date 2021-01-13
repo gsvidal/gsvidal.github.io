@@ -35,7 +35,7 @@ body {
 }
 .construction {
   /* Descomentar cuando esté lista la web */
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -142,7 +142,7 @@ z-index: 1;
 }
 .topicsInfo.showHide {
   /* display: block; */
-  transition: .75s;
+  transition: .4s;
   top: 0px;
   z-index: 0;
   position: relative;
