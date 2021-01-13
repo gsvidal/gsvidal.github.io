@@ -35,7 +35,7 @@ body {
 }
 .construction {
   /* Descomentar cuando esté lista la web */
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
@@ -65,7 +65,7 @@ body {
   border-radius: 7.5px;
 }
 .capacidad_barra_full {
-  width:30%;
+  width:35%;
   height: 12px;
   background-image: linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
   border-radius: 7.5px;
@@ -136,8 +136,8 @@ z-index: 1;
   padding: 50px 0;
   font-family: 'PT Serif', serif;
   background-color: rgba(255, 255, 255,.3);
-  /* transition:linear 1s; */
-  z-index: -5;
+  /* transition: .25s; */
+  z-index: -3;
   
 }
 .topicsInfo.showHide {
@@ -179,7 +179,7 @@ footer .contact img {
   h1 {
     padding: 50px 100px 30px 70px;
     font-size: 4rem;
-    background: url("../images/bgh1.png") top -60px left/cover no-repeat;
+    background: url("https://i.imgur.com/TANm3FX.png") top -60px left/cover no-repeat;
   }  
   h2 {
     font-size: 2.2rem;
@@ -203,13 +203,10 @@ footer .contact img {
 
 @media screen and (min-width: 1024px) {
   body {
-
     font-size: 2.2rem;
   }
   h1 {
-    padding: 50px 100px 30px 70px;
     font-size: 6.5rem;
-    background: url("../images/bgh1.png") top -60px left/cover no-repeat;
   }  
   h2 {
     font-size: 2.2rem;
