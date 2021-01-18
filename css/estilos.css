@@ -192,6 +192,7 @@ html {
   }
   .p5 img {
     box-shadow: none;
+
   }
   .older-projects-list {
     text-align: center;
@@ -203,8 +204,6 @@ html {
     display: block;
     margin: 30px;
     text-shadow: 0 0 5px;
-
-
   }
   .older-projects-list ul {
     list-style: none;
