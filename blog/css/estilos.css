@@ -35,7 +35,7 @@ body {
 }
 .construction {
   /* Descomentar cuando esté lista la web */
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -72,90 +72,114 @@ body {
   display: flex;align-items: center;
   justify-content: flex-end;
 }
+code {
+  padding: 1px 4px;
+  background-color: #9bc8ec;
+  border-radius: 4px;
+  font-family: 'Courier Prime', monospace;
 
+}
 h1 {
   padding: 30px 40px 20px 30px;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 3rem;
+  font-size: 3.5rem;
   background: url("https://i.imgur.com/TANm3FX.png") center/cover no-repeat;
 /* Revisar como pasa el topicsInfo por debajo del h1 bg una vez que reviva imgur */
 }
-
+.blog-title__description {
+  padding: 30px;
+  padding-top: 10px;
+  text-align: justify;
+  font-weight: 300;
+}
 h2 {
-  font-size: 2rem;
-}
-.topicsTitle {
-  font-family: 'Poppins', sans-serif;
   font-weight: 200;
-  text-align: center;
-  padding: 80px 40px;
 }
-.topicsTitle a {
+h3 {
+  padding: 20px;
+  width: 100%;
+}
+
+.topics-container {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 200;
+  text-align: justify;
+  padding: 80px 20px;
+
+}
+
+:not(.topics-container) > ol {
+  /* Este padding se aplica a los ol que no tienen como padre a .topics-container */
+  padding-left: 25px;
+}
+.topics-container .topics-title {
 text-decoration: none;
 position: relative;
 z-index: 1;
+display: block;
+margin: 15px;
+font-size: 2rem;
+text-align: center;
 }
-#topicsTitleJS {
+#topics-container-JS {
   background:  #fff8b6 url("https://i.imgur.com/ZhxrYXc.png") left top/90px no-repeat;
 }
-#topicsTitleHTML {
+#topics-container-HTML {
   background: #ffc8b0 url("https://i.imgur.com/G7lMafd.png") left top/90px no-repeat;;
 }
-#topicsTitleCSS {
+#topics-container-CSS {
   background: #A8D0F0 url("https://i.imgur.com/TD6QrB3.png") left top/90px no-repeat;
 }
-.topicsTitle li {
+.topics-container li {
   /* Al darle la siguiente línea puedo hacer crecer con hover y no mover el resto de elementos */
   line-height: 2.8rem;
+
 }
-.topicsTitle ol {
+.topics-container .numeracion-orden-principal {
   /* Para borrar los números de la lista ordenada: */
   list-style: none;
 }
-.topicsTitle a {
-  display: inline-block;
-  margin: 15px;
+.topics-title:hover {
+  font-size: 2.3rem;
 }
-.topicsTitle a:hover {
-  font-size: 2.2rem;
-}
-#topicsTitleJS a{
+#topics-container-JS a{
   color: #a79600;
 }
-#topicsTitleHTML a{
+#topics-container-HTML a{
   color: #a33100;
 }
-#topicsTitleCSS a{
+#topics-container-CSS a{
   color: #00559b;
 }
 
-.topicsInfo {
+.topics-info {
   position: absolute;
   /* El top determina desde donde va a aparecer el topicsInfo */
   top: -1005px;
-  padding: 50px 0;
-  font-family: 'PT Serif', serif;
+  padding: 50px 10px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 1.8rem;
   background-color: rgba(255, 255, 255,.3);
-  /* transition: .25s; */
   z-index: -3;
-  
+
 }
-.topicsInfo.showHide {
-  /* display: block; */
+.topics-info.showHide {
   transition: .4s;
   top: 0px;
   z-index: 0;
   position: relative;
-  /* color: white; */
 }
-
+/* .topics-info.showHide p ol + li {
+  padding: 50px;
+} */
 .quiz {
   padding: 30px;
   text-align: center;
   color: #288000;
   background-color: #C3DEB7;
-
 }
 footer {
   padding: 25px;
@@ -182,13 +206,19 @@ footer .contact img {
     font-size: 4rem;
     background: url("https://i.imgur.com/TANm3FX.png") top -60px left/cover no-repeat;
   }  
+  .blog-title__description {
+    padding-left: 70px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+  }
   h2 {
     font-size: 2.2rem;
   }
-  .topicsTitle {
+  .topics-container {
     padding: 150px 70px;
   }
-  .topicsTitle a:hover {
+  .topics-container a:hover {
     font-size: 2.5rem;
   }
   .quiz {
@@ -222,19 +252,19 @@ footer .contact img {
   .construction strong {
     font-size: 6rem;
   }
-  .topicsTitle {
+  .topics-container {
     padding: 150px 200px;
   }
-  .topicsTitle a:hover {
+  .topics-container a:hover {
     font-size: 2.5rem;
   }
-  #topicsTitleJS {
+  #topics-container-JS {
     background-size: 10%;
   }
-  #topicsTitleHTML {
+  #topics-container-HTML {
     background-size: 10%;
   }
-  #topicsTitleCSS {
+  #topics-container-CSS {
     background-size: 10%;
   }
   .quiz {
@@ -249,13 +279,13 @@ footer .contact img {
 }
 
 @media screen and (min-width: 1500px) {
-  #topicsTitleJS {
+  #topics-container-JS {
     background-size: 150px;
   }
-  #topicsTitleHTML {
+  #topics-container-HTML {
     background-size: 150px;
   }
-  #topicsTitleCSS {
+  #topics-container-CSS {
     background-size: 150px;
   }
 }
