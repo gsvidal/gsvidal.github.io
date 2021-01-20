@@ -35,7 +35,7 @@ body {
 }
 .construction {
   /* Descomentar cuando esté lista la web */
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
@@ -65,7 +65,7 @@ body {
   border-radius: 7.5px;
 }
 .capacidad_barra_full {
-  width:35%;
+  width:40%;
   height: 12px;
   background-image: linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
   border-radius: 7.5px;
