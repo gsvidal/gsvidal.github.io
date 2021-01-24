@@ -95,12 +95,16 @@ h1 {
 }
 h2 {
   font-weight: 200;
+  display: flex;
+  justify-content: center;
 }
 h3 {
-  padding: 20px;
+  padding: 20px 0;
   width: 100%;
 }
-
+h3 li {
+  margin-left: 22px;
+}
 .topics-container {
   font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
@@ -109,17 +113,27 @@ h3 {
   padding: 80px 20px;
 
 }
+/* .topics-subtitle li {
+  margin-left: 20px;
+} */
 
-:not(.topics-container) > ol {
-  /* Este padding se aplica a los ol que no tienen como padre a .topics-container */
+
+/* :not(.topics-container) > li::marker {
+  Este padding se aplica a los ol que no tienen como padre a .topics-container
   padding-left: 25px;
+} */
+
+/* Esta linea hace que la información enumerada debajo del h3 tenga una sangría más */
+.topics-info ol ol li{
+  margin-left: 30px;
 }
+
+
 .topics-container .topics-title {
 text-decoration: none;
 position: relative;
 z-index: 1;
-display: block;
-margin: 15px;
+display: inline;
 font-size: 2rem;
 text-align: center;
 }
@@ -144,6 +158,8 @@ text-align: center;
 .topics-title:hover {
   font-size: 2.3rem;
 }
+
+
 #topics-container-JS a{
   color: #a79600;
 }
@@ -153,7 +169,12 @@ text-align: center;
 #topics-container-CSS a{
   color: #00559b;
 }
-
+.coming-soon {
+  color: red;
+  font-size: 1.1rem;
+  padding-bottom: 10px;
+  line-height: 1.6rem;
+}
 .topics-info {
   position: absolute;
   /* El top determina desde donde va a aparecer el topicsInfo */
@@ -214,12 +235,18 @@ footer .contact img {
   }
   h2 {
     font-size: 2.2rem;
+    padding: 5px 0;
   }
   .topics-container {
-    padding: 150px 70px;
+    padding: 100px 70px;
   }
   .topics-container a:hover {
     font-size: 2.5rem;
+  }
+  .coming-soon {
+    position: absolute;
+    top: 1px;
+    right: -110px;
   }
   .quiz {
     padding: 100px;
@@ -253,7 +280,7 @@ footer .contact img {
     font-size: 6rem;
   }
   .topics-container {
-    padding: 150px 200px;
+    padding: 100px 100px;
   }
   .topics-container a:hover {
     font-size: 2.5rem;
