@@ -1,15 +1,12 @@
 /* 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 62.5%;
 }
-
 Orden de las propiedades de los selectores:
 1. Posicionamiento: static, relative, absolute, display, etc
 2. Modelo caja: content(width,height,min/max) , padding, border, margin
@@ -35,7 +32,7 @@ body {
 }
 .construction {
   /* Descomentar cuando esté lista la web */
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -99,7 +96,15 @@ h2 {
   justify-content: center;
 }
 h3 {
-  padding: 20px 0;
+  font-family: 'Oxygen', sans-serif;
+  font-size: 3rem;
+  padding: 28px 0;
+  width: 100%;
+}
+h4 {
+  font-size: 2.5rem;
+  font-family: 'Oxygen', sans-serif;
+  padding: 18px 0;
   width: 100%;
 }
 h3 li {
@@ -158,8 +163,6 @@ text-align: center;
 .topics-title:hover {
   font-size: 2.3rem;
 }
-
-
 #topics-container-JS a{
   color: #a79600;
 }
@@ -175,23 +178,37 @@ text-align: center;
   padding-bottom: 10px;
   line-height: 1.6rem;
 }
+
 .topics-info {
   position: absolute;
   /* El top determina desde donde va a aparecer el topicsInfo */
   top: -1005px;
   padding: 50px 10px;
+  margin-top: 20px;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 1.8rem;
   background-color: rgba(255, 255, 255,.3);
   z-index: -3;
-
+}
+.topics-info .enlaces-externos {
+  text-decoration: none;
+}
+.topics-info .enlaces-externos:hover {
+  font-size: 1.8rem;
 }
 .topics-info.showHide {
   transition: .4s;
   top: 0px;
   z-index: 0;
   position: relative;
+}
+.infografia-estructuras {
+  width: 80%;
+  margin: 0 10%;
+}
+figcaption {
+  text-align: center;
 }
 /* .topics-info.showHide p ol + li {
   padding: 50px;
@@ -230,7 +247,7 @@ footer .contact img {
   .blog-title__description {
     padding-left: 70px;
     padding-top: 15px;
-    padding-bottom: 15px;
+    padding-bottom: 55px;
 
   }
   h2 {
@@ -245,9 +262,13 @@ footer .contact img {
   }
   .coming-soon {
     position: absolute;
-    top: 1px;
+    top: 7px;
     right: -110px;
   }
+  /* .coming-soon:hover {
+    font-size: 1.1rem;
+    right: -50px;
+  } */
   .quiz {
     padding: 100px;
   }
