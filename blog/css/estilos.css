@@ -32,7 +32,7 @@ body {
 }
 .construction {
   /* Descomentar cuando esté lista la web */
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
@@ -81,8 +81,12 @@ h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 3.5rem;
-  background: url("https://i.imgur.com/TANm3FX.png") center/cover no-repeat;
+
+}
 /* Revisar como pasa el topicsInfo por debajo del h1 bg una vez que reviva imgur */
+.header {
+  background: url("https://i.postimg.cc/vHFwdkHC/header-Blog.png") center/cover no-repeat;
+
 }
 .blog-title__description {
   padding: 30px;
@@ -143,13 +147,13 @@ font-size: 2rem;
 text-align: center;
 }
 #topics-container-JS {
-  background:  #fff8b6 url("https://i.imgur.com/ZhxrYXc.png") left top/90px no-repeat;
+  background:  #fff8b6 url("https://i.postimg.cc/mrr0wG81/js-logo.png") left top/90px no-repeat;
 }
 #topics-container-HTML {
-  background: #ffc8b0 url("https://i.imgur.com/G7lMafd.png") left top/90px no-repeat;;
+  background: #ffc8b0 url("https://i.postimg.cc/2SGsh5Ff/html-logo.png") left top/90px no-repeat;
 }
 #topics-container-CSS {
-  background: #A8D0F0 url("https://i.imgur.com/TD6QrB3.png") left top/90px no-repeat;
+  background: #A8D0F0 url("https://i.postimg.cc/9fNsgNn8/css-logo.png") left top/90px no-repeat;
 }
 .topics-container li {
   /* Al darle la siguiente línea puedo hacer crecer con hover y no mover el resto de elementos */
@@ -182,7 +186,7 @@ text-align: center;
 .topics-info {
   position: absolute;
   /* El top determina desde donde va a aparecer el topicsInfo */
-  top: -1005px;
+  top: -100vh;
   padding: 50px 10px;
   margin-top: 20px;
   font-family: 'Poppins', sans-serif;
@@ -205,10 +209,12 @@ text-align: center;
 }
 .infografia-estructuras {
   width: 80%;
-  margin: 0 10%;
+  margin: 30px 10%;
+  margin-bottom: 10px;
 }
 figcaption {
   text-align: center;
+  font-weight: 500;
 }
 /* .topics-info.showHide p ol + li {
   padding: 50px;
