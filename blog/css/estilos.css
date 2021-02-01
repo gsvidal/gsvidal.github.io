@@ -33,7 +33,7 @@ body {
 }
 .construction {
   /* Descomentar cuando esté lista la web */
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -93,6 +93,7 @@ h1 {
   padding: 30px;
   padding-top: 10px;
   text-align: justify;
+  font-size: 1.8rem;
   font-weight: 300;
 }
 h2 {
@@ -139,7 +140,7 @@ h3 li {
 }
 
 
-.topics-container .topics-title {
+.topics-container .topics-title, .topics-container .topics-title-ready {
 text-decoration: none;
 position: relative;
 z-index: 1;
@@ -180,7 +181,13 @@ text-align: center;
 .coming-soon {
   color: red;
   font-size: 1.1rem;
-  padding-bottom: 10px;
+  padding-top: 7px;
+  line-height: 1.6rem;
+}
+.new {
+  color: blue;
+  font-size: 1.2rem;
+  padding-top: 7px;
   line-height: 1.6rem;
 }
 
@@ -223,8 +230,12 @@ figcaption {
 .quiz {
   padding: 30px;
   text-align: center;
-  color: #288000;
   background-color: #C3DEB7;
+}
+.quiz a {
+  text-decoration: none;
+  color: #288000;
+  display: block;
 }
 footer {
   padding: 25px;
@@ -254,7 +265,8 @@ footer .contact img {
   .blog-title__description {
     padding-left: 70px;
     padding-top: 15px;
-    padding-bottom: 55px;
+    padding-bottom: 35px;
+    font-size: 2.1rem;
 
   }
   h2 {
@@ -271,6 +283,11 @@ footer .contact img {
     position: absolute;
     top: 7px;
     right: -110px;
+  }
+  .new {
+    position: absolute;
+    top: 7px;
+    right: -60px;
   }
   /* .coming-soon:hover {
     font-size: 1.1rem;
@@ -309,6 +326,9 @@ footer .contact img {
   }
   .topics-container {
     padding: 100px 100px;
+  }
+  .topics-container .topics-title, .topics-container .topics-title-ready {
+    padding: 7px;
   }
   .topics-container a:hover {
     font-size: 2.5rem;

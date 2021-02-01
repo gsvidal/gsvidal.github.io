@@ -1,4 +1,4 @@
-const topicsTitle = document.querySelectorAll(".topics-title");
+const topicsTitle = document.querySelectorAll(".topics-title-ready");
 const topicsInfo = document.querySelectorAll(".topics-info");
 
 for(let i = 0; i < topicsTitle.length; i++){
