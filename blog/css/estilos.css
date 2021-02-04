@@ -29,11 +29,11 @@ body {
   font-weight: 400; */
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 .construction {
   /* Descomentar cuando esté lista la web */
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -124,15 +124,6 @@ h3 li {
   padding: 80px 20px;
 
 }
-/* .topics-subtitle li {
-  margin-left: 20px;
-} */
-
-
-/* :not(.topics-container) > li::marker {
-  Este padding se aplica a los ol que no tienen como padre a .topics-container
-  padding-left: 25px;
-} */
 
 /* Esta linea hace que la información enumerada debajo del h3 tenga una sangría más */
 .topics-info ol ol li{
@@ -140,7 +131,7 @@ h3 li {
 }
 
 
-.topics-container .topics-title, .topics-container .topics-title-ready {
+.topics-container .topics-title, .topics-container .topics-title-ready, .quiz {
 text-decoration: none;
 position: relative;
 z-index: 1;
@@ -178,16 +169,19 @@ text-align: center;
 #topics-container-CSS a{
   color: #00559b;
 }
-.coming-soon {
+.coming-soon, .quiz-container .coming-soonq {
   color: red;
   font-size: 1.1rem;
-  padding-top: 7px;
+  font-weight: 300;
+  padding-top: 1px;
+  padding-bottom: 8px;
   line-height: 1.6rem;
 }
 .new {
   color: blue;
   font-size: 1.2rem;
-  padding-top: 7px;
+  padding-top: 1px;
+  padding-bottom: 6px;
   line-height: 1.6rem;
 }
 
@@ -224,18 +218,20 @@ figcaption {
   text-align: center;
   font-weight: 500;
 }
-/* .topics-info.showHide p ol + li {
-  padding: 50px;
-} */
-.quiz {
-  padding: 30px;
+.quiz-container {
+  padding: 100px 70px;
   text-align: center;
   background-color: #C3DEB7;
 }
-.quiz a {
+.quiz-container p {
   text-decoration: none;
   color: #288000;
   display: block;
+}
+.quiz-container .quiz {
+  padding: 0;
+  color: #216800;
+  font-weight: 700;
 }
 footer {
   padding: 25px;
@@ -247,15 +243,35 @@ footer {
 footer .contact {
   display: flex;
   justify-content: center;
+  margin-top: 35px;
 }
 footer .contact img {
-  margin: 12px;
+  transition: .5s ease-in-out;
+  margin: 15px;
+
+  /* padding: auto; */
 }
+footer .contact img:hover {
+  transition: linear .15s;
+  transform: scale(1.4)
+}
+footer .contact a {
+  /* width: 100px;
+  height: 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p a {
+  display: inline-block;
+  text-decoration: none;
+  margin: 8px;
+}
+
 
 @media screen and (min-width: 600px) {
   body {
-
-    font-size: 2.2rem;
+    font-size: 2.1rem;
   }
   h1 {
     padding: 50px 100px 30px 70px;
@@ -279,14 +295,14 @@ footer .contact img {
   .topics-container a:hover {
     font-size: 2.5rem;
   }
-  .coming-soon {
+  .coming-soon, .coming-soonq {
     position: absolute;
-    top: 7px;
+    top: 5px;
     right: -110px;
   }
   .new {
     position: absolute;
-    top: 7px;
+    top: 5px;
     right: -60px;
   }
   /* .coming-soon:hover {
@@ -305,9 +321,7 @@ footer .contact img {
 }
 
 @media screen and (min-width: 1024px) {
-  body {
-    font-size: 2.2rem;
-  }
+
   h1 {
     font-size: 6.5rem;
   }  
@@ -344,6 +358,9 @@ footer .contact img {
   }
   .quiz {
     padding: 100px;
+  }
+  .coming-soon, .new {
+    padding-top: 9px;
   }
   footer {
     padding: 75px;
