@@ -33,7 +33,7 @@ body {
 }
 .construction {
   /* Descomentar cuando esté lista la web */
-  /* display: none; */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -130,8 +130,7 @@ h3 li {
   margin-left: 30px;
 }
 
-
-.topics-container .topics-title, .topics-container .topics-title-ready, .quiz {
+.topics-container .topics-title, .topics-container.topics-title-ready, .quiz {
 text-decoration: none;
 position: relative;
 z-index: 1;
