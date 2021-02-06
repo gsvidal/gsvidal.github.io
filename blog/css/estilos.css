@@ -33,7 +33,7 @@ body {
 }
 .construction {
   /* Descomentar cuando esté lista la web */
-  display: none;
+  /* display: none; */
   position: fixed;
   top: 0;
   left: 0;
@@ -186,7 +186,7 @@ text-align: center;
 .topics-info {
   position: absolute;
   /* El top determina desde donde va a aparecer el topicsInfo */
-  top: -250vh;
+  top: -300vh;
   padding: 50px 15px;
   margin-top: 20px;
   font-family: 'Poppins', sans-serif;
