@@ -2,12 +2,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JS Fundamentals</title>
+  <title>5 Fundamentos Front-End</title>
   <link rel="stylesheet" href="./css/estilos.css">
+  <link rel="stylesheet" href="./prism.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -20,7 +22,7 @@
     </div>
   </div>
   <div class="header">
-  <h1 class="blog-title">5 Fundamentos que debes dominar para ser un mejor Web Developer
+  <h1 class="blog-title">5 Fundamentos que todo desarrollador Front-End debe dominar
   </h1>
   <div class="blog-title__container">
   <p class="blog-title__description">
@@ -45,10 +47,11 @@
 
         <div class= "topics-info">
           <p>
-            Según Wikipedia una <a class="enlaces-externos" href="https://es.wikipedia.org/wiki/Estructura_de_datos">estructura de datos</a> es una forma particular de organizar datos en una computadora para que puedan ser utilizados de manera eficiente. <br>
+            Según Wikipedia una <a class="enlaces-externos" href="https://es.wikipedia.org/wiki/Estructura_de_datos">estructura de datos</a> es una forma particular de organizar datos en una computadora para que puedan ser utilizados de manera eficiente. <br><br>
             También podemos definirlas como formas de organizar datos.
             Comprenden colecciones de valores, las relaciones entre ellos y las funciones y operaciones que se les puedan aplicar. <br><br>
-            El uso "eficiente" que se le dará dependerá para que necesitaremos la estructura de datos que usaremos. Aquí entra el tema de la <strong>complejidad.</strong> 
+            El uso "eficiente" que se le dará dependerá para que necesitaremos la estructura de datos que usaremos. Quizás necesitemos una estructura donde se requiere una rápida búsqueda de elementos, o una inserción eficiente, etc, todo dependerá de que aplicación estemos haciendo. <br><br>
+            Aquí entra el tema de la <strong>complejidad.</strong> 
             <h3>La Complejidad</h3>
             Este término hace referencia a como se expresan las ventajas y desventajas que tiene cada estructura de datos al utilizarse en un problema en particular.
             La complejidad se puede expresar en 2 ejes: El <strong>espacio</strong> y el <strong>tiempo</strong>.
@@ -61,17 +64,128 @@
               <figcaption>Algunos tipos de Estructuras de Datos</figcaption>
             </figure>
 
+            
+            <br>
             Podemos agrupar estas estructuras en 3 diferentes tipos: <br><br>
             <ol>
-              <li>
-              Las similares a un <i>Array</i>,como los <strong>Arrays</strong>, <strong></strong>Stacks</strong> y <strong></strong>Queues</strong> los cuales se diferencian principalmente en la forma de como se insertan y modifican elementos
+              <li class="elem-lista-numerada">
+              Las estructuras del <i>tipo-Array</i>, como los <strong>Arrays</strong>, <strong>Stacks</strong> y <strong>Queues</strong> las cuales se diferencian principalmente en la forma de insertar y remover elementos de ellas.
+              </li> 
+              <li class="elem-lista-numerada">
+                <strong>Linked Lists</strong>, <strong>Trees</strong> y <strong>Graphs</strong> son estructuras con <i>nodos</i>  que guardan referencias con otros nodos.
+              </li> 
+              <li class="elem-lista-numerada">
+              Las <strong>Hash Tables</strong> dependen de <i>hash functions</i>  para localizar y guardar información.
               </li> 
             </ol>   
 
           <h3 class='topics-subtitle'>Arrays</h3>  
-          Los arreglos son...
-          <figure><img class='' src='https://i.imgur.com/TiNKqYN.png' width='30%' height=''>
-          </img></figure>
+          Los Arrays(arreglos) son una colección de elemnentos, los cuales son emparejados con un key(índice), la forma más básica de esta estructura es el array lineal(array unidimensional).
+          <br><br>
+          Los arrays de las estructuras más antiguas e importantes y de las más utilizadas en casi todo programa.
+          <br><br>
+          Todos hemos utilizado un array en JavaScript, inizializándolo tan simple como:
+          <br>
+          <pre>
+            <code class="language-js">
+              var array1 = [1,3,4,5,7];
+            </code>
+          </pre>
+          <br>
+          Pero ya que estamos en Estructura de Datos, vamos a crear una clase Array y a partir de ahí, crear métodos para buscar, agregar, remover valores del array. En pocas palabras veremos como crear métodos similares a .push(), .pop(), unshift(), .shift(), etc.
+          <br>
+          <pre>
+            <code class="language-js">
+              class MyArray { 
+                constructor() {
+                  this.length = 0;
+                  this.data = {};
+                }
+              }
+            </code>
+          </pre>
+          
+          Luego instanciaremos:
+          <br>
+          <pre>
+          <code class="language-js">
+          myArray = new MyArray();
+          </code>
+          </pre>
+          
+          *Podemos utilizar el Inspector de elementos para trabajar esto, lo que nos da el siguiente output:
+          <pre>
+            <code class="language-js">
+              <output>
+                //MyArray {length: 0, data: {…}}
+              </output>
+            </code>
+          </pre>
+          Como vemos esa estructura está vacía, tiene un lenght de 0 y no contiene data. <br><br>
+          Ahora creemos unos cuantos <strong>métodos</strong> para poder hacer operaciones sobre nuestro array. Los crearemos dentro de nuestra clase MyArray, previamente creada:<br>
+
+          <pre>
+            <code class="language-js">
+          class MyArray {
+            constructor() {
+              this.length = 0;
+              this.data = {};
+            }
+            //Nuestro método get devuelve el valor del índice index
+            get(index) {
+              return this.data[index];
+            }
+            //Nuestro método push añade al final un valor al array
+            push(item) {
+              this.data[this.length] = item;
+              this.length++;
+              return this.data;
+            }
+            //Nuestro método pop remueve el último elemento del array
+            pop() {
+              const lastItem = this.data[this.length - 1];
+              delete this.data[this.length -1];
+              this.length--;
+               
+            }
+            //Nuestro método delete devuelve el elemento con índice index
+            delete(index) {
+              const item = this.data[index];
+              this.shiftIndex(index);
+              return item;
+            }
+            shiftIndex(index) {
+              for(let i = index; i < this.length - 1; i++) {
+                this.data[i] = this.data[i + 1];
+              }
+              delete this.data[this.length - 1];
+              this.length--;
+            }
+            //Nuestro método unshiftItem añade un elemento(item) al inicio de nuestro array y devuelve la longitud
+            unshiftItem(item) {
+              this.length++;
+              this.unshiftIndex();
+              this.data[0] = item;
+              
+              return this.length;
+            }
+            unshiftIndex() {
+              for(let i = this.length - 1; i > 0 ; i--) {
+                this.data[i] = this.data[i-1];
+              }
+            }
+            //Para nuestro método shiftItem vamos a remover el primer elemento de nuestro array, usaremos el método delete() creado anteriormente.
+            shiftItem() {
+              return this.delete(0);
+            }
+          }
+              </code>
+          </pre>
+
+
+
+          <!-- <figure><img class='' src='https://i.imgur.com/TiNKqYN.png' width='30%' height=''>
+          </img></figure> -->
           </p>
         </div>  
       </li>
@@ -191,7 +305,7 @@
       </li>
 
       <li>
-        <h2><a class="topics-title" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title-ready" href="javascript:void(0)">
         Orden de declaración 
         <p class="coming-soon">Próximamente</p>
       </a></h2>
@@ -249,5 +363,6 @@
 </body>
 
 <script src="./blog.js"></script>
+<script src="./prism.js"></script>
 
 </html>

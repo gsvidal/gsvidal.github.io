@@ -71,11 +71,10 @@ body {
   justify-content: flex-end;
 }
 code {
-  padding: 1px 4px;
-  background-color: #9bc8ec;
+  padding:Sebastian, para hoy necesitamos 20 personas primero en el Plantel 102 y luego completas con carne en el plantel 99-98 2px 4px;
+  }  /* background-color: #dddddd; */
   border-radius: 4px;
   font-family: 'Courier Prime', monospace;
-
 }
 h1 {
   padding: 30px 40px 20px 30px;
@@ -102,15 +101,15 @@ h2 {
   justify-content: center;
 }
 h3 {
-  font-family: 'Oxygen', sans-serif;
+  /* font-family: 'Oxygen', sans-serif; */
   font-size: 3rem;
   padding: 28px 0;
   width: 100%;
 }
 h4 {
   font-size: 2.5rem;
-  font-family: 'Oxygen', sans-serif;
-  padding: 18px 0;
+  /* font-family: 'Oxygen', sans-serif; */
+  padding: 20px 0;
   width: 100%;
 }
 h3 li {
@@ -187,8 +186,8 @@ text-align: center;
 .topics-info {
   position: absolute;
   /* El top determina desde donde va a aparecer el topicsInfo */
-  top: -100vh;
-  padding: 50px 10px;
+  top: -250vh;
+  padding: 50px 15px;
   margin-top: 20px;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
@@ -216,6 +215,12 @@ text-align: center;
 figcaption {
   text-align: center;
   font-weight: 500;
+  margin-bottom: 50px;
+}
+.elem-lista-numerada {
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 15px;
 }
 .quiz-container {
   padding: 100px 70px;
@@ -279,6 +284,7 @@ footer p a {
   }  
   .blog-title__description {
     padding-left: 70px;
+    padding-right: 70px;
     padding-top: 15px;
     padding-bottom: 35px;
     font-size: 2.1rem;
