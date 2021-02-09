@@ -54,9 +54,50 @@ class MyArray {
   }
 }
 
+//Hash Tables
+
+class HashTable {
+  constructor(size) {
+    this.data = new Array(size);
+  }
+  //Lo siguiente es un Hash Function que fue creado arbitrariamente, existen muchos Hash Functions en GitHub
+  hashMethod(key) {
+    let hash = 0;
+    for (let i = 0; i < key.length; i++) {
+      hash = (hash + key.charCodeAt(i) * i) % this.data.length;
+    }
+    return hash;
+  }
+  //El metodo set nos permitirá insertar un valor con determinado key y value(puede haber colisiones)
+  set(key, value) {
+    const address = this.hashMethod(key);
+    if (!this.data[address]) {
+      this.data[address] = [];
+    }
+    this.data[address].push([key, value]);
+    return this.data;
+  }
+  //El metodo get nos devuelve el valor que le corresponde al key que enviemos como parámetro, en caso no exista el key nos devolverá undefined
+  get(key) {
+    const address = this.hashMethod(key);
+    const currentBucket = this.data[address];
+    if (currentBucket) {
+      for (let i = 0; i < currentBucket.length; i++) {
+        if (currentBucket[i][0] === key) {
+          return currentBucket[i][1];
+        }
+      }
+    }
+    return undefined;
+  }
+}
+//Instanciamos el HashTable con 50 espacios libres
+const myHashTable = new HashTable(50);
+
+
 
 //Singly Linked List
-
+//Creamos una clase Node(nodo) para no reescribir código en los métodos
 class Node {
   constructor(value) {
     this.value = value;
@@ -71,26 +112,26 @@ class MySinglyLinkedList {
       next: null
     }
     this.tail = this.head;
-
     this.length = 1;
   }
+  //Nuestro método append agregará un elemento al tail del Singly Linked List
   append(value) {
     const newNode = new Node(value);
-
     this.tail.next = newNode;
     this.tail = newNode;
     this.length++;
 
     return this;
   }
+  //Nuestro método prepend agregará un elemento en el head del Singly Linked List
   prepend(value) {
     const newNode = new Node(value);
-
     newNode.next = this.head;
     this.head = newNode;
 
     this.length++;
   }
+  //Nuestro método insert insertará un elemento en el nodode índice index en el Singly Linked List
   insert(index, value) {
     if(index >= this.length) {
       console.log("No hay suficientes elementos, será enviado al final");
@@ -99,6 +140,7 @@ class MySinglyLinkedList {
 
     const newNode = new Node(value); 
     const firstPointer = this.getTheIndex(index - 1);
+    //Se crea una const holdingPointer que servirá para no perder el puntero next del firstPointer.
     const holdingPointer = firstPointer.next;
     firstPointer.next = newNode;
     newNode.next = holdingPointer;
@@ -106,11 +148,9 @@ class MySinglyLinkedList {
     this.length++;
 
     return this;
-
   }
 
   getTheIndex(index) {
-    
     let currentNode = this.head;
 
     for(let counter = 0; counter < this.length; counter++) {
@@ -122,12 +162,15 @@ class MySinglyLinkedList {
     }
   }
 }
-
+//Instanciado MySinglyLinkedList:
 let myLinkedList = new MySinglyLinkedList(1);
 
 
 //Doubly Linked List
 
+//Como podremos ver el código para la creación de un doubly solo se diferencia por ser unas cuantas líneas más larga:
+
+//Creamos una clase Node(nodo) para no reescribir código en los métodos
 class Node {
   constructor(value) {
     this.value = value;
@@ -141,7 +184,7 @@ class MyDoublyLinkedList {
     this.head = {
       value: value,
       next: null,
-      // Doubly: sgt linea
+      // Doubly: se añade la siguiente linea
       prev: null,
     };
     this.tail = this.head;
@@ -159,7 +202,7 @@ class MyDoublyLinkedList {
   }
   prepend(value) {
     const newNode = new Node(value);
-    // Doubly: sgt linea
+    // Doubly: se añade la siguiente linea
     this.head.prev = newNode;
     
     newNode.next = this.head;
@@ -179,7 +222,7 @@ class MyDoublyLinkedList {
     let holdingPointer = firstPointer.next;
     firstPointer.next = newNode;
     newNode.next = holdingPointer;
-    // Doubly: sgts 3 líneas
+    // Doubly: se añaden las siguientes 3 líneas
     holdingPointer.prev = newNode;
     firstPointer = newNode.prev;
     holdingPointer = secondPointer;
@@ -204,13 +247,13 @@ class MyDoublyLinkedList {
   }
   
 }
-
+//Instanciado MyDoublyLinkedList:
 let myDoublyLinkedList = new MyDoublyLinkedList(1);
 
 
 
 //Stack
-
+//Creamos una clase Node(nodo) para no reescribir código en los métodos
 class Node {
   constructor(value) {
     this.value = value;
@@ -224,9 +267,11 @@ class Stack {
     this.bottom = null;
     this.length = 0;
   }
+  //Nuestro método peek nos devuelve el elemento en el top
   peek() {
     return this.top;
   }
+  //Nuestro método push agrega un elemento al final (top) del stack y nos devuelve el stack
   push(value) {
     const newNode = new Node(value);
     if(this.length === 0) {
@@ -241,6 +286,7 @@ class Stack {
 
     return this;
   }
+  //Nuestro método pop remueve el elemento top y nos devuelve el stack
   pop() {
     var penultimo = myStack.bottom;
     for(let i = 0; i < this.length-2; i++) {
@@ -254,9 +300,8 @@ class Stack {
     return this;
   }
 }
-
+//Instanciamos la clase Stack
 const myStack = new Stack();
-
 
 
 //Queue
@@ -274,9 +319,11 @@ class Queue {
     this.last = null;
     this.length = 0;
   }
+  //Nuestro método peek nos devuelve el elemento en el top
   peek() {
     return this.first;
   }
+  //Con nuestro método enqueue agregaremos un elemento al final de la cola
   enqueue(value) {
     const newNode = new Node(value);
     if(this.length === 0) {
@@ -290,19 +337,7 @@ class Queue {
 
     return this;
   }
-  enqueue(value) {
-    const newNode = new Node(value);
-    if(this.length === 0) {
-      this.first = newNode;
-      this.last = newNode;
-    } else {
-      this.last.next = newNode;
-      this.last = newNode;
-    }
-    this.length++;
-
-    return this;
-  }
+  //Con nuestro método dequeue removeremos el primer elemento de la cola
   dequeue() {
     if(this.length !== 0) {
     const second = myQueue.first.next;
@@ -316,7 +351,7 @@ class Queue {
   }
   
 }
-
+//Instanciamos la clase Queue
 const myQueue = new Queue();
 
 
@@ -384,4 +419,42 @@ const myQueue = new Queue();
   
   const myBinarySearchTree = new BinarySearchTree();
 
+
+//Graph
+
+class Graph {
+  constructor() {
+    this.nodes = 0;
+    this.adjacentList = {};
+  }
+  addVertex(node) {
+    this.adjacentList[node] = [];
+    this.nodes++;
+  }
+  addEdge(node1, node2) {
+    this.adjacentList[node1].push(node2);
+    this.adjacentList[node2].push(node1);
+  }
+}
+
+const myGraph = new Graph();
+
+//Creamos los vértices(nodos):
+
+myGraph.addVertex(1);
+myGraph.addVertex(3);
+myGraph.addVertex(4);
+myGraph.addVertex(5);
+myGraph.addVertex(6);
+myGraph.addVertex(8);
+
+//Creamos los Edges(bordes):
+
+myGraph.addEdge(8,4);
+myGraph.addEdge(4,5);
+myGraph.addEdge(4,1);
+myGraph.addEdge(1,6);
+myGraph.addEdge(3,6);
+myGraph.addEdge(1,3);
+myGraph.addEdge(5,3);
 

@@ -60,8 +60,8 @@
             <h4>El tiempo</h4>
             La <strong>complejidad del tiempo</strong> se necesita expresar para varias operaciones que puedes usar en estructuras de datos, tales como insertar(agregar), eliminar, buscar y/ o acceder elementos. <br>
             <figure>
-              <img class="infografia-estructuras" src="https://i.postimg.cc/1tBszKCD/GSVIDAL-WEB-6.png" alt="Infografía de tipos de estructuras de datos">
-              <figcaption>Algunos tipos de Estructuras de Datos</figcaption>
+              <img class="infografia" src="https://i.postimg.cc/1tBszKCD/GSVIDAL-WEB-6.png" alt="Infografía de tipos de estructuras de datos">
+              <figcaption>Principales tipos de Estructuras de Datos</figcaption>
             </figure>
 
             
@@ -78,38 +78,41 @@
               Las <strong>Hash Tables</strong> dependen de <i>hash functions</i>  para localizar y guardar información.
               </li> 
             </ol>   
+          
+          Quieres ver el código js de todas estas estructuras de datos?. Puedes encontrarlo en GitHub en el repositorio <a class="enlaces-externos" href="" target="_blank">Data Structures-JS</a>
 
           <h3 class='topics-subtitle'>Arrays</h3>  
-          Los Arrays(arreglos) son una colección de elemnentos, los cuales son emparejados con un key(índice), la forma más básica de esta estructura es el array lineal(array unidimensional).
+          Los Arrays(arreglos) son una colección de elementos, los cuales son emparejados con un key(índice), la forma más básica de esta estructura es el array lineal(array unidimensional).
           <br><br>
-          Los arrays de las estructuras más antiguas e importantes y de las más utilizadas en casi todo programa.
+          Los arrays son de las estructuras más antiguas e importantes y de las más utilizadas en casi toda aplicación.
           <br><br>
-          Todos hemos utilizado un array en JavaScript, inizializándolo tan simple como:
-          <br>
+          Creo que todos hemos utilizado un array en JavaScript, inizializándolo tan simple como:
+          
           <pre>
             <code class="language-js">
-              var array1 = [1,3,4,5,7];
+var array1 = [1,3,4,5,7];
             </code>
           </pre>
-          <br>
-          Pero ya que estamos en Estructura de Datos, vamos a crear una clase Array y a partir de ahí, crear métodos para buscar, agregar, remover valores del array. En pocas palabras veremos como crear métodos similares a .push(), .pop(), unshift(), .shift(), etc.
+
+          Pero ya que estamos en <i>Estructura de Datos</i>, vamos a crear una clase Array y a partir de ahí, crear métodos para buscar, agregar, remover valores del array. En pocas palabras veremos como crear métodos similares a .push(), .pop(), unshift(), .shift(), etc.
           <br>
           <pre>
             <code class="language-js">
-              class MyArray { 
-                constructor() {
-                  this.length = 0;
-                  this.data = {};
-                }
-              }
+ class MyArray { 
+   constructor() {
+     this.length = 0;
+     this.data = {};
+   }
+ }              
             </code>
           </pre>
           
-          Luego instanciaremos:
+          Luego instanciaremos la clase MyArray:
           <br>
           <pre>
+
           <code class="language-js">
-          myArray = new MyArray();
+myArray = new MyArray();
           </code>
           </pre>
           
@@ -117,7 +120,7 @@
           <pre>
             <code class="language-js">
               <output>
-                //MyArray {length: 0, data: {…}}
+//MyArray {length: 0, data: {…}}
               </output>
             </code>
           </pre>
@@ -126,66 +129,448 @@
 
           <pre>
             <code class="language-js">
-          class MyArray {
-            constructor() {
-              this.length = 0;
-              this.data = {};
-            }
-            //Nuestro método get devuelve el valor del índice index
-            get(index) {
-              return this.data[index];
-            }
-            //Nuestro método push añade al final un valor al array
-            push(item) {
-              this.data[this.length] = item;
-              this.length++;
-              return this.data;
-            }
-            //Nuestro método pop remueve el último elemento del array
-            pop() {
-              const lastItem = this.data[this.length - 1];
-              delete this.data[this.length -1];
-              this.length--;
-               
-            }
-            //Nuestro método delete devuelve el elemento con índice index
-            delete(index) {
-              const item = this.data[index];
-              this.shiftIndex(index);
-              return item;
-            }
-            shiftIndex(index) {
-              for(let i = index; i < this.length - 1; i++) {
-                this.data[i] = this.data[i + 1];
-              }
-              delete this.data[this.length - 1];
-              this.length--;
-            }
-            //Nuestro método unshiftItem añade un elemento(item) al inicio de nuestro array y devuelve la longitud
-            unshiftItem(item) {
-              this.length++;
-              this.unshiftIndex();
-              this.data[0] = item;
-              
-              return this.length;
-            }
-            unshiftIndex() {
-              for(let i = this.length - 1; i > 0 ; i--) {
-                this.data[i] = this.data[i-1];
-              }
-            }
-            //Para nuestro método shiftItem vamos a remover el primer elemento de nuestro array, usaremos el método delete() creado anteriormente.
-            shiftItem() {
-              return this.delete(0);
-            }
-          }
+
+ class MyArray {
+   constructor() {
+     this.length = 0;
+     this.data = {};
+   }
+   //Nuestro método get devuelve el valor del índice index
+   get(index) {
+     return this.data[index];
+   }
+   //Nuestro método push añade al final un valor al array
+   push(item) {
+     this.data[this.length] = item;
+     this.length++;
+     return this.data;
+   }
+   //Nuestro método pop remueve el último elemento del array
+   pop() {
+     const lastItem = this.data[this.length - 1];
+     delete this.data[this.length -1];
+     this.length--;
+   }
+   //Nuestro método delete devuelve el elemento con índice index
+   delete(index) {
+     const item = this.data[index];
+     this.shiftIndex(index);
+     return item;
+   }
+   shiftIndex(index) {
+     for(let i = index; i < this.length - 1; i++) {
+       this.data[i] = this.data[i + 1];
+     }
+     delete this.data[this.length - 1];
+     this.length--;
+   }
+   //Nuestro método unshiftItem añade un elemento(item) al inicio de nuestro array y devuelve la longitud
+   unshiftItem(item) {
+     this.length++;
+     this.unshiftIndex();
+
+     this.data[0] = item;
+     
+     return this.length;
+   }
+   unshiftIndex() {
+     for(let i = this.length - 1; i > 0 ; i--) {
+       this.data[i] = this.data[i-1];
+     }
+   }
+   //Para nuestro método shiftItem vamos a remover el primer elemento de nuestro array, usaremos el método delete() creado anteriormente.
+   shiftItem() {
+     return this.delete(0);
+   }
+ }
               </code>
           </pre>
 
+          <h3 class='topics-subtitle'>Stacks</h3> 
+
+          Los <strong>stacks</strong> son también una colección de elementos apilados, con 3 operaciones, peek(), push() y pop(), la forma en que se añaden y remueven elementos es a través del ordenamiento LIFO(Last in, first out), es decir el último que entra es el primero que sale.
+          Un ejemplo práctico y conocido de un stack es el call stack. 
+          <figure>
+            <img class="infografia infografia-chica" src="https://i.postimg.cc/sfWVc0PQ/GSVIDAL-WEB-14.jpg.jpg" alt="Imagen de un stack">
+            <figcaption>Diagrama de un stack</figcaption>
+          </figure>
+          Ahora pasemos a lo interesante, crearemos un stack usando clases como en el caso del array. <br>
+          Pero antes de eso expliquemos el concepto de <i>nodos</i>, que utilizaremos a lo largo del tema de estructura de datos, y si bien mencionamos que los Linked Lists, Trees y Graphs son estructuras basadas en nodos, también podemos tratar a cada elemento del stack(y más adelante al queue), como un nodo que tiene un valor(value) y que tiene una referencia a través de un puntero al siguiente elemento(en el caso del stack el siguiente elemento es el próximo en entrar).
+          
+          <pre>
+            <code class="language-js">
+ //Creamos una clase Node(nodo) para no código en los métodos
+ class Node {
+   constructor(value) {
+     this.value = value;
+     this.next = null;
+   }
+ }
+
+class Stack {
+  constructor() {
+    this.top = null;
+    this.bottom = null;
+    this.length = 0;
+  }
+  //Nuestro método peek nos devuelve el elemento el top
+  peek() {
+    return this.top;
+  }
+  //Nuestro método push agrega un elemento al (top) del stack y nos devuelve el stack
+  push(value) {
+    const newNode = new Node(value);
+    if(this.length === 0) {
+      this.top = newNode;
+      this.bottom = this.top;
+    } else {
+      const holdingPointer = newNode;
+      this.top.next = holdingPointer;
+      this.top = holdingPointer;
+    }
+    this.length++;
+
+    return this;
+  }
+  //Nuestro método pop remueve el elemento top nos devuelve el stack
+  pop() {
+    var penultimo = myStack.bottom;
+    for(let i = 0; i < this.length-2; i++) {
+      penultimo = penultimo.next;
+    }
+
+    this.top = penultimo;
+    this.top.next = null;
+    this.length--;
+
+    return this;
+  }
+}
+//Instanciamos la clase Stack
+const myStack = new Stack();
+            </code>
+          </pre>
+
+          <h3 class='topics-subtitle'>Queues</h3> 
+
+          Los <strong>queues</strong> son <i>colas</i>, sus operaciones principales son agregar al final de la cola(enqueue) y remover el primer elemento de la cola (dequeue), usa el protocolo FIFO (First in First Out), lo que significa que el primero que entra a la cola, es el primero que sale.
+          <figure>
+            <img class="infografia infografia-chica" src="https://i.postimg.cc/SxkNj7MX/GSVIDAL-WEB-15.jpg" alt="Imagen de un queue">
+            <figcaption>Diagrama de un Queue</figcaption>
+          </figure>
+          Veamos el código:
+          <pre>
+            <code class="language-js">
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class Queue {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.length = 0;
+  }
+  //Nuestro método peek nos devuelve el elemento en el top
+  peek() {
+    return this.first;
+  }
+  //Con nuestro método enqueue agregaremos un elemento al final de la cola
+  enqueue(value) {
+    const newNode = new Node(value);
+    if(this.length === 0) {
+      this.first = newNode;
+      this.last = newNode;
+    } else {
+      this.last.next = newNode;
+      this.last = newNode;
+    }
+    this.length++;
+
+    return this;
+  }
+  //Con nuestro método dequeue removeremos el primer elemento de la cola
+  dequeue() {
+    if(this.length !== 0) {
+    const second = myQueue.first.next;
+    this.first = second;
+    this.length--;
+
+    return this;
+    } else {
+      console.log("Queue is empty, you cannot dequeue!")
+    }
+  }
+  
+}
+//Instanciamos la clase Queue
+const myQueue = new Queue();
+
+            </code>
+          </pre>
+
+          <h3 class='topics-subtitle'>Hash Tables</h3> 
+
+          Un <strong>Hash Table</strong> es una estructura de datos usada para implementar un array asociativo, donde se puede emparejar <i>keys</i> y <i>values</i>. Es similar a un objeto de JavaScript, con la diferencia que la hash table tiene un <strong>Hash Function</strong> que determina en que parte de la memoria se ubicarán estos datos. Esta Hash Function recibe como argumento al key y retorna la dirección(address) de la locación en donde estará esta información. Pueden existir colisiones, lo que significa que puede haber dos keys diferentes para un mismo address, pero con el método set que veremos más adelante al enviar como parámetro al key, nos devolverá su value.
+          <figure>
+            <img class="infografia" src="https://i.postimg.cc/k4K8ygYB/GSVIDAL-WEB-13.jpg" alt="Imagen de un hash table">
+            <figcaption>Diagrama de Hash Table</figcaption>
+          </figure>
+
+          <pre>
+            <code class="language-js">
+ class HashTable {
+   constructor(size) {
+     this.data = new Array(size);
+   }
+   //Lo siguiente es un Hash que fue creado arbitrariamenteexisten muchos Hash Functions GitHub
+   hashMethod(key) {
+     let hash = 0;
+     for (let i = 0; i < key.length; i+) {
+       hash = (hash + key.charCodeAt(i * i) % this.data.length;
+     }
+     return hash;
+   }
+   //El metodo set nos insertar un valor con key y value(puede haber colisiones)
+   set(key, value) {
+     const address = this.(key);
+     if (!this.data[address]) {
+       this.data[address] = [];
+     }
+     this.data[address].push([keyvalue]);
+     return this.data;
+   }
+   //El metodo get nos devuelve el valor que le corresponde al key que enviemos como parámetro, en caso no exista el key nos devolverá undefined
+   get(key) {
+     const address = this.(key);
+     const currentBucket = this.[address];
+     if (currentBucket) {
+       for (let i = 0; i  currentBucket.length; i++) {
+         if (currentBucket[i][0] === key) {
+           return currentBucket[i][1];
+         }
+       }
+     }
+     return undefined;
+   }
+ }      
+ //Instanciamos el HashTable con 50 espacios libres
+ const myHashTable = new HashTable(50);  
+
+            </code>
+          </pre>
+            
+
+          <h3 class='topics-subtitle'>Linked Lists</h3> 
+
+          Los <strong>Linked Lists</strong> almacenan data en forma secuencial, pero en lugar de mantener índices, mantienen <i>pointers(punteros)</i> a otros elementos.
+          El primer nodo es llamado <strong>head</strong> y el último nodo <strong>tail</strong>. <br><br>
+          Existen dos tipos de linked list:
+          <ol>
+            <li>
+              <strong>Singly Linked List:</strong>  <br>
+              Cada nodo tiene solo un puntero hacia el siguiente nodo <i>(next)</i>.
+            </li>
+            <li>
+              <strong>Doubly Linked List:</strong>  <br>
+              Aquí aparte del <i>next</i>, cada nodo tiene también un puntero hacia el nodo previo(prev).
+            </li>
+          </ol>
+          <br>
+          <figure class="infografias-container">
+           <div>
+            <img class="infografias" src="https://i.postimg.cc/GhBvqR7P/GSVIDAL-WEB-16.jpg" alt="Imagen de Singly Linked List">
+            <figcaption>Diagrama de un Singly Linked List</figcaption>
+           </div>
+           <div>
+            <img class="infografias" src="https://i.postimg.cc/R0TtNZhm/GSVIDAL-WEB-17.jpg" alt="Imagen de Doubly Linked List">
+            <figcaption>Diagrama de un Doubly Linked List</figcaption>
+           </div>
+          </figure>
+          Démosle un vistazo al código: <br>
+          <strong>Singly Linked List:</strong>
+          <pre>
+            <code class="language-js">
+ //Creamos una clase Node(nodo) para no código en los métodos
+ class Node {
+   constructor(value) {
+     this.value = value;
+     this.next = null;
+   }
+ }
+ 
+ class MySinglyLinkedList {
+   constructor(value) {
+     this.head = {
+       value: value,
+       next: null
+     }
+     this.tail = this.head;
+     this.length = 1;
+   }
+   //Nuestro método append agregará un elemento tail del Singly Linked List
+   append(value) {
+     const newNode = new Node(value);
+     this.tail.next = newNode;
+     this.tail = newNode;
+     this.length++;
+ 
+     return this;
+   }
+   //Nuestro método prepend agregará un elemento el head del Singly Linked List
+   prepend(value) {
+     const newNode = new Node(value);
+     newNode.next = this.head;
+     this.head = newNode;
+ 
+     this.length++;
+   }
+   //Nuestro método insert insertará un elemento el nodode índice index en el Singly Linked List
+   insert(index, value) {
+     if(index >= this.length) {
+       console.log("No hay suficientes elementosserá enviado al final");
+       return this.append(value);
+     }
+ 
+     const newNode = new Node(value); 
+     const firstPointer = this.getTheIndex(index 1);
+     //Se crea una const holdingPointer que para no perder el puntero next firstPointer.
+     const holdingPointer = firstPointer.next;
+     firstPointer.next = newNode;
+     newNode.next = holdingPointer;
+ 
+     this.length++;
+ 
+     return this;
+   }
+ 
+   getTheIndex(index) {
+     let currentNode = this.head;
+ 
+     for(let counter = 0; counter < this.lengthcounter++) {
+       if(counter !== index) {
+         currentNode = currentNode.next;
+       } else{
+         return currentNode;
+       }
+     }
+   }
+ }
+ //Instanciando MySinglyLinkedList:
+ let myLinkedList = new MySinglyLinkedList(1;              
+            </code>
+          </pre>
+
+          <strong>Doubly Linked List:</strong>
+          <pre>
+            <code class="language-js">
+//Como podremos ver el código para la de un doubly solo se diferencia por ser cuantas líneas más larga:
+
+//Creamos una clase Node(nodo) para reescribir código en los métodos
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+    this.prev = null;
+  }
+}
+ 
+class MyDoublyLinkedList {
+  constructor(value) {
+    this.head = {
+      value: value,
+      next: null,
+      // Doubly: se añade la siguiente linea
+      prev: null,
+    };
+    this.tail = this.head;
+ 
+    this.length = 1;
+  }
+  append(value) {
+    const newNode = new Node(value);
+    newNode.prev = this.tail;
+    this.tail.next = newNode;
+    this.tail = newNode;
+    this.length++;
+ 
+    return this;
+  }
+  prepend(value) {
+    const newNode = new Node(value);
+    // Doubly: se añade la siguiente linea
+    this.head.prev = newNode;
+    
+    newNode.next = this.head;
+    this.head = newNode;
+ 
+    this.length++;
+  }
+  insert(index, value) {
+    if(index >= this.length) {
+      console.log("No hay suficientes elementos, será enviado al final");
+      return this.append(value);
+    }
+ 
+    const newNode = new Node(value);
+    let firstPointer = this.getTheIndex(- 1);
+    let secondPointer = this.getTheIndex(index;
+    let holdingPointer = firstPointer.next;
+    firstPointer.next = newNode;
+    newNode.next = holdingPointer;
+    // Doubly: se añaden las siguientes líneas
+    holdingPointer.prev = newNode;
+    firstPointer = newNode.prev;
+    holdingPointer = secondPointer;
+ 
+    this.length++;
+ 
+    return this;
+ 
+  }
+ 
+  getTheIndex(index) {
+    
+    let currentNode = this.head;
+ 
+    for(let counter = 0; counter < thislength; counter++) {
+      if(counter !== index) {
+        currentNode = currentNode.next;
+      } else{
+        return currentNode;
+      }
+    }
+  }
+  
+}
+//Instanciado MyDoublyLinkedList:
+let myDoublyLinkedList = new (1);              
+            </code>
+          </pre>
+
+          <h3 class='topics-subtitle'>Trees</h3> 
+
+          Los <strong>Trees</strong> son  
+          <figure>
+            <img class="infografia infografia-chica" src="https://i.postimg.cc/yNrjP8RV/GSVIDAL-WEB-8.jpg" alt="Imagen de un stack">
+            <figcaption>Diagrama de un Tree</figcaption>
+          </figure>
+
+          <h3 class='topics-subtitle'>Graphs</h3> 
+
+          Los <strong>Graphs</strong> son  
+          <figure>
+            <img class="infografia infografia-chica" src="https://i.postimg.cc/yNrjP8RV/GSVIDAL-WEB-8.jpg" alt="Imagen de un stack">
+            <figcaption>Diagrama de un Graph</figcaption>
+          </figure>
+
+          
 
 
-          <!-- <figure><img class='' src='https://i.imgur.com/TiNKqYN.png' width='30%' height=''>
-          </img></figure> -->
+          
           </p>
         </div>  
       </li>
