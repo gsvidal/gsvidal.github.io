@@ -76,7 +76,7 @@ h1 {
   padding: 30px 40px 20px 30px;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
-  font-size: 3.5rem;
+  font-size: 3.4rem;
 
 }
 /* Revisar como pasa el topicsInfo por debajo del h1 bg una vez que reviva imgur */
@@ -187,7 +187,7 @@ text-align: center;
   /* El top determina desde donde va a aparecer el topicsInfo */
   /* display:none; */
   width: 90%;
-  top: -4800vh;
+  top: -5100vh;
   padding: 30px 15px;
   margin: 25px 0;
   font-family: 'Poppins', sans-serif;
