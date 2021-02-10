@@ -26,13 +26,13 @@
   </h1>
   <div class="blog-title__container">
   <p class="blog-title__description">
-    Existen muchas y muchos desarrolladores con experiencia en esta industria, los cuales a lo largo de los años han logrado abrirse paso en medio de este mar de tecnologías, lenguajes y frameworks del mundo de la programación y lo han hecho bien hasta ahora, pero una parte de ellos(y no una insignificante) aún siente que mucho de esto funciona con una suerte de <i>Arte de Magia</i>, lo cual desde un punto de vista <i>holístico</i>, como el de la <strong>Ingeniería de Software</strong> no es lo ideal. 
+    Existen muchas y muchos desarrolladores con experiencia en esta industria, los cuales a lo largo de los años han logrado abrirse paso en medio de este mar de tecnologías, lenguajes y frameworks del mundo de la programación y lo han hecho bien hasta ahora, pero una parte de ellos(y no una insignificante) aún siente que mucho de esto funciona como una suerte de <i>Arte de Magia</i>, lo cual desde un punto de vista <i>holístico</i>, como el de la <strong>Ingeniería de Software</strong>, no es lo ideal. 
   </p>
   <p class="blog-title__description">
-    El saber las respuestas a preguntas tales como: <strong>"¿Como funciona el motor de JavaScript?"</strong>, <strong>"¿Como crear y en que puedo utilizar una Estructura de Datos?"</strong> o <strong>"¿Que ventajas puedo obtener por usar un lenguaje asíncrono?"</strong>, entre otras, puede abrir muchas puertas, incluso más allá de las que nos abrieron el saber programar o codear. 
+    El conocer respuestas a interrogantes tales como: <strong>"¿Qué es y como funciona el motor de JavaScript?"</strong>, <strong>"¿Como crear y en que puedo utilizar cierta Estructura de Datos?"</strong> o <strong>"¿Cómo funciona el asincronismo en JavaScript?"</strong>, entre otras, puede llevarte al siguiente nivel.
   </p>  
   <p class="blog-title__description">
-    En las siguientes líneas encontrarás información que quizás ya viste antes pero la dejaste de lado, por n motivos, pero creo que tú y yo sabemos que es momento de pasar al siguiente nivel. Te doy la bienvenida a mi Blog de los <i>Fundamentals de JavaScript, HTML y CSS.</i> 
+    En las siguientes líneas encontrarás temas que puedes haber oído, quizás solo superficialmente, pero es momento de cambiar eso. Aquí inicia este artículo de los <i>5 Fundamentos que todo desarrollador Front-End debe dominar.</i> <br>
   </p>
   </div>
   </div>
@@ -48,17 +48,17 @@
         <div class= "topics-info">
           <p>
             Según Wikipedia una <a class="enlaces-externos" href="https://es.wikipedia.org/wiki/Estructura_de_datos">estructura de datos</a> es una forma particular de organizar datos en una computadora para que puedan ser utilizados de manera eficiente. <br><br>
-            También podemos definirlas como formas de organizar datos.
+            También podemos definirla como una forma de organizar datos.
             Comprenden colecciones de valores, las relaciones entre ellos y las funciones y operaciones que se les puedan aplicar. <br><br>
-            El uso "eficiente" que se le dará dependerá para que necesitaremos la estructura de datos que usaremos. Quizás necesitemos una estructura donde se requiere una rápida búsqueda de elementos, o una inserción eficiente, etc, todo dependerá de que aplicación estemos haciendo. <br><br>
-            Aquí entra el tema de la <strong>complejidad.</strong> 
+            El uso "eficiente" que se le dará dependerá del motivo a necesitar cierta estructura de datos. Quizás necesitemos una estructura donde se requiere una búsqueda rápida de elementos, o una inserción eficiente, etc, todo dependerá de que aplicación estemos haciendo. <br><br>
+            Aquí entra un tema importante: la <strong>complejidad.</strong> 
             <h3>La Complejidad</h3>
             Este término hace referencia a como se expresan las ventajas y desventajas que tiene cada estructura de datos al utilizarse en un problema en particular.
             La complejidad se puede expresar en 2 ejes: El <strong>espacio</strong> y el <strong>tiempo</strong>.
             <h4>El espacio</h4>
             La <strong>complejidad del espacio</strong> representa el consumo de memoria de una estructura de datos.
             <h4>El tiempo</h4>
-            La <strong>complejidad del tiempo</strong> se necesita expresar para varias operaciones que puedes usar en estructuras de datos, tales como insertar(agregar), eliminar, buscar y/ o acceder elementos. <br>
+            La <strong>complejidad del tiempo</strong> se necesita expresar para varias operaciones que se puede usar en estructuras de datos, tales como insertar(agregar), eliminar, buscar y/ o acceder elementos. <br>
             <figure>
               <img class="infografia" src="https://i.postimg.cc/1tBszKCD/GSVIDAL-WEB-6.png" alt="Infografía de tipos de estructuras de datos">
               <figcaption>Principales tipos de Estructuras de Datos</figcaption>
@@ -72,21 +72,22 @@
               Las estructuras del <i>tipo-Array</i>, como los <strong>Arrays</strong>, <strong>Stacks</strong> y <strong>Queues</strong> las cuales se diferencian principalmente en la forma de insertar y remover elementos de ellas.
               </li> 
               <li class="elem-lista-numerada">
+                Las <strong>Hash Tables</strong> dependen de <i>hash functions</i>  para localizar y guardar información.
+                </li> 
+              <li class="elem-lista-numerada">
                 <strong>Linked Lists</strong>, <strong>Trees</strong> y <strong>Graphs</strong> son estructuras con <i>nodos</i>  que guardan referencias con otros nodos.
               </li> 
-              <li class="elem-lista-numerada">
-              Las <strong>Hash Tables</strong> dependen de <i>hash functions</i>  para localizar y guardar información.
-              </li> 
+              
             </ol>   
           
-          Quieres ver el código js de todas estas estructuras de datos?. Puedes encontrarlo en GitHub en el repositorio <a class="enlaces-externos" href="" target="_blank">Data Structures-JS</a>
+          ¿Quieres ver el código .js de todas estas estructuras de datos?. Puedes encontrarlo en GitHub en el repositorio <a class="enlaces-externos" href="" target="_blank">Data Structures-JS</a>
 
           <h3 class='topics-subtitle'>Arrays</h3>  
           Los Arrays(arreglos) son una colección de elementos, los cuales son emparejados con un key(índice), la forma más básica de esta estructura es el array lineal(array unidimensional).
           <br><br>
-          Los arrays son de las estructuras más antiguas e importantes y de las más utilizadas en casi toda aplicación.
+          Los arrays son una de las estructuras más antiguas e importantes, así como de las más utilizadas en casi toda aplicación.
           <br><br>
-          Creo que todos hemos utilizado un array en JavaScript, inizializándolo tan simple como:
+          Creo que todos hemos utilizado un array en JavaScript, tan solo inicializándolo así:
           
           <pre>
             <code class="language-js">
@@ -94,7 +95,7 @@ var array1 = [1,3,4,5,7];
             </code>
           </pre>
 
-          Pero ya que estamos en <i>Estructura de Datos</i>, vamos a crear una clase Array y a partir de ahí, crear métodos para buscar, agregar, remover valores del array. En pocas palabras veremos como crear métodos similares a .push(), .pop(), unshift(), .shift(), etc.
+          Pero ya que estamos en el fundamento de: <i>Estructura de Datos</i>, vamos a crear una clase MyArray y en ella, crear métodos para buscar, agregar, remover valores del array. En pocas palabras veremos como crear desde cero métodos similares a los <i>built-in methods</i> .push(), .pop(), unshift(), .shift(), etc.
           <br>
           <pre>
             <code class="language-js">
@@ -135,11 +136,11 @@ myArray = new MyArray();
      this.length = 0;
      this.data = {};
    }
-   //Nuestro método get devuelve el valor del índice index
+   //Nuestro método get devuelve el valor del elemento con índice index
    get(index) {
      return this.data[index];
    }
-   //Nuestro método push añade al final un valor al array
+   //Nuestro método push añade un valor al final del array
    push(item) {
      this.data[this.length] = item;
      this.length++;
@@ -151,7 +152,7 @@ myArray = new MyArray();
      delete this.data[this.length -1];
      this.length--;
    }
-   //Nuestro método delete devuelve el elemento con índice index
+   //Nuestro método delete elimina el elemento de indice index y devuelve el elemento removido.
    delete(index) {
      const item = this.data[index];
      this.shiftIndex(index);
@@ -164,7 +165,7 @@ myArray = new MyArray();
      delete this.data[this.length - 1];
      this.length--;
    }
-   //Nuestro método unshiftItem añade un elemento(item) al inicio de nuestro array y devuelve la longitud
+   //Nuestro método unshiftItem añade un elemento(item) al inicio de nuestro array y devuelve la longitud del array
    unshiftItem(item) {
      this.length++;
      this.unshiftIndex();
@@ -188,18 +189,18 @@ myArray = new MyArray();
 
           <h3 class='topics-subtitle'>Stacks</h3> 
 
-          Los <strong>stacks</strong> son también una colección de elementos apilados, con 3 operaciones, peek(), push() y pop(), la forma en que se añaden y remueven elementos es a través del ordenamiento LIFO(Last in, first out), es decir el último que entra es el primero que sale.
+          Los <strong>stacks</strong>(pilas) son también una colección de elementos, están apilados y cuenta con 3 operaciones principales, peek(), push() y pop(), la forma en que se añaden y remueven elementos es a través del ordenamiento LIFO(Last in, first out), es decir el último que entra es el primero que sale.
           Un ejemplo práctico y conocido de un stack es el call stack. 
           <figure>
             <img class="infografia infografia-chica" src="https://i.postimg.cc/sfWVc0PQ/GSVIDAL-WEB-14.jpg.jpg" alt="Imagen de un stack">
             <figcaption>Diagrama de un stack</figcaption>
           </figure>
           Ahora pasemos a lo interesante, crearemos un stack usando clases como en el caso del array. <br>
-          Pero antes de eso expliquemos el concepto de <i>nodos</i>, que utilizaremos a lo largo del tema de estructura de datos, y si bien mencionamos que los Linked Lists, Trees y Graphs son estructuras basadas en nodos, también podemos tratar a cada elemento del stack(y más adelante al queue), como un nodo que tiene un valor(value) y que tiene una referencia a través de un puntero al siguiente elemento(en el caso del stack el siguiente elemento es el próximo en entrar).
+          Pero antes de eso expliquemos el concepto de <i>nodos</i>, que utilizaremos a lo largo del tema de estructura de datos, y si bien mencionamos que los Linked Lists, Trees y Graphs son estructuras basadas en nodos, también podemos tratar a cada elemento del stack(y más adelante al queue), como un nodo que tiene un valor(value) y que tiene una referencia a través de un puntero al siguiente elemento(el próximo en entrar).
           
           <pre>
             <code class="language-js">
- //Creamos una clase Node(nodo) para no código en los métodos
+ //Creamos una clase Node(nodo) para no repetir código en los métodos
  class Node {
    constructor(value) {
      this.value = value;
@@ -213,7 +214,7 @@ class Stack {
     this.bottom = null;
     this.length = 0;
   }
-  //Nuestro método peek nos devuelve el elemento el top
+  //Nuestro método peek nos devuelve el elemento top(último en ingresar)
   peek() {
     return this.top;
   }
@@ -232,7 +233,7 @@ class Stack {
 
     return this;
   }
-  //Nuestro método pop remueve el elemento top nos devuelve el stack
+  //Nuestro método pop remueve el elemento top y nos devuelve el stack
   pop() {
     var penultimo = myStack.bottom;
     for(let i = 0; i < this.length-2; i++) {
@@ -253,7 +254,7 @@ const myStack = new Stack();
 
           <h3 class='topics-subtitle'>Queues</h3> 
 
-          Los <strong>queues</strong> son <i>colas</i>, sus operaciones principales son agregar al final de la cola(enqueue) y remover el primer elemento de la cola (dequeue), usa el protocolo FIFO (First in First Out), lo que significa que el primero que entra a la cola, es el primero que sale.
+          Los <strong>queues</strong> son <i>colas</i>, sus operaciones principales son agregar elementos al final de la cola(enqueue) y remover el primer elemento de la cola (dequeue), usa el protocolo FIFO (First in First Out), lo que significa que el primero que entra a la cola, es el primero que sale al remover un elemento.
           <figure>
             <img class="infografia infografia-chica" src="https://i.postimg.cc/SxkNj7MX/GSVIDAL-WEB-15.jpg" alt="Imagen de un queue">
             <figcaption>Diagrama de un Queue</figcaption>
@@ -261,6 +262,7 @@ const myStack = new Stack();
           Veamos el código:
           <pre>
             <code class="language-js">
+//Creamos una clase Node(nodo) para no repetir código en los métodos
 class Node {
   constructor(value) {
     this.value = value;
@@ -274,11 +276,11 @@ class Queue {
     this.last = null;
     this.length = 0;
   }
-  //Nuestro método peek nos devuelve el elemento en el top
+  //Nuestro método peek nos devuelve el elemento first(primero en la cola)
   peek() {
     return this.first;
   }
-  //Con nuestro método enqueue agregaremos un elemento al final de la cola
+  //Con nuestro método enqueue agregaremos un elemento al final de la cola (last)
   enqueue(value) {
     const newNode = new Node(value);
     if(this.length === 0) {
@@ -314,7 +316,7 @@ const myQueue = new Queue();
 
           <h3 class='topics-subtitle'>Hash Tables</h3> 
 
-          Un <strong>Hash Table</strong> es una estructura de datos usada para implementar un array asociativo, donde se puede emparejar <i>keys</i> y <i>values</i>. Es similar a un objeto de JavaScript, con la diferencia que la hash table tiene un <strong>Hash Function</strong> que determina en que parte de la memoria se ubicarán estos datos. Esta Hash Function recibe como argumento al key y retorna la dirección(address) de la locación en donde estará esta información. Pueden existir colisiones, lo que significa que puede haber dos keys diferentes para un mismo address, pero con el método set que veremos más adelante al enviar como parámetro al key, nos devolverá su value.
+          Un <strong>Hash Table</strong> es una estructura de datos usada para implementar un array asociativo, donde se puede emparejar <i>keys</i> y <i>values</i>. Es similar a un objeto de JavaScript, con la diferencia que la hash table tiene un <strong>Hash Function</strong> que determina en que lugar de la memoria se ubicarán estos datos. Esta Hash Function recibe como argumento al key y retorna la dirección(address) de la locación en donde estará esta información. Pueden existir <i>colisiones</i>, lo que significa que puede haber dos keys diferentes para un mismo address, pero con el método set que veremos más adelante al enviar como parámetro al key, nos devolverá su value respectivo.
           <figure>
             <img class="infografia" src="https://i.postimg.cc/k4K8ygYB/GSVIDAL-WEB-13.jpg" alt="Imagen de un hash table">
             <figcaption>Diagrama de Hash Table</figcaption>
@@ -326,7 +328,7 @@ const myQueue = new Queue();
    constructor(size) {
      this.data = new Array(size);
    }
-   //Lo siguiente es un Hash que fue creado arbitrariamenteexisten muchos Hash Functions GitHub
+   //Lo siguiente es un Hash que fue creado arbitrariamente,existen muchos Hash Functions en GitHub
    hashMethod(key) {
      let hash = 0;
      for (let i = 0; i < key.length; i+) {
@@ -334,7 +336,7 @@ const myQueue = new Queue();
      }
      return hash;
    }
-   //El metodo set nos insertar un valor con key y value(puede haber colisiones)
+   //El metodo set nos inserta un elemento con su key y value(puede haber colisiones)
    set(key, value) {
      const address = this.(key);
      if (!this.data[address]) {
@@ -343,7 +345,7 @@ const myQueue = new Queue();
      this.data[address].push([keyvalue]);
      return this.data;
    }
-   //El metodo get nos devuelve el valor que le corresponde al key que enviemos como parámetro, en caso no exista el key nos devolverá undefined
+   //El metodo get nos devuelve el valor que le corresponde al key, en caso no exista el key enviado nos devolverá undefined
    get(key) {
      const address = this.(key);
      const currentBucket = this.[address];
@@ -376,7 +378,7 @@ const myQueue = new Queue();
             </li>
             <li>
               <strong>Doubly Linked List:</strong>  <br>
-              Aquí aparte del <i>next</i>, cada nodo tiene también un puntero hacia el nodo previo(prev).
+              En este caso además del <i>next</i>, cada nodo tiene un puntero adicional hacia el nodo previo(prev).
             </li>
           </ol>
           <br>
@@ -394,7 +396,7 @@ const myQueue = new Queue();
           <strong>Singly Linked List:</strong>
           <pre>
             <code class="language-js">
- //Creamos una clase Node(nodo) para no código en los métodos
+//Creamos una clase Node(nodo) para no repetir código en los métodos
  class Node {
    constructor(value) {
      this.value = value;
@@ -411,7 +413,7 @@ const myQueue = new Queue();
      this.tail = this.head;
      this.length = 1;
    }
-   //Nuestro método append agregará un elemento tail del Singly Linked List
+   //Nuestro método append agregará un elemento al final(tail) del Singly Linked List
    append(value) {
      const newNode = new Node(value);
      this.tail.next = newNode;
@@ -420,7 +422,7 @@ const myQueue = new Queue();
  
      return this;
    }
-   //Nuestro método prepend agregará un elemento el head del Singly Linked List
+   //Nuestro método prepend agregará un elemento al inicio(head) del Singly Linked List
    prepend(value) {
      const newNode = new Node(value);
      newNode.next = this.head;
@@ -428,7 +430,7 @@ const myQueue = new Queue();
  
      this.length++;
    }
-   //Nuestro método insert insertará un elemento el nodode índice index en el Singly Linked List
+   //Nuestro método insert insertará un elemento con índice index en el Singly Linked List
    insert(index, value) {
      if(index >= this.length) {
        console.log("No hay suficientes elementosserá enviado al final");
@@ -467,9 +469,8 @@ const myQueue = new Queue();
           <strong>Doubly Linked List:</strong>
           <pre>
             <code class="language-js">
-//Como podremos ver el código para la de un doubly solo se diferencia por ser cuantas líneas más larga:
+//Como podremos ver el código para el doubly linked list solo se diferencia por ser unas cuantas líneas más larga:
 
-//Creamos una clase Node(nodo) para reescribir código en los métodos
 class Node {
   constructor(value) {
     this.value = value;
@@ -546,7 +547,7 @@ class MyDoublyLinkedList {
   }
   
 }
-//Instanciado MyDoublyLinkedList:
+//Instanciando MyDoublyLinkedList:
 let myDoublyLinkedList = new (1);              
             </code>
           </pre>
@@ -645,7 +646,7 @@ let myDoublyLinkedList = new (1);
 
           <h3 class='topics-subtitle'>Graphs</h3> 
           
-          Los grafos o <strong>Graphs</strong> consiste en una finita colección de vertices(nodos) unidos por bordes(edges), existen varios tipos de grafos, según muchos criterios: <br><br>  
+          Los grafos o <strong>Graphs</strong> consisten en una colección finita de vertices(nodos) unidos por bordes(edges), existen varios tipos de grafos, según diferentes criterios: <br><br>  
           <figure class="infografias-container">
             <div>
              <img class="infografias" id="infografias-graph" src="https://i.postimg.cc/x1vCj6wq/GSVIDAL-WEB-20.jpg" alt="Diagrama de un Graph">
@@ -658,7 +659,7 @@ let myDoublyLinkedList = new (1);
            </figure>
            <figure class="infografias-container">
             <div>
-             <img class="infografias" src="https://i.postimg.cc/3JSczhSZ/GSVIDAL-WEB-22.jpg" alt="Tipos de Graph: Cíclico y acíclico">
+             <img class="infografias" src="https://i.postimg.cc/gjfmM2Kj/GSVIDAL-WEB-24.jpg" alt="Tipos de Graph: Cíclico y acíclico">
              <figcaption>Tipos de Graph: Cíclico y acíclico</figcaption>
             </div>
             <div>
@@ -669,11 +670,11 @@ let myDoublyLinkedList = new (1);
            Existen varias maneras de representar un grafo, pero 2 de las principales son: <br><br>
            <ol>
             <li>
-              <strong>Adjacency list:</strong>  <br>
+              <strong>Lista de Adyacencia:</strong>  <br>
               Para cada vértice, se almacena una lista de vértices adyacentes.
             </li>
             <li>
-              <strong>Adjacency matrix:</strong>  <br>
+              <strong>Matriz de Adyacencia:</strong>  <br>
               La información es almacenada en una matriz bidimensional, en la cual las filas representan los vértices y las columnas representan los vértices a donde apuntan, la información en los bordes y vértices deben almacenarse externamente.
               <br><br>
 
@@ -694,7 +695,7 @@ let myDoublyLinkedList = new (1);
      this.adjacentList[node] [];
      this.nodes++;
    }
-   //Se agregan border(edgespasando como argumento a nodos(nodo1 y nodo2), el grafo del ejercicio es dirigido debe colocarse método push en direcciones.
+   //Se agregan bordes(edges) pasando como argumentos a nodos(nodo1 y nodo2), el grafo del ejercicio es del tipo dirigido, así que debe colocarse el método push en ambas direcciones.
    addEdge(node1, node2) {
      this.adjacentList[node1push(node2);
      this.adjacentList[node2push(node1);
@@ -711,7 +712,7 @@ let myDoublyLinkedList = new (1);
  myGraph.addVertex(6);
  myGraph.addVertex(8);
  
- //Creamos los Edges(bordesya que hay 7 bordes en gráfico, deben haber 7 addEdge:
+ //Creamos los Edges(bordes) ya que hay 7 bordes en el gráfico, deben haber 7 addEdge:
  myGraph.addEdge(8,4);
  myGraph.addEdge(4,5);
  myGraph.addEdge(4,1);
@@ -730,17 +731,17 @@ let myDoublyLinkedList = new (1);
             </div>
             <div>
              <img class="infografias" src="https://i.postimg.cc/cHPPF9w0/myGraph.jpg" alt="Output en Inspector de Elementos-Consola">
-             <figcaption>Output en Inspector de Elementos-Consola</figcaption>
+             <figcaption>Output en el Inspector de Elementos-Consola</figcaption>
             </div>
            </figure>
 
-           Como vemos en el output, al llamar a <i>myGraph</i> en su adjacentList nos muestra los nodos y sus respectivos nodos unidos por bordes, por ejemplo el nodo 1 tiene como nodos adyacentes(unidos por un borde) a los nodos 4,6 y 3. <br><br>
+           Como vemos en el output, al llamar a <i>myGraph</i> en su adjacentList nos muestra los nodos y sus respectivos nodos unidos por bordes, por ejemplo el nodo 1 tiene como nodos adyacentes(unidos por un borde) a los nodos 4,6 y 3. Lo cual es rápidamente verificable viendo el diagrama del grafo <br><br>
 
            <h3>Conclusiones</h3>
 
-           Existen muchas más estructuras de datos las cuales responden de una mejor o no tan eficiente manera al uso que se le quiera dar, algunas resaltan por su eficiencia en tiempo de búsqueda, otras por la forma de insertar o remover elementos, aquí entra en juego la habilidad y experiencia del desarrollador/ingeniero para saber cuando y por qué usar una estructura de datos en particular. <br><br>
+           Existen muchas más estructuras de datos las cuales responden de una mejor o no tan eficiente manera al uso que se les quiera dar, algunas resaltan por su eficiencia en tiempo de búsqueda, otras por la forma de insertar o remover elementos, aquí entra en juego la habilidad y experiencia del desarrollador/ingeniero para saber cuando y por qué usar una estructura de datos en particular. <br><br>
 
-           Las formas de crear las estructuras de datos de este artículo es una de varias formas de llegar al mismo resultado, esta vez se usó clases, pero también se puede crear con funciones. 
+           Las formas de crear las estructuras de datos de este artículo es una de tantas maneras de llegar al mismo resultado o similar, esta vez se usó clases, pero también se puede crear con funciones. <br><br>
           </p>
         </div>  
       </li>
