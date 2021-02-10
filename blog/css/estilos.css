@@ -81,7 +81,6 @@ h1 {
 }
 /* Revisar como pasa el topicsInfo por debajo del h1 bg una vez que reviva imgur */
 .header {
-  background: white center/cover no-repeat;
   position: relative;
   z-index: 3;
 }
@@ -184,9 +183,7 @@ text-align: center;
 
 .topics-info {
   position: absolute;
-  /* El top determina desde donde va a aparecer el topicsInfo */
-  /* display:none; */
-  top: -5400vh;
+  display: none;
   width: 90%;
   padding: 30px 15px;
   margin: 25px 0;
@@ -211,7 +208,7 @@ text-align: center;
   color: rgb(232, 62, 0);
 }
 .topics-info.showHide {
-  /* display: block; */
+  display: block;
   transition: .4s;
   top: 0px;
   width: 100%;
@@ -320,7 +317,6 @@ footer p a {
   h1 {
     padding: 50px 100px 30px 70px;
     font-size: 4rem;
-    background: url("https://i.imgur.com/TANm3FX.png") top -60px left/cover no-repeat;
   }  
   .blog-title__description {
     padding-left: 70px;
