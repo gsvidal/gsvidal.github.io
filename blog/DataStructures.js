@@ -358,9 +358,9 @@ const myQueue = new Queue();
 
 //Tree
 
- //      10
+  //      10
   //   4      20  
-  // 2  8   17  170
+  // 2   8  17  170
   
   class Node {
     constructor(value) {
@@ -374,6 +374,7 @@ const myQueue = new Queue();
     constructor() {
       this.root = null;
     }
+    //Con este método insert, podremos agregar nodos con sus valores y referencias según la condición si son menor o mayor al padre.
     insert(value) {
       const newNode = new Node(value);
       if(this.root === null) {
@@ -397,7 +398,9 @@ const myQueue = new Queue();
         } 
       }
     }
+    //El método search nos permitirá devolver el nodo en el que se encuentra el valor(value) enviado como argumento. Recordar que el nodo es el conjunto de información como: value, left child, right child. En caso de recorrerse el binary search tree y no encontrar el valor buscado nos indicará que no existe el valor.
     search(value) {
+      var msj = "no se encuentra el valor";
       if(this.root === null) {
         console.log(`The tree is empty!`);
       } else {
@@ -407,11 +410,20 @@ const myQueue = new Queue();
             return currentNode;
           } else {
             if(value < currentNode.value) {
-              currentNode = currentNode.left;
+              if(currentNode.left) {
+                currentNode = currentNode.left;
+              } else {
+                return msj;
+              }
             } else {
-              currentNode = currentNode.right;
+              if(currentNode.right) {
+                currentNode = currentNode.right;
+              } else {
+                return msj;
+              }
             }
           }
+          
          }
         } 
     }   
@@ -427,10 +439,12 @@ class Graph {
     this.nodes = 0;
     this.adjacentList = {};
   }
+  //Se agregan nodos(vértices)
   addVertex(node) {
     this.adjacentList[node] = [];
     this.nodes++;
   }
+  //Se agregan border(edges) pasando como argumento a los nodos(nodo1 y nodo2), como el grafo del ejercicio es no dirigido debe colocarse el método push en ambas direcciones.
   addEdge(node1, node2) {
     this.adjacentList[node1].push(node2);
     this.adjacentList[node2].push(node1);
@@ -440,7 +454,6 @@ class Graph {
 const myGraph = new Graph();
 
 //Creamos los vértices(nodos):
-
 myGraph.addVertex(1);
 myGraph.addVertex(3);
 myGraph.addVertex(4);
@@ -448,8 +461,7 @@ myGraph.addVertex(5);
 myGraph.addVertex(6);
 myGraph.addVertex(8);
 
-//Creamos los Edges(bordes):
-
+//Creamos los Edges(bordes), ya que hay 7 bordes en el gráfico, deben haber 7 addEdge:
 myGraph.addEdge(8,4);
 myGraph.addEdge(4,5);
 myGraph.addEdge(4,1);

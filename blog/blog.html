@@ -553,24 +553,188 @@ let myDoublyLinkedList = new (1);
 
           <h3 class='topics-subtitle'>Trees</h3> 
 
-          Los <strong>Trees</strong> son  
-          <figure>
-            <img class="infografia infografia-chica" src="https://i.postimg.cc/yNrjP8RV/GSVIDAL-WEB-8.jpg" alt="Imagen de un stack">
-            <figcaption>Diagrama de un Tree</figcaption>
-          </figure>
+          Una estructura de datos en forma de árbol o <strong>Tree</strong> simula una estructura de árbol jerárquica, con un nodo padre, un valor root e hijos(children). Cada nodo contiene un valor y una referencia a su(s) hijo(s). <br><br>
+          En este caso veremos un Binary Search Tree, un tipo de Tree usado para insertar y buscar valores en la estructura.
+          Un Binary Searh Tree consta de un root donde a partir de este elemento se inicia la búsqueda, cada elemento solo puede tener dos descendientes(children), los <i>children</i> que son mayores que el elemento padre se colocan debajo del padre pero al lado derecho y los menores al lado izquierdo. <br><br>
+          
+          <figure class="infografias-container">
+            <div>
+             <img class="infografias" src="https://i.postimg.cc/ZKk8gb16/GSVIDAL-WEB-18.jpg" alt="Imagen de un Tree">
+             <figcaption>Diagrama de un Tree</figcaption>
+            </div>
+            <div>
+             <img class="infografias" src="https://i.postimg.cc/598YXwRF/GSVIDAL-WEB-19.jpg" alt="Imagen de un Binary Search Tree">
+             <figcaption>Diagrama de un Binary Search Tree</figcaption>
+            </div>
+           </figure>
+
+           Ahora sí, para este código, armaremos el binary search tree de arriba.
+
+           <pre>
+             <code class="language-js">         
+  class Node {
+    constructor(value) {
+      this.left = null;
+      this.right = null;
+      this.value = value;
+    }
+  }
+  
+  class BinarySearchTree {
+    constructor() {
+      this.root = null;
+    }
+    //Con este método insert, podremos agregar nodos con sus valores y referencias según la condición si son menor o mayor al padre.
+    insert(value) {
+      const newNode = new Node(value);
+      if(this.root === null) {
+        this.root = newNode;
+      } else {
+        let currentNode = this.root;
+        while(true) {
+          if(value < currentNode.value) {
+            if(!currentNode.left) {
+              currentNode.left = newNode;
+              return this;
+            }
+            currentNode = currentNode.left;
+          } else {
+            if(!currentNode.right) {
+              currentNode.right = newNode;
+              return this;
+            }
+            currentNode = currentNode.right;
+          }
+        } 
+      }
+    }
+    //El método search nos permitirá devolver el nodo en el que se encuentra el valor(value) enviado como argumento. Recordar que el nodo es el conjunto de información como: value, left child, right child. En caso de recorrerse el binary search tree y no encontrar el valor buscado nos indicará que no existe el valor.
+    search(value) {
+      var msj = "no se encuentra el valor";
+      if(this.root === null) {
+        console.log(`The tree is empty!`);
+      } else {
+        let currentNode = this.root;
+         while(true) {
+          if(value === currentNode.value) {
+            return currentNode;
+          } else {
+            if(value < currentNode.value) {
+              if(currentNode.left) {
+                currentNode = currentNode.left;
+              } else {
+                return msj;
+              }
+            } else {
+              if(currentNode.right) {
+                currentNode = currentNode.right;
+              } else {
+                return msj;
+              }
+            }
+          }
+          
+         }
+        } 
+    }   
+  }
+  //Instanciamos BinarySearchTree
+  const myBinarySearchTree = new BinarySearchTree();
+             </code>
+           </pre>
 
           <h3 class='topics-subtitle'>Graphs</h3> 
-
-          Los <strong>Graphs</strong> son  
-          <figure>
-            <img class="infografia infografia-chica" src="https://i.postimg.cc/yNrjP8RV/GSVIDAL-WEB-8.jpg" alt="Imagen de un stack">
-            <figcaption>Diagrama de un Graph</figcaption>
-          </figure>
-
           
+          Los grafos o <strong>Graphs</strong> consiste en una finita colección de vertices(nodos) unidos por bordes(edges), existen varios tipos de grafos, según muchos criterios: <br><br>  
+          <figure class="infografias-container">
+            <div>
+             <img class="infografias" id="infografias-graph" src="https://i.postimg.cc/x1vCj6wq/GSVIDAL-WEB-20.jpg" alt="Diagrama de un Graph">
+             <figcaption>Diagrama de un Graph</figcaption>
+            </div>
+            <div>
+             <img class="infografias" src="https://i.postimg.cc/xCLrSZJ1/GSVIDAL-WEB-21.jpg" alt="Tipos de Graph: Ponderado y no ponderado">
+             <figcaption>Tipos de Graph: Ponderado y no ponderado</figcaption>
+            </div>
+           </figure>
+           <figure class="infografias-container">
+            <div>
+             <img class="infografias" src="https://i.postimg.cc/3JSczhSZ/GSVIDAL-WEB-22.jpg" alt="Tipos de Graph: Cíclico y acíclico">
+             <figcaption>Tipos de Graph: Cíclico y acíclico</figcaption>
+            </div>
+            <div>
+             <img class="infografias" src="https://i.postimg.cc/52DkN3MY/GSVIDAL-WEB-23.jpg" alt="Tipos de Graph: Dirigido y no dirigido">
+             <figcaption>Tipos de Graph: Dirigido y no dirigido</figcaption>
+            </div>
+           </figure>
+           Existen varias maneras de representar un grafo, pero 2 de las principales son: <br><br>
+           <ol>
+            <li>
+              <strong>Adjacency list:</strong>  <br>
+              Para cada vértice, se almacena una lista de vértices adyacentes.
+            </li>
+            <li>
+              <strong>Adjacency matrix:</strong>  <br>
+              La información es almacenada en una matriz bidimensional, en la cual las filas representan los vértices y las columnas representan los vértices a donde apuntan, la información en los bordes y vértices deben almacenarse externamente.
+              <br><br>
 
+            </li>
+           </ol>
 
-          
+           Para el código usaremos la representación  con lista adjacente, del tipo no dirigido, y usaremos la forma y nodos del grafo de la imagen: <a class="enlaces-externos" href="#infografias-graph">Diagrama de un Graph.</a>
+
+           <pre>
+             <code class="language-js">
+ class Graph {
+   constructor() {
+     this.nodes = 0;
+     this.adjacentList = {};
+   }
+   //Se agregan nodos(vértices)
+   addVertex(node) {
+     this.adjacentList[node] [];
+     this.nodes++;
+   }
+   //Se agregan border(edgespasando como argumento a nodos(nodo1 y nodo2), el grafo del ejercicio es dirigido debe colocarse método push en direcciones.
+   addEdge(node1, node2) {
+     this.adjacentList[node1push(node2);
+     this.adjacentList[node2push(node1);
+   }
+ }
+ 
+ const myGraph = new Graph();
+ 
+ //Creamos los vértices(nodos):
+ myGraph.addVertex(1);
+ myGraph.addVertex(3);
+ myGraph.addVertex(4);
+ myGraph.addVertex(5);
+ myGraph.addVertex(6);
+ myGraph.addVertex(8);
+ 
+ //Creamos los Edges(bordesya que hay 7 bordes en gráfico, deben haber 7 addEdge:
+ myGraph.addEdge(8,4);
+ myGraph.addEdge(4,5);
+ myGraph.addEdge(4,1);
+ myGraph.addEdge(1,6);
+ myGraph.addEdge(3,6);
+ myGraph.addEdge(1,3);
+ myGraph.addEdge(5,3);   
+             </code>
+           </pre>
+
+           Comparemos el output luego de ingresar el código: <br><br>
+           <figure class="infografias-container">
+            <div>
+             <img class="infografias" id="infografias-graph" src="https://i.postimg.cc/x1vCj6wq/GSVIDAL-WEB-20.jpg" alt="Grafo a construir">
+             <figcaption>Grafo a construir</figcaption>
+            </div>
+            <div>
+             <img class="infografias" src="https://i.postimg.cc/cHPPF9w0/myGraph.jpg" alt="Output en Inspector de Elementos-Consola">
+             <figcaption>Output en Inspector de Elementos-Consola</figcaption>
+            </div>
+           </figure>
+
+           Como vemos en el output, al llamar a <i>myGraph</i> en su adjacentList nos muestra los nodos y sus respectivos nodos unidos por bordes, por ejemplo el nodo 1 tiene como nodos adyacentes(unidos por un borde) a los nodos 4,6 y 3.
           </p>
         </div>  
       </li>
