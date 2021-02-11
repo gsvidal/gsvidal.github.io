@@ -80,7 +80,7 @@ h1 {
 
 }
 /* Revisar como pasa el topicsInfo por debajo del h1 bg una vez que reviva imgur */
-.header {
+header {
   position: relative;
   z-index: 3;
 }
