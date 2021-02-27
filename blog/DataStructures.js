@@ -5,11 +5,11 @@ class MyArray {
     this.length = 0;
     this.data = {};
   }
-  //Nuestro método get devuelve el valor del índice index
+  //Nuestro método get devuelve el valor del elemento con índice index
   get(index) {
     return this.data[index];
   }
-  //Nuestro método push añade al final un valor al array
+  //Nuestro método push añade un valor al final del array
   push(item) {
     this.data[this.length] = item;
     this.length++;
@@ -22,7 +22,7 @@ class MyArray {
     this.length--;
      
   }
-  //Nuestro método delete devuelve el elemento con índice index
+  //Nuestro método delete elimina el elemento de indice index y devuelve el elemento removido.
   delete(index) {
     const item = this.data[index];
     this.shiftIndex(index);
@@ -35,7 +35,7 @@ class MyArray {
     delete this.data[this.length - 1];
     this.length--;
   }
-  //Nuestro método unshiftItem añade un elemento(item) al inicio de nuestro array y devuelve la longitud
+  //Nuestro método unshiftItem añade un elemento(item) al inicio de nuestro array y devuelve la longitud del array
   unshiftItem(item) {
     this.length++;
     this.unshiftIndex();
@@ -114,7 +114,7 @@ class MySinglyLinkedList {
     this.tail = this.head;
     this.length = 1;
   }
-  //Nuestro método append agregará un elemento al tail del Singly Linked List
+  //Nuestro método append agregará un elemento al final(tail) del Singly Linked List
   append(value) {
     const newNode = new Node(value);
     this.tail.next = newNode;
@@ -123,7 +123,7 @@ class MySinglyLinkedList {
 
     return this;
   }
-  //Nuestro método prepend agregará un elemento en el head del Singly Linked List
+  //Nuestro método prepend agregará un elemento al inicio(head) del Singly Linked List
   prepend(value) {
     const newNode = new Node(value);
     newNode.next = this.head;
@@ -131,7 +131,7 @@ class MySinglyLinkedList {
 
     this.length++;
   }
-  //Nuestro método insert insertará un elemento en el nodode índice index en el Singly Linked List
+  //Nuestro método insert insertará un elemento con índice index en el Singly Linked List
   insert(index, value) {
     if(index >= this.length) {
       console.log("No hay suficientes elementos, será enviado al final");
@@ -162,7 +162,7 @@ class MySinglyLinkedList {
     }
   }
 }
-//Instanciado MySinglyLinkedList:
+//Instanciando MySinglyLinkedList:
 let myLinkedList = new MySinglyLinkedList(1);
 
 
@@ -267,11 +267,11 @@ class Stack {
     this.bottom = null;
     this.length = 0;
   }
-  //Nuestro método peek nos devuelve el elemento en el top
+  //Nuestro método peek nos devuelve el elemento top(último en ingresar)
   peek() {
     return this.top;
   }
-  //Nuestro método push agrega un elemento al final (top) del stack y nos devuelve el stack
+  //Nuestro método push agrega un elemento al (top) del stack y nos devuelve el stack
   push(value) {
     const newNode = new Node(value);
     if(this.length === 0) {
@@ -319,11 +319,11 @@ class Queue {
     this.last = null;
     this.length = 0;
   }
-  //Nuestro método peek nos devuelve el elemento en el top
+  //Nuestro método peek nos devuelve el elemento first(primero en la cola)
   peek() {
     return this.first;
   }
-  //Con nuestro método enqueue agregaremos un elemento al final de la cola
+  //Con nuestro método enqueue agregaremos un elemento al final de la cola (last)
   enqueue(value) {
     const newNode = new Node(value);
     if(this.length === 0) {
@@ -428,7 +428,7 @@ const myQueue = new Queue();
         } 
     }   
   }
-  
+  //Instanciamos BinarySearchTree
   const myBinarySearchTree = new BinarySearchTree();
 
 
@@ -444,7 +444,7 @@ class Graph {
     this.adjacentList[node] = [];
     this.nodes++;
   }
-  //Se agregan border(edges) pasando como argumento a los nodos(nodo1 y nodo2), como el grafo del ejercicio es no dirigido debe colocarse el método push en ambas direcciones.
+  //Se agregan bordes(edges) pasando como argumentos a nodos(nodo1 y nodo2), el grafo del ejercicio es del tipo no dirigido, así que debe colocarse el método push en ambas direcciones.
   addEdge(node1, node2) {
     this.adjacentList[node1].push(node2);
     this.adjacentList[node2].push(node1);

@@ -169,7 +169,6 @@ myArray = new MyArray();
    unshiftItem(item) {
      this.length++;
      this.unshiftIndex();
-
      this.data[0] = item;
      
      return this.length;
@@ -328,7 +327,7 @@ const myQueue = new Queue();
    constructor(size) {
      this.data = new Array(size);
    }
-   //Lo siguiente es un Hash que fue creado arbitrariamente,existen muchos Hash Functions en GitHub
+   //Lo siguiente es un Hash Function que fue creado arbitrariamente,existen muchos Hash Functions en GitHub
    hashMethod(key) {
     let hash = 0;
     for (let i = 0; i < key.length; i++) {
@@ -433,13 +432,13 @@ const myQueue = new Queue();
    //Nuestro método insert insertará un elemento con índice index en el Singly Linked List
    insert(index, value) {
      if(index >= this.length) {
-       console.log("No hay suficientes elementosserá enviado al final");
+       console.log("No hay suficientes elementos, será enviado al final");
        return this.append(value);
      }
  
      const newNode = new Node(value); 
-     const firstPointer = this.getTheIndex(index 1);
-     //Se crea una const holdingPointer que para no perder el puntero next firstPointer.
+     const firstPointer = this.getTheIndex(index - 1);
+     //Se crea una const holdingPointer que servirá para no perder el puntero next del firstPointer.
      const holdingPointer = firstPointer.next;
      firstPointer.next = newNode;
      newNode.next = holdingPointer;
@@ -452,7 +451,7 @@ const myQueue = new Queue();
    getTheIndex(index) {
      let currentNode = this.head;
  
-     for(let counter = 0; counter < this.lengthcounter++) {
+     for(let counter = 0; counter < this.length; counter++) {
        if(counter !== index) {
          currentNode = currentNode.next;
        } else{
@@ -517,12 +516,12 @@ class MyDoublyLinkedList {
     }
  
     const newNode = new Node(value);
-    let firstPointer = this.getTheIndex(- 1);
-    let secondPointer = this.getTheIndex(index;
+    let firstPointer = this.getTheIndex(index - 1);
+    let secondPointer = this.getTheIndex(index);
     let holdingPointer = firstPointer.next;
     firstPointer.next = newNode;
     newNode.next = holdingPointer;
-    // Doubly: se añaden las siguientes líneas
+    // Doubly: se añaden las siguientes 3 líneas
     holdingPointer.prev = newNode;
     firstPointer = newNode.prev;
     holdingPointer = secondPointer;
@@ -537,7 +536,7 @@ class MyDoublyLinkedList {
     
     let currentNode = this.head;
  
-    for(let counter = 0; counter < thislength; counter++) {
+    for(let counter = 0; counter < this.length; counter++) {
       if(counter !== index) {
         currentNode = currentNode.next;
       } else{
@@ -548,7 +547,7 @@ class MyDoublyLinkedList {
   
 }
 //Instanciando MyDoublyLinkedList:
-let myDoublyLinkedList = new (1);              
+let myDoublyLinkedList = new MyDoublyLinkedList(1);              
             </code>
           </pre>
 
@@ -692,13 +691,13 @@ let myDoublyLinkedList = new (1);
    }
    //Se agregan nodos(vértices)
    addVertex(node) {
-     this.adjacentList[node] [];
+     this.adjacentList[node] = [];
      this.nodes++;
    }
-   //Se agregan bordes(edges) pasando como argumentos a nodos(nodo1 y nodo2), el grafo del ejercicio es del tipo dirigido, así que debe colocarse el método push en ambas direcciones.
+   //Se agregan bordes(edges) pasando como argumentos a nodos(nodo1 y nodo2), el grafo del ejercicio es del tipo no dirigido, así que debe colocarse el método push en ambas direcciones.
    addEdge(node1, node2) {
-     this.adjacentList[node1push(node2);
-     this.adjacentList[node2push(node1);
+     this.adjacentList[node1].push(node2);
+     this.adjacentList[node2].push(node1);
    }
  }
  
@@ -712,7 +711,7 @@ let myDoublyLinkedList = new (1);
  myGraph.addVertex(6);
  myGraph.addVertex(8);
  
- //Creamos los Edges(bordes) ya que hay 7 bordes en el gráfico, deben haber 7 addEdge:
+ //Creamos los Edges(bordes), ya que hay 7 bordes en el gráfico, deben haber 7 addEdge:
  myGraph.addEdge(8,4);
  myGraph.addEdge(4,5);
  myGraph.addEdge(4,1);
