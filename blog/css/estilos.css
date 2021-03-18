@@ -258,6 +258,14 @@ figcaption {
   margin-right: 30px;
   margin-bottom: 15px;
 }
+.modifiers-code-division {
+  display: flex;
+}
+[class*="modifiers-"] {
+  margin: 5px;
+}
+
+
 .quiz-container {
   padding: 100px 70px;
   text-align: center;

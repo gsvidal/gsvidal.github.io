@@ -7,6 +7,7 @@
   <title>5 Fundamentos Front-End</title>
   <link rel="stylesheet" href="./css/estilos.css">
   <link rel="stylesheet" href="./prism.css">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/k4a0ecv.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
@@ -847,20 +848,153 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
 
       <li>
         <h2><a class="topics-title" href="javascript:void(0)">
-          Nomenclatura en CSS
+          Metodología BEM
         <p class="coming-soon">Próximamente</p>
       </a></h2>
         <div class= "topics-info">
           <p>
-          Existen varias metodologías o convenciones para nombrar a las classes en CSS.
-          Fuentes:
-          https://iknowdavehouse.medium.com/bem-for-everyone-else-89ccc8ad66f2
-          </p>
+          Existen varias metodologías o convenciones para nombrar a las classes en CSS. Entre las principales tenemos a BEM, OOCSS, SMACSS, SUITCSS, etc. <br><br>
+          Estas se utilizan para organizar nuestro código en CSS y ayuda a mantener CSSs extensos.
+          <h4>¿Qué es BEM?</h4>
+          BEM es una convención o standard para nombrar clases en CSS.
+          <h4>¿Porqué utilizar BEM?</h4>
+          Primero veamos por qué utilizarlo sobre las otras metodologías mencionadas líneas arriba, es menos confusa que otros métodos (SMACSS) pero aun nos brinda una buena arquitectura(OOCSS) y con una terminología que podemos reconocer.
+          <br><br>
+          Podemos encontrar <strong>3 beneficios</strong> al utilizar BEM:
+          <ol>
+            <li>Comunica propósito o función.</li>
+            <li>Comunica estructura de compentes.</li>
+            <li>Proporciona una especificidad baja.</li>
+          </ol>
+
+          <br> <strong>BEM</strong> significa: <br>
+          <h4>Blocks</h4>
+          <ol>
+            <li>Los bloques son contenedores o el contexto donde están situados los elementos.</li>
+            <li>Suelen ser etiquetas semánticas. ejem: (main, section, header, footer, etc.)</li>
+            <li>Son independientes de otros bloques/elementos.</li>
+          </ol>
+          <br>
+          Código en CSS:
+          <pre>
+            <code class="language-css">
+.block {
+
+}
+            </code>
+          </pre>
+          Ejemplo:
+          <pre>
+            <code class="language-css">
+.header {
+
+}
+            </code>
+          </pre>
+
+          <h4>Elements</h4>
+          <ol>
+            <li>Los elementos son parte de un bloque y no tienen significado semántico fuera de ese bloque.
+            </li>
+            <li>Los elementos son escritos usando el nombre del bloque conectado por dos guiones abajo (underscore) a ellos.</li>
+          </ol>
+          Código en CSS:
+          <pre>
+            <code class="language-css">
+.block__element {
+
+}
+            </code>
+          </pre>
+          Ejemplo:
+          <pre>
+            <code class="language-css">
+.header__navbar {
+
+}
+            </code>
+          </pre>
+
+          <h4>Modifiers</h4>
+          <ol>
+            <li>Los modificadores son un <i>flag</i> en un bloque o un elemento, se usa para cambiar apariencia, comportamiento  o estado.
+            </li>
+            <li>Una gran ventaja: <i>Modularidad</i>.</li>
+            <li>Al usar modificadores se facilita la <i>reutilización de código</i> e incentiva a la <i>programación por componentes</i>.</li>
+          </ol>
+          
+          <div class="modifiers-code-division">
+            
+            <div class="modifiers-left">
+              Codigo en CSS:
+              <pre>
+                <code class="language-css">
+    .block--modifier {
+    
+    }
+                </code>
+              </pre>
+              ó
+              <pre>
+                <code class="language-css">
+    .block__element--modifier {
+    
+    }
+                </code>
+              </pre>
+            Ejemplo práctico: <br>
+            CSS:
+            <pre>
+              <code class="language-css">
+  .hero__copy--languages {
+  
+  }
+              </code>
+            </pre>
+
+            </div>
+            
+            <div class="modifiers-right">
+              Codigo en HTML:
+              <div class="modifiers-left">
+                <pre>
+                  <code class="language-markup">
+<textarea readonly>
+  <tag class ="block block--modifier">
+  </tag>
+</textarea>
+                  </code>
+                </pre>
+                ó
+                <pre>
+                  <code class="language-markup">
+<textarea readonly>
+  <tag class ="block__element block__element--modifier">
+  </tag>
+</textarea>
+                  </code>
+                </pre>
+              Ejemplo práctico: <br>
+              HTML:
+              <pre>
+                <code class="language-markup">
+<textarea readonly>
+  <p class ="hero__copy hero__copy--languages">Contenido
+  </p>
+</textarea>
+                </code>
+              </pre>
+   
+            </div>
+          </div>
+
+
+         </p>
         </div>  
       </li>
 
       <li>
-        <h2><a class="topics-title topics-title-ready" href="javascript:void(0)">
+        <h2><a class="topics-title" href="javascript:void(0)">
         Orden de declaración 
         <p class="coming-soon">Próximamente</p>
       </a></h2>
@@ -908,7 +1042,7 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
       <div class="contact">
         <a href="https://gsvidal.github.io" target="_blank"><img src="https://i.postimg.cc/WbLs5F6b/MIYMC01.gif" alt="Portafolio de Proyectos Web" width="45px" height="45px"></a>
         <a href="https://github.com/gsvidal" target="_blank"><img src="https://i.postimg.cc/ncDt7Hyb/github.png" width="45px" height="45px" alt="Cuenta de GitHub: gsvidal"></a>
-        <a href="https://www.linkedin.com/in/gonzalosebastianvidal/" target="_blank"><img src="https://i.postimg.cc/P5bs3SfS/linkedin.png" width="45px" height="45px" alt="Cuenta de Linkedin"></a>
+        <a href="https://www.linkedin.com/in/gsvidal/" target="_blank"><img src="https://i.postimg.cc/P5bs3SfS/linkedin.png" width="45px" height="45px" alt="Cuenta de Linkedin"></a>
         <a href="https://bio.torre.co/es/gsvidal" target="_blank"><img src="https://i.postimg.cc/VkPPWxwS/torre.png" width="45px" height="45px" alt="Cuenta de Torre"></a>
         <a href="https://www.instagram.com/gsvidal.web/" target="_blank"><img src="https://i.postimg.cc/PqtGB1PT/instagram.png" width="45px" height="45px" alt="Cuenta de Instagram: @gsvidal.web"></a>
       </div>
