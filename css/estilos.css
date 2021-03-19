@@ -451,7 +451,7 @@ html {
    position: absolute;
    top: 550px;
    left: 0;
-   margin-top: 500px;
+   margin-top: 350px;
  }
  footer {
    position: absolute;
@@ -465,13 +465,13 @@ html {
     top: 110px;
   }
 }
-/* 
+
 @media screen and (min-width: 1300px){
   .older-projects-list {
-    margin-top: 500px;
+    margin-top: 27%;
   }
 
-} */
+}
 
 
 
@@ -519,9 +519,9 @@ html {
   .p4 .project_name {
     top: 20px;
   }
-  /* .older-projects-list {
+  .older-projects-list {
     margin-top: 420px;
-  } */
+  }
  
 }
 
