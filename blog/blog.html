@@ -847,9 +847,9 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
       </li>
 
       <li>
-        <h2><a class="topics-title" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title-ready" href="javascript:void(0)">
           Metodología BEM
-        <p class="coming-soon">Próximamente</p>
+        <p class="new">Nuevo</p>
       </a></h2>
         <div class= "topics-info">
           <p>
@@ -919,14 +919,15 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
           <ol>
             <li>Los modificadores son un <i>flag</i> en un bloque o un elemento, se usa para cambiar apariencia, comportamiento  o estado.
             </li>
-            <li>Una gran ventaja: <i>Modularidad</i>.</li>
+            <li>Ofrecen una gran ventaja: <i>Modularidad</i>.</li>
             <li>Al usar modificadores se facilita la <i>reutilización de código</i> e incentiva a la <i>programación por componentes</i>.</li>
+            <br>
           </ol>
           
           <div class="modifiers-code-division">
             
             <div class="modifiers-left">
-              Codigo en CSS:
+              Codigo en CSS(Modificador de un bloque):
               <pre>
                 <code class="language-css">
     .block--modifier {
@@ -934,7 +935,7 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
     }
                 </code>
               </pre>
-              ó
+              ó Modificador de un elemento:
               <pre>
                 <code class="language-css">
     .block__element--modifier {
@@ -955,8 +956,7 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
             </div>
             
             <div class="modifiers-right">
-              Codigo en HTML:
-              <div class="modifiers-left">
+              Codigo en HTML(Modificador de un bloque):
                 <pre>
                   <code class="language-markup">
 <textarea readonly>
@@ -965,7 +965,7 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
 </textarea>
                   </code>
                 </pre>
-                ó
+                ó Modificador de un elemento:
                 <pre>
                   <code class="language-markup">
 <textarea readonly>
@@ -985,9 +985,8 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
                 </code>
               </pre>
    
-            </div>
           </div>
-
+        </div>
 
          </p>
         </div>  

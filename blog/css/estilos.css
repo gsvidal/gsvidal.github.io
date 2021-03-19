@@ -260,10 +260,17 @@ figcaption {
 }
 .modifiers-code-division {
   display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
 }
-[class*="modifiers-"] {
+.modifiers-left, .modifiers-right {
   margin: 5px;
+  width: 90%;
 }
+
+
+
 
 
 .quiz-container {
@@ -287,7 +294,6 @@ footer {
   color: #34009c;
   background-color: #c0b7d4;
 }
-
 footer .contact {
   display: flex;
   justify-content: center;
@@ -296,16 +302,12 @@ footer .contact {
 footer .contact img {
   transition: .5s ease-in-out;
   margin: 15px;
-
-  /* padding: auto; */
 }
 footer .contact img:hover {
   transition: linear .15s;
   transform: scale(1.4)
 }
 footer .contact a {
-  /* width: 100px;
-  height: 100px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -366,6 +368,12 @@ footer p a {
   }
 }
 
+@media screen and (min-width: 800px) {
+
+
+
+}
+
 @media screen and (min-width: 1024px) {
 
   h1 {
@@ -385,7 +393,7 @@ footer p a {
     font-size: 6rem;
   }
   .topics-container {
-    padding: 100px 100px;
+    padding: 100px 50px;
   }
   .topics-container .topics-title, .topics-container .topics-title-ready {
     padding: 7px;
@@ -405,6 +413,17 @@ footer p a {
   .infografias-container {
     flex-direction: row;
   }
+  .modifiers-code-division {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .modifiers-left, .modifiers-right {
+    margin: 5px;
+    width: 47%;
+  }
   .quiz {
     padding: 100px;
   }
@@ -423,6 +442,9 @@ footer p a {
 }
 
 @media screen and (min-width: 1500px) {
+  .topics-container {
+    padding: 100px 80px;
+  }
   #topics-container-JS {
     background-size: 150px;
   }
