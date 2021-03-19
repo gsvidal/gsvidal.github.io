@@ -1,4 +1,3 @@
-
 *{
   box-sizing:border-box;
   margin: 0;
@@ -25,8 +24,7 @@ html {
     background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); background-repeat: no-repeat; 
     background-size: 280px,150px, 150px, 100%;
     background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left;
-     
-  }
+}
 
   .logo-container{
     position: absolute;
@@ -231,12 +229,12 @@ html {
     width: 145px;
   }
 
-  footer {
+  .footer {
     width: 100%;
     padding: 50px 20px;
     text-align: center;
-    color: white;
     font-size: 2rem;
+    font-weight: 300;
   }
   footer .contact {
     display: flex;
@@ -273,7 +271,6 @@ html {
   .older-projects.light-dark-mode {
     color: #450db2;
   }
-
   #switch_button_container.light-dark-mode {
     background-color: #450db2;
   }
@@ -296,7 +293,6 @@ html {
   
 
 @media screen and (min-width: 375px) {
-
 
 }
 @media screen and (min-width: 500px) {
@@ -371,7 +367,7 @@ html {
   align-items: flex-start;
   margin-left: 0;
   margin-right: 0;
-  height: 1800px;
+  height: 1550px;
   position: relative;
  }
 
@@ -420,17 +416,11 @@ html {
  .blog .click {
    width: 30px;
    height: 35px;
-
  }
- /* .descripcion_blog .beforeMiBlog {
-  top: 150px;
- } */
-
  .p2 .project_name {
    position:relative;
    top: 6px;
  }
-
  .p4 .project_name {
   position:relative;
    top: 14px;
@@ -455,7 +445,7 @@ html {
  }
  footer {
    position: absolute;
-   top: 1480px;
+   top: 1230px;
  }
 
 }
@@ -466,17 +456,10 @@ html {
   }
 }
 
-@media screen and (min-width: 1300px){
-  .older-projects-list {
-    margin-top: 27%;
-  }
-
-}
-
-
-
 @media screen and (min-width: 1440px){
-
+  body {
+    height: 1650px;
+   }
   .bienvenida {
     position: relative;
     top: 325px;
@@ -507,11 +490,9 @@ html {
     top: 80px;
   }
   .beforeMiBlog .click {
-    /* position: relative; */
     top: 40px;
     width: 45px;
     height: 50px;
-
   }
   .p2 .project_name {
     top: 10px;
@@ -520,7 +501,11 @@ html {
     top: 20px;
   }
   .older-projects-list {
-    margin-top: 420px;
+    margin-top: 350px;
+  }
+  footer {
+    position: absolute;
+    top: 1330px;
   }
  
 }
@@ -529,7 +514,6 @@ html {
 
   body {
     background-position:  top -200px left, bottom -50px left;
-    height: 1200px;
   }
 
 }

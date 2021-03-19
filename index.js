@@ -14,7 +14,6 @@ var olderProjects = document.querySelectorAll(".older-projects")
 var olderProjectsImages = document.querySelectorAll(".older-projects-images")
 var pName = document.querySelectorAll(".project_name")
 
-
 switch_button.addEventListener("click",light_dark_mode);
 
 function light_dark_mode() {
@@ -40,6 +39,5 @@ function light_dark_mode() {
   for(i=0; i<pName.length; i++){
     pName[i].classList.toggle("light-dark-mode");
   }
-
 
 }
