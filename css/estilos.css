@@ -71,14 +71,15 @@ html {
   .beforeMiBlog .blog {
     position: relative;
     width: 100px;
+    color: rgb(0, 255, 0);
 
   }
   .blog .click {
     display: inline;
-    width: 25px;
-    height: 30px;
+    width: 45px;
+    height: 50px;
     position: absolute;
-    top: 23px;
+    top: 20px;
     left: 25px;
   }
 
@@ -418,13 +419,15 @@ html {
  .bienvenida .descripcion_blog {
   position: absolute;
   top: 250px;
+  width: 100%;
+  /* text-align: center; */
  }
  .beforeMiBlog {
-  top: 80px;
+  bottom: -50px;
 }
  .blog .click {
-   width: 30px;
-   height: 35px;
+   width: 50px;
+   height: 60px;
  }
  .p2 .project_name {
    position:relative;
@@ -467,10 +470,19 @@ html {
  }
 
 }
-
+@media screen and (min-width: 1131px){
+  .beforeMiBlog {
+    top: 79px;
+  }
+}
+@media screen and (min-width: 1195px){
+  .beforeMiBlog {
+    top: 59px;
+  }
+}
 @media screen and (min-width: 1285px){
   .beforeMiBlog {
-    top: 110px;
+    top: 88px;
   }
 }
 
@@ -480,7 +492,7 @@ html {
    }
   .bienvenida {
     position: relative;
-    top: 325px;
+    top: 373px;
     left: 20px;
     margin: 43.2px;
     min-width: 633px;
@@ -488,7 +500,7 @@ html {
   .bienvenida p {
     position: relative;
     top: -190px;
-    font-size: 3rem;
+    font-size: 2.4rem;
     margin-bottom: 155px;
   }
   .bienvenida img {
@@ -502,13 +514,13 @@ html {
   }
   .bienvenida .descripcion_blog {
     position: absolute;
-    top: 190px;
+    top: 90px;
    }
-   .beforeMiBlog {
+   /* .beforeMiBlog {
     top: 80px;
-  }
+  } */
   .beforeMiBlog .click {
-    top: 40px;
+    top: 30px;
     width: 45px;
     height: 50px;
   }
