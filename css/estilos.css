@@ -20,6 +20,7 @@ html {
     margin: 0 auto;
     margin-top: 130px;
     /* width: 100vw; */
+    min-width: 320px;
     max-width: 700px;
     background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); background-repeat: no-repeat; 
     background-size: 280px,150px, 150px, 100%;
@@ -123,6 +124,7 @@ html {
     flex-direction: inherit;
     align-items: inherit;
     justify-items: center;
+
   }
   .contenedor-projects span {
     margin-bottom: 40px;
@@ -156,6 +158,9 @@ html {
   .p1, .p3, .p5 {
     position: relative;
     left: -60px;
+  }
+  .p5 {
+    left: -40px;
   }
   .p2, .p4 {
     position: relative;
@@ -192,6 +197,7 @@ html {
 
   }
   .older-projects-list {
+
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
@@ -206,7 +212,8 @@ html {
     list-style: none;
   }
   .older-projects-list ul li {
-    margin: 15px;
+    padding: 15px;
+
   }
   .older-projects {
     text-decoration: none;
@@ -229,7 +236,7 @@ html {
     width: 145px;
   }
 
-  .footer {
+  footer {
     width: 100%;
     padding: 50px 20px;
     text-align: center;
@@ -293,7 +300,9 @@ html {
   
 
 @media screen and (min-width: 375px) {
-
+  .p5 {
+    left: -40px;
+  }
 }
 @media screen and (min-width: 500px) {
 
@@ -367,7 +376,7 @@ html {
   align-items: flex-start;
   margin-left: 0;
   margin-right: 0;
-  height: 1550px;
+  height: 1480px;
   position: relative;
  }
 
@@ -443,9 +452,18 @@ html {
    left: 0;
    margin-top: 250px;
  }
+ .older-projects-list ul {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 0 5%;
+}
+.older-projects-list ul li {
+  padding: 15px 45px;
+}
  footer {
    position: absolute;
-   top: 1230px;
+   top: 1150px;
  }
 
 }
@@ -458,7 +476,7 @@ html {
 
 @media screen and (min-width: 1440px){
   body {
-    height: 1650px;
+    height: 1550px;
    }
   .bienvenida {
     position: relative;
@@ -505,7 +523,7 @@ html {
   }
   footer {
     position: absolute;
-    top: 1330px;
+    top: 1230px;
   }
  
 }
