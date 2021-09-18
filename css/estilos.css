@@ -1,32 +1,33 @@
-*{
-  box-sizing:border-box;
-  margin: 0;
-  padding: 0;
-}
-html {
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
+  *{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+  }
   body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-width: 320px;
+    max-width: 700px;
+    min-height: 2850px;
+    height: 100vh;
+    margin: 0 auto;
+    margin-top: 130px;
+    transition: .5s linear;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 3rem;
     background-color: #450db2;
     color: white;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 130px;
-    /* width: 100vw; */
-    min-width: 320px;
-    max-width: 700px;
     background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); background-repeat: no-repeat; 
     background-size: 280px,150px, 150px, 100%;
     background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left;
 }
-
   .logo-container{
     position: absolute;
     top: 20px;
@@ -38,19 +39,18 @@ html {
     vertical-align: middle;
   }
   .logo-image-animacion {
+    display: block;
     width: 113%;
     height: 113%;
     position: relative;
     top: -89px;
     left: -4px;
   }
-
   .bienvenida {
     width: 90%;
     text-align: justify;
     text-align-last: center;
     margin-bottom: 70px;
-
   }
   .bienvenida p {
     font-size: 1.9rem;
@@ -62,7 +62,6 @@ html {
   .bienvenida .descripcion_blog {
     line-height: 4rem;
     margin: 0;
-
   }
  .beforeMiBlog {
     display: inline;
@@ -147,8 +146,8 @@ html {
   .project_name {
     font-size: 1.4rem;
     color: white;
+    transition: .5s linear;
     text-align: center;
-
   }
 
   .p4 .project-name {
@@ -169,44 +168,46 @@ html {
   }
  
   .project img {
-
     box-shadow: 0px 10px 5px -5px #b8a5f2;
     border-radius: 15px;
     width: 70%;
     vertical-align: middle;
     margin: 10% 15% 5% 15%;
-
   }
   .project img:hover {
     position: relative;
     top: -5px;
-
+    box-shadow: 0px 15px 15px -2px #b8a5f2;
   }
-
-  .p4 img {
-    box-shadow: -13px 16px 7px -12px #b8a5f2;
+  .p1 img:hover {
+    box-shadow: 0px 20px 10px -10px #b8a5f2;
   }
   .p2 img,.p3 img {
     box-shadow: 0px 5px 5px 1px #b8a5f2;
+  }
+  .p4 img {
+    box-shadow: -13px 16px 7px -12px #b8a5f2;
+  }
+  .p4 img:hover {
+    box-shadow: -13px 20px 15px -5px #b8a5f2;
   }
   .projects-container-grid .p5 {
     width: 265px;
     height: 50px;
   }
-  .p5 img {
+  .p5 img, .p5 img:hover {
     box-shadow: none;
-
   }
   .older-projects-list {
-
     text-align: center;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 20px;
   }
   .older-projects-list span {
-    font-size: 2.2rem;
+    font-size: 2.8rem;
     display: block;
     margin: 30px;
+    margin-bottom: 45px;
     text-shadow: 0 0 5px;
   }
   .older-projects-list ul {
@@ -239,7 +240,7 @@ html {
 
   footer {
     width: 100%;
-    padding: 50px 20px;
+    padding: 0px 20px 50px;
     text-align: center;
     font-size: 2rem;
     font-weight: 300;
@@ -272,6 +273,7 @@ html {
   #body.light-dark-mode {
     background-color: white;
     color: #450db2;
+    transition: background-color .75s linear;
     background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"),url("../images/mobileBG2.svg"); background-repeat: no-repeat; 
     background-size: 280px,150px, 150px, 100%, 240%;
     background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left, top 40vh right -95vw;
@@ -291,6 +293,7 @@ html {
   }
   .project_name.light-dark-mode {
     color: #450db2;
+    transition: .75s linear;
   }
   .logo-image-animacion.light-dark-mode {
     display: none;
@@ -299,16 +302,20 @@ html {
     filter: brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(6209%) hue-rotate(261deg) brightness(67%) contrast(114%);
   }
   
-
+@media screen and (max-width: 310px) {
+  .logo-image-animacion {
+    display: none;
+  }
+}
 @media screen and (min-width: 375px) {
   .p5 {
     left: -40px;
   }
 }
 @media screen and (min-width: 500px) {
-
   body {
     background-size: 280px,30%, 30%, 100%;
+     transition: none;
   }
   .project_name {
     font-size: 1.6rem;
@@ -316,16 +323,27 @@ html {
   
 }
 
-@media screen and (min-width: 800px) {
-
+@media screen and (min-width: 740px) {
+  .logo-image-animacion {
+    display:none
+  }
   body {
+    transition: .5s linear;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     max-width: 90%;
+    height: calc(100vh - 130px);
+    /* min-height: 1550px; */
     background-image: none;
     background-image: url("../images/desktopBG1.svg"), url("../images/desktopBG2.svg");
-
     background-size: 100%;
     background-position: top left, bottom left;
-    
+    transition: .75s ease;
   }
   #body.light-dark-mode {
     background-color: white;
@@ -334,10 +352,9 @@ html {
     background-image: url("../images/desktopBG1.svg"), url("../images/desktopBG2.svg");
     background-size: 100%;
     background-position: top left, bottom left;
+    transition: .75s ease-in-out;
   }
-  .logo-image-animacion {
-    display:none
-  }
+
   .bienvenida {
     width: 95%;
   }
@@ -370,14 +387,13 @@ html {
 }
 
 @media screen and (min-width: 1024px){
-
  body {
   min-width: 100%;
+  min-height: 1500px;
   flex-wrap: nowrap;
   align-items: flex-start;
   margin-left: 0;
   margin-right: 0;
-  height: 1480px;
   position: relative;
  }
 
@@ -393,11 +409,8 @@ html {
   top: 37%;
   left: calc(50% - 42.5px);
  }
-
  .bienvenida {
-   /* display: block; */
    height: 250px;
-   /* width: 470px; */
    position: relative;
    top: 250px;
    margin: 3%;
@@ -405,9 +418,7 @@ html {
    margin-bottom: 0;
    margin-left: 5%;
    max-width: 613px;
-
  }
- 
  .bienvenida img {
   display: block;
   position: absolute;
@@ -420,7 +431,6 @@ html {
   position: absolute;
   top: 250px;
   width: 100%;
-  /* text-align: center; */
  }
  .beforeMiBlog {
   bottom: -50px;
@@ -434,7 +444,7 @@ html {
    top: 6px;
  }
  .p4 .project_name {
-  position:relative;
+   position:relative;
    top: 14px;
  }
  .p5 {
@@ -447,23 +457,42 @@ html {
   top: -80px;
   left: 5%;
  }
-
  .older-projects-list {
-   width: 100%;
-   position: absolute;
-   top: 550px;
-   left: 0;
-   margin-top: 250px;
- }
- .older-projects-list ul {
-  display: flex;
-  justify-content: center;
-  width: 90%;
-  margin: 0 5%;
+  width: 100%;
+  position: absolute;
+  top: 550px;
+  left: 0;
+  margin-top: 250px;
+}
+.older-projects-list ul {
+ display: flex;
+ justify-content: space-between;
+ width: 90%;
+ margin: 0 5%;
 }
 .older-projects-list ul li {
-  padding: 15px 45px;
+ padding: 0px;
+ display: inherit;
+ align-items: center;
 }
+.older-projects {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 210px;
+   height: 90px;
+}
+/* .older-projects.huddle {
+  display: inline-block;
+  width: 280px;
+} */
+.older-projects img {
+  margin: 20px;
+}
+.older-projects.text {
+  width: 350px;
+} 
+
  footer {
    position: absolute;
    top: 1150px;
@@ -487,9 +516,7 @@ html {
 }
 
 @media screen and (min-width: 1440px){
-  body {
-    height: 1550px;
-   }
+
   .bienvenida {
     position: relative;
     top: 373px;
@@ -541,7 +568,6 @@ html {
 }
 
 @media screen and (min-width: 1921px){
-
   body {
     background-position:  top -200px left, bottom -50px left;
   }
