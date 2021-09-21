@@ -1,13 +1,9 @@
-
 const bodyBGColor = document.getElementById("body");
-
 const switch_button_container = document.getElementById("switch_button_container");
-
 const switch_button = document.getElementById("switch_button");
-
 const logo = document.querySelector(".logo-image");
-
 const logoAnim = document.querySelector(".logo-image-animacion");
+const linkPortfolioReact = document.querySelector(".bienvenida__portfolio-react");
 
 var i;
 var olderProjects = document.querySelectorAll(".older-projects")
@@ -27,6 +23,7 @@ function light_dark_mode() {
 
   logoAnim.classList.toggle("light-dark-mode");
 
+  linkPortfolioReact.classList.toggle("light-dark-mode");
 
   for(i=0; i<olderProjects.length; i++){
     olderProjects[i].classList.toggle("light-dark-mode");

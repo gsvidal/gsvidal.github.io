@@ -10,15 +10,14 @@
   body {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     min-width: 320px;
     max-width: 700px;
-    min-height: 2850px;
+    min-height: 2400px;
     height: 100vh;
     margin: 0 auto;
     margin-top: 130px;
-    transition: .5s linear;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 3rem;
@@ -27,6 +26,7 @@
     background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); background-repeat: no-repeat; 
     background-size: 280px,150px, 150px, 100%;
     background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left;
+    transition: none;
 }
   .logo-container{
     position: absolute;
@@ -52,46 +52,42 @@
     text-align-last: center;
     margin-bottom: 70px;
   }
-  .bienvenida p {
+  .bienvenida__intro {
     font-size: 1.9rem;
     margin-bottom: 30px;
   }
-  .bienvenida strong, .blog {
+
+  .bienvenida strong {
     color: rgb(255, 204, 1);
   }
-  .bienvenida .descripcion_blog {
-    line-height: 4rem;
-    margin: 0;
+  .bienvenida__portfolio-react {
+    color: rgb(255, 157, 175);
+    transition: color .75s ease;
+    text-underline-offset: 3px;
   }
- .beforeMiBlog {
-    display: inline;
-    position: relative;
- }
-  .beforeMiBlog .blog {
-    position: relative;
+  .bienvenida__portfolio-react.light-dark-mode {
+    color: rgb(252, 95, 124);
+  }
+  .bienvenida .descripcion_blog {
+    margin-top: 60px;
+    font-size: 2rem;
+
+  }
+  .blog {
+    margin-top: 25px;
+    text-decoration: none;
+    font-size: 2rem;
+  }
+  .blog .blog__link {
     width: 100px;
     color: rgb(0, 255, 0);
-
-  }
-  .blog .click {
-    display: inline;
-    width: 45px;
-    height: 50px;
-    position: absolute;
-    top: 20px;
-    left: 25px;
-  }
-
-  .blog {
     text-decoration: none;
-    /* font-size: 2.3rem; */
   }
   .bienvenida img {
     position: relative;
     display: none;
   }
   #switch_button_container {
-    
     width: 80px;
     height: 40px;
     background-color: white;
@@ -129,7 +125,6 @@
   .contenedor-projects span {
     margin-bottom: 40px;
     text-shadow: 0 0 5px;
-
   }
   .project {
     width: 65%;
@@ -137,11 +132,9 @@
     margin-bottom: 10px;
     padding-bottom: auto;
   }
-
   .project a {
     height: 0;
     text-decoration: none;
-
   }
   .project_name {
     font-size: 1.4rem;
@@ -149,12 +142,10 @@
     transition: .5s linear;
     text-align: center;
   }
-
   .p4 .project-name {
     position: relative;
     left: -2px;
   }
-
   .p1, .p3, .p5 {
     position: relative;
     left: -60px;
@@ -166,13 +157,15 @@
     position: relative;
     left: 50px;
   }
- 
   .project img {
+    position: relative;
+    top: 0px;
     box-shadow: 0px 10px 5px -5px #b8a5f2;
     border-radius: 15px;
     width: 70%;
     vertical-align: middle;
     margin: 10% 15% 5% 15%;
+    transition:  top .35s linear, box-shadow .35s linear;
   }
   .project img:hover {
     position: relative;
@@ -215,7 +208,6 @@
   }
   .older-projects-list ul li {
     padding: 15px;
-
   }
   .older-projects {
     text-decoration: none;
@@ -226,18 +218,15 @@
   .older-projects img {
     vertical-align: middle;
   }
-  
   .older-projects:hover {
     font-size: 2.2rem;
   }
-
   .older-projects img:hover {
     width: 100px;
   }
   .older-projects.huddle img:hover {
     width: 145px;
   }
-
   footer {
     width: 100%;
     padding: 0px 20px 50px;
@@ -251,7 +240,7 @@
     margin-top: 35px;
   }
   footer .contact img {
-    transition: .5s ease-in-out;
+    transition: .25s ease-in-out;
     margin: 15px;
   }
   footer .contact img:hover {
@@ -269,7 +258,6 @@
     margin: 8px;
     color:rgb(255, 204, 1)
   }
-
   #body.light-dark-mode {
     background-color: white;
     color: #450db2;
@@ -315,7 +303,6 @@
 @media screen and (min-width: 500px) {
   body {
     background-size: 280px,30%, 30%, 100%;
-     transition: none;
   }
   .project_name {
     font-size: 1.6rem;
@@ -328,7 +315,8 @@
     display:none
   }
   body {
-    transition: .5s linear;
+    transition: background-color .5s linear;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -390,6 +378,7 @@
  body {
   min-width: 100%;
   min-height: 1500px;
+  margin-top: 130px;
   flex-wrap: nowrap;
   align-items: flex-start;
   margin-left: 0;
@@ -429,15 +418,11 @@
 }
  .bienvenida .descripcion_blog {
   position: absolute;
-  top: 250px;
+  top: 200px;
   width: 100%;
  }
- .beforeMiBlog {
-  bottom: -50px;
-}
- .blog .click {
-   width: 50px;
-   height: 60px;
+ .blog {
+    margin-top: 14vw;
  }
  .p2 .project_name {
    position:relative;
@@ -482,36 +467,29 @@
    width: 210px;
    height: 90px;
 }
-/* .older-projects.huddle {
-  display: inline-block;
-  width: 280px;
-} */
 .older-projects img {
   margin: 20px;
 }
 .older-projects.text {
   width: 350px;
 } 
-
  footer {
    position: absolute;
    top: 1150px;
  }
 
 }
-@media screen and (min-width: 1131px){
-  .beforeMiBlog {
-    top: 79px;
-  }
-}
-@media screen and (min-width: 1195px){
-  .beforeMiBlog {
-    top: 59px;
-  }
-}
+
 @media screen and (min-width: 1285px){
-  .beforeMiBlog {
-    top: 88px;
+  .blog {
+    margin-top: 10vw;
+ }
+  .bienvenida .descripcion_blog {
+    top: 150px;
+   }
+  .older-projects-list {
+    width: 1500px;
+    margin-left: calc( 50vw - 750px);
   }
 }
 
@@ -536,21 +514,15 @@
     width: 150px;
     height: 150px;
   }
-  .descripcion_blog {
-    line-height: 4.6rem;
-  }
-  .bienvenida .descripcion_blog {
-    position: absolute;
-    top: 90px;
+  #switch_button_container {
+    left: calc( 50vw - 665px );
    }
-   /* .beforeMiBlog {
-    top: 80px;
-  } */
-  .beforeMiBlog .click {
-    top: 30px;
-    width: 45px;
-    height: 50px;
-  }
+   .blog {
+    margin-top: 144px;
+   }
+  .bienvenida .descripcion_blog {
+    top: 50px;
+   }
   .p2 .project_name {
     top: 10px;
   }
@@ -565,11 +537,4 @@
     top: 1230px;
   }
  
-}
-
-@media screen and (min-width: 1921px){
-  body {
-    background-position:  top -200px left, bottom -50px left;
-  }
-
 }
