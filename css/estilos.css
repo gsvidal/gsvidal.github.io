@@ -40,7 +40,7 @@ body {
 .logo-image-animacion {
   display: block;
   position: relative;
-  top: -89px;
+  top: -96px;
   left: -4px;
   width: 113%;
   height: 113%;
@@ -142,7 +142,7 @@ body {
 }
 .p1, .p3, .p5 {
   position: relative;
-  left: -60px;
+  left: -55px;
 }
 .p5 {
   left: -40px;
