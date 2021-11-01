@@ -9,7 +9,7 @@ const olderProjects = document.querySelectorAll(".older-projects")
 const olderProjectsImages = document.querySelectorAll(".older-projects-images")
 const pName = document.querySelectorAll(".project_name")
 
-switchButton.addEventListener("click",lightDarkMode);
+switchButtonContainer.addEventListener("click",lightDarkMode);
 
 function lightDarkMode() {
   bodyBGColor.classList.toggle("light-dark-mode"); 
@@ -31,3 +31,24 @@ function lightDarkMode() {
     pName[i].classList.toggle("light-dark-mode");
   }
 }
+
+//Web technologies icons animation
+const icons = document.querySelectorAll(".toolbox__icon");
+
+let lastIndex;
+function fadeRandomIcon() {
+  let randomIconIndex = Math.floor(icons.length*Math.random());
+  if(lastIndex === randomIconIndex) {
+    randomIconIndex++;
+  }
+    icons[lastIndex]?.classList.remove("toolbox__fade");
+    icons[randomIconIndex].classList.add("toolbox__fade");
+    lastIndex = randomIconIndex;
+}
+
+function startAnimation() {
+  setInterval(fadeRandomIcon,2000)
+}
+
+setTimeout(startAnimation, 1000)
+
