@@ -20,7 +20,7 @@ body {
   font-size: 3rem;
   background-color: #450db2;
   color: white;
-  background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); background-repeat: no-repeat; 
+  background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bg.footer.svg"); background-repeat: no-repeat; 
   background-size: 280px,150px, 150px, 100%;
   background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left;
   transition: none;
@@ -43,28 +43,28 @@ body {
   width: 113%;
   height: 113%;
 }
-.bienvenida {
+.welcome {
   width: 90%;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
   text-align: justify;
   text-align-last: center;
 }
-.bienvenida__intro {
+.welcome__intro {
   margin-bottom: 30px;
   font-size: 1.9rem;
 }
-.bienvenida strong {
+.welcome strong {
   color: rgb(255, 204, 1);
 }
-.bienvenida__portfolio-react {
+.welcome__portfolio-react {
   color: rgb(255, 157, 175);
   transition: color .75s ease;
   text-underline-offset: 3px;
 }
-.bienvenida__portfolio-react.light-dark-mode {
+.welcome__portfolio-react.light-dark-mode {
   color: rgb(252, 95, 124);
 }
-.bienvenida .descripcion_blog {
+.welcome .descripcion_blog {
   margin-top: 60px;
   font-size: 2rem;
 }
@@ -78,9 +78,9 @@ body {
   color: rgb(0, 255, 0);
   text-decoration: none;
 }
-.bienvenida img {
+.welcome img {
   display: none;
-  position: relative;
+  /* position: relative; */
 }
 #switch_button_container {
   display: flex;
@@ -88,7 +88,7 @@ body {
   align-items: center;
   width: 80px;
   height: 40px;
-  margin-bottom: 50px;
+  margin: 0 auto 50px;
   border-radius: 20px;
   background-color: white;
   cursor: pointer;
@@ -206,25 +206,25 @@ h3, h4 {
 .p5 img, .p5 img:hover {
   box-shadow: none;
 }
-.older-projects-list {
+.older-projects {
   width: 100%;
   /* margin-top: 100px; */
   margin-bottom: 20px;
   text-align: center;
 }
-.older-projects-list p {
+.older-projects p {
   margin: 30px;
   margin-bottom: 45px;
   font-size: 2.8rem;
   text-shadow: 0 0 5px;
 }
-.older-projects-list ul {
+.older-projects ul {
   list-style: none;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.older-projects-list ul li {
+.older-projects ul li {
   width: 300px;
   padding: 15px;
   display: inherit;
@@ -249,32 +249,32 @@ h3, h4 {
 .older-projects.huddle img:hover {
   width: 145px;
 }
-footer {
+.footer {
   width: 100%;
   padding: 50px 20px 50px;
   font-size: 2rem;
   font-weight: 300;
   text-align: center;
 }
-footer .contact {
+.footer .contact {
   display: flex;
   justify-content: center;
   margin-top: 35px;
 }
-footer .contact img {
+.footer .contact img {
   margin: 15px;
   transition: .25s ease-in-out;
 }
-footer .contact img:hover {
+.footer .contact img:hover {
   transition: linear .15s;
   transform: scale(1.4)
 }
-footer .contact a {
+.footer .contact a {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-footer p a {
+.footer p a {
   display: inline-block;
   margin: 8px;
   text-decoration: none;
@@ -284,7 +284,7 @@ footer p a {
 /* Ligth-dark-mode styles */
 #body.light-dark-mode {
   color: #450db2;
-  background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"),url("../images/mobileBG2.svg"); background-repeat: no-repeat; 
+  background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bg.footer.svg"),url("../images/mobileBG2.svg"); background-repeat: no-repeat; 
   background-size: 280px,150px, 150px, 100%, 240%;
   background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left, top 40vh right -95vw;
   background-color: white;
@@ -363,10 +363,11 @@ footer p a {
     background-position: top left, bottom left;
     transition: .75s ease-in-out;
   }
-  .bienvenida {
-    width: 95%;
+  .welcome {
+    /* width: 95%; */
+    /* margin: 0; */
   }
-  .bienvenida p {
+  .welcome p {
     margin-bottom: 80px;
   }
   .toolbox__icons {
@@ -399,7 +400,7 @@ footer p a {
    position: relative;
    left: 180px; 
   } */
-  footer {
+  .footer {
     padding-bottom: 80px;
   }
 }
@@ -415,23 +416,37 @@ footer p a {
     width: 90%;
     /* min-height: 100%; */
   }
-  /* .header, .bienvenida {
+  .header {
+    position: absolute;
+    top: 35px;
+    left: 300px;
+  }
+  .body__top {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .body__bottom {
+
+  }
+  /* .header, .welcome {
     position: static;
   } */
-  .bienvenida {
-    width: 80%;
+  .welcome {
+    /* width: 50%; */
   }
-  .bienvenida img {
+  .welcome img {
     display: block;
-    position: initial;
-    margin: 0 auto;
+    /* position: initial; */
+    /* margin: 0 auto; */
     /* position: absolute;
     top: -220px;
     left: calc(50% - 75px); */
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 20px;
   }
-  .bienvenida .descripcion_blog {
+  .welcome .descripcion_blog {
     width: 100%;
   }
   .recent-projects {
@@ -446,26 +461,23 @@ footer p a {
     left: calc(50% - 42.5px);
   }
   #switch_button_container {
-    /* position: absolute; */
-/*       
-      top: -80px;
-      left: 5%; */
-      margin: 0;
+    margin-top: 60px;
+      /* margin: 0; */
   }
-  .older-projects-list {
+  .older-projects {
     /* position: absolute; */
     /* top: 550px; */
     /* left: 0; */
     /* width: 100%; */
     /* margin-top: 250px; */
   }
-  .older-projects-list ul {
+  .older-projects ul {
     display: flex;
     justify-content: space-between;
     width: 90%;
     margin: 0 5%;
   }
-  .older-projects-list ul li {
+  .older-projects ul li {
     padding: 0px;
     display: inherit;
     align-items: center;
@@ -480,10 +492,10 @@ footer p a {
   .older-projects img {
     margin: 20px;
   }
-  .older-projects.text {
+  .older-projects .text {
     width: 350px;
   } 
-  footer {
+  .footer {
     /* position: absolute;
     top: 1150px; */
     padding: 0px 0px 50px;
@@ -491,24 +503,24 @@ footer p a {
 }
 /* 
 @media screen and (min-width: 1285px){
-  .bienvenida .descripcion_blog {
+  .welcome .descripcion_blog {
     top: 150px;
    }
-  .older-projects-list {
+  .older-projects {
     width: 1500px;
     margin-left: calc( 50vw - 750px);
   }
 }
 
 @media screen and (min-width: 1440px){
-  .bienvenida {
+  .welcome {
     min-width: 633px;
     margin: 43.2px;
   }
-  .bienvenida p, .descripcion_blog {
+  .welcome p, .descripcion_blog {
     font-size: 2.4rem;
   }
-  .bienvenida img {
+  .welcome img {
     position: absolute;
   }
   #switch_button_container {
@@ -520,10 +532,10 @@ footer p a {
   .p4 .project_name {
     top: 20px;
   }
-  .older-projects-list {
+  .older-projects {
     margin-top: 350px;
   }
-  footer {
+  .footer {
     position: absolute;
     top: 1230px;
   }
