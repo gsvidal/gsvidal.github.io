@@ -15,24 +15,25 @@
 <body id="body">
 
     <header class="header">
-      <nav id="switch_button_container">
-        <div id="switch_button"></div>
+      <nav class="switch_button_container">
+        <div class="switch_button"></div>
       </nav>
+      <picture class="logo__image">
+        <source media="(min-width: 800px)" srcset="./images/mobile_logo_dark_mode.svg" width="96" height="96">
+        <img class="logo__image-base" src="https://i.postimg.cc/R0ZtsZxq/Z7x9Riw.gif" alt="Logo de una G animada" width="96" height="96">
+      </picture>
     </header>
   <section class="body__top">
     <section class="welcome">
-      <img src="./images/mobile_logo_dark_mode.svg" alt="Logo G para desktop">
       <p class="welcome__intro">
-        Hola soy <strong>Gonzalo Vidal</strong> , gracias por visitarme!, te comento que  este portfolio (y los proyectos en él) fueron realizados durante mis primeros 4 meses como desarrollador web. Si quieres ver aplicaciones web, te invito a ver mis últimos proyectos profesionales realizados junto al equipo de BitHug: <a class="welcome__portfolio-react" href="https://bit-hug.com">Portfolio hecho en React Js</a>
+        Hi there I'm <strong>Gonzalo Vidal</strong> , thanks for passing by!, feel free to check the web technologies I've been working with and the individual projects I've made, you are also invited to have a look of  my team projects that I made with others developers at: <br> <a class="welcome__portfolio-react" href="https://bit-hug.com" target="_blank" > BitHug </a>
       </p>  
-      <div class = "descripcion_blog">
-        Conoces los <i>Fundamentals</i> de <b style="color:#fff6ae;">JavaScript</b>, <b style="color:#ffbda0;">HTML</b> y <b
-          style="color:#aac3ff;">CSS</b> ? <br>
-      </div>
+      <img class="welcome__logobithug" src="./images/logobithug.png" alt="Logo de BitHug" width="100" height="100">
       <p class="blog">
-        También te dejo 
-        <a  class = "blog__link" href="./blog/blog.html" target="_blank">Mi blog personal
+        You can also look at
+        <a  class = "blog__link" href="./blog/blog.html" target="_blank">my personal blog
         </a> 
+        where I explain HTML, CSS and JavaScript fundamentals.
       </p>  
     </section>
   
@@ -42,69 +43,75 @@
       </h3>
       <div class="toolbox__icons">
         <img class="toolbox__icon toolbox__icon--html" src="https://github.com/devicons/devicon/raw/master/icons/html5/html5-original.svg" alt="HTML logo image" width="40" height="40" title="HTML">
-        <img class="toolbox__icon toolbox__icon--css" src="https://github.com/devicons/devicon/raw/master/icons/css/css-original.svg" alt="CSS logo image" width="40" height="40" title="CSS">
-        <img class="toolbox__icon toolbox__icon--js" src="https://github.com/devicons/devicon/raw/master/icons/js/js-original.svg" alt="JavaScript logo image" width="40" height="40" title="JavaScript">
+        <img class="toolbox__icon toolbox__icon--css" src="https://github.com/devicons/devicon/raw/master/icons/css3/css3-original.svg" alt="CSS logo image" width="40" height="40" title="CSS">
+        <img class="toolbox__icon toolbox__icon--js" src="https://github.com/devicons/devicon/raw/master/icons/javascript/javascript-original.svg" alt="JavaScript logo image" width="40" height="40" title="JavaScript">
         <img class="toolbox__icon toolbox__icon--react" src="https://github.com/devicons/devicon/raw/master/icons/react/react-original.svg" alt="React JS logo image" width="40" height="40" title="React JS">
         <img class="toolbox__icon toolbox__icon--sass" src="https://github.com/devicons/devicon/raw/master/icons/sass/sass-original.svg" alt="Sass logo image" width="40" height="40" title="Sass">
         <img class="toolbox__icon toolbox__icon--git" src="https://github.com/devicons/devicon/raw/master/icons/git/git-original.svg" alt="Git logo image" width="40" height="40" title="Git">
         <img class="toolbox__icon toolbox__icon--github" src="https://github.com/devicons/devicon/raw/master/icons/github/github-original.svg" alt="Git Hub logo image" width="40" height="40" title="Git Hub">
         <img class="toolbox__icon toolbox__icon--nextjs" src="https://github.com/devicons/devicon/raw/master/icons/nextjs/nextjs-original.svg" alt="Next JS logo image" width="40" height="40" title="Next JS">
         <img class="toolbox__icon toolbox__icon--figma" src="https://github.com/devicons/devicon/raw/master/icons/figma/figma-original.svg" alt="Figma logo image" width="40" height="40" title="Figma">
-        <img class="toolbox__icon toolbox__icon--npm" src="https://github.com/devicons/devicon/raw/master/icons/npm/npm-original.svg" alt="Node Package Manager (npm) logo image" width="40" height="40" title="Node Package Manager">
+        <img class="toolbox__icon toolbox__icon--npm" src="https://github.com/devicons/devicon/raw/master/icons/npm/npm-original-wordmark.svg" alt="Node Package Manager (npm) logo image" width="40" height="40" title="Node Package Manager">
+        <img class="toolbox__icon toolbox__icon--materializecss" src="./images/materializecss.svg" alt="Materialize CSS logo image" width="50" height="50" title="Materialize CSS">
+        <img class="toolbox__icon toolbox__icon--scrum" src="./images/scrum.svg" alt="Scrum logo image" width="60" height="60" title="Scrum">
       </div>
     </section>
   </section>
 
   <section class="body__bottom">
     <section class="recent-projects">
-      <figure class="logo-container">
-        <img class="logo-image" src="./images/mobile_logo_dark_mode.svg" alt="logo en forma de G de Gonzalo Vidal" width="96" height="96">
-        <img class="logo-image-animacion" src="https://i.postimg.cc/R0ZtsZxq/Z7x9Riw.gif" alt="logo animado en forma de G de Gonzalo Vidal" width="96" height="96">
-      </figure>
       <h3 class="title-projects">
         RECENT PROJECTS
       </h3>
       <section class="projects-container-grid">
-        <div class="project p1"><a  target="_blank" href="https://gsvidal.github.io/LandingLedexTech/" rel="noreferrer">
-          <img src="https://i.postimg.cc/CLk9wxT5/ledextech.png" alt="Imagen de proyecto LedexTech"><p class= "project_name">Web Design, Apps y Software</p>
+        <div class="project p-base"><a  target="_blank" href="https://gsvidal.github.io/LandingLedexTech/" rel="noreferrer">
+          <img src="https://i.postimg.cc/CLk9wxT5/ledextech.png" alt="Imagen de proyecto LedexTech"><p class="project_name">Web Design, Apps y Software</p>
         </a></div>
-        <div class="project p2"><a  target="_blank" href="https://gsvidal.github.io/TuPela-Landing/" rel="noreferrer">
+        <div class="project"><a  target="_blank" href="https://gsvidal.github.io/TuPela-Landing/" rel="noreferrer">
           <img src="https://i.postimg.cc/DwhH03ng/tupela2.png" alt="Imagen de proyecto TuPela"><p class= "project_name">Streaming de películas y series</p>
         </a></div>
-        
-        <div class="project p3"><a  target="_blank" href="https://gsvidal.github.io/Coding-Bootcamp-Testimonials-Slider/" rel="noreferrer">
+        <div class="project"><a  target="_blank" href="https://gsvidal.github.io/Coding-Bootcamp-Testimonials-Slider/" rel="noreferrer">
           <img src="https://i.postimg.cc/y6wwqSG2/bootcamp.jpg" alt="Imagen de proyecto Coding Bootcamp"><p class= "project_name">Coding Bootcamp</p>
         </a></div>
         
-        <div class="project p4"><a  target="_blank" href="https://gsvidal.github.io/componente-de-vista-previa-de-articulo/" rel="noreferrer">
+        <div class="project p-base"><a  target="_blank" href="https://gsvidal.github.io/componente-de-vista-previa-de-articulo/" rel="noreferrer">
           <img src="https://i.postimg.cc/3ryPbZtg/articulo2.png" alt="Imagen de proyecto Componente de vista previa de Art&íacute;culo"><p class= "project_name">Social Media Share Button</p>
         </a></div>
   
-        <div class="project p5"><a  target="_blank" href="https://gsvidal.github.io/Batatabit/" rel="noreferrer"> 
+        <div class="project p-none"><a  target="_blank" href="https://gsvidal.github.io/Batatabit/" rel="noreferrer"> 
           <img src="./images/projects-logos/batatabit.svg" alt="La próxima revolución en el intercambio de criptomonedas"><p class= "project_name">Intercambio de Criptomonedas</p>
         </a></div>
-        <div class="project p5"><a  target="_blank" href="https://gsvidal.github.io/Batatabit/" rel="noreferrer"> 
-          <img src="./images/projects-logos/batatabit.svg" alt="La próxima revolución en el intercambio de criptomonedas"><p class= "project_name">Intercambio de Criptomonedas</p>
-        </a></div>
+        
     </section>
     </section>
      
-    <section class="older-projects">
-      <h4>
+    <section class="older-projects-container">
+      <h3 class="title-project">
         OLDER PROJECTS
-      </h4>
+      </h3>
       <ul>
         <li>
-          <a  target="_blank" class="older-projects" href="https://gsvidal.github.io/Room-HomePage/" rel="noreferrer"><img class="older-projects-images" src="./images/older-projects-logos/room.svg" width="85px" alt="Logo de Room"></a>
+          <a  target="_blank" class="older-projects" href="https://gsvidal.github.io/Room-HomePage/" rel="noreferrer">
+            <img class="older-projects-images" src="./images/older-projects-logos/room.svg" width="85px" alt="Logo de Room">
+          </a>
         </li>
         <li>
-          <a  target="_blank" class="older-projects huddle" href="https://gsvidal.github.io/Huddle-Landing/" rel="noreferrer"><img class="older-projects-images" src="./images/older-projects-logos/huddle.svg" width="130px" alt="Logo de Huddle" ></a>
+          <a  target="_blank" class="older-projects huddle" href="https://gsvidal.github.io/Huddle-Landing/" rel="noreferrer">
+            <img class="older-projects-images" src="./images/older-projects-logos/huddle.svg" width="130px" alt="Logo de Huddle" >
+          </a>
         </li>
         <li>
-          <a  target="_blank" class="older-projects" href="https://gsvidal.github.io/Fylo-data-storage-component/" rel="noreferrer"><img class="older-projects-images" src="./images/older-projects-logos/fylo.svg" width="85px" alt="Logo de Fylo"></a>
+          <a  target="_blank" class="older-projects" href="https://gsvidal.github.io/Fylo-data-storage-component/" rel="noreferrer">
+            <img class="older-projects-images" src="./images/older-projects-logos/fylo.svg" width="85px" alt="Logo de Fylo">
+          </a>
         </li>
         <li>
-          <a  target="_blank" class="older-projects text" href="https://gsvidal.github.io/Four-card-feature-section/" rel="noreferrer">Four Card Feature Section</a>
+          <a  target="_blank" class="older-projects text" href="https://gsvidal.github.io/Four-card-feature-section/" rel="noreferrer">
+             <p>Four Card Feature Section</p>
+          </a>
+        </li>
+        
+          </a>
         </li>
       </ul>
     </section>
@@ -123,6 +130,6 @@
     </p>
   </footer>
 
-  <script src="index.js"></script>
+  <script src="./index.js"></script>
 </body>
 </html>

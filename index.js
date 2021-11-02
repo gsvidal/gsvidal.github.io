@@ -1,13 +1,13 @@
 const bodyBGColor = document.getElementById("body");
-const switchButtonContainer = document.getElementById("switch_button_container");
-const switchButton = document.getElementById("switch_button");
-const logo = document.querySelector(".logo-image");
-const logoAnim = document.querySelector(".logo-image-animacion");
-const linkPortfolioReact = document.querySelector(".bienvenida__portfolio-react");
+const switchButtonContainer = document.querySelector(".switch_button_container");
+const switchButton = document.querySelector(".switch_button");
+// const logo = document.querySelector(".logo__image-base");
+// const logoAnim = document.querySelector(".logo-image-animacion");
+const linkPortfolioReact = document.querySelector(".welcome__portfolio-react");
 
 const olderProjects = document.querySelectorAll(".older-projects")
 const olderProjectsImages = document.querySelectorAll(".older-projects-images")
-const pName = document.querySelectorAll(".project_name")
+const pName = document.querySelectorAll(".project_name");
 
 switchButtonContainer.addEventListener("click",lightDarkMode);
 
@@ -15,8 +15,9 @@ function lightDarkMode() {
   bodyBGColor.classList.toggle("light-dark-mode"); 
   switchButton.classList.toggle("light-dark-mode");
   switchButtonContainer.classList.toggle("light-dark-mode");
-  logo.classList.toggle("light-dark-mode");
-  logoAnim.classList.toggle("light-dark-mode");
+  // logo.classList.toggle("light-dark-mode");
+  // logo.setAttribute("src", "../images/logo.png");
+  // logoAnim.classList.toggle("light-dark-mode");
   linkPortfolioReact.classList.toggle("light-dark-mode");
 
   for(let i=0; i<olderProjects.length; i++){
@@ -39,7 +40,7 @@ let lastIndex;
 function fadeRandomIcon() {
   let randomIconIndex = Math.floor(icons.length*Math.random());
   if(lastIndex === randomIconIndex) {
-    randomIconIndex++;
+    randomIconIndex !== icons.length - 1 ? randomIconIndex++ : randomIconIndex--;
   }
     icons[lastIndex]?.classList.remove("toolbox__fade");
     icons[randomIconIndex].classList.add("toolbox__fade");
