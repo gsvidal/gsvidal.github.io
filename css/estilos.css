@@ -30,7 +30,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 25px;
 }
 .switch_button_container {
   display: flex;
@@ -53,6 +53,12 @@ body {
   background-color: #450db2;
   transition: .25s;
 }
+.logo__bg {
+  display: inline-block;
+  width: 110px;
+  height: 110px;
+  background: url("https://i.postimg.cc/R0ZtsZxq/Z7x9Riw.gif") center/cover no-repeat;
+}
 .logo__image {
   display: flex;
   align-items: center;
@@ -72,7 +78,7 @@ body {
 }
 .welcome__portfolio-react {
   color: #98d3ff;
-  transition: color .75s ease;
+  transition: color .75s linear;
   text-underline-offset: 3px;
   font-size: 2.5rem;
 }
@@ -154,26 +160,18 @@ h3 {
   padding-bottom: 70px;
 }
 .projects-container-grid {
-  /* display: inherit;
-  flex-direction: inherit;
-  align-items: inherit;
-  justify-items: center; */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
-  /* width: 100%; */
-  /* max-width: 1000px; */
 }
 .project {
   display: flex;
   flex-direction: column;
-  /* align-items: center; */
   justify-content: center;
   width: 300px;
   height: 250px;
-  /* margin: 20px; */
 }
 .project a {
   display: flex;
@@ -187,7 +185,7 @@ h3 {
   margin: 15px 0;
   font-size: 1.4rem;
   color: white;
-  transition: .5s linear;
+  transition: .75s linear;
 }
 .project img {
   width: 220px;
@@ -279,9 +277,11 @@ h3 {
   background-color: white;
   transition: background-color .75s linear;
 }
+.logo__bg.light-dark-mode {
+  background-image: url("../images/mobile_logo_light_mode.svg");
+}
 .logo__image-base.light-dark-mode {
-  /* background: url("../images/logo.png") center/cover no-repeat; */
-  filter: brightness(0%) saturate(100%)
+  background: url("../images/logo.png") center/cover no-repeat;
 }
 .older-projects.light-dark-mode {
   color: #450db2;
@@ -304,10 +304,6 @@ h3 {
   .header {
     margin-top: 80px;
   }
-  /* .logo__image img {
-    width: 80px;
-    height: 80px;
-  } */
 }
 @media screen and (min-width: 500px) {
   body {
@@ -316,7 +312,7 @@ h3 {
   .header {
     flex-direction: row-reverse;
     justify-content: center;
-    margin: 100px 0px 40px 110px;
+    margin: 100px 0px 40px 100px;
   }
   .project_name {
     font-size: 1.6rem;
@@ -332,7 +328,7 @@ h3 {
     background-image: url("../images/desktopBG1.svg"), url("../images/desktopBG2.svg");
     background-size: 100%;
     background-position: top left, bottom left;
-    transition: .75s ease;
+    transition: .75s linear;
   }
   #body.light-dark-mode {
     background-color: white;
@@ -341,7 +337,20 @@ h3 {
     background-image: url("../images/desktopBG1.svg"), url("../images/desktopBG2.svg");
     background-size: 100%;
     background-position: top left, bottom left;
-    transition: .75s ease-in-out;
+    transition: .75s linear;
+  }
+  .header {
+    margin-bottom: 45px;
+  }
+  .switch_button_container {
+    margin-bottom: 25px;
+  }
+  .logo__bg {
+    background-image: url("../images/mobile_logo_dark_mode.svg");
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+    margin-top: 5px;
   }
   .toolbox__icons {
     margin: 20px;
@@ -355,17 +364,6 @@ h3 {
     width: 70px;
     height: 70px;
   }
-
-  .project {
-    /* position: static; */
-    /* width: 90%; */
-  }
-  .project img {
-    /* position: static; */
-    /* width: 60%; */
-    /* margin-left: 20%;
-    margin-right: 20%; */
-  }
   .older-projects-container ul {
     justify-content: space-around;
   }
@@ -373,7 +371,11 @@ h3 {
     padding-bottom: 80px;
   }
 }
-
+@media screen and (min-width: 850px) {
+  .logo__bg {
+    transition: background-image .75s linear;
+  }
+}
 @media screen and (min-width: 1280px){
   body {
     display: flex;

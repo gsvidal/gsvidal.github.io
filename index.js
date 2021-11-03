@@ -1,7 +1,7 @@
 const bodyBGColor = document.getElementById("body");
 const switchButtonContainer = document.querySelector(".switch_button_container");
 const switchButton = document.querySelector(".switch_button");
-// const logo = document.querySelector(".logo__image-base");
+const logo = document.querySelector(".logo__bg");
 // const logoAnim = document.querySelector(".logo-image-animacion");
 const linkPortfolioReact = document.querySelector(".welcome__portfolio-react");
 
@@ -15,7 +15,7 @@ function lightDarkMode() {
   bodyBGColor.classList.toggle("light-dark-mode"); 
   switchButton.classList.toggle("light-dark-mode");
   switchButtonContainer.classList.toggle("light-dark-mode");
-  // logo.classList.toggle("light-dark-mode");
+  logo.classList.toggle("light-dark-mode");
   // logo.setAttribute("src", "../images/logo.png");
   // logoAnim.classList.toggle("light-dark-mode");
   linkPortfolioReact.classList.toggle("light-dark-mode");
@@ -32,6 +32,22 @@ function lightDarkMode() {
     pName[i].classList.toggle("light-dark-mode");
   }
 }
+//Put the logo when is light mode but only until max-width: 800px
+
+// const mql = window.matchMedia("(max-width: 800px)");
+
+// function screenTest(event) {
+//   console.log("match")
+//   console.log(event)
+//   if(event.matches && logo.classList.contains("light-dark-mode")) {
+//     logo.setAttribute("src", "../images/logo.png");
+
+//   } else {
+//     logo.setAttribute("src", "https://i.postimg.cc/R0ZtsZxq/Z7x9Riw.gif");
+//   }
+// }
+
+// mql.addEventListener("change", screenTest)
 
 //Web technologies icons animation
 const icons = document.querySelectorAll(".toolbox__icon");
