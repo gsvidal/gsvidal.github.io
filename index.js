@@ -2,9 +2,7 @@ const bodyBGColor = document.getElementById("body");
 const switchButtonContainer = document.querySelector(".switch_button_container");
 const switchButton = document.querySelector(".switch_button");
 const logo = document.querySelector(".logo__bg");
-// const logoAnim = document.querySelector(".logo-image-animacion");
 const linkPortfolioReact = document.querySelector(".welcome__portfolio-react");
-
 const olderProjects = document.querySelectorAll(".older-projects")
 const olderProjectsImages = document.querySelectorAll(".older-projects-images")
 const pName = document.querySelectorAll(".project_name");
@@ -16,40 +14,19 @@ function lightDarkMode() {
   switchButton.classList.toggle("light-dark-mode");
   switchButtonContainer.classList.toggle("light-dark-mode");
   logo.classList.toggle("light-dark-mode");
-  // logo.setAttribute("src", "../images/logo.png");
-  // logoAnim.classList.toggle("light-dark-mode");
   linkPortfolioReact.classList.toggle("light-dark-mode");
 
   for(let i=0; i<olderProjects.length; i++){
     olderProjects[i].classList.toggle("light-dark-mode");
   }
-
   for(let i=0; i<olderProjectsImages.length; i++){
     olderProjectsImages[i].classList.toggle("light-dark-mode");
   }
-
   for(let i=0; i<pName.length; i++){
     pName[i].classList.toggle("light-dark-mode");
   }
 }
-//Put the logo when is light mode but only until max-width: 800px
 
-// const mql = window.matchMedia("(max-width: 800px)");
-
-// function screenTest(event) {
-//   console.log("match")
-//   console.log(event)
-//   if(event.matches && logo.classList.contains("light-dark-mode")) {
-//     logo.setAttribute("src", "../images/logo.png");
-
-//   } else {
-//     logo.setAttribute("src", "https://i.postimg.cc/R0ZtsZxq/Z7x9Riw.gif");
-//   }
-// }
-
-// mql.addEventListener("change", screenTest)
-
-//Web technologies icons animation
 const icons = document.querySelectorAll(".toolbox__icon");
 
 let lastIndex;
@@ -64,8 +41,21 @@ function fadeRandomIcon() {
 }
 
 function startAnimation() {
-  setInterval(fadeRandomIcon,2000)
+  setInterval(fadeRandomIcon,1500);
 }
+setTimeout(startAnimation, 500);
 
-setTimeout(startAnimation, 1000)
+//Project_image animation when hover
+const images = document.querySelectorAll(".project_image");
+
+images.forEach((image) => {
+  image.addEventListener("mouseover", (event) => {
+    image.style.position = "relative";
+    image.style.top = "-5px";
+  })
+  image.addEventListener("mouseout", (event) => {
+    setTimeout(() => image.style.top = "0px", 200 ) 
+  })
+}
+)
 

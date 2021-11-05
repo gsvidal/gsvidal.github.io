@@ -30,7 +30,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 25px;
+  margin: 35px;
 }
 .switch_button_container {
   display: flex;
@@ -55,14 +55,9 @@ body {
 }
 .logo__bg {
   display: inline-block;
-  width: 110px;
-  height: 110px;
+  width: 150px;
+  height: 150px;
   background: url("https://i.postimg.cc/R0ZtsZxq/Z7x9Riw.gif") center/cover no-repeat;
-}
-.logo__image {
-  display: flex;
-  align-items: center;
-  margin: 0 15px;
 }
 .welcome {
   width: 90%;
@@ -93,7 +88,6 @@ body {
   display: none;
   margin: 10px 25px;
   border-radius: 50%;
-  border: 3px solid #450db2;
   cursor: pointer;
 }
 .blog {
@@ -137,7 +131,7 @@ h3 {
   filter: brightness(0) saturate(100%);
 }
 .toolbox__fade {
-  animation: fading linear 2s 1 ;
+  animation: fading linear 1.5s 1 ;
 }
 @keyframes fading {
   0% {
@@ -156,7 +150,6 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
   padding-bottom: 70px;
 }
 .projects-container-grid {
@@ -177,7 +170,7 @@ h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   text-decoration: none;
   text-align: center;
 }
@@ -192,14 +185,12 @@ h3 {
   border-radius: 15px;
   vertical-align: middle;
   box-shadow: 0px 10px 5px -5px #b8a5f2;
-  transition:  top .2s linear, box-shadow 0.3s linear;
+  transition: box-shadow 0.3s linear;
 }
 .p-none img {
   box-shadow: none;
 }
 .project img:hover {
-  position: relative;
-  top: -5px;
   box-shadow: 0px 15px 15px -2px #b8a5f2;
 }
 .p-base img:hover {
@@ -278,10 +269,8 @@ h3 {
   transition: background-color .75s linear;
 }
 .logo__bg.light-dark-mode {
-  background-image: url("../images/mobile_logo_light_mode.svg");
-}
-.logo__image-base.light-dark-mode {
-  background: url("../images/logo.png") center/cover no-repeat;
+  border-radius: 50%;
+  background-image: url("https://i.postimg.cc/d3y13NRR/Webp-net-resizeimage-6.png");
 }
 .older-projects.light-dark-mode {
   color: #450db2;
@@ -300,11 +289,13 @@ h3 {
 .older-projects-images.light-dark-mode {
   filter: brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(6209%) hue-rotate(261deg) brightness(67%) contrast(114%);
 }
+
 @media screen and (max-width: 388px) {
   .header {
     margin-top: 80px;
   }
 }
+
 @media screen and (min-width: 500px) {
   body {
     background-size: 280px,30%, 30%, 100%;
@@ -312,7 +303,7 @@ h3 {
   .header {
     flex-direction: row-reverse;
     justify-content: center;
-    margin: 100px 0px 40px 100px;
+    margin: 120px 0px 40px 125px;
   }
   .project_name {
     font-size: 1.6rem;
@@ -346,11 +337,10 @@ h3 {
     margin-bottom: 25px;
   }
   .logo__bg {
-    background-image: url("../images/mobile_logo_dark_mode.svg");
-    width: 100px;
-    height: 100px;
     margin-right: 10px;
     margin-top: 5px;
+    background-image: url("https://i.postimg.cc/d3y13NRR/Webp-net-resizeimage-6.png");
+    border-radius: 50%;
   }
   .toolbox__icons {
     margin: 20px;
@@ -381,22 +371,17 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 90%;
+    max-width: 1800px;
+    min-height: 100vh;
   }
   .header {
     width: 100%;
     margin: 0;
-    margin-right: 30px;
+    margin-right: 5px;
     justify-content: flex-end;
     margin-top: 100px;
     margin-bottom: 20px;
-  }
-  .logo__image { 
-    border-radius: 50%;
-    border: 3px solid #450db2;
-  }
-  .logo__image img {
-    width: 120px;
-    height: 120px;
   }
   .body__top {
     display: flex;
@@ -406,6 +391,7 @@ h3 {
   }
   .toolbox {
     margin: 0;
+    margin-left: 10%;
   }
   .toolbox__icons {
     margin-bottom: 0;
