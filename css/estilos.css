@@ -282,7 +282,7 @@ h3 {
 }
 .logo__bg.light-dark-mode {
   border-radius: 50%;
-  background-image: url("https://i.postimg.cc/MGBZxvmv/portfolio.png");
+  background-image: url("../images/gonzaPic.png");
 }
 .older-projects.light-dark-mode {
   color: #450db2;
@@ -367,7 +367,7 @@ h3 {
   .logo__bg {
     margin-right: 10px;
     margin-top: 5px;
-    background-image: url("https://i.postimg.cc/MGBZxvmv/portfolio.png");
+    background-image: url("../images/gonzaPic.png");
     border-radius: 50%;
   }
   .toolbox__icons {
