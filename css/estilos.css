@@ -24,7 +24,7 @@ body {
   background-repeat: no-repeat; 
   background-size: 280px,150px, 150px, 100%;
   background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left;
-  transition: none;
+
 }
 .header {
   display: flex;
@@ -52,7 +52,7 @@ body {
   margin-left: 5px;
   border-radius: 15px;
   background-color: #450db2;
-  transition: .25s;
+  transition: .25s linear;
 }
 .logo__bg {
   display: inline-block;
@@ -74,7 +74,6 @@ body {
 }
 .welcome__portfolio-react {
   color: #98d3ff;
-  transition: color .75s linear;
   text-underline-offset: 3px;
   font-size: 2.5rem;
 }
@@ -195,7 +194,6 @@ h3 {
   margin: 15px 0;
   font-size: 1.4rem;
   color: white;
-  transition: .75s linear;
 }
 .project img {
   width: 250px;
@@ -264,7 +262,6 @@ h3 {
   transition: .25s ease-in-out;
 }
 .footer .contact img:hover {
-  transition: linear .15s;
   transform: scale(1.4)
 }
 .footer .contact a {
@@ -282,11 +279,10 @@ h3 {
   background-size: 280px,150px, 150px, 100%, 240%;
   background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left, top 40vh right -95vw;
   background-color: white;
-  transition: background-color .75s linear;
 }
 .logo__bg.light-dark-mode {
   border-radius: 50%;
-  background-image: url("https://i.postimg.cc/d3y13NRR/Webp-net-resizeimage-6.png");
+  background-image: url("https://i.postimg.cc/MGBZxvmv/portfolio.png");
 }
 .older-projects.light-dark-mode {
   color: #450db2;
@@ -300,30 +296,28 @@ h3 {
 }
 .project_name.light-dark-mode {
   color: #450db2;
-  transition: .75s linear;
 }
 .older-projects-images.light-dark-mode {
   filter: brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(6209%) hue-rotate(261deg) brightness(67%) contrast(114%);
 }
 .toolbox h3.light-dark-mode {
-  color: rgb(255, 239, 18);
-  text-shadow: 0 0 12px rgb(129, 129, 129);
+  color: rgb(255, 242, 59);
+  text-shadow: 0 0 12px rgb(156, 156, 148);
 }
 .team-projects h3.light-dark-mode {
-  color: rgb(255, 122, 122);
+  color: rgb(255, 147, 147);
   text-shadow: 0 0 12px rgb(255, 183, 183);
 }
 .recent-projects h3.light-dark-mode {
-  color: rgb(111, 171, 255);
+  color: rgb(130, 182, 255);
   text-shadow: 0 0 12px rgb(156, 197, 255);
 }
 .older-projects-container h3.light-dark-mode {
   color: rgb(131, 131, 131);
 }
 .blog__link.light-dark-mode {
-  color: rgb(56, 228, 128);
+  color: rgb(0, 146, 61);
 }
-
 /* Ends Ligth-dark-mode styles */
 
 @media screen and (max-width: 388px) {
@@ -355,7 +349,6 @@ h3 {
     background-image: url("../images/desktopBG1.svg"), url("../images/desktopBG2.svg");
     background-size: 100%;
     background-position: top left, bottom left;
-    transition: .75s linear;
   }
   #body.light-dark-mode {
     background-color: white;
@@ -364,7 +357,6 @@ h3 {
     background-image: url("../images/desktopBG1.svg"), url("../images/desktopBG2.svg");
     background-size: 100%;
     background-position: top left, bottom left;
-    transition: .75s linear;
   }
   .header {
     margin-bottom: 45px;
@@ -375,7 +367,7 @@ h3 {
   .logo__bg {
     margin-right: 10px;
     margin-top: 5px;
-    background-image: url("https://i.postimg.cc/d3y13NRR/Webp-net-resizeimage-6.png");
+    background-image: url("https://i.postimg.cc/MGBZxvmv/portfolio.png");
     border-radius: 50%;
   }
   .toolbox__icons {
@@ -395,11 +387,6 @@ h3 {
   }
   .footer {
     padding-bottom: 80px;
-  }
-}
-@media screen and (min-width: 850px) {
-  .logo__bg {
-    transition: background-image .75s linear;
   }
 }
 @media screen and (min-width: 1280px){
