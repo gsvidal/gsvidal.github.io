@@ -54,7 +54,7 @@ images.forEach((image) => {
     image.style.top = "-5px";
   })
   image.addEventListener("mouseout", (event) => {
-    setTimeout(() => image.style.top = "0px", 200 ) 
+    setTimeout(() => image.style.top = "0px", 150 ) 
   })
 }
 )

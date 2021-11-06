@@ -13,6 +13,7 @@ body {
   align-items: center;
   min-width: 320px;
   max-width: 700px;
+  padding: 10px;
   margin: 0 auto;
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
@@ -60,7 +61,7 @@ body {
   background: url("https://i.postimg.cc/R0ZtsZxq/Z7x9Riw.gif") center/cover no-repeat;
 }
 .welcome {
-  width: 90%;
+  width: 95%;
   margin: 0 auto;
   text-align: justify;
   text-align-last: center;
@@ -112,8 +113,24 @@ body {
 }
 h3 {
   text-align: center;
-  margin-bottom: 30px;
-  text-shadow: 0 0 5px;
+  margin: 50px 0 30px;
+  text-shadow: 0 0 7px;
+}
+.toolbox h3 {
+  color: rgb(255, 254, 238);
+  text-shadow: 0 0 12px rgb(255, 249, 166);
+}
+.team-projects h3 {
+  color: rgb(255, 223, 223);
+  text-shadow: 0 0 12px rgb(255, 118, 118);
+}
+.recent-projects h3 {
+  color: rgb(205, 226, 255);
+  text-shadow: 0 0 12px rgb(128, 181, 255);
+}
+.older-projects-container h3 {
+  color: rgb(202, 202, 202);
+  text-shadow: 0 0 3px;
 }
 .toolbox__icons {
   display: grid;
@@ -146,7 +163,7 @@ h3 {
     transform: rotateY(360deg)
   }
 }
-.recent-projects {
+.projects {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -182,6 +199,8 @@ h3 {
 }
 .project img {
   width: 220px;
+  height: 130px;
+  object-fit: cover;
   border-radius: 15px;
   vertical-align: middle;
   box-shadow: 0px 10px 5px -5px #b8a5f2;
@@ -191,7 +210,7 @@ h3 {
   box-shadow: none;
 }
 .project img:hover {
-  box-shadow: 0px 15px 15px -2px #b8a5f2;
+  box-shadow: 0px 9px 15px 3px #b8a5f2;
 }
 .p-base img:hover {
   box-shadow: 0px 20px 10px -10px #b8a5f2;
@@ -253,13 +272,10 @@ h3 {
   justify-content: center;
   align-items: center;
 }
-.footer p a {
-  display: inline-block;
-  margin: 8px;
-  text-decoration: none;
+.footer strong {
   color:rgb(255, 204, 1);
 }
-/* Ligth-dark-mode styles */
+/* Starts Ligth-dark-mode styles */
 #body.light-dark-mode {
   color: #450db2;
   background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bg.footer.svg"),url("../images/mobileBG2.svg"); background-repeat: no-repeat; 
@@ -289,6 +305,7 @@ h3 {
 .older-projects-images.light-dark-mode {
   filter: brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(6209%) hue-rotate(261deg) brightness(67%) contrast(114%);
 }
+/* Ends Ligth-dark-mode styles */
 
 @media screen and (max-width: 388px) {
   .header {
@@ -393,6 +410,9 @@ h3 {
     margin: 0;
     margin-left: 10%;
   }
+  .toolbox h3 {
+    margin-top: 0;
+  }
   .toolbox__icons {
     margin-bottom: 0;
   }
@@ -418,7 +438,6 @@ h3 {
   }
   .older-projects-container {
     width: 100%;
-    margin: 30px 0;
   }
   .older-projects-container ul {
     max-width: 1200px;
