@@ -3,9 +3,13 @@ const switchButtonContainer = document.querySelector(".switch_button_container")
 const switchButton = document.querySelector(".switch_button");
 const logo = document.querySelector(".logo__bg");
 const linkPortfolioReact = document.querySelector(".welcome__portfolio-react");
+const personalBlog = document.querySelector(".blog__link");
 const olderProjects = document.querySelectorAll(".older-projects")
 const olderProjectsImages = document.querySelectorAll(".older-projects-images")
-const pName = document.querySelectorAll(".project_name");
+const projectNames = document.querySelectorAll(".project_name");
+
+//Titles changing color when dark-light mode turns
+const titles = document.querySelectorAll(".title-projects");
 
 switchButtonContainer.addEventListener("click",lightDarkMode);
 
@@ -15,18 +19,18 @@ function lightDarkMode() {
   switchButtonContainer.classList.toggle("light-dark-mode");
   logo.classList.toggle("light-dark-mode");
   linkPortfolioReact.classList.toggle("light-dark-mode");
+  personalBlog.classList.toggle("light-dark-mode");
 
-  for(let i=0; i<olderProjects.length; i++){
-    olderProjects[i].classList.toggle("light-dark-mode");
-  }
-  for(let i=0; i<olderProjectsImages.length; i++){
-    olderProjectsImages[i].classList.toggle("light-dark-mode");
-  }
-  for(let i=0; i<pName.length; i++){
-    pName[i].classList.toggle("light-dark-mode");
-  }
+  olderProjects.forEach(olderProject => olderProject.classList.toggle("light-dark-mode"));
+
+  olderProjectsImages.forEach(olderProjectsImage => olderProjectsImage.classList.toggle("light-dark-mode"));
+
+  projectNames.forEach(projectName => projectName.classList.toggle("light-dark-mode"));
+
+  titles.forEach(title => title.classList.toggle("light-dark-mode"));
 }
 
+//Web Technologies - Logo Animations
 const icons = document.querySelectorAll(".toolbox__icon");
 
 let lastIndex;
@@ -58,4 +62,5 @@ images.forEach((image) => {
   })
 }
 )
+
 
