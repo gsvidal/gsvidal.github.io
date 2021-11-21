@@ -116,18 +116,22 @@ h3 {
   text-shadow: 0 0 7px;
 }
 .toolbox h3 {
-  color: rgb(255, 254, 238);
+  color: rgb(255, 252, 203);
   text-shadow: 0 0 12px rgb(255, 249, 166);
 }
-.team-projects h3 {
+.title-projects--team-projects {
   color: rgb(255, 223, 223);
   text-shadow: 0 0 12px rgb(255, 118, 118);
 }
-.recent-projects h3 {
+.title-projects--react-projects {
   color: rgb(205, 226, 255);
   text-shadow: 0 0 12px rgb(128, 181, 255);
 }
-.older-projects-container h3 {
+.title-projects--vanilla-projects {
+  color: rgb(194, 255, 198);
+  text-shadow: 0 0 12px rgb(81, 255, 92);
+}
+.title-projects--older-projects {
   color: rgb(202, 202, 202);
   text-shadow: 0 0 3px;
 }
@@ -147,7 +151,7 @@ h3 {
   filter: brightness(0) saturate(100%);
 }
 .toolbox__fade {
-  animation: fading linear 1.5s 1 ;
+  animation: fading linear 1.5s 1;
 }
 @keyframes fading {
   0% {
@@ -189,32 +193,35 @@ h3 {
   justify-content: space-around;
   text-decoration: none;
   text-align: center;
+  /* overflow: hidden; */
 }
 .project_name {
   margin: 15px 0;
   font-size: 1.4rem;
   color: white;
 }
-.project img {
+.project_image-container {
+  overflow: hidden;
   width: 250px;
   height: 150px;
-  object-fit: cover;
   border-radius: 15px;
-  vertical-align: middle;
-  box-shadow: 0px 10px 5px -5px #b8a5f2;
-  transition: box-shadow 0.3s linear;
+  transition: box-shadow .75s;
+}
+.project_image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform, opacity .25s;
+  opacity: .5;
 }
 .p-none img {
   box-shadow: none;
 }
-.project img:hover {
-  box-shadow: 0px 9px 15px 3px #b8a5f2;
-}
-.p-base img:hover {
-  box-shadow: 0px 20px 10px -10px #b8a5f2;
-}
-.p-none img:hover {
-  box-shadow: none;
+.project_image:hover {
+  transform: scale(1.2);
+  transition: transform .5s;
+  opacity: 1;
 }
 .older-projects-container {
   text-align: center;
@@ -304,15 +311,19 @@ h3 {
   color: rgb(255, 242, 59);
   text-shadow: 0 0 12px rgb(156, 156, 148);
 }
-.team-projects h3.light-dark-mode {
+.title-projects--team-projects.light-dark-mode {
   color: rgb(255, 147, 147);
   text-shadow: 0 0 12px rgb(255, 183, 183);
 }
-.recent-projects h3.light-dark-mode {
+.title-projects--react-projects.light-dark-mode {
   color: rgb(130, 182, 255);
   text-shadow: 0 0 12px rgb(156, 197, 255);
 }
-.older-projects-container h3.light-dark-mode {
+.title-projects--vanilla-projects.light-dark-mode {
+  color: rgb(135, 226, 141);
+  text-shadow: 0 0 12px rgb(81, 255, 92);
+}
+.title-projects--older-projects.light-dark-mode {
   color: rgb(131, 131, 131);
 }
 .blog__link.light-dark-mode {

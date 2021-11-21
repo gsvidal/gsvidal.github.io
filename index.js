@@ -54,11 +54,16 @@ const images = document.querySelectorAll(".project_image");
 
 images.forEach((image) => {
   image.addEventListener("mouseover", (event) => {
-    image.style.position = "relative";
-    image.style.top = "-5px";
+    if(!image.parentElement.classList.contains("p-none")) {
+      image.parentElement.style.boxShadow = "0px 0px 35px 2px #b8a5f2, 0px 0px 15px 2px #ffffff";
+    } else {
+      image.style.transform = "none";
+    }
   })
   image.addEventListener("mouseout", (event) => {
-    setTimeout(() => image.style.top = "0px", 150 ) 
+    if(!image.parentElement.classList.contains("p-none")) {
+      image.parentElement.style.boxShadow = "none";
+    } 
   })
 }
 )
