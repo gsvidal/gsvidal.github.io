@@ -11,6 +11,8 @@ const projectNames = document.querySelectorAll(".project_name");
 //Titles changing color when dark-light mode turns
 const titles = document.querySelectorAll(".title-projects");
 
+
+
 switchButtonContainer.addEventListener("click",lightDarkMode);
 
 function lightDarkMode() {
@@ -49,10 +51,10 @@ function startAnimation() {
 }
 setTimeout(startAnimation, 500);
 
-//Project_image animation when hover
-const images = document.querySelectorAll(".project_image");
+// Project_image animation when hover
+const imagesShadow = document.querySelectorAll(".project_image");
 
-images.forEach((image) => {
+imagesShadow.forEach((image) => {
   image.addEventListener("mouseover", (event) => {
     if(!image.parentElement.classList.contains("p-none")) {
       image.parentElement.style.boxShadow = "0px 0px 35px 2px #b8a5f2, 0px 0px 15px 2px #ffffff";
@@ -68,4 +70,16 @@ images.forEach((image) => {
 }
 )
 
+
+// Live/source
+const images = document.querySelectorAll(".project_image-container-test");
+const githubIcon = document.querySelector(".project__github-image");
+
+images.forEach(image => image.addEventListener("mouseover",(event) => {
+  image.parentNode.nextElementSibling.classList.add("show");
+}));
+
+images.forEach(image => image.addEventListener("mouseout",(event) => {
+  image.parentNode.nextElementSibling.classList.remove("show");
+}));
 
