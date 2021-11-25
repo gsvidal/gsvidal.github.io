@@ -213,7 +213,7 @@ h3 {
   height: 100%;
   object-fit: cover;
   transition: transform, opacity .25s;
-  opacity: .5;
+  opacity: .7;
 }
 .p-none img {
   box-shadow: none;
