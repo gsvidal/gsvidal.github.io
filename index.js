@@ -72,7 +72,7 @@ imagesShadow.forEach((image) => {
 
 
 // Live/source
-const images = document.querySelectorAll(".project_image-container-test");
+const images = document.querySelectorAll(".project_image-container");
 const githubIcon = document.querySelector(".project__github-image");
 
 images.forEach(image => image.addEventListener("mouseover",(event) => {
