@@ -1,5 +1,5 @@
-*{
-  box-sizing:border-box;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -20,11 +20,13 @@ body {
   font-size: 3rem;
   background-color: #450db2;
   color: white;
-  background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"); 
-  background-repeat: no-repeat; 
-  background-size: 280px,150px, 150px, 100%;
-  background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left;
-
+  background-image: url('../images/pentagonRound1.svg'),
+    url('../images/pentagonRound2.svg'), url('../images/pentagonRound2.svg'),
+    url('../images/bgFooter.svg');
+  background-repeat: no-repeat;
+  background-size: 280px, 150px, 150px, 100%;
+  background-position: top -100px right -80px, bottom 900px left -100px,
+    top 900px right -80px, bottom left;
 }
 .header {
   display: flex;
@@ -52,13 +54,14 @@ body {
   margin-left: 5px;
   border-radius: 15px;
   background-color: #450db2;
-  transition: .25s linear;
+  transition: 0.25s linear;
 }
 .logo__bg {
   display: inline-block;
   width: 150px;
   height: 150px;
-  background: url("https://i.postimg.cc/R0ZtsZxq/Z7x9Riw.gif") center/cover no-repeat;
+  background: url('https://i.postimg.cc/R0ZtsZxq/Z7x9Riw.gif') center/cover
+    no-repeat;
 }
 .welcome {
   width: 95%;
@@ -100,6 +103,10 @@ body {
   color: rgb(64, 223, 112);
   text-underline-offset: 3px;
 }
+.certificate__id {
+  font-size: 8px;
+  font-weight: 400;
+}
 .toolbox {
   width: 100%;
   margin: 50px 0 70px;
@@ -116,20 +123,32 @@ h3 {
   text-shadow: 0 0 7px;
 }
 .toolbox h3 {
-  color: rgb(255, 252, 203);
+  color: rgb(255, 252, 205);
   text-shadow: 0 0 12px rgb(255, 249, 166);
 }
+.title-projects--certificates {
+  color: rgb(255, 194, 156);
+  text-shadow: 0 0 12px rgb(255, 171, 118);
+}
 .title-projects--team-projects {
-  color: rgb(255, 223, 223);
+  color: rgb(255, 187, 187);
   text-shadow: 0 0 12px rgb(255, 118, 118);
+}
+.title-projects--fullstack-react-projects {
+  color: rgb(130, 209, 136);
+  text-shadow: 0 0 12px rgb(81, 255, 92);
+}
+.title-projects--react-adv-projects {
+  color: rgb(192, 156, 238);
+  text-shadow: 0 0 12px rgb(122, 89, 255);
 }
 .title-projects--react-projects {
   color: rgb(205, 226, 255);
-  text-shadow: 0 0 12px rgb(128, 181, 255);
+  text-shadow: 0 0 12px rgb(106, 168, 255);
 }
 .title-projects--vanilla-projects {
-  color: rgb(194, 255, 198);
-  text-shadow: 0 0 12px rgb(81, 255, 92);
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 12px rgb(255, 255, 255);
 }
 .title-projects--older-projects {
   color: rgb(202, 202, 202);
@@ -159,12 +178,26 @@ h3 {
   }
   50% {
     opacity: 25%;
-    transform: rotateY(180deg)
+    transform: rotateY(180deg);
   }
   100% {
     opacity: 100%;
-    transform: rotateY(360deg)
+    transform: rotateY(360deg);
   }
+}
+.certificates {
+  margin-bottom: 70px;
+}
+.certificates__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.certificates__icons-item {
+  margin: 0 20px;
+}
+.certificates__icons-item--keys {
+  text-align: center;
 }
 .projects {
   display: flex;
@@ -200,19 +233,19 @@ h3 {
   width: 250px;
   height: 150px;
   border-radius: 15px;
-  transition: box-shadow .75s;
+  transition: box-shadow 0.75s;
 }
 .project_image {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform, opacity .25s;
-  opacity: .7;
+  transition: transform, opacity 0.25s;
+  opacity: 0.7;
 }
 .project_image:hover {
   transform: scale(1.2);
-  transition: transform .5s;
+  transition: transform 0.5s;
   opacity: 1;
 }
 .project .project__github {
@@ -222,7 +255,7 @@ h3 {
   width: 50px;
   height: 50px;
   opacity: 0;
-  transition: all .25s ease;
+  transition: all 0.25s ease;
 }
 .project .project__github:hover {
   opacity: 1;
@@ -233,14 +266,14 @@ h3 {
 .project.team .project__github {
   bottom: 89px;
 }
-.project.team  .project__github:hover {
+.project.team .project__github:hover {
   bottom: 91px;
 }
 .project .project__github.show {
-  opacity: .6;
+  opacity: 0.6;
 }
 .project__github-image {
-border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 15px;
 }
 .project_name {
   margin: 15px 0;
@@ -295,10 +328,10 @@ border-bottom-left-radius: 15px;
 }
 .footer .contact img {
   margin: 15px;
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 .footer .contact img:hover {
-  transform: scale(1.4)
+  transform: scale(1.4);
 }
 .footer .contact a {
   display: flex;
@@ -306,19 +339,23 @@ border-bottom-left-radius: 15px;
   align-items: center;
 }
 .footer strong {
-  color:rgb(255, 204, 1);
+  color: rgb(255, 204, 1);
 }
 /* Starts Ligth-dark-mode styles */
 #body.light-dark-mode {
   color: #450db2;
-  background-image: url("../images/pentagonRound1.svg"),url("../images/pentagonRound2.svg"),url("../images/pentagonRound2.svg"),url("../images/bgFooter.svg"),url("../images/mobileBG2.svg"); background-repeat: no-repeat; 
-  background-size: 280px,150px, 150px, 100%, 240%;
-  background-position: top -100px right -80px,bottom 900px left -100px,top 900px right -80px, bottom left, top 40vh right -95vw;
+  background-image: url('../images/pentagonRound1.svg'),
+    url('../images/pentagonRound2.svg'), url('../images/pentagonRound2.svg'),
+    url('../images/bgFooter.svg'), url('../images/mobileBG2.svg');
+  background-repeat: no-repeat;
+  background-size: 280px, 150px, 150px, 100%, 240%;
+  background-position: top -100px right -80px, bottom 900px left -100px,
+    top 900px right -80px, bottom left, top 40vh right -95vw;
   background-color: white;
 }
 .logo__bg.light-dark-mode {
   border-radius: 50%;
-  background-image: url("../images/gonzaPic.png");
+  background-image: url('../images/gonzaPic.png');
 }
 .older-projects.light-dark-mode {
   color: #450db2;
@@ -334,11 +371,18 @@ border-bottom-left-radius: 15px;
   color: #450db2;
 }
 .older-projects-images.light-dark-mode {
-  filter: brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(6209%) hue-rotate(261deg) brightness(67%) contrast(114%);
+  filter: brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(6209%)
+    hue-rotate(261deg) brightness(67%) contrast(114%);
 }
 .toolbox h3.light-dark-mode {
   color: rgb(255, 242, 59);
   text-shadow: 0 0 12px rgb(156, 156, 148);
+}
+.subtitle-projects {
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: italic;
 }
 .title-projects--team-projects.light-dark-mode {
   color: rgb(255, 147, 147);
@@ -349,8 +393,8 @@ border-bottom-left-radius: 15px;
   text-shadow: 0 0 12px rgb(156, 197, 255);
 }
 .title-projects--vanilla-projects.light-dark-mode {
-  color: rgb(135, 226, 141);
-  text-shadow: 0 0 12px rgb(81, 255, 92);
+  color: rgb(115, 200, 169);
+  text-shadow: 0 0 12px rgb(103, 201, 165);
 }
 .title-projects--older-projects.light-dark-mode {
   color: rgb(131, 131, 131);
@@ -360,8 +404,6 @@ border-bottom-left-radius: 15px;
 }
 /* Ends Ligth-dark-mode styles */
 
-
-
 @media screen and (max-width: 388px) {
   .header {
     margin-top: 80px;
@@ -370,7 +412,7 @@ border-bottom-left-radius: 15px;
 
 @media screen and (min-width: 500px) {
   body {
-    background-size: 280px,30%, 30%, 100%;
+    background-size: 280px, 30%, 30%, 100%;
   }
   .header {
     flex-direction: row-reverse;
@@ -388,7 +430,8 @@ border-bottom-left-radius: 15px;
     flex-wrap: wrap;
     justify-content: center;
     max-width: 90%;
-    background-image: url("../images/desktopBG1.svg"), url("../images/desktopBG2.svg");
+    background-image: url('../images/desktopBG1.svg'),
+      url('../images/desktopBG2.svg');
     background-size: 100%;
     background-position: top left, bottom left;
   }
@@ -396,7 +439,8 @@ border-bottom-left-radius: 15px;
     background-color: white;
     color: #450db2;
     background-image: none;
-    background-image: url("../images/desktopBG1.svg"), url("../images/desktopBG2.svg");
+    background-image: url('../images/desktopBG1.svg'),
+      url('../images/desktopBG2.svg');
     background-size: 100%;
     background-position: top left, bottom left;
   }
@@ -409,7 +453,7 @@ border-bottom-left-radius: 15px;
   .logo__bg {
     margin-right: 10px;
     margin-top: 5px;
-    background-image: url("../images/gonzaPic.png");
+    background-image: url('../images/gonzaPic.png');
     border-radius: 50%;
   }
   .toolbox__icons {
@@ -420,7 +464,8 @@ border-bottom-left-radius: 15px;
     width: 60px;
     height: 60px;
   }
-  .toolbox__icon--materializecss, .toolbox__icon--scrum {
+  .toolbox__icon--materializecss,
+  .toolbox__icon--scrum {
     width: 70px;
     height: 70px;
   }
@@ -431,7 +476,7 @@ border-bottom-left-radius: 15px;
     padding-bottom: 80px;
   }
 }
-@media screen and (min-width: 1280px){
+@media screen and (min-width: 1280px) {
   body {
     display: flex;
     flex-direction: column;
@@ -481,7 +526,8 @@ border-bottom-left-radius: 15px;
   .blog {
     margin: 0;
   }
-  .projects-container-grid, .older-projects-container {
+  .projects-container-grid,
+  .older-projects-container {
     width: 100%;
     max-width: 1150px;
   }
