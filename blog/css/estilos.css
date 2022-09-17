@@ -26,8 +26,6 @@ html {
 }
 
 body {
-  /* font-family: 'PT Serif', serif;
-  font-weight: 400; */
   font-family: 'Poppins', sans-serif;
   font-weight: 200;
   font-size: 1.6rem;
@@ -41,7 +39,7 @@ body {
   right: 0;
   bottom: -500px;
   text-align: center;
-  background-color: rgba(0, 0, 0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   z-index: 4;
 }
 .construction p {
@@ -58,20 +56,25 @@ body {
   padding: 1rem 0;
 }
 .capacidad_barra {
-  width:300px;
+  width: 300px;
   height: 18px;
-  background-color: hsl(229, 57%, 11%); 
+  background-color: hsl(229, 57%, 11%);
   margin: 15px calc(50vw - 150px);
   margin-top: 30px;
   border: 3px solid hsl(229, 57%, 11%);
   border-radius: 7.5px;
 }
 .capacidad_barra_full {
-  width:40%;
+  width: 40%;
   height: 12px;
-  background-image: linear-gradient(to right,hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  background-image: linear-gradient(
+    to right,
+    hsl(6, 100%, 80%),
+    hsl(335, 100%, 65%)
+  );
   border-radius: 7.5px;
-  display: flex;align-items: center;
+  display: flex;
+  align-items: center;
   justify-content: flex-end;
 }
 
@@ -80,7 +83,6 @@ h1 {
   font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 3.4rem;
-
 }
 /* Revisar como pasa el topicsInfo por debajo del h1 bg una vez que reviva imgur */
 header {
@@ -100,7 +102,6 @@ h2 {
   justify-content: center;
 }
 h3 {
-  /* font-family: 'Oxygen', sans-serif; */
   font-size: 3rem;
   padding: 28px 0;
   padding-top: 50px;
@@ -108,7 +109,6 @@ h3 {
 }
 h4 {
   font-size: 2.5rem;
-  /* font-family: 'Oxygen', sans-serif; */
   padding: 20px 0;
   width: 100%;
 }
@@ -121,66 +121,83 @@ h3 li {
   font-weight: 200;
   text-align: justify;
   padding: 80px 20px;
-
 }
 
 /* Esta linea hace que la información enumerada debajo del h3 tenga una sangría más */
-.topics-info ol ol li, .topics-info ol li{
+.topics-info ol ol li,
+.topics-info ol li {
   margin-left: 30px;
 }
 
-
-.topics-container .topics-title, .topics-container.topics-title-ready, .quiz {
-text-decoration: none;
-position: relative;
-z-index: 1;
-display: inline;
-font-size: 2rem;
-text-align: center;
+.topics-container .topics-title,
+.topics-container.topics-title--ready,
+.quiz {
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  display: inline;
+  font-size: 2rem;
+  text-align: center;
 }
-#topics-container-JS {
-  background:  #fff8b6 url("https://i.postimg.cc/mrr0wG81/js-logo.png") left top/90px no-repeat;
+.topics-title::after {
+  position: relative;
+  top: -1px;
+  left: 8px;
+  content: 'Próximamente';
+  color: red;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
 }
-#topics-container-HTML {
-  background: #ffc8b0 url("https://i.postimg.cc/2SGsh5Ff/html-logo.png") left top/90px no-repeat;
+.topics-title.topics-title--ready::after {
+  content: 'Nuevo!';
+  color: blue;
 }
-#topics-container-CSS {
-  background: #A8D0F0 url("https://i.postimg.cc/9fNsgNn8/css-logo.png") left top/90px no-repeat;
+.topics-js {
+  background: #fff8b6 url('https://i.postimg.cc/mrr0wG81/js-logo.png') left
+    top/90px no-repeat;
+}
+.topics-html {
+  background: #ffc8b0 url('https://i.postimg.cc/2SGsh5Ff/html-logo.png') left
+    top/90px no-repeat;
+}
+.topics-css {
+  background: #a8d0f0 url('https://i.postimg.cc/9fNsgNn8/css-logo.png') left
+    top/90px no-repeat;
 }
 .topics-container li {
   /* Al darle la siguiente línea puedo hacer crecer con hover y no mover el resto de elementos */
   line-height: 2.8rem;
-
 }
 .topics-container .numeracion-orden-principal {
   /* Para borrar los números de la lista ordenada: */
   list-style: none;
 }
-.topics-title:hover {
-  font-size: 2.3rem;
+.topics-title--soon:hover {
+  cursor: default;
 }
-#topics-container-JS .topics-title, #topics-container-JS .enlaces-externos{
+.topics-title--ready:hover {
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+.topics-js .topics-title,
+.topics-js .enlaces-externos {
   color: #a79600;
 }
-#topics-container-HTML .topics-title, #topics-container-HTML .enlaces-externos{
+.topics-html .topics-title,
+.topics-html .enlaces-externos {
   color: #a33100;
 }
-#topics-container-CSS .topics-title, #topics-container-CSS .enlaces-externos{
+.topics-css .topics-title,
+.topics-css .enlaces-externos {
   color: #00559b;
 }
-.coming-soon, .quiz-container .coming-soonq {
+.coming-soon,
+.quiz-container .coming-soonq {
   color: red;
   font-size: 1.1rem;
   font-weight: 300;
   padding-top: 1px;
   padding-bottom: 8px;
-  line-height: 1.6rem;
-}
-.new {
-  color: blue;
-  font-size: 1.2rem;
-  padding-top: 1px;
-  padding-bottom: 6px;
   line-height: 1.6rem;
 }
 
@@ -193,25 +210,19 @@ text-align: center;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 1.6rem;
-  background-color: rgba(255, 255, 255,.3);
+  background-color: rgba(255, 255, 255, 0.3);
   z-index: -100;
-}
-.topics-container .topics-title:hover {
-  font-size: 2.5rem;
 }
 
 .topics-info .enlaces-externos {
   text-underline-offset: 3px;
 }
-#topics-container-JS .enlaces-externos:hover,
-#topics-container-HTML .enlaces-externos:hover,
-#topics-container-CSS .enlaces-externos:hover
-{
+.enlaces-externos:hover {
   color: rgb(232, 62, 0);
 }
 .topics-info.showHide {
   display: block;
-  transition: .4s;
+  transition: 0.4s;
   top: 0px;
   width: 100%;
 
@@ -227,7 +238,7 @@ figure {
   width: 80%;
   max-width: 800px;
   margin: 30px;
-  
+
   margin-bottom: 10px;
 }
 .infografia.infografia-chica {
@@ -267,19 +278,16 @@ figcaption {
   width: 100%;
   align-items: center;
 }
-.modifiers-left, .modifiers-right {
+.modifiers-left,
+.modifiers-right {
   margin: 5px;
   width: 90%;
 }
 
-
-
-
-
 .quiz-container {
   padding: 100px 70px;
   text-align: center;
-  background-color: #C3DEB7;
+  background-color: #c3deb7;
 }
 .quiz-container p {
   text-decoration: none;
@@ -303,12 +311,12 @@ footer .contact {
   margin-top: 35px;
 }
 footer .contact img {
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
   margin: 15px;
 }
 footer .contact img:hover {
-  transition: linear .15s;
-  transform: scale(1.4)
+  transition: linear 0.15s;
+  transform: scale(1.4);
 }
 footer .contact a {
   display: flex;
@@ -328,14 +336,13 @@ footer p a {
   h1 {
     padding: 50px 100px 30px 70px;
     font-size: 4rem;
-  }  
+  }
   .blog-title__description {
     padding-left: 70px;
     padding-right: 70px;
     padding-top: 15px;
     padding-bottom: 35px;
     font-size: 2.1rem;
-
   }
   h2 {
     font-size: 2.2rem;
@@ -348,7 +355,8 @@ footer p a {
     font-size: 2.1rem;
   }
 
-  .coming-soon, .coming-soonq {
+  .coming-soon,
+  .coming-soonq {
     position: absolute;
     top: 5px;
     right: -110px;
@@ -371,16 +379,12 @@ footer p a {
 }
 
 @media screen and (min-width: 800px) {
-
-
-
 }
 
 @media screen and (min-width: 1024px) {
-
   h1 {
     font-size: 6.5rem;
-  }  
+  }
   h2 {
     font-size: 2.2rem;
   }
@@ -397,11 +401,9 @@ footer p a {
   .topics-container {
     padding: 100px 50px;
   }
-  .topics-container .topics-title, .topics-container .topics-title-ready {
+  .topics-container .topics-title,
+  .topics-container .topics-title--ready {
     padding: 7px;
-  }
-  .topics-container a:hover {
-    /* font-size: 2.5rem; */
   }
   #topics-container-JS {
     background-size: 10%;
@@ -422,14 +424,16 @@ footer p a {
     justify-content: center;
     align-items: flex-start;
   }
-  .modifiers-left, .modifiers-right {
+  .modifiers-left,
+  .modifiers-right {
     margin: 5px;
     width: 47%;
   }
   .quiz {
     padding: 100px;
   }
-  .coming-soon, .new {
+  .coming-soon,
+  .new {
     padding-top: 9px;
   }
   .infografias {

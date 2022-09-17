@@ -38,14 +38,13 @@
     </section>
   </header>
   
-  <section class = "topics-container" id = "topics-container-JS">
+  <section class = "topics-container topics-js">
     <ol class="numeracion-orden-principal">
 
 
       <li>
-        <h2><a class="topics-title topics-title-ready" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title--ready" href="javascript:void(0)">
           Motores de JavaScript
-        <p class="new">Nuevo</p>
         </a></h2>
         <div class= "topics-info">
           <p class="topics-copy">
@@ -89,9 +88,8 @@
       </li>
 
       <li>
-        <h2><a class="topics-title topics-title-ready" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title--ready" href="javascript:void(0)">
           Scope & Closures
-        <p class="new">Nuevo</p>
       </a></h2>
         <div class= "topics-info">
           <h3 class='topics-subtitle'>Scope</h3>
@@ -282,9 +280,9 @@ console.log(c2); //l2lgllgl
       </li>
 
       <li>
-        <h2><a class="topics-title" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
           Asincronismo
-        <p class="coming-soon">Próximamente</p>
+
       </a></h2>
         <div class= "topics-info">
           <p>
@@ -294,9 +292,8 @@ console.log(c2); //l2lgllgl
       </li>
       
       <li>
-        <h2><a class="topics-title" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
           Objetos
-        <p class="coming-soon">Próximamente</p>
       </a></h2>
         <div class= "topics-info">
           <p>
@@ -306,9 +303,8 @@ console.log(c2); //l2lgllgl
       </li>
 
       <li>
-        <h2><a class="topics-title topics-title-ready" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title--ready" href="javascript:void(0)">
           Estructuras de Datos
-        <p class="new">Nuevo!</p>
       </a></h2>
 
         <div class= "topics-info">
@@ -1010,16 +1006,99 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
           </p>
         </div>  
       </li>
+              
+      <li>
+        <h2>
+          <a class="topics-title topics-title--ready" href="javascript:void(0)">
+            Test Driven Development (TDD)
+          </a>
+        </h2>
+        <div class= "topics-info">
+          <h3>Qué es TDD?</h3>
+          <p>Es un proceso en el cual se hacen los tests antes del codigo, se basa en el ciclo red, green, refactor, donde red(rojo) es hacer un test que falla(debe fallar), luego en la fase green(verde), creamos el codigo necesario para que el test pase, y en la ultima fase, refactor, el codigo puede ser mejorado/optimizado.</p>
+          <figure>
+            <img class="infografia" src="https://i.postimg.cc/14xc0XjH/0.png" alt="Red, green, refactor cycle in TDD">
+            <figcaption>Ciclo TDD</figcaption>
+          </figure>
 
+          <h3>Beneficios</h3>
+          <h4>Testing se convierte en parte del desarrollo</h4>
+          <p>
+            Mayormente hacer tests se siente como una tarea pesada, por lo cual al aplicar TDD, los tests se convierten en parte del desarrollo.
+          </p>
+          <h4>Escribiremos código más limpio</h4>
+          <p>
+            Cuando aplicamos TDD, solemos escribir el mínimo código posible para hacer que el código pase.
+          </p>
+          <h4>Se reducen los bugs</h4>
+          <p>
+            Al usar TDD se escriben mas tests, lo cual tiende a reducir el numero de bugs.
+          </p>
+
+          <h3>Reglas del juego</h3>
+          <p>Existe una versión corta con 2 reglas basadas en las propuestas por Uncle Bob:
+          </p>
+          <br>
+          <ol>
+            <li class="list">Escribe solo lo necesario para que un unit test falle.</li>
+            <li class="list">Escribe solo suficiente codigo para hacer que el test que falló, pase.</li>
+          </ol>
+
+          <h3>Ejercicio: Aplicación en React para calcular el volumen de una esfera:</h3>
+
+          <figure>
+            <img class="infografia" src="https://i.postimg.cc/d3w1cKpB/1.png" alt="Intro TDD - Calcular volumen Estrella de la muerte">
+          </figure>
+          
+          <figure>
+            <img class="infografia" src="https://i.postimg.cc/Wbp39TMp/2.png" alt="Fases del ciclo red, green, refactor del TDD">
+          </figure> 
+
+          <figure>
+            <img class="infografia" src="https://i.postimg.cc/rpRzSj5S/5.png" alt="Primer test que falla (red)">
+          </figure> 
+
+          <figure>
+            <img class="infografia" src="https://i.postimg.cc/8c4C10VV/6.png" alt="Primer test que pasa (green)">
+          </figure> 
+
+          <figure>
+            <img class="infografia" src="https://i.postimg.cc/bJQJ5vCr/7.png" alt="Segundo Test que falla (red)">
+          </figure> 
+
+          <figure>
+            <img class="infografia" src="https://i.postimg.cc/v8tTLcxS/8.png" alt="Segundo Test que pasa (green)">
+          </figure> 
+
+          <figure>
+            <img class="infografia" src="https://i.postimg.cc/qRfqQKGW/9.png" alt="Tercer Test que falla (red)">
+          </figure> 
+
+          <figure>
+            <img class="infografia" src="https://i.postimg.cc/NfN0SS46/10.png" alt="Tercer Test que pasa (green)">
+          </figure> 
+
+          <figure>
+            <img class="infografia" src="https://i.postimg.cc/XYpvbLHT/11.png" alt="Imagen de la aplicacion en el navegador - Calculadora de volumen de esfera">
+          </figure> 
+
+          <figure>
+            <img class="infografia" src="https://i.postimg.cc/MpNpKBgX/TDDeath-Star.png" alt="Consejos y retos finales sobre el app">
+            <figcaption>
+              Fuente: <a href="https://www.instagram.com/p/CigT04OOmwR/" target="_blank" rel="noopener">gsvidal.web</a>
+            </figcaption>
+          </figure> 
+
+        </div>  
+      </li>
     </ol>
   </section>
 
-  <section class = "topics-container" id = "topics-container-HTML">
+  <section class = "topics-container topics-html">
     <ol class="numeracion-orden-principal">
       <li>
-        <h2><a class="topics-title" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
           Anatomía de una etiqueta HTML
-        <p class="coming-soon">Próximamente</p>
       </a></h2>
         <div class= "topics-info">
           <p>
@@ -1031,9 +1110,8 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
       </li>
 
       <li>
-        <h2><a class="topics-title" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
           Etiquetas
-        <p class="coming-soon">Próximamente</p>
       </a></h2>
         <div class= "topics-info">
           <p>
@@ -1041,16 +1119,14 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
           </p>
         </div>  
       </li>
-
     </ol>
   </section>
 
-  <section class = "topics-container" id = "topics-container-CSS">
+  <section class = "topics-container topics-css">
     <ol class="numeracion-orden-principal">
       <li>
-        <h2><a class="topics-title" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
           Anatomía de una Regla CSS
-        <p class="coming-soon">Próximamente</p>
       </a></h2>
         <div class= "topics-info">
           <p>
@@ -1062,9 +1138,8 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
       </li>
 
       <li>
-        <h2><a class="topics-title topics-title-ready" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title--ready" href="javascript:void(0)">
           Metodología BEM
-        <p class="new">Nuevo</p>
       </a></h2>
         <div class= "topics-info">
           <p>
@@ -1226,9 +1301,8 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
       </li>
 
       <li>
-        <h2><a class="topics-title" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
         Orden de declaración 
-        <p class="coming-soon">Próximamente</p>
       </a></h2>
         <div class= "topics-info">
           <p>
@@ -1263,7 +1337,6 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
   <section class="quiz-container">
     <p>Mide cuanto realmente aprendiste:</p>
     <a class="quiz" href="javascript:void(0)">Quiz Time!
-      <p class="coming-soonq">Próximamente</p>
     </a>
   </section>  
 
