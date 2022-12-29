@@ -1111,11 +1111,22 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
 
       <li>
         <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
-          Etiquetas
+          HTML Semántico
       </a></h2>
         <div class= "topics-info">
           <p>
-          Entre las etiquetas HTML más conocidas tenemos a:
+          El uso del HTML Semántico se remonta a...
+          </p>
+        </div>  
+      </li>
+
+      <li>
+        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
+          Parseo del código HTML
+      </a></h2>
+        <div class= "topics-info">
+          <p>
+          El parseo del codigo...
           </p>
         </div>  
       </li>
@@ -1274,8 +1285,7 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
 </textarea>
                 </code>
               </pre>
-   
-          </div>
+           </div>
         </div>
 
          </p>
@@ -1294,38 +1304,72 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
              <li>section-7</li>
              <li>footer</li>
            </ol>
-           
          </p>
-
         </div>  
       </li>
 
       <li>
-        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
+        <h2><a class="topics-title topics-title--ready" href="javascript:void(0)">
         Orden de declaración 
       </a></h2>
         <div class= "topics-info">
           <p>
-          Antes de pasar a conocer como se controla el orden al declarar en CSS, recordemos algo sobre la <strong>Herencia</strong>, la cual...
-          <br> Ahora sí, veamos las 3 formas de como controlar el orden al declarar en CSS:
+          A continuación, las 3 formas de como controlar el orden al declarar en CSS son (prioridad va de mayor 1. a menor 3.):
+          </p>
+          
           <ol>
-            <h3 class='topics-subtitle'>
-              <li>Importancia</li>
-            </h3>
-            <ol>
-              <li>Primero se aplican los estilos del navegador</li>
-              <li>Luego se aplican los estilos de nuestras declaraciones en nuestros archivos .css</li>
-              <li>Finalmente se aplican las declaraciones con| <code> !important</code></li>
-            </ol>
-            <p><br><strong>Notas: </strong>Recordar que el uso de !important es considerado una mala práctica, ya que puede romper nuestros estilos o llegar al punto de usarlo cada vez que no sepamos como funciona CSS </p>
-            <h3 class='topics-subtitle'>
-              <li>Especificidad</li>
-            </h3>  
-            <h3 class='topics-subtitle'>
-              <li>Orden en las fuentes</li>
-            </h3> 
-            <p>Aquí se aplica el algoritmo de Cascada que tiene CSS, las declaraciones y/o reglas CSS que estén por debajo sobreescribirán o anularán a las que estén por arriba, en caso de conflicto. <br><br><strong>Notas: </strong> También tener en cuenta que al llamar en el archivo .html varios archivos .css, los de abajo también pueden reescribir a los de arriba.</p>
+            <li>Origen e Importancia</li>
+            <li>Especificidad</li>
+            <li>Posición / Orden de las fuentes de codigo CSS</li>
           </ol>
+
+          <p>Recordar que mientras más alta sea alguna de estas 3 formas, más alta la relevancia o prioridad será la declaración CSS</p>
+            
+          <h3 class='topics-subtitle'>Origen e Importancia</h3>
+          <ol>
+            <li>Primero se aplican los estilos del navegador</li>
+            <li>Luego se aplican los estilos de nuestras declaraciones en nuestros archivos .css</li>
+            <li>Finalmente se aplican las declaraciones con <code> !important</code></li>
+          </ol>
+          <p>Una regla práctica para recordar la importancia de las declaraciones CSS, es la siguiente:</p>
+          <ol>
+            <li>transitions</li>
+            <li>user-agent !important</li>
+            <li>user !important</li>
+            <li>author !important</li>
+            <li>animations</li>
+            <li>author</li>
+            <li>user</li>
+            <li>user-agent</li>
+          </ol>
+          <p>Donde la importancia es mayor en 1. y menor en 8.</p>
+          <p><strong>Notas: </strong>Recordar que el uso de !important es considerado una mala práctica, ya que puede romper nuestros estilos o llegar al punto de usarlo cada vez que no sepamos como funciona CSS</p>
+           
+          <h3 class='topics-subtitle'>
+            Especificidad
+          </h3>
+
+          <ol>
+            <li>inline</li>
+            <li>id</li>
+            <li>clases / selectores de atributo / pseudo-clases</li>
+            <li>tipo / pseudo-elementos</li>
+          </ol>
+          <p>Donde la especificidad es mayor en 1. y menor en 4.</p>
+
+          <h3 class='topics-subtitle'>
+            Posición / Orden de las fuentes de codigo CSS
+          </h3>
+
+          <ol>
+            <li>CSS internos (al utilizar la etiqueta &lt;style&gt; dentro de la etiqueta &lt;head&gt;) </li>
+            <li>CSS externos (al utilizar la etiqueta &lt;link&gt; haciendo referencia a un css externo)</li>
+            <li>Orden en declaraciones CSS</li>
+          </ol>
+          <p>Donde la posicion es mayor en 1. y menor en 3.</p>
+
+          <p>
+          Aquí se aplica el algoritmo de Cascada que tiene CSS, las declaraciones y/o reglas CSS que estén por debajo sobreescribirán o anularán a las que estén por arriba, en caso de conflicto. <br><br><strong>Notas: </strong> También tener en cuenta que al llamar en el archivo .html varios archivos .css, los de abajo también pueden reescribir a los de arriba.
           </p>
 
         </div>  

@@ -122,6 +122,9 @@ h3 li {
   text-align: justify;
   padding: 80px 20px;
 }
+.topics-info ol {
+  margin: 20px 0;
+}
 
 /* Esta linea hace que la información enumerada debajo del h3 tenga una sangría más */
 .topics-info ol ol li,

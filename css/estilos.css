@@ -190,6 +190,7 @@ h3 {
 }
 .certificates__icons {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -272,7 +273,7 @@ h3 {
 .project .project__github.show {
   opacity: 0.6;
 }
-.project__github-image {
+.project__github-logo {
   border-bottom-left-radius: 15px;
 }
 .project_name {
@@ -497,11 +498,13 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 60px;
     margin-bottom: 60px;
   }
+
   .toolbox {
     margin: 0;
-    margin-left: 10%;
+    margin-left: 0;
   }
   .toolbox h3 {
     margin-top: 0;
@@ -515,7 +518,7 @@ h3 {
     justify-content: center;
     align-items: center;
     width: 120%;
-    height: 365px;
+    /* height: 365px; */
   }
   .welcome__logobithug {
     display: block;
