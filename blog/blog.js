@@ -8,6 +8,3 @@ for (let i = 0; i < topicsTitle.length; i++) {
     }
   });
 }
-
-console.log(topicsTitle);
-console.log(topicsTitleR);
