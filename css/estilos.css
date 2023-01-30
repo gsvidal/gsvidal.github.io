@@ -161,7 +161,8 @@ h3 {
   justify-items: center;
   width: 100%;
   max-width: 400px;
-  height: 300px;
+  row-gap: 20px;
+  column-gap: 0;
   padding: 10px;
   margin: 0 20px;
   font-size: 1rem;
@@ -462,16 +463,15 @@ h3 {
   }
   .toolbox__icons {
     margin: 20px;
-    grid-gap: 25px;
+    gap: 25px;
   }
   .toolbox__icon {
     width: 60px;
     height: 60px;
   }
-  .toolbox__icon--materializecss,
   .toolbox__icon--scrum {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
   }
   .older-projects-container ul {
     justify-content: space-around;
