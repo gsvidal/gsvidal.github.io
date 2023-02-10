@@ -20,13 +20,11 @@ body {
   font-size: 3rem;
   background-color: #450db2;
   color: white;
-  background-image: url('../images/pentagonRound1.svg'),
-    url('../images/pentagonRound2.svg'), url('../images/pentagonRound2.svg'),
-    url('../images/bgFooter.svg');
+  background-image: url('../images/pentagonRound1.svg'), url('../images/pentagonRound2.svg'),
+    url('../images/pentagonRound2.svg'), url('../images/bgFooter.svg');
   background-repeat: no-repeat;
   background-size: 280px, 150px, 150px, 100%;
-  background-position: top -100px right -80px, bottom 900px left -100px,
-    top 900px right -80px, bottom left;
+  background-position: top -100px right -80px, bottom 900px left -100px, top 900px right -80px, bottom left;
 }
 .header {
   display: flex;
@@ -60,8 +58,7 @@ body {
   display: inline-block;
   width: 150px;
   height: 150px;
-  background: url('https://i.postimg.cc/R0ZtsZxq/Z7x9Riw.gif') center/cover
-    no-repeat;
+  background: url('https://i.postimg.cc/R0ZtsZxq/Z7x9Riw.gif') center/cover no-repeat;
 }
 .welcome {
   width: 95%;
@@ -70,6 +67,7 @@ body {
   text-align-last: center;
 }
 .welcome__intro {
+  margin-top: 5px;
   font-size: 1.9rem;
 }
 .welcome strong {
@@ -89,7 +87,7 @@ body {
 }
 .welcome__logobithug {
   display: none;
-  margin: 10px 25px;
+  margin: 20px;
   border-radius: 50%;
   cursor: pointer;
 }
@@ -114,15 +112,13 @@ body {
   flex-direction: column;
   align-items: center;
 }
-.toolbox__title {
-  line-height: 3.5rem;
-}
 h3 {
   text-align: center;
   margin: 50px 0 30px;
   text-shadow: 0 0 7px;
 }
-.toolbox h3 {
+.title-projects--web-technologies {
+  margin-right: 0;
   color: rgb(255, 252, 205);
   text-shadow: 0 0 12px rgb(255, 249, 166);
 }
@@ -225,6 +221,7 @@ h3 {
   height: 250px;
   margin: 0 25px;
 }
+
 .project .project__link {
   display: flex;
   flex-direction: column;
@@ -285,7 +282,47 @@ h3 {
   font-size: 1.6rem;
   color: white;
   text-align: center;
+  cursor: default;
 }
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.1s;
+  visibility: visible;
+}
+[data-title]:after {
+  transition: all 0.2s ease 0.2s;
+  content: attr(data-title);
+  background-color: #cdc7ff71;
+  color: #111;
+  font-size: 1.5rem;
+  position: absolute;
+  padding: 5px 12px;
+  top: 30px;
+  left: 0;
+  box-shadow: 1px 1px 3px #222222;
+  opacity: 0;
+  border: 1px solid #111111;
+  z-index: 1;
+  visibility: hidden;
+}
+[data-title] {
+  position: relative;
+}
+.toolbox__icons [data-title]:after {
+  top: 70px;
+  width: 200px;
+  background-color: #ffffa5d0;
+}
+
+.certificates__icons [data-title]:after {
+  top: 70px;
+  background-color: #ffcaa6af;
+}
+
+.react-projects--fullstack [data-title]:after {
+  background-color: #b6ffb4af;
+}
+
 .p-none img {
   box-shadow: none;
 }
@@ -349,13 +386,12 @@ h3 {
 /* Starts Ligth-dark-mode styles */
 #body.light-dark-mode {
   color: #450db2;
-  background-image: url('../images/pentagonRound1.svg'),
-    url('../images/pentagonRound2.svg'), url('../images/pentagonRound2.svg'),
-    url('../images/bgFooter.svg'), url('../images/mobileBG2.svg');
+  background-image: url('../images/pentagonRound1.svg'), url('../images/pentagonRound2.svg'),
+    url('../images/pentagonRound2.svg'), url('../images/bgFooter.svg'), url('../images/mobileBG2.svg');
   background-repeat: no-repeat;
   background-size: 280px, 150px, 150px, 100%, 240%;
-  background-position: top -100px right -80px, bottom 900px left -100px,
-    top 900px right -80px, bottom left, top 40vh right -95vw;
+  background-position: top -100px right -80px, bottom 900px left -100px, top 900px right -80px, bottom left,
+    top 40vh right -95vw;
   background-color: white;
 }
 .logo__bg.light-dark-mode {
@@ -376,8 +412,8 @@ h3 {
   color: #450db2;
 }
 .older-projects-images.light-dark-mode {
-  filter: brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(6209%)
-    hue-rotate(261deg) brightness(67%) contrast(114%);
+  filter: brightness(0) saturate(100%) invert(21%) sepia(99%) saturate(6209%) hue-rotate(261deg) brightness(67%)
+    contrast(114%);
 }
 .toolbox h3.light-dark-mode {
   color: rgb(255, 242, 59);
@@ -435,8 +471,7 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 90%;
-    background-image: url('../images/desktopBG1.svg'),
-      url('../images/desktopBG2.svg');
+    background-image: url('../images/desktopBG1.svg'), url('../images/desktopBG2.svg');
     background-size: 100%;
     background-position: top left, bottom left;
   }
@@ -444,8 +479,7 @@ h3 {
     background-color: white;
     color: #450db2;
     background-image: none;
-    background-image: url('../images/desktopBG1.svg'),
-      url('../images/desktopBG2.svg');
+    background-image: url('../images/desktopBG1.svg'), url('../images/desktopBG2.svg');
     background-size: 100%;
     background-position: top left, bottom left;
   }
@@ -486,12 +520,13 @@ h3 {
     flex-direction: column;
     align-items: center;
     width: 90%;
-    max-width: 1800px;
+    max-width: 1200px;
     min-height: 100vh;
   }
   .header {
     width: 100%;
     margin: 0;
+    margin-left: 60px;
     margin-right: 5px;
     justify-content: flex-end;
     margin-top: 100px;
@@ -504,13 +539,16 @@ h3 {
     margin-top: 60px;
     margin-bottom: 60px;
   }
-
   .toolbox {
     margin: 0;
     margin-left: 0;
+    align-items: flex-end;
   }
   .toolbox h3 {
     margin-top: 0;
+  }
+  .title-projects--web-technologies {
+    margin-right: 45px;
   }
   .toolbox__icons {
     margin-bottom: 0;
@@ -520,8 +558,8 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 30px;
     width: 120%;
-    /* height: 365px; */
   }
   .welcome__logobithug {
     display: block;
