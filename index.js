@@ -1,7 +1,5 @@
 const bodyBGColor = document.getElementById('body');
-const switchButtonContainer = document.querySelector(
-  '.switch_button_container'
-);
+const switchButtonContainer = document.querySelector('.switch_button_container');
 const switchButton = document.querySelector('.switch_button');
 const logo = document.querySelector('.logo__bg');
 const linkPortfolioReact = document.querySelector('.welcome__portfolio-react');
@@ -23,17 +21,11 @@ function lightDarkMode() {
   linkPortfolioReact.classList.toggle('light-dark-mode');
   personalBlog.classList.toggle('light-dark-mode');
 
-  olderProjects.forEach((olderProject) =>
-    olderProject.classList.toggle('light-dark-mode')
-  );
+  olderProjects.forEach((olderProject) => olderProject.classList.toggle('light-dark-mode'));
 
-  olderProjectsImages.forEach((olderProjectsImage) =>
-    olderProjectsImage.classList.toggle('light-dark-mode')
-  );
+  olderProjectsImages.forEach((olderProjectsImage) => olderProjectsImage.classList.toggle('light-dark-mode'));
 
-  projectNames.forEach((projectName) =>
-    projectName.classList.toggle('light-dark-mode')
-  );
+  projectNames.forEach((projectName) => projectName.classList.toggle('light-dark-mode'));
 
   titles.forEach((title) => title.classList.toggle('light-dark-mode'));
 }
@@ -45,9 +37,7 @@ let lastIndex;
 function fadeRandomIcon() {
   let randomIconIndex = Math.floor(icons.length * Math.random());
   if (lastIndex === randomIconIndex) {
-    randomIconIndex !== icons.length - 1
-      ? randomIconIndex++
-      : randomIconIndex--;
+    randomIconIndex !== icons.length - 1 ? randomIconIndex++ : randomIconIndex--;
   }
   icons[lastIndex]?.classList.remove('toolbox__fade');
   icons[randomIconIndex].classList.add('toolbox__fade');
@@ -65,8 +55,7 @@ const imagesShadow = document.querySelectorAll('.project_image');
 imagesShadow.forEach((image) => {
   image.addEventListener('mouseover', (event) => {
     if (!image.parentElement.classList.contains('p-none')) {
-      image.parentElement.style.boxShadow =
-        '0px 0px 35px 2px #b8a5f2, 0px 0px 15px 2px #ffffff';
+      image.parentElement.style.boxShadow = '0px 0px 35px 2px #b8a5f2, 0px 0px 15px 2px #ffffff';
     } else {
       image.style.transform = 'none';
     }

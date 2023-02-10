@@ -67,11 +67,7 @@ body {
 .capacidad_barra_full {
   width: 40%;
   height: 12px;
-  background-image: linear-gradient(
-    to right,
-    hsl(6, 100%, 80%),
-    hsl(335, 100%, 65%)
-  );
+  background-image: linear-gradient(to right, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
   border-radius: 7.5px;
   display: flex;
   align-items: center;
@@ -156,16 +152,13 @@ h3 li {
   color: blue;
 }
 .topics-js {
-  background: #fff8b6 url('https://i.postimg.cc/mrr0wG81/js-logo.png') left
-    top/90px no-repeat;
+  background: #fff8b6 url('https://i.postimg.cc/mrr0wG81/js-logo.png') left top/90px no-repeat;
 }
 .topics-html {
-  background: #ffc8b0 url('https://i.postimg.cc/2SGsh5Ff/html-logo.png') left
-    top/90px no-repeat;
+  background: #ffc8b0 url('https://i.postimg.cc/2SGsh5Ff/html-logo.png') left top/90px no-repeat;
 }
 .topics-css {
-  background: #a8d0f0 url('https://i.postimg.cc/9fNsgNn8/css-logo.png') left
-    top/90px no-repeat;
+  background: #a8d0f0 url('https://i.postimg.cc/9fNsgNn8/css-logo.png') left top/90px no-repeat;
 }
 .topics-container li {
   /* Al darle la siguiente línea puedo hacer crecer con hover y no mover el resto de elementos */

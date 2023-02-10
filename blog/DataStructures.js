@@ -18,9 +18,8 @@ class MyArray {
   //Nuestro método pop remueve el último elemento del array
   pop() {
     const lastItem = this.data[this.length - 1];
-    delete this.data[this.length -1];
+    delete this.data[this.length - 1];
     this.length--;
-     
   }
   //Nuestro método delete elimina el elemento de indice index y devuelve el elemento removido.
   delete(index) {
@@ -29,7 +28,7 @@ class MyArray {
     return item;
   }
   shiftIndex(index) {
-    for(let i = index; i < this.length - 1; i++) {
+    for (let i = index; i < this.length - 1; i++) {
       this.data[i] = this.data[i + 1];
     }
     delete this.data[this.length - 1];
@@ -40,12 +39,12 @@ class MyArray {
     this.length++;
     this.unshiftIndex();
     this.data[0] = item;
-    
+
     return this.length;
   }
   unshiftIndex() {
-    for(let i = this.length - 1; i > 0 ; i--) {
-      this.data[i] = this.data[i-1];
+    for (let i = this.length - 1; i > 0; i--) {
+      this.data[i] = this.data[i - 1];
     }
   }
   //Para nuestro método shiftItem vamos a remover el primer elemento de nuestro array, usaremos el método delete() creado anteriormente.
@@ -94,8 +93,6 @@ class HashTable {
 //Instanciamos el HashTable con 50 espacios libres
 const myHashTable = new HashTable(50);
 
-
-
 //Singly Linked List
 //Creamos una clase Node(nodo) para no reescribir código en los métodos
 class Node {
@@ -109,8 +106,8 @@ class MySinglyLinkedList {
   constructor(value) {
     this.head = {
       value: value,
-      next: null
-    }
+      next: null,
+    };
     this.tail = this.head;
     this.length = 1;
   }
@@ -133,12 +130,12 @@ class MySinglyLinkedList {
   }
   //Nuestro método insert insertará un elemento con índice index en el Singly Linked List
   insert(index, value) {
-    if(index >= this.length) {
-      console.log("No hay suficientes elementos, será enviado al final");
+    if (index >= this.length) {
+      console.log('No hay suficientes elementos, será enviado al final');
       return this.append(value);
     }
 
-    const newNode = new Node(value); 
+    const newNode = new Node(value);
     const firstPointer = this.getTheIndex(index - 1);
     //Se crea una const holdingPointer que servirá para no perder el puntero next del firstPointer.
     const holdingPointer = firstPointer.next;
@@ -153,10 +150,10 @@ class MySinglyLinkedList {
   getTheIndex(index) {
     let currentNode = this.head;
 
-    for(let counter = 0; counter < this.length; counter++) {
-      if(counter !== index) {
+    for (let counter = 0; counter < this.length; counter++) {
+      if (counter !== index) {
         currentNode = currentNode.next;
-      } else{
+      } else {
         return currentNode;
       }
     }
@@ -164,7 +161,6 @@ class MySinglyLinkedList {
 }
 //Instanciando MySinglyLinkedList:
 let myLinkedList = new MySinglyLinkedList(1);
-
 
 //Doubly Linked List
 
@@ -204,15 +200,15 @@ class MyDoublyLinkedList {
     const newNode = new Node(value);
     // Doubly: se añade la siguiente linea
     this.head.prev = newNode;
-    
+
     newNode.next = this.head;
     this.head = newNode;
 
     this.length++;
   }
   insert(index, value) {
-    if(index >= this.length) {
-      console.log("No hay suficientes elementos, será enviado al final");
+    if (index >= this.length) {
+      console.log('No hay suficientes elementos, será enviado al final');
       return this.append(value);
     }
 
@@ -230,27 +226,22 @@ class MyDoublyLinkedList {
     this.length++;
 
     return this;
-
   }
 
   getTheIndex(index) {
-    
     let currentNode = this.head;
 
-    for(let counter = 0; counter < this.length; counter++) {
-      if(counter !== index) {
+    for (let counter = 0; counter < this.length; counter++) {
+      if (counter !== index) {
         currentNode = currentNode.next;
-      } else{
+      } else {
         return currentNode;
       }
     }
   }
-  
 }
 //Instanciado MyDoublyLinkedList:
 let myDoublyLinkedList = new MyDoublyLinkedList(1);
-
-
 
 //Stack
 //Creamos una clase Node(nodo) para no reescribir código en los métodos
@@ -274,7 +265,7 @@ class Stack {
   //Nuestro método push agrega un elemento al (top) del stack y nos devuelve el stack
   push(value) {
     const newNode = new Node(value);
-    if(this.length === 0) {
+    if (this.length === 0) {
       this.top = newNode;
       this.bottom = this.top;
     } else {
@@ -289,7 +280,7 @@ class Stack {
   //Nuestro método pop remueve el elemento top y nos devuelve el stack
   pop() {
     var penultimo = myStack.bottom;
-    for(let i = 0; i < this.length-2; i++) {
+    for (let i = 0; i < this.length - 2; i++) {
       penultimo = penultimo.next;
     }
 
@@ -302,7 +293,6 @@ class Stack {
 }
 //Instanciamos la clase Stack
 const myStack = new Stack();
-
 
 //Queue
 
@@ -326,7 +316,7 @@ class Queue {
   //Con nuestro método enqueue agregaremos un elemento al final de la cola (last)
   enqueue(value) {
     const newNode = new Node(value);
-    if(this.length === 0) {
+    if (this.length === 0) {
       this.first = newNode;
       this.last = newNode;
     } else {
@@ -339,98 +329,93 @@ class Queue {
   }
   //Con nuestro método dequeue removeremos el primer elemento de la cola
   dequeue() {
-    if(this.length !== 0) {
-    const second = myQueue.first.next;
-    this.first = second;
-    this.length--;
+    if (this.length !== 0) {
+      const second = myQueue.first.next;
+      this.first = second;
+      this.length--;
 
-    return this;
+      return this;
     } else {
-      console.log("Queue is empty, you cannot dequeue!")
+      console.log('Queue is empty, you cannot dequeue!');
     }
   }
-  
 }
 //Instanciamos la clase Queue
 const myQueue = new Queue();
 
-
-
 //Tree
 
-  //      10
-  //   4      20  
-  // 2   8  17  170
-  
-  class Node {
-    constructor(value) {
-      this.left = null;
-      this.right = null;
-      this.value = value;
-    }
+//      10
+//   4      20
+// 2   8  17  170
+
+class Node {
+  constructor(value) {
+    this.left = null;
+    this.right = null;
+    this.value = value;
   }
-  
-  class BinarySearchTree {
-    constructor() {
-      this.root = null;
-    }
-    //Con este método insert, podremos agregar nodos con sus valores y referencias según la condición si son menor o mayor al padre.
-    insert(value) {
-      const newNode = new Node(value);
-      if(this.root === null) {
-        this.root = newNode;
-      } else {
-        let currentNode = this.root;
-        while(true) {
-          if(value < currentNode.value) {
-            if(!currentNode.left) {
-              currentNode.left = newNode;
-              return this;
-            }
-            currentNode = currentNode.left;
-          } else {
-            if(!currentNode.right) {
-              currentNode.right = newNode;
-              return this;
-            }
-            currentNode = currentNode.right;
+}
+
+class BinarySearchTree {
+  constructor() {
+    this.root = null;
+  }
+  //Con este método insert, podremos agregar nodos con sus valores y referencias según la condición si son menor o mayor al padre.
+  insert(value) {
+    const newNode = new Node(value);
+    if (this.root === null) {
+      this.root = newNode;
+    } else {
+      let currentNode = this.root;
+      while (true) {
+        if (value < currentNode.value) {
+          if (!currentNode.left) {
+            currentNode.left = newNode;
+            return this;
           }
-        } 
+          currentNode = currentNode.left;
+        } else {
+          if (!currentNode.right) {
+            currentNode.right = newNode;
+            return this;
+          }
+          currentNode = currentNode.right;
+        }
       }
     }
-    //El método search nos permitirá devolver el nodo en el que se encuentra el valor(value) enviado como argumento. Recordar que el nodo es el conjunto de información como: value, left child, right child. En caso de recorrerse el binary search tree y no encontrar el valor buscado nos indicará que no existe el valor.
-    search(value) {
-      var msj = "no se encuentra el valor";
-      if(this.root === null) {
-        console.log(`The tree is empty!`);
-      } else {
-        let currentNode = this.root;
-         while(true) {
-          if(value === currentNode.value) {
-            return currentNode;
-          } else {
-            if(value < currentNode.value) {
-              if(currentNode.left) {
-                currentNode = currentNode.left;
-              } else {
-                return msj;
-              }
+  }
+  //El método search nos permitirá devolver el nodo en el que se encuentra el valor(value) enviado como argumento. Recordar que el nodo es el conjunto de información como: value, left child, right child. En caso de recorrerse el binary search tree y no encontrar el valor buscado nos indicará que no existe el valor.
+  search(value) {
+    var msj = 'no se encuentra el valor';
+    if (this.root === null) {
+      console.log(`The tree is empty!`);
+    } else {
+      let currentNode = this.root;
+      while (true) {
+        if (value === currentNode.value) {
+          return currentNode;
+        } else {
+          if (value < currentNode.value) {
+            if (currentNode.left) {
+              currentNode = currentNode.left;
             } else {
-              if(currentNode.right) {
-                currentNode = currentNode.right;
-              } else {
-                return msj;
-              }
+              return msj;
+            }
+          } else {
+            if (currentNode.right) {
+              currentNode = currentNode.right;
+            } else {
+              return msj;
             }
           }
-          
-         }
-        } 
-    }   
+        }
+      }
+    }
   }
-  //Instanciamos BinarySearchTree
-  const myBinarySearchTree = new BinarySearchTree();
-
+}
+//Instanciamos BinarySearchTree
+const myBinarySearchTree = new BinarySearchTree();
 
 //Graph
 
@@ -462,11 +447,10 @@ myGraph.addVertex(6);
 myGraph.addVertex(8);
 
 //Creamos los Edges(bordes), ya que hay 7 bordes en el gráfico, deben haber 7 addEdge:
-myGraph.addEdge(8,4);
-myGraph.addEdge(4,5);
-myGraph.addEdge(4,1);
-myGraph.addEdge(1,6);
-myGraph.addEdge(3,6);
-myGraph.addEdge(1,3);
-myGraph.addEdge(5,3);
-
+myGraph.addEdge(8, 4);
+myGraph.addEdge(4, 5);
+myGraph.addEdge(4, 1);
+myGraph.addEdge(1, 6);
+myGraph.addEdge(3, 6);
+myGraph.addEdge(1, 3);
+myGraph.addEdge(5, 3);

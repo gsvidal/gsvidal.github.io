@@ -1,365 +1,402 @@
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="10 Fundamentos que todo desarrollador Front-End debe dominar">
-  <meta name="robots" content="index, follow">
-  <title>10 Fundamentos Front-End</title>
-  <link rel="stylesheet" href="./css/estilos.css">
-  <link rel="stylesheet" href="./prism.css">
-  <link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/k4a0ecv.png">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@200;300;400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="10 Fundamentos que todo desarrollador Front-End debe dominar" />
+    <meta name="robots" content="index, follow" />
+    <title>10 Fundamentos Front-End</title>
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="stylesheet" href="./prism.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://i.imgur.com/k4a0ecv.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&family=Poppins:wght@200;300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet" />
+  </head>
 
-<body>
-  <section class="construction">
-    <p> <strong>En construcción</strong><br>Inicio: 09/01/2021 <br> Estreno-aprox: 15/02/2021 <br> % Avance: </p>
-    <div class="capacidad_barra">
-      <div class="capacidad_barra_full">
+  <body>
+    <section class="construction">
+      <p>
+        <strong>En construcción</strong><br />Inicio: 09/01/2021 <br />
+        Estreno-aprox: 15/02/2021 <br />
+        % Avance:
+      </p>
+      <div class="capacidad_barra">
+        <div class="capacidad_barra_full"></div>
       </div>
-    </div>
-  </section>
-  <header>
-    <h1 class="blog-title">10 Fundamentos que todo desarrollador Front-End debe dominar
-    </h1>
-    <section class="blog-title__container">
-    <p class="blog-title__description">
-      Existen muchas y muchos desarrolladores con experiencia en esta industria, los cuales a lo largo de los años han logrado abrirse paso en medio de este mar de tecnologías, lenguajes y frameworks del mundo de la programación y lo han hecho bien hasta ahora, pero una parte de ellos(y no una insignificante) aún siente que mucho de esto funciona como una suerte de <i>Arte de Magia</i>, lo cual desde un punto de vista <i>holístico</i>, como el de la <strong>Ingeniería de Software</strong>, no es lo ideal. 
-    </p>
-    <p class="blog-title__description">
-      El conocer respuestas a interrogantes tales como: <strong>"¿Qué es y como funciona el motor de JavaScript?"</strong>, <strong>"¿Como crear y en que puedo utilizar cierta Estructura de Datos?"</strong> o <strong>"¿Cómo funciona el asincronismo en JavaScript?"</strong>, entre otras, puede llevarte al siguiente nivel.
-    </p>  
-    <p class="blog-title__description">
-      En las siguientes líneas encontrarás temas que puedes haber oído, quizás solo superficialmente, pero es momento de cambiar eso. Aquí inicia este artículo de los <i>5 Fundamentos que todo desarrollador Front-End debe dominar.</i> <br>
-    </p>
     </section>
-  </header>
-  
-  <section class = "topics-container topics-js">
-    <ol class="numeracion-orden-principal">
+    <header>
+      <h1 class="blog-title">10 Fundamentos que todo desarrollador Front-End debe dominar</h1>
+      <section class="blog-title__container">
+        <p class="blog-title__description">
+          Existen muchas y muchos desarrolladores con experiencia en esta industria, los cuales a lo largo de los años
+          han logrado abrirse paso en medio de este mar de tecnologías, lenguajes y frameworks del mundo de la
+          programación y lo han hecho bien hasta ahora, pero una parte de ellos(y no una insignificante) aún siente que
+          mucho de esto funciona como una suerte de <i>Arte de Magia</i>, lo cual desde un punto de vista
+          <i>holístico</i>, como el de la <strong>Ingeniería de Software</strong>, no es lo ideal.
+        </p>
+        <p class="blog-title__description">
+          El conocer respuestas a interrogantes tales como:
+          <strong>"¿Qué es y como funciona el motor de JavaScript?"</strong>,
+          <strong>"¿Como crear y en que puedo utilizar cierta Estructura de Datos?"</strong> o
+          <strong>"¿Cómo funciona el asincronismo en JavaScript?"</strong>, entre otras, puede llevarte al siguiente
+          nivel.
+        </p>
+        <p class="blog-title__description">
+          En las siguientes líneas encontrarás temas que puedes haber oído, quizás solo superficialmente, pero es
+          momento de cambiar eso. Aquí inicia este artículo de los
+          <i>5 Fundamentos que todo desarrollador Front-End debe dominar.</i> <br />
+        </p>
+      </section>
+    </header>
 
+    <section class="topics-container topics-js">
+      <ol class="numeracion-orden-principal">
+        <li>
+          <h2><a class="topics-title topics-title--ready" href="javascript:void(0)"> Motores de JavaScript </a></h2>
+          <div class="topics-info">
+            <p class="topics-copy">
+              Como desarrolladores web, es bueno conocer los fundamentos del lenguaje Javascript y de su motor, este
+              último con el fin de comprender como a partir de un lenguaje que los humanos podemos entender, se llega a
+              convertir en algo que las maquinas pueden comprender y ejecutar.
+            </p>
+            <h3 class="topics-subtitle">Diferentes Motores de Javascript</h3>
+            <p class="topics-copy">
+              Cada navegador tiene su propio motor de javascript, entre los más conocidos tenemos los siguientes:
+            </p>
+            <figure>
+              <img
+                class="infografia"
+                src="https://i.postimg.cc/7LZCgVn1/4to-post.png"
+                alt="Infografía de los motores de Javascript"
+              />
+              <figcaption>Definición y distintos motores de JavaScript</figcaption>
+            </figure>
+            <p class="topics-copy">Revisaremos uno de los más utilizados, el V8 de Chrome:</p>
+            <figure>
+              <img
+                class="infografia"
+                src="https://i.postimg.cc/kgc66ZKX/4to-post-2.png"
+                alt="Infografía de V8 Chrome Engine"
+              />
+              <figcaption>V8 Chrome Engine</figcaption>
+            </figure>
+            <p class="topics-copy">
+              Pero ¿cómo funciona?, veamos todo el recorrido que hace nuestro código en Javascript desde nuestro editor
+              de código hasta que sirve a su propósito.
+            </p>
+            <figure>
+              <img
+                class="infografia"
+                src="https://i.postimg.cc/q7DNQ31P/4to-post-3.png"
+                alt="Infografía de como funciona el motor V8 de Chrome"
+              />
+              <figcaption>Funcionamiento del motor V8 de Chrome</figcaption>
+            </figure>
+            <p class="topics-copy">Mostremos en código el bytecode y el machine code:</p>
+            <figure>
+              <img
+                class="infografia"
+                src="https://res.cloudinary.com/practicaldev/image/fetch/s--63gCOzJI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/ignition-bytecode.png"
+                alt="Infografía de comparación de lenguajes de alto a bajo nivel: javascript - bytecode - machine code"
+              />
+              <figcaption>
+                Javascript - Bytecode - Machine code
+                <p>Fuente: Franziska Hinkelmann</p>
+              </figcaption>
+            </figure>
+          </div>
+        </li>
 
-      <li>
-        <h2><a class="topics-title topics-title--ready" href="javascript:void(0)">
-          Motores de JavaScript
-        </a></h2>
-        <div class= "topics-info">
-          <p class="topics-copy">
-            Como desarrolladores web, es bueno conocer los fundamentos del lenguaje Javascript y de su motor, este último con el fin de comprender como a partir de un lenguaje que los humanos podemos entender, se llega a convertir en algo que las maquinas pueden comprender y ejecutar.
-          </p>
-          <h3 class='topics-subtitle'>Diferentes Motores de Javascript</h3> 
-          <p class="topics-copy">
-          Cada navegador tiene su propio motor de javascript, entre los más conocidos tenemos los siguientes:
-          </p> 
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/7LZCgVn1/4to-post.png" alt="Infografía de los motores de Javascript">
-            <figcaption>Definición y distintos motores de JavaScript</figcaption>
-          </figure>
-          <p class="topics-copy">
-          Revisaremos uno de los más utilizados, el V8 de Chrome:
-          </p>
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/kgc66ZKX/4to-post-2.png" alt="Infografía de V8 Chrome Engine">
-            <figcaption>V8 Chrome Engine</figcaption>
-          </figure>
-          <p class="topics-copy">
-            Pero ¿cómo funciona?, veamos todo el recorrido que hace nuestro código en Javascript desde nuestro editor de código hasta que sirve a su propósito.
-          </p>
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/q7DNQ31P/4to-post-3.png" alt="Infografía de como funciona el motor V8 de Chrome">
-            <figcaption>Funcionamiento del motor V8 de Chrome</figcaption>
-          </figure>
-          <p class="topics-copy">
-            Mostremos en código el bytecode y el machine code:
-          </p>
-          <figure>
-            <img class="infografia" src="https://res.cloudinary.com/practicaldev/image/fetch/s--63gCOzJI--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://github.com/khaosdoctor/my-notes/raw/master/node/assets/ignition-bytecode.png" alt="Infografía de comparación de lenguajes de alto a bajo nivel: javascript - bytecode - machine code">
-            <figcaption>Javascript - Bytecode - Machine code
-              <p>
-                Fuente: Franziska Hinkelmann 
-              </p>
-            </figcaption>
-          </figure>
+        <li>
+          <h2><a class="topics-title topics-title--ready" href="javascript:void(0)"> Scope & Closures </a></h2>
+          <div class="topics-info">
+            <h3 class="topics-subtitle">Scope</h3>
+            <p class="topics-copy">
+              Es el contexto de ejecución, en el cual los valores y expresiones son visibles o pueden ser referenciados,
+              scopes pueden ser colocados en jerarquía, así el hijo o scope interno (inner scope) tiene acceso al padre
+              o scope externo (outer scope), pero no viceversa. Scope es definido en tiempo de parseo.
+            </p>
+            <h3 class="topics-subtitle">Ámbito Léxico / Lexical Scope</h3>
+            <p class="topics-copy">
+              Se basa en el lugar donde una variable fue declarada para determinar dónde esta variable estará
+              disponible. Las funciones anidadas tienen acceso a las variables declaradas en su ámbito exterior.
+            </p>
+            <p class="topics-copy">
+              Pasemos a ver unos ejemplos de scope, pero con la siguiente pregunta en mente:
+              <strong>¿Cómo funciona realmente Javascript?</strong>
+            </p>
 
-        </div>  
-      </li>
-
-      <li>
-        <h2><a class="topics-title topics-title--ready" href="javascript:void(0)">
-          Scope & Closures
-      </a></h2>
-        <div class= "topics-info">
-          <h3 class='topics-subtitle'>Scope</h3>
-          <p class="topics-copy">
-            Es el contexto de ejecución, en el cual los valores y expresiones son visibles o pueden ser referenciados, scopes pueden ser colocados en jerarquía, así el hijo o scope interno (inner scope) tiene acceso al padre o scope externo (outer scope), pero no viceversa. Scope es definido en tiempo de parseo.
-          </p>
-          <h3 class='topics-subtitle'>Ámbito Léxico / Lexical Scope</h3>
-          <p class="topics-copy">
-            Se basa en el lugar donde una variable fue declarada para determinar dónde esta variable estará disponible. Las funciones anidadas tienen acceso a las variables declaradas en su ámbito exterior.
-          </p>
-          <p class="topics-copy">
-            Pasemos a ver unos ejemplos de scope, pero con la siguiente pregunta en mente:
-            <strong>¿Cómo funciona realmente Javascript?</strong> 
-          </p>
-
-          <pre>
+            <pre>
             <code class="language-js">
-//Exercise 1
-let a = 3;
-function addTwo(x) {
-  let ret = x + 2;
-  return ret;
-}
-let b = addTwo(a);
-console.log(b);
-//5
+              //Exercise 1
+              let a = 3;
+              function addTwo(x) {
+                let ret = x + 2;
+                return ret;
+              }
+              let b = addTwo(a);
+              console.log(b);
+              //5
 
-//The compiler asks the global scope manager(gsm) if already exists a variable named "a", the gsm doesn't find it, so it creates it. then assigns to it the aritmethic expression, a literal value of 3, after that the gsm has a new request for creating a variable named addTwo, as it doesn't exists yet, it's created and is assigned to it a function definition. Still in the global scope a b variable is also created and assign for now an undefined, in that line, occurs a call expression addTwo() the gsm check if it exits in that scope and there it is, so executes it sending an a argument, so a is also checked and its value is 3 in the global scope, so the addTwo function have a parameter x, so it's created in the local execution context, and it's assigned the value of 3, so x = 3; then a ret variable is created in the function execution context and it's assign to it a binary expression (x + 2), the x = 3 and 2; 5 is assigned to ret, the next line is a return statement and finish the function, the 5 is returned when it's called and immediately the function instance as well as its local execution context and its variables (x, ret) are destroyed by the garbage colector.
-//Then again in the global scope the b variable is assigned with the 5 returned. and finally it's put to the console the value of b (5).
-
-
-
-//Exercise 2
-//Here we can see the lexical scope definition in practice: 
-//Lexical scope is when a function can access a variable declared in its outer scope(next outer scope and so on)
-//Or when a variable defined outside a function can be accessible inside that function
-
-//Lexical scope / Ambito Léxico / Scope Chain
-let val1 = 2;
-function multiplyThis(n) {
-  let ret = n * val1;
-  return ret;
-}
-let multiplied = multiplyThis(6);
-console.log('example of scope:', multiplied);
-//example of scope: 12
-
-
-//Exercise 3
-//A function that returns a function example is essential to understand closures
-let val = 7;
-function createAdder() {
-  function addNumbers(a, b) {
-    let ret = a + b;
-    return ret;
-  }
-  return addNumbers;
-}
-let adder = createAdder();
-let sum = adder(val, 8);
-console.log('example of function returning a function:', sum);
-//example of function returning a function: 15
-
-
-// Line 55: We declare a variable val in the global execution context and assign the value 7 to that variable
-
-// Line 56: We declare a variable named createAdder and we assign a function definition to it (we put "function" before createAdder) all this happens int the global exection context, we have to remember that whatever is between the curly brackets {} is not executed, not even evalated, just stored the function definition into a variable for future use
-
-// Line 63: we declare a new variable, named adder in the global execution context, temporarily, undefined is assigned to adder. , we see round brackets() so we need to execute or call the function. let's query the gec's memory and look for a variable named createrAdder, it was created  before so let's call it.
-
-// Line 56: a new local execution context is created.the engine adds the new context to the call MediaStreamTrack, the function has no arguments, so let's jump right into the body of it.
-
-// Line 57-60, we have a new function declaration, we create the variable addNumbers in the local execution context( addNumbers just exists in this lec) and assign a function definition to it (function addNumber) , we store the function definition in the local variable named addNumber.
-
-// Line 61: We return the content of the variable addNumbers. The engine looks for a variable named addNumbers and finds it. It's a function definition, it's ok because this function(addNumbers) can return anything, including another function definition, so it return addNumbers definition- anything between the brackets on lines 58 and 59 makes up the function definition, we also remove the local execution context from the call stack.
-
-// After return, the lec is destroyed , the addNumbers variable doesn't exist anymore. the function definition still exists though, it was returned from the createAdder function and assigned to the variable adder, which was previously created.
-
-// Now in line 64, we define a new sum variable in the gec/global scope, we assign undefined to it.
-
-// Then we need to execute a function, the function named adder, we look it up in the global scope/gec and we find it, this function takes two parameters 
-
-// Let's retrieve these parameteres, so we can call the function (with the correct arguments) and pass it, remember that the addNumbers function definition was assigned to adder because of that we call adder(2 parameters), in this case val was defined before and the second parameter is 8
-
-// Now we have to execute that function (adder), a new local execution context (local scope) is created. Within the lec two new variables are created: a and b. they were assigned the values 7 and 8, as the arguments we passed before
-
-//A new variable is declared, name ret, it's declared in the lec, its value is set to undefined. Then an adition is performed, where we add the content of variable a and b, the result (15) is assigned to the ret variable
-
-// After that ret is returned, the lec is destroyed , it is removed from the call stack, the variables a, b and ret no longer exist.
-
-// The returned value is assigned to the variable named sum
-
-// We print out the value of sum to the console.
+              //The compiler asks the global scope manager(gsm) if already exists a variable named "a", the gsm doesn't find it, so it creates it. then assigns to it the aritmethic expression, a literal value of 3, after that the gsm has a new request for creating a variable named addTwo, as it doesn't exists yet, it's created and is assigned to it a function definition. Still in the global scope a b variable is also created and assign for now an undefined, in that line, occurs a call expression addTwo() the gsm check if it exits in that scope and there it is, so executes it sending an a argument, so a is also checked and its value is 3 in the global scope, so the addTwo function have a parameter x, so it's created in the local execution context, and it's assigned the value of 3, so x = 3; then a ret variable is created in the function execution context and it's assign to it a binary expression (x + 2), the x = 3 and 2; 5 is assigned to ret, the next line is a return statement and finish the function, the 5 is returned when it's called and immediately the function instance as well as its local execution context and its variables (x, ret) are destroyed by the garbage colector.
+              //Then again in the global scope the b variable is assigned with the 5 returned. and finally it's put to the console the value of b (5).
 
 
 
-// Finally we'll see a closure:
-function createCounter() {
-  let counter = 0;
-  const myFunction = function() {
-    counter = counter + 1;
-    return counter;
-  }
-  return myFunction;
-}
-const increment = createCounter();
- const c1 = increment();
- const c2 = increment();
- const c3 = increment();
- console.log('example increment:', c1, c2, c3);
- //example increment: 1 2 3
+              //Exercise 2
+              //Here we can see the lexical scope definition in practice: 
+              //Lexical scope is when a function can access a variable declared in its outer scope(next outer scope and so on)
+              //Or when a variable defined outside a function can be accessible inside that function
+
+              //Lexical scope / Ambito Léxico / Scope Chain
+              let val1 = 2;
+              function multiplyThis(n) {
+                let ret = n * val1;
+                return ret;
+              }
+              let multiplied = multiplyThis(6);
+              console.log('example of scope:', multiplied);
+              //example of scope: 12
 
 
-//Line 101: The compiler finds a formal variable declaration with a function definition attach to it, then asks the global scope manager if the creatCounter variable exists, but the gsm says doesn't find any, so the compiler produce code that at execution time ask to create a new variable called students in that scope bucket.
-
-// Everything inside the createCounter function (beetween the curly brackets) it's not going to be processed yet (but it was already parsed- to make the AST). In modern web browser this is known as lazy compiling, it's going to be compiled when it's executed(called/invocked)
-
-//Now we are going to shorten the explanation
-
-//Line 109: An increment variable is going to be created in the global scope and then assigned a createCounter(), the "()" means that we call that function, so we find that variable declared and defined at line 101, a new local execturion context is created (a function scope).
-
-//Line 102: a counter variable is created in the createCounter scope and we assign the 0 to it.
-
-//Line 103: a MyFunction variable is declared and has a function definition assign to it, WE ALSO CREATE A CLOSURE AND INCLUDE IT AS PART OF THE FUNCTION DEFINITION. THE CLOSURE CAONTAINES THE VARIABLES THAT ARE IN SCOPE, IN THEIS CASE THE VARIABLE counter.
-
-//Everything from line 104 to 105 is not proccesed yet.
-
-//Line 107: we have a return statement , and the variable MyFunction is returned, the local scope manager is asked if the myFunction variable already exists, and the answer is yes, so because it has a function definition attached to it, it will return  the function definition (whatever is from line 104 to 105) and its closure. The garbage collector takes care of the local scopes and local variables created until now. 
-
-//Next we assign line 104-105 to the increment variable; so now that function definition is not labeled myFunction anymore, now is called increment and has a function definition including its closure.
-
-//Line 110: a c1 variable is created in the global scope and is assigned a callingExpression increment(), Now we are going to execute line 104-105, so it is created a increment local scope when a counter variables is checked, before looking in the local and global scope, let's check the CLOSURE, it contains the variable named counter, and after the expression in line 104, its value is set to 1, now the closure contains counter with its value 1.
-
-//The counter value is returned (1) and it's assigned to c1
-
-//Line 111: We repeat steps in line 133, c2 gets assigned 2
-
-//Line 112: We repeat steps in line 133, c2 gets assigned 3.
-
-//Line 113: The content of variables c1, c2 and c3 is logged in console.
-
-//So now we understand how closures works, the key to remember is that when a function gets declared, it contains a function definition and a closure. The closure is a collection of all the variables in the function's scope.
-
-// This works even in the global scope, yes it is created a closure as well but since these functions were created in the global scope, they have access to all the variables in the global scope, and the closure concept is not that relevant
+              //Exercise 3
+              //A function that returns a function example is essential to understand closures
+              let val = 7;
+              function createAdder() {
+                function addNumbers(a, b) {
+                  let ret = a + b;
+                  return ret;
+                }
+                return addNumbers;
+              }
+              let adder = createAdder();
+              let sum = adder(val, 8);
+              console.log('example of function returning a function:', sum);
+              //example of function returning a function: 15
 
 
-//Another example with 2 functions returned (two closures), we'll see the same effect
-let glob = "g";
-function f1() {
-    let loc = "l";
-    glob = glob + loc;
-    function f2() {
-       let loc2 = "l2";
-       function f3() {
-          loc2 = loc2 + loc + glob;
-          return loc2;
-       }
-       return f3;
-    }
-    return f2;
-}
-const g1 = f1(); 
-const g2 = g1();
-const c1 = g2(); 
-const c2 = g2(); 
-console.log(c1); //l2lgl
-console.log(c2); //l2lgllgl
+              // Line 55: We declare a variable val in the global execution context and assign the value 7 to that variable
+
+              // Line 56: We declare a variable named createAdder and we assign a function definition to it (we put "function" before createAdder) all this happens int the global exection context, we have to remember that whatever is between the curly brackets {} is not executed, not even evalated, just stored the function definition into a variable for future use
+
+              // Line 63: we declare a new variable, named adder in the global execution context, temporarily, undefined is assigned to adder. , we see round brackets() so we need to execute or call the function. let's query the gec's memory and look for a variable named createrAdder, it was created  before so let's call it.
+
+              // Line 56: a new local execution context is created.the engine adds the new context to the call MediaStreamTrack, the function has no arguments, so let's jump right into the body of it.
+
+              // Line 57-60, we have a new function declaration, we create the variable addNumbers in the local execution context( addNumbers just exists in this lec) and assign a function definition to it (function addNumber) , we store the function definition in the local variable named addNumber.
+
+              // Line 61: We return the content of the variable addNumbers. The engine looks for a variable named addNumbers and finds it. It's a function definition, it's ok because this function(addNumbers) can return anything, including another function definition, so it return addNumbers definition- anything between the brackets on lines 58 and 59 makes up the function definition, we also remove the local execution context from the call stack.
+
+              // After return, the lec is destroyed , the addNumbers variable doesn't exist anymore. the function definition still exists though, it was returned from the createAdder function and assigned to the variable adder, which was previously created.
+
+              // Now in line 64, we define a new sum variable in the gec/global scope, we assign undefined to it.
+
+              // Then we need to execute a function, the function named adder, we look it up in the global scope/gec and we find it, this function takes two parameters 
+
+              // Let's retrieve these parameteres, so we can call the function (with the correct arguments) and pass it, remember that the addNumbers function definition was assigned to adder because of that we call adder(2 parameters), in this case val was defined before and the second parameter is 8
+
+              // Now we have to execute that function (adder), a new local execution context (local scope) is created. Within the lec two new variables are created: a and b. they were assigned the values 7 and 8, as the arguments we passed before
+
+              //A new variable is declared, name ret, it's declared in the lec, its value is set to undefined. Then an adition is performed, where we add the content of variable a and b, the result (15) is assigned to the ret variable
+
+              // After that ret is returned, the lec is destroyed , it is removed from the call stack, the variables a, b and ret no longer exist.
+
+              // The returned value is assigned to the variable named sum
+
+              // We print out the value of sum to the console.
 
 
 
-//Bibliography:
+              // Finally we'll see a closure:
+              function createCounter() {
+                let counter = 0;
+                const myFunction = function() {
+                  counter = counter + 1;
+                  return counter;
+                }
+                return myFunction;
+              }
+              const increment = createCounter();
+              const c1 = increment();
+              const c2 = increment();
+              const c3 = increment();
+              console.log('example increment:', c1, c2, c3);
+              //example increment: 1 2 3
 
-// Olivier De Meulder,"I never understood javascript closures.", Medium, https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8
 
-//Simpson, Kyle. You Don't Know JS Yet: Scope & Closures
+              //Line 101: The compiler finds a formal variable declaration with a function definition attach to it, then asks the global scope manager if the creatCounter variable exists, but the gsm says doesn't find any, so the compiler produce code that at execution time ask to create a new variable called students in that scope bucket.
 
-//MDN, Scope, https://developer.mozilla.org/en-US/docs/Glossary/Scope
+              // Everything inside the createCounter function (beetween the curly brackets) it's not going to be processed yet (but it was already parsed- to make the AST). In modern web browser this is known as lazy compiling, it's going to be compiled when it's executed(called/invocked)
+
+              //Now we are going to shorten the explanation
+
+              //Line 109: An increment variable is going to be created in the global scope and then assigned a createCounter(), the "()" means that we call that function, so we find that variable declared and defined at line 101, a new local execturion context is created (a function scope).
+
+              //Line 102: a counter variable is created in the createCounter scope and we assign the 0 to it.
+
+              //Line 103: a MyFunction variable is declared and has a function definition assign to it, WE ALSO CREATE A CLOSURE AND INCLUDE IT AS PART OF THE FUNCTION DEFINITION. THE CLOSURE CAONTAINES THE VARIABLES THAT ARE IN SCOPE, IN THEIS CASE THE VARIABLE counter.
+
+              //Everything from line 104 to 105 is not proccesed yet.
+
+              //Line 107: we have a return statement , and the variable MyFunction is returned, the local scope manager is asked if the myFunction variable already exists, and the answer is yes, so because it has a function definition attached to it, it will return  the function definition (whatever is from line 104 to 105) and its closure. The garbage collector takes care of the local scopes and local variables created until now. 
+
+              //Next we assign line 104-105 to the increment variable; so now that function definition is not labeled myFunction anymore, now is called increment and has a function definition including its closure.
+
+              //Line 110: a c1 variable is created in the global scope and is assigned a callingExpression increment(), Now we are going to execute line 104-105, so it is created a increment local scope when a counter variables is checked, before looking in the local and global scope, let's check the CLOSURE, it contains the variable named counter, and after the expression in line 104, its value is set to 1, now the closure contains counter with its value 1.
+
+              //The counter value is returned (1) and it's assigned to c1
+
+              //Line 111: We repeat steps in line 133, c2 gets assigned 2
+
+              //Line 112: We repeat steps in line 133, c2 gets assigned 3.
+
+              //Line 113: The content of variables c1, c2 and c3 is logged in console.
+
+              //So now we understand how closures works, the key to remember is that when a function gets declared, it contains a function definition and a closure. The closure is a collection of all the variables in the function's scope.
+
+              // This works even in the global scope, yes it is created a closure as well but since these functions were created in the global scope, they have access to all the variables in the global scope, and the closure concept is not that relevant
+
+
+              //Another example with 2 functions returned (two closures), we'll see the same effect
+              let glob = "g";
+              function f1() {
+                  let loc = "l";
+                  glob = glob + loc;
+                  function f2() {
+                    let loc2 = "l2";
+                    function f3() {
+                        loc2 = loc2 + loc + glob;
+                        return loc2;
+                    }
+                    return f3;
+                  }
+                  return f2;
+              }
+              const g1 = f1(); 
+              const g2 = g1();
+              const c1 = g2(); 
+              const c2 = g2(); 
+              console.log(c1); //l2lgl
+              console.log(c2); //l2lgllgl
+
+
+
+              //Bibliography:
+
+              // Olivier De Meulder,"I never understood javascript closures.", Medium, https://medium.com/dailyjs/i-never-understood-javascript-closures-9663703368e8
+
+              //Simpson, Kyle. You Don't Know JS Yet: Scope & Closures
+
+              //MDN, Scope, https://developer.mozilla.org/en-US/docs/Glossary/Scope
             </code>
           </pre>
 
-          <h3 class='topics-subtitle'>
-            Closures
-          </h3>
-          <p class="topics-copy">
-            Como ya vimos en el ejemplo práctico lineas arriba, un closure es formado por una función y es la combinación de la definición de esta función, así como su ámbito léxico que comprenden las variables locales definidas en este scope.
-          </p>          
-        </div>  
-      </li>
+            <h3 class="topics-subtitle">Closures</h3>
+            <p class="topics-copy">
+              Como ya vimos en el ejemplo práctico lineas arriba, un closure es formado por una función y es la
+              combinación de la definición de esta función, así como su ámbito léxico que comprenden las variables
+              locales definidas en este scope.
+            </p>
+          </div>
+        </li>
 
-      <li>
-        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
-          Asincronismo
+        <li>
+          <h2><a class="topics-title topics-title--soon" href="javascript:void(0)"> Asincronismo </a></h2>
+          <div class="topics-info">
+            <p>El Asincronismo es...</p>
+          </div>
+        </li>
 
-      </a></h2>
-        <div class= "topics-info">
-          <p>
-          El Asincronismo es...
-          </p>
-        </div>  
-      </li>
-      
-      <li>
-        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
-          Objetos
-      </a></h2>
-        <div class= "topics-info">
-          <p>
-           Los objetos son...
-          </p>
-        </div>  
-      </li>
+        <li>
+          <h2><a class="topics-title topics-title--soon" href="javascript:void(0)"> Objetos </a></h2>
+          <div class="topics-info">
+            <p>Los objetos son...</p>
+          </div>
+        </li>
 
-      <li>
-        <h2><a class="topics-title topics-title--ready" href="javascript:void(0)">
-          Estructuras de Datos
-      </a></h2>
+        <li>
+          <h2><a class="topics-title topics-title--ready" href="javascript:void(0)"> Estructuras de Datos </a></h2>
 
-        <div class= "topics-info">
-          <p>
-            Según Wikipedia una <a class="enlaces-externos" href="https://es.wikipedia.org/wiki/Estructura_de_datos">estructura de datos</a> es una forma particular de organizar datos en una computadora para que puedan ser utilizados de manera eficiente. <br><br>
-            También podemos definirla como una forma de organizar datos.
-            Comprenden colecciones de valores, las relaciones entre ellos y las funciones y operaciones que se les puedan aplicar. <br><br>
-            El uso "eficiente" que se le dará dependerá del motivo a necesitar cierta estructura de datos. Quizás necesitemos una estructura donde se requiere una búsqueda rápida de elementos, o una inserción eficiente, etc, todo dependerá de que aplicación estemos haciendo. <br><br>
-            Aquí entra un tema importante: la <strong>complejidad.</strong> 
+          <div class="topics-info">
+            Según Wikipedia una
+            <a class="enlaces-externos" href="https://es.wikipedia.org/wiki/Estructura_de_datos">estructura de datos</a>
+            es una forma particular de organizar datos en una computadora para que puedan ser utilizados de manera
+            eficiente. <br /><br />
+            También podemos definirla como una forma de organizar datos. Comprenden colecciones de valores, las
+            relaciones entre ellos y las funciones y operaciones que se les puedan aplicar. <br /><br />
+            El uso "eficiente" que se le dará dependerá del motivo a necesitar cierta estructura de datos. Quizás
+            necesitemos una estructura donde se requiere una búsqueda rápida de elementos, o una inserción eficiente,
+            etc, todo dependerá de que aplicación estemos haciendo. <br /><br />
+            Aquí entra un tema importante: la <strong>complejidad.</strong>
             <h3>La Complejidad</h3>
-            Este término hace referencia a como se expresan las ventajas y desventajas que tiene cada estructura de datos al utilizarse en un problema en particular.
-            La complejidad se puede expresar en 2 ejes: El <strong>espacio</strong> y el <strong>tiempo</strong>.
+            Este término hace referencia a como se expresan las ventajas y desventajas que tiene cada estructura de
+            datos al utilizarse en un problema en particular. La complejidad se puede expresar en 2 ejes: El
+            <strong>espacio</strong> y el <strong>tiempo</strong>.
             <h4>El espacio</h4>
             La <strong>complejidad del espacio</strong> representa el consumo de memoria de una estructura de datos.
             <h4>El tiempo</h4>
-            La <strong>complejidad del tiempo</strong> se necesita expresar para varias operaciones que se puede usar en estructuras de datos, tales como insertar(agregar), eliminar, buscar y/ o acceder elementos. <br>
+            La <strong>complejidad del tiempo</strong> se necesita expresar para varias operaciones que se puede usar en
+            estructuras de datos, tales como insertar(agregar), eliminar, buscar y/ o acceder elementos. <br />
             <figure>
-              <img class="infografia" src="https://i.postimg.cc/1tBszKCD/GSVIDAL-WEB-6.png" alt="Infografía de tipos de estructuras de datos">
+              <img
+                class="infografia"
+                src="https://i.postimg.cc/1tBszKCD/GSVIDAL-WEB-6.png"
+                alt="Infografía de tipos de estructuras de datos"
+              />
               <figcaption>Principales tipos de Estructuras de Datos</figcaption>
             </figure>
 
-            
-            <br>
-            Podemos agrupar estas estructuras en 3 diferentes tipos: <br><br>
+            <br />
+            Podemos agrupar estas estructuras en 3 diferentes tipos: <br /><br />
             <ol>
               <li class="elem-lista-numerada">
-              Las estructuras del <i>tipo-Array</i>, como los <strong>Arrays</strong>, <strong>Stacks</strong> y <strong>Queues</strong> las cuales se diferencian principalmente en la forma de insertar y remover elementos de ellas.
-              </li> 
+                Las estructuras del <i>tipo-Array</i>, como los <strong>Arrays</strong>, <strong>Stacks</strong> y
+                <strong>Queues</strong> las cuales se diferencian principalmente en la forma de insertar y remover
+                elementos de ellas.
+              </li>
               <li class="elem-lista-numerada">
-                Las <strong>Hash Tables</strong> dependen de <i>hash functions</i>  para localizar y guardar información.
-                </li> 
+                Las <strong>Hash Tables</strong> dependen de <i>hash functions</i> para localizar y guardar información.
+              </li>
               <li class="elem-lista-numerada">
-                <strong>Linked Lists</strong>, <strong>Trees</strong> y <strong>Graphs</strong> son estructuras con <i>nodos</i>  que guardan referencias con otros nodos.
-              </li> 
-              
-            </ol>   
-          
-          ¿Quieres ver el código .js de todas estas estructuras de datos?. Puedes encontrarlo en GitHub en el repositorio <a class="enlaces-externos" href="https://github.com/gsvidal/DataStructures-JS/tree/master" target="_blank">Data Structures-JS</a>
+                <strong>Linked Lists</strong>, <strong>Trees</strong> y <strong>Graphs</strong> son estructuras con
+                <i>nodos</i> que guardan referencias con otros nodos.
+              </li>
+            </ol>
 
-          <h3 class='topics-subtitle'>Arrays</h3>  
-          Los Arrays(arreglos) son una colección de elementos, los cuales son emparejados con un key(índice), la forma más básica de esta estructura es el array lineal(array unidimensional).
-          <br><br>
-          Los arrays son una de las estructuras más antiguas e importantes, así como de las más utilizadas en casi toda aplicación.
-          <br><br>
-          Creo que todos hemos utilizado un array en JavaScript, tan solo inicializándolo así:
-          
-          <pre>
+            ¿Quieres ver el código .js de todas estas estructuras de datos?. Puedes encontrarlo en GitHub en el
+            repositorio
+            <a
+              class="enlaces-externos"
+              href="https://github.com/gsvidal/DataStructures-JS/tree/master"
+              target="_blank"
+              rel="noopener"
+              >Data Structures-JS</a
+            >
+
+            <h3 class="topics-subtitle">Arrays</h3>
+            Los Arrays(arreglos) son una colección de elementos, los cuales son emparejados con un key(índice), la forma
+            más básica de esta estructura es el array lineal(array unidimensional).
+            <br /><br />
+            Los arrays son una de las estructuras más antiguas e importantes, así como de las más utilizadas en casi
+            toda aplicación.
+            <br /><br />
+            Creo que todos hemos utilizado un array en JavaScript, tan solo inicializándolo así:
+
+            <pre>
             <code class="language-js">
 var array1 = [1,3,4,5,7];
             </code>
           </pre>
 
-          Pero ya que estamos en el fundamento de: <i>Estructura de Datos</i>, vamos a crear una clase MyArray y en ella, crear métodos para buscar, agregar, remover valores del array. En pocas palabras veremos como crear desde cero métodos similares a los <i>built-in methods</i> .push(), .pop(), unshift(), .shift(), etc.
-          <br>
-          <pre>
+            Pero ya que estamos en el fundamento de: <i>Estructura de Datos</i>, vamos a crear una clase MyArray y en
+            ella, crear métodos para buscar, agregar, remover valores del array. En pocas palabras veremos como crear
+            desde cero métodos similares a los <i>built-in methods</i> .push(), .pop(), unshift(), .shift(), etc.
+            <br />
+            <pre>
             <code class="language-js">
  class MyArray { 
    constructor() {
@@ -369,28 +406,29 @@ var array1 = [1,3,4,5,7];
  }              
             </code>
           </pre>
-          
-          Luego instanciaremos la clase MyArray:
-          <br>
-          <pre>
+
+            Luego instanciaremos la clase MyArray:
+            <br />
+            <pre>
 
           <code class="language-js">
 myArray = new MyArray();
           </code>
           </pre>
-          
-          *Podemos utilizar el Inspector de elementos para trabajar esto, lo que nos da el siguiente output:
-          <pre>
+
+            *Podemos utilizar el Inspector de elementos para trabajar esto, lo que nos da el siguiente output:
+            <pre>
             <code class="language-js">
               <output>
 //MyArray {length: 0, data: {…}}
               </output>
             </code>
           </pre>
-          Como vemos esa estructura está vacía, tiene un lenght de 0 y no contiene data. <br><br>
-          Ahora creemos unos cuantos <strong>métodos</strong> para poder hacer operaciones sobre nuestro array. Los crearemos dentro de nuestra clase MyArray, previamente creada:<br>
+            Como vemos esa estructura está vacía, tiene un lenght de 0 y no contiene data. <br /><br />
+            Ahora creemos unos cuantos <strong>métodos</strong> para poder hacer operaciones sobre nuestro array. Los
+            crearemos dentro de nuestra clase MyArray, previamente creada:<br />
 
-          <pre>
+            <pre>
             <code class="language-js">
 
  class MyArray {
@@ -448,18 +486,27 @@ myArray = new MyArray();
               </code>
           </pre>
 
-          <h3 class='topics-subtitle'>Stacks</h3> 
+            <h3 class="topics-subtitle">Stacks</h3>
 
-          Los <strong>stacks</strong>(pilas) son también una colección de elementos, están apilados y cuenta con 3 operaciones principales, peek(), push() y pop(), la forma en que se añaden y remueven elementos es a través del ordenamiento LIFO(Last in, first out), es decir el último que entra es el primero que sale.
-          Un ejemplo práctico y conocido de un stack es el call stack. 
-          <figure>
-            <img class="infografia infografia-chica" src="https://i.postimg.cc/sfWVc0PQ/GSVIDAL-WEB-14.jpg.jpg" alt="Imagen de un stack">
-            <figcaption>Diagrama de un stack</figcaption>
-          </figure>
-          Ahora pasemos a lo interesante, crearemos un stack usando clases como en el caso del array. <br>
-          Pero antes de eso expliquemos el concepto de <i>nodos</i>, que utilizaremos a lo largo del tema de estructura de datos, y si bien mencionamos que los Linked Lists, Trees y Graphs son estructuras basadas en nodos, también podemos tratar a cada elemento del stack(y más adelante al queue), como un nodo que tiene un valor(value) y que tiene una referencia a través de un puntero al siguiente elemento(el próximo en entrar).
-          
-          <pre>
+            Los <strong>stacks</strong>(pilas) son también una colección de elementos, están apilados y cuenta con 3
+            operaciones principales, peek(), push() y pop(), la forma en que se añaden y remueven elementos es a través
+            del ordenamiento LIFO(Last in, first out), es decir el último que entra es el primero que sale. Un ejemplo
+            práctico y conocido de un stack es el call stack.
+            <figure>
+              <img
+                class="infografia infografia-chica"
+                src="https://i.postimg.cc/sfWVc0PQ/GSVIDAL-WEB-14.jpg.jpg"
+                alt="Imagen de un stack"
+              />
+              <figcaption>Diagrama de un stack</figcaption>
+            </figure>
+            Ahora pasemos a lo interesante, crearemos un stack usando clases como en el caso del array. <br />
+            Pero antes de eso expliquemos el concepto de <i>nodos</i>, que utilizaremos a lo largo del tema de
+            estructura de datos, y si bien mencionamos que los Linked Lists, Trees y Graphs son estructuras basadas en
+            nodos, también podemos tratar a cada elemento del stack(y más adelante al queue), como un nodo que tiene un
+            valor(value) y que tiene una referencia a través de un puntero al siguiente elemento(el próximo en entrar).
+
+            <pre>
             <code class="language-js">
  //Creamos una clase Node(nodo) para no repetir código en los métodos
  class Node {
@@ -513,15 +560,21 @@ const myStack = new Stack();
             </code>
           </pre>
 
-          <h3 class='topics-subtitle'>Queues</h3> 
+            <h3 class="topics-subtitle">Queues</h3>
 
-          Los <strong>queues</strong> son <i>colas</i>, sus operaciones principales son agregar elementos al final de la cola(enqueue) y remover el primer elemento de la cola (dequeue), usa el protocolo FIFO (First in First Out), lo que significa que el primero que entra a la cola, es el primero que sale al remover un elemento.
-          <figure>
-            <img class="infografia infografia-chica" src="https://i.postimg.cc/SxkNj7MX/GSVIDAL-WEB-15.jpg" alt="Imagen de un queue">
-            <figcaption>Diagrama de un Queue</figcaption>
-          </figure>
-          Veamos el código:
-          <pre>
+            Los <strong>queues</strong> son <i>colas</i>, sus operaciones principales son agregar elementos al final de
+            la cola(enqueue) y remover el primer elemento de la cola (dequeue), usa el protocolo FIFO (First in First
+            Out), lo que significa que el primero que entra a la cola, es el primero que sale al remover un elemento.
+            <figure>
+              <img
+                class="infografia infografia-chica"
+                src="https://i.postimg.cc/SxkNj7MX/GSVIDAL-WEB-15.jpg"
+                alt="Imagen de un queue"
+              />
+              <figcaption>Diagrama de un Queue</figcaption>
+            </figure>
+            Veamos el código:
+            <pre>
             <code class="language-js">
 //Creamos una clase Node(nodo) para no repetir código en los métodos
 class Node {
@@ -575,15 +628,25 @@ const myQueue = new Queue();
             </code>
           </pre>
 
-          <h3 class='topics-subtitle'>Hash Tables</h3> 
+            <h3 class="topics-subtitle">Hash Tables</h3>
 
-          Un <strong>Hash Table</strong> es una estructura de datos usada para implementar un array asociativo, donde se puede emparejar <i>keys</i> y <i>values</i>. Es similar a un objeto de JavaScript, con la diferencia que la hash table tiene un <strong>Hash Function</strong> que determina en que lugar de la memoria se ubicarán estos datos. Esta Hash Function recibe como argumento al key y retorna la dirección(address) de la locación en donde estará esta información. Pueden existir <i>colisiones</i>, lo que significa que puede haber dos keys diferentes para un mismo address, pero con el método set que veremos más adelante al enviar como parámetro al key, nos devolverá su value respectivo.
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/k4K8ygYB/GSVIDAL-WEB-13.jpg" alt="Imagen de un hash table">
-            <figcaption>Diagrama de Hash Table</figcaption>
-          </figure>
+            Un <strong>Hash Table</strong> es una estructura de datos usada para implementar un array asociativo, donde
+            se puede emparejar <i>keys</i> y <i>values</i>. Es similar a un objeto de JavaScript, con la diferencia que
+            la hash table tiene un <strong>Hash Function</strong> que determina en que lugar de la memoria se ubicarán
+            estos datos. Esta Hash Function recibe como argumento al key y retorna la dirección(address) de la locación
+            en donde estará esta información. Pueden existir <i>colisiones</i>, lo que significa que puede haber dos
+            keys diferentes para un mismo address, pero con el método set que veremos más adelante al enviar como
+            parámetro al key, nos devolverá su value respectivo.
+            <figure>
+              <img
+                class="infografia"
+                src="https://i.postimg.cc/k4K8ygYB/GSVIDAL-WEB-13.jpg"
+                alt="Imagen de un hash table"
+              />
+              <figcaption>Diagrama de Hash Table</figcaption>
+            </figure>
 
-          <pre>
+            <pre>
             <code class="language-js">
  class HashTable {
    constructor(size) {
@@ -625,37 +688,45 @@ const myQueue = new Queue();
 
             </code>
           </pre>
-            
 
-          <h3 class='topics-subtitle'>Linked Lists</h3> 
+            <h3 class="topics-subtitle">Linked Lists</h3>
 
-          Los <strong>Linked Lists</strong> almacenan data en forma secuencial, pero en lugar de mantener índices, mantienen <i>pointers(punteros)</i> a otros elementos.
-          El primer nodo es llamado <strong>head</strong> y el último nodo <strong>tail</strong>. <br><br>
-          Existen dos tipos de linked list:
-          <ol>
-            <li>
-              <strong>Singly Linked List:</strong>  <br>
-              Cada nodo tiene solo un puntero hacia el siguiente nodo <i>(next)</i>.
-            </li>
-            <li>
-              <strong>Doubly Linked List:</strong>  <br>
-              En este caso además del <i>next</i>, cada nodo tiene un puntero adicional hacia el nodo previo(prev).
-            </li>
-          </ol>
-          <br>
-          <figure class="infografias-container">
-           <div>
-            <img class="infografias" src="https://i.postimg.cc/GhBvqR7P/GSVIDAL-WEB-16.jpg" alt="Imagen de Singly Linked List">
-            <figcaption>Diagrama de un Singly Linked List</figcaption>
-           </div>
-           <div>
-            <img class="infografias" src="https://i.postimg.cc/R0TtNZhm/GSVIDAL-WEB-17.jpg" alt="Imagen de Doubly Linked List">
-            <figcaption>Diagrama de un Doubly Linked List</figcaption>
-           </div>
-          </figure>
-          Démosle un vistazo al código: <br>
-          <strong>Singly Linked List:</strong>
-          <pre>
+            Los <strong>Linked Lists</strong> almacenan data en forma secuencial, pero en lugar de mantener índices,
+            mantienen <i>pointers(punteros)</i> a otros elementos. El primer nodo es llamado <strong>head</strong> y el
+            último nodo <strong>tail</strong>. <br /><br />
+            Existen dos tipos de linked list:
+            <ol>
+              <li>
+                <strong>Singly Linked List:</strong> <br />
+                Cada nodo tiene solo un puntero hacia el siguiente nodo <i>(next)</i>.
+              </li>
+              <li>
+                <strong>Doubly Linked List:</strong> <br />
+                En este caso además del <i>next</i>, cada nodo tiene un puntero adicional hacia el nodo previo(prev).
+              </li>
+            </ol>
+            <br />
+            <figure class="infografias-container">
+              <div>
+                <img
+                  class="infografias"
+                  src="https://i.postimg.cc/GhBvqR7P/GSVIDAL-WEB-16.jpg"
+                  alt="Imagen de Singly Linked List"
+                />
+                <figcaption>Diagrama de un Singly Linked List</figcaption>
+              </div>
+              <div>
+                <img
+                  class="infografias"
+                  src="https://i.postimg.cc/R0TtNZhm/GSVIDAL-WEB-17.jpg"
+                  alt="Imagen de Doubly Linked List"
+                />
+                <figcaption>Diagrama de un Doubly Linked List</figcaption>
+              </div>
+            </figure>
+            Démosle un vistazo al código: <br />
+            <strong>Singly Linked List:</strong>
+            <pre>
             <code class="language-js">
 //Creamos una clase Node(nodo) para no repetir código en los métodos
  class Node {
@@ -727,8 +798,8 @@ const myQueue = new Queue();
             </code>
           </pre>
 
-          <strong>Doubly Linked List:</strong>
-          <pre>
+            <strong>Doubly Linked List:</strong>
+            <pre>
             <code class="language-js">
 //Como podremos ver el código para el doubly linked list solo se diferencia por ser unas cuantas líneas más larga:
 
@@ -813,26 +884,39 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
             </code>
           </pre>
 
-          <h3 class='topics-subtitle'>Trees</h3> 
+            <h3 class="topics-subtitle">Trees</h3>
 
-          Una estructura de datos en forma de árbol o <strong>Tree</strong> simula una estructura de árbol jerárquica, con un nodo padre, un valor root e hijos(children). Cada nodo contiene un valor y una referencia a su(s) hijo(s). <br><br>
-          En este caso veremos un Binary Search Tree, un tipo de Tree usado para insertar y buscar valores en la estructura.
-          Un Binary Searh Tree consta de un root donde a partir de este elemento se inicia la búsqueda, cada elemento solo puede tener dos descendientes(children), los <i>children</i> que son mayores que el elemento padre se colocan debajo del padre pero al lado derecho y los menores al lado izquierdo. <br><br>
-          
-          <figure class="infografias-container">
-            <div>
-             <img class="infografias" src="https://i.postimg.cc/ZKk8gb16/GSVIDAL-WEB-18.jpg" alt="Imagen de un Tree">
-             <figcaption>Diagrama de un Tree</figcaption>
-            </div>
-            <div>
-             <img class="infografias" src="https://i.postimg.cc/598YXwRF/GSVIDAL-WEB-19.jpg" alt="Imagen de un Binary Search Tree">
-             <figcaption>Diagrama de un Binary Search Tree</figcaption>
-            </div>
-           </figure>
+            Una estructura de datos en forma de árbol o <strong>Tree</strong> simula una estructura de árbol jerárquica,
+            con un nodo padre, un valor root e hijos(children). Cada nodo contiene un valor y una referencia a su(s)
+            hijo(s). <br /><br />
+            En este caso veremos un Binary Search Tree, un tipo de Tree usado para insertar y buscar valores en la
+            estructura. Un Binary Searh Tree consta de un root donde a partir de este elemento se inicia la búsqueda,
+            cada elemento solo puede tener dos descendientes(children), los <i>children</i> que son mayores que el
+            elemento padre se colocan debajo del padre pero al lado derecho y los menores al lado izquierdo.
+            <br /><br />
 
-           Ahora sí, para este código, armaremos el binary search tree de arriba.
+            <figure class="infografias-container">
+              <div>
+                <img
+                  class="infografias"
+                  src="https://i.postimg.cc/ZKk8gb16/GSVIDAL-WEB-18.jpg"
+                  alt="Imagen de un Tree"
+                />
+                <figcaption>Diagrama de un Tree</figcaption>
+              </div>
+              <div>
+                <img
+                  class="infografias"
+                  src="https://i.postimg.cc/598YXwRF/GSVIDAL-WEB-19.jpg"
+                  alt="Imagen de un Binary Search Tree"
+                />
+                <figcaption>Diagrama de un Binary Search Tree</figcaption>
+              </div>
+            </figure>
 
-           <pre>
+            Ahora sí, para este código, armaremos el binary search tree de arriba.
+
+            <pre>
              <code class="language-js">         
   class Node {
     constructor(value) {
@@ -905,46 +989,67 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
              </code>
            </pre>
 
-          <h3 class='topics-subtitle'>Graphs</h3> 
-          
-          Los grafos o <strong>Graphs</strong> consisten en una colección finita de vertices(nodos) unidos por bordes(edges), existen varios tipos de grafos, según diferentes criterios: <br><br>  
-          <figure class="infografias-container">
-            <div>
-             <img class="infografias" id="infografias-graph" src="https://i.postimg.cc/x1vCj6wq/GSVIDAL-WEB-20.jpg" alt="Diagrama de un Graph">
-             <figcaption>Diagrama de un Graph</figcaption>
-            </div>
-            <div>
-             <img class="infografias" src="https://i.postimg.cc/xCLrSZJ1/GSVIDAL-WEB-21.jpg" alt="Tipos de Graph: Ponderado y no ponderado">
-             <figcaption>Tipos de Graph: Ponderado y no ponderado</figcaption>
-            </div>
-           </figure>
-           <figure class="infografias-container">
-            <div>
-             <img class="infografias" src="https://i.postimg.cc/gjfmM2Kj/GSVIDAL-WEB-24.jpg" alt="Tipos de Graph: Cíclico y acíclico">
-             <figcaption>Tipos de Graph: Cíclico y acíclico</figcaption>
-            </div>
-            <div>
-             <img class="infografias" src="https://i.postimg.cc/52DkN3MY/GSVIDAL-WEB-23.jpg" alt="Tipos de Graph: Dirigido y no dirigido">
-             <figcaption>Tipos de Graph: Dirigido y no dirigido</figcaption>
-            </div>
-           </figure>
-           Existen varias maneras de representar un grafo, pero 2 de las principales son: <br><br>
-           <ol>
-            <li>
-              <strong>Lista de Adyacencia:</strong>  <br>
-              Para cada vértice, se almacena una lista de vértices adyacentes.
-            </li>
-            <li>
-              <strong>Matriz de Adyacencia:</strong>  <br>
-              La información es almacenada en una matriz bidimensional, en la cual las filas representan los vértices y las columnas representan los vértices a donde apuntan, la información en los bordes y vértices deben almacenarse externamente.
-              <br><br>
+            <h3 class="topics-subtitle">Graphs</h3>
 
-            </li>
-           </ol>
+            Los grafos o <strong>Graphs</strong> consisten en una colección finita de vertices(nodos) unidos por
+            bordes(edges), existen varios tipos de grafos, según diferentes criterios: <br /><br />
+            <figure class="infografias-container">
+              <div>
+                <img
+                  class="infografias"
+                  id="infografias-graph"
+                  src="https://i.postimg.cc/x1vCj6wq/GSVIDAL-WEB-20.jpg"
+                  alt="Diagrama de un Graph"
+                />
+                <figcaption>Diagrama de un Graph</figcaption>
+              </div>
+              <div>
+                <img
+                  class="infografias"
+                  src="https://i.postimg.cc/xCLrSZJ1/GSVIDAL-WEB-21.jpg"
+                  alt="Tipos de Graph: Ponderado y no ponderado"
+                />
+                <figcaption>Tipos de Graph: Ponderado y no ponderado</figcaption>
+              </div>
+            </figure>
+            <figure class="infografias-container">
+              <div>
+                <img
+                  class="infografias"
+                  src="https://i.postimg.cc/gjfmM2Kj/GSVIDAL-WEB-24.jpg"
+                  alt="Tipos de Graph: Cíclico y acíclico"
+                />
+                <figcaption>Tipos de Graph: Cíclico y acíclico</figcaption>
+              </div>
+              <div>
+                <img
+                  class="infografias"
+                  src="https://i.postimg.cc/52DkN3MY/GSVIDAL-WEB-23.jpg"
+                  alt="Tipos de Graph: Dirigido y no dirigido"
+                />
+                <figcaption>Tipos de Graph: Dirigido y no dirigido</figcaption>
+              </div>
+            </figure>
+            Existen varias maneras de representar un grafo, pero 2 de las principales son: <br /><br />
+            <ol>
+              <li>
+                <strong>Lista de Adyacencia:</strong> <br />
+                Para cada vértice, se almacena una lista de vértices adyacentes.
+              </li>
+              <li>
+                <strong>Matriz de Adyacencia:</strong> <br />
+                La información es almacenada en una matriz bidimensional, en la cual las filas representan los vértices
+                y las columnas representan los vértices a donde apuntan, la información en los bordes y vértices deben
+                almacenarse externamente.
+                <br /><br />
+              </li>
+            </ol>
 
-           Para el código usaremos la representación  con lista adjacente, del tipo no dirigido, y usaremos la forma y nodos del grafo de la imagen: <a class="enlaces-externos" href="#infografias-graph">Diagrama de un Graph.</a>
+            Para el código usaremos la representación con lista adjacente, del tipo no dirigido, y usaremos la forma y
+            nodos del grafo de la imagen:
+            <a class="enlaces-externos" href="#infografias-graph">Diagrama de un Graph.</a>
 
-           <pre>
+            <pre>
              <code class="language-js">
  class Graph {
    constructor() {
@@ -984,423 +1089,485 @@ let myDoublyLinkedList = new MyDoublyLinkedList(1);
              </code>
            </pre>
 
-           Comparemos el output luego de ingresar el código: <br><br>
-           <figure class="infografias-container">
-            <div>
-             <img class="infografias" id="infografias-graph" src="https://i.postimg.cc/x1vCj6wq/GSVIDAL-WEB-20.jpg" alt="Grafo a construir">
-             <figcaption>Grafo a construir</figcaption>
-            </div>
-            <div>
-             <img class="infografias" src="https://i.postimg.cc/cHPPF9w0/myGraph.jpg" alt="Output en Inspector de Elementos-Consola">
-             <figcaption>Output en el Inspector de Elementos-Consola</figcaption>
-            </div>
-           </figure>
+            Comparemos el output luego de ingresar el código: <br /><br />
+            <figure class="infografias-container">
+              <div>
+                <img
+                  class="infografias"
+                  id="infografias-graph"
+                  src="https://i.postimg.cc/x1vCj6wq/GSVIDAL-WEB-20.jpg"
+                  alt="Grafo a construir"
+                />
+                <figcaption>Grafo a construir</figcaption>
+              </div>
+              <div>
+                <img
+                  class="infografias"
+                  src="https://i.postimg.cc/cHPPF9w0/myGraph.jpg"
+                  alt="Output en Inspector de Elementos-Consola"
+                />
+                <figcaption>Output en el Inspector de Elementos-Consola</figcaption>
+              </div>
+            </figure>
 
-           Como vemos en el output, al llamar a <i>myGraph</i> en su adjacentList nos muestra los nodos y sus respectivos nodos unidos por bordes, por ejemplo el nodo 1 tiene como nodos adyacentes(unidos por un borde) a los nodos 4,6 y 3. Lo cual es rápidamente verificable viendo el diagrama del grafo <br><br>
+            Como vemos en el output, al llamar a <i>myGraph</i> en su adjacentList nos muestra los nodos y sus
+            respectivos nodos unidos por bordes, por ejemplo el nodo 1 tiene como nodos adyacentes(unidos por un borde)
+            a los nodos 4,6 y 3. Lo cual es rápidamente verificable viendo el diagrama del grafo <br /><br />
 
-           <h3>Conclusiones</h3>
+            <h3>Conclusiones</h3>
 
-           Existen muchas más estructuras de datos las cuales responden de una mejor o no tan eficiente manera al uso que se les quiera dar, algunas resaltan por su eficiencia en tiempo de búsqueda, otras por la forma de insertar o remover elementos, aquí entra en juego la habilidad y experiencia del desarrollador/ingeniero para saber cuando y por qué usar una estructura de datos en particular. <br><br>
+            Existen muchas más estructuras de datos las cuales responden de una mejor o no tan eficiente manera al uso
+            que se les quiera dar, algunas resaltan por su eficiencia en tiempo de búsqueda, otras por la forma de
+            insertar o remover elementos, aquí entra en juego la habilidad y experiencia del desarrollador/ingeniero
+            para saber cuando y por qué usar una estructura de datos en particular. <br /><br />
 
-           Las formas de crear las estructuras de datos de este artículo es una de tantas maneras de llegar al mismo resultado o similar, esta vez se usó clases, pero también se puede crear con funciones. <br><br>
-          </p>
-        </div>  
-      </li>
-              
-      <li>
-        <h2>
-          <a class="topics-title topics-title--ready" href="javascript:void(0)">
-            Test Driven Development (TDD)
-          </a>
-        </h2>
-        <div class= "topics-info">
-          <h3>Qué es TDD?</h3>
-          <p>Es un proceso en el cual se hacen los tests antes del codigo, se basa en el ciclo red, green, refactor, donde red(rojo) es hacer un test que falla(debe fallar), luego en la fase green(verde), creamos el codigo necesario para que el test pase, y en la ultima fase, refactor, el codigo puede ser mejorado/optimizado.</p>
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/14xc0XjH/0.png" alt="Red, green, refactor cycle in TDD">
-            <figcaption>Ciclo TDD</figcaption>
-          </figure>
+            Las formas de crear las estructuras de datos de este artículo es una de tantas maneras de llegar al mismo
+            resultado o similar, esta vez se usó clases, pero también se puede crear con funciones. <br /><br />
+          </div>
+        </li>
 
-          <h3>Beneficios</h3>
-          <h4>Testing se convierte en parte del desarrollo</h4>
-          <p>
-            Mayormente hacer tests se siente como una tarea pesada, por lo cual al aplicar TDD, los tests se convierten en parte del desarrollo.
-          </p>
-          <h4>Escribiremos código más limpio</h4>
-          <p>
-            Cuando aplicamos TDD, solemos escribir el mínimo código posible para hacer que el código pase.
-          </p>
-          <h4>Se reducen los bugs</h4>
-          <p>
-            Al usar TDD se escriben mas tests, lo cual tiende a reducir el numero de bugs.
-          </p>
+        <li>
+          <h2>
+            <a class="topics-title topics-title--ready" href="javascript:void(0)"> Test Driven Development (TDD) </a>
+          </h2>
+          <div class="topics-info">
+            <h3>Qué es TDD?</h3>
+            <p>
+              Es un proceso en el cual se hacen los tests antes del codigo, se basa en el ciclo red, green, refactor,
+              donde red(rojo) es hacer un test que falla(debe fallar), luego en la fase green(verde), creamos el codigo
+              necesario para que el test pase, y en la ultima fase, refactor, el codigo puede ser mejorado/optimizado.
+            </p>
+            <figure>
+              <img
+                class="infografia"
+                src="https://i.postimg.cc/14xc0XjH/0.png"
+                alt="Red, green, refactor cycle in TDD"
+              />
+              <figcaption>Ciclo TDD</figcaption>
+            </figure>
 
-          <h3>Reglas del juego</h3>
-          <p>Existe una versión corta con 2 reglas basadas en las propuestas por Uncle Bob:
-          </p>
-          <br>
-          <ol>
-            <li class="list">Escribe solo lo necesario para que un unit test falle.</li>
-            <li class="list">Escribe solo suficiente codigo para hacer que el test que falló, pase.</li>
-          </ol>
+            <h3>Beneficios</h3>
+            <h4>Testing se convierte en parte del desarrollo</h4>
+            <p>
+              Mayormente hacer tests se siente como una tarea pesada, por lo cual al aplicar TDD, los tests se
+              convierten en parte del desarrollo.
+            </p>
+            <h4>Escribiremos código más limpio</h4>
+            <p>Cuando aplicamos TDD, solemos escribir el mínimo código posible para hacer que el código pase.</p>
+            <h4>Se reducen los bugs</h4>
+            <p>Al usar TDD se escriben mas tests, lo cual tiende a reducir el numero de bugs.</p>
 
-          <h3>Ejercicio: Aplicación en React para calcular el volumen de una esfera:</h3>
+            <h3>Reglas del juego</h3>
+            <p>Existe una versión corta con 2 reglas basadas en las propuestas por Uncle Bob:</p>
+            <br />
+            <ol>
+              <li class="list">Escribe solo lo necesario para que un unit test falle.</li>
+              <li class="list">Escribe solo suficiente codigo para hacer que el test que falló, pase.</li>
+            </ol>
 
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/d3w1cKpB/1.png" alt="Intro TDD - Calcular volumen Estrella de la muerte">
-          </figure>
-          
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/Wbp39TMp/2.png" alt="Fases del ciclo red, green, refactor del TDD">
-          </figure> 
+            <h3>Ejercicio: Aplicación en React para calcular el volumen de una esfera:</h3>
 
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/rpRzSj5S/5.png" alt="Primer test que falla (red)">
-          </figure> 
+            <figure>
+              <img
+                class="infografia"
+                src="https://i.postimg.cc/d3w1cKpB/1.png"
+                alt="Intro TDD - Calcular volumen Estrella de la muerte"
+              />
+            </figure>
 
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/8c4C10VV/6.png" alt="Primer test que pasa (green)">
-          </figure> 
+            <figure>
+              <img
+                class="infografia"
+                src="https://i.postimg.cc/Wbp39TMp/2.png"
+                alt="Fases del ciclo red, green, refactor del TDD"
+              />
+            </figure>
 
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/bJQJ5vCr/7.png" alt="Segundo Test que falla (red)">
-          </figure> 
+            <figure>
+              <img class="infografia" src="https://i.postimg.cc/rpRzSj5S/5.png" alt="Primer test que falla (red)" />
+            </figure>
 
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/v8tTLcxS/8.png" alt="Segundo Test que pasa (green)">
-          </figure> 
+            <figure>
+              <img class="infografia" src="https://i.postimg.cc/8c4C10VV/6.png" alt="Primer test que pasa (green)" />
+            </figure>
 
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/qRfqQKGW/9.png" alt="Tercer Test que falla (red)">
-          </figure> 
+            <figure>
+              <img class="infografia" src="https://i.postimg.cc/bJQJ5vCr/7.png" alt="Segundo Test que falla (red)" />
+            </figure>
 
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/NfN0SS46/10.png" alt="Tercer Test que pasa (green)">
-          </figure> 
+            <figure>
+              <img class="infografia" src="https://i.postimg.cc/v8tTLcxS/8.png" alt="Segundo Test que pasa (green)" />
+            </figure>
 
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/XYpvbLHT/11.png" alt="Imagen de la aplicacion en el navegador - Calculadora de volumen de esfera">
-          </figure> 
+            <figure>
+              <img class="infografia" src="https://i.postimg.cc/qRfqQKGW/9.png" alt="Tercer Test que falla (red)" />
+            </figure>
 
-          <figure>
-            <img class="infografia" src="https://i.postimg.cc/MpNpKBgX/TDDeath-Star.png" alt="Consejos y retos finales sobre el app">
-            <figcaption>
-              Fuente: <a href="https://www.instagram.com/p/CigT04OOmwR/" target="_blank" rel="noopener">gsvidal.web</a>
-            </figcaption>
-          </figure> 
+            <figure>
+              <img class="infografia" src="https://i.postimg.cc/NfN0SS46/10.png" alt="Tercer Test que pasa (green)" />
+            </figure>
 
-        </div>  
-      </li>
-    </ol>
-  </section>
+            <figure>
+              <img
+                class="infografia"
+                src="https://i.postimg.cc/XYpvbLHT/11.png"
+                alt="Imagen de la aplicacion en el navegador - Calculadora de volumen de esfera"
+              />
+            </figure>
 
-  <section class = "topics-container topics-html">
-    <ol class="numeracion-orden-principal">
-      <li>
-        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
-          Anatomía de una etiqueta HTML
-      </a></h2>
-        <div class= "topics-info">
-          <p>
-          Conocer la anatomía de las etiquetas HTML te dará muchas ventajas al ...
-          <img class='' src='' width='30%'>
-          </img>
-          </p>
-        </div>  
-      </li>
+            <figure>
+              <img
+                class="infografia"
+                src="https://i.postimg.cc/MpNpKBgX/TDDeath-Star.png"
+                alt="Consejos y retos finales sobre el app"
+              />
+              <figcaption>
+                Fuente:
+                <a href="https://www.instagram.com/p/CigT04OOmwR/" target="_blank" rel="noopener">gsvidal.web</a>
+              </figcaption>
+            </figure>
+          </div>
+        </li>
+      </ol>
+    </section>
 
-      <li>
-        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
-          HTML Semántico
-      </a></h2>
-        <div class= "topics-info">
-          <p>
-          El uso del HTML Semántico se remonta a...
-          </p>
-        </div>  
-      </li>
+    <section class="topics-container topics-html">
+      <ol class="numeracion-orden-principal">
+        <li>
+          <h2>
+            <a class="topics-title topics-title--soon" href="javascript:void(0)"> Anatomía de una etiqueta HTML </a>
+          </h2>
+          <div class="topics-info">
+            <p>
+              Conocer la anatomía de las etiquetas HTML te dará muchas ventajas al ...
+              <img class="" src="" width="30%" alt="" />
+            </p>
+          </div>
+        </li>
 
-      <li>
-        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
-          Parseo del código HTML
-      </a></h2>
-        <div class= "topics-info">
-          <p>
-          El parseo del codigo...
-          </p>
-        </div>  
-      </li>
-    </ol>
-  </section>
+        <li>
+          <h2><a class="topics-title topics-title--soon" href="javascript:void(0)"> HTML Semántico </a></h2>
+          <div class="topics-info">
+            <p>El uso del HTML Semántico se remonta a...</p>
+          </div>
+        </li>
 
-  <section class = "topics-container topics-css">
-    <ol class="numeracion-orden-principal">
-      <li>
-        <h2><a class="topics-title topics-title--soon" href="javascript:void(0)">
-          Anatomía de una Regla CSS
-      </a></h2>
-        <div class= "topics-info">
-          <p>
-          Las Reglas, así como las etiquetas en HTML, son los ladrillos sobre los que se construyen las aplicaciones, paginas y sitios webs.
-          <img class='' src='' width='30%'>
-          </img>
-          </p>
-        </div>  
-      </li>
+        <li>
+          <h2><a class="topics-title topics-title--soon" href="javascript:void(0)"> Parseo del código HTML </a></h2>
+          <div class="topics-info">
+            <p>El parseo del codigo...</p>
+          </div>
+        </li>
+      </ol>
+    </section>
 
-      <li>
-        <h2><a class="topics-title topics-title--ready" href="javascript:void(0)">
-          Metodología BEM
-      </a></h2>
-        <div class= "topics-info">
-          <p>
-          Existen varias metodologías o convenciones para nombrar a las classes en CSS. Entre las principales tenemos a BEM, OOCSS, SMACSS, SUITCSS, etc. <br><br>
-          Estas se utilizan para organizar nuestro código en CSS y ayuda a mantener CSSs extensos.
-          <h4>¿Qué es BEM?</h4>
-          BEM es una convención o standard para nombrar clases en CSS.
-          <h4>¿Porqué utilizar BEM?</h4>
-          Primero veamos por qué utilizarlo sobre las otras metodologías mencionadas líneas arriba, es menos confusa que otros métodos (SMACSS) pero aun nos brinda una buena arquitectura(OOCSS) y con una terminología que podemos reconocer.
-          <br><br>
-          Podemos encontrar <strong>3 beneficios</strong> al utilizar BEM:
-          <ol>
-            <li>Comunica propósito o función.</li>
-            <li>Comunica estructura de compentes.</li>
-            <li>Proporciona una especificidad baja.</li>
-          </ol>
+    <section class="topics-container topics-css">
+      <ol class="numeracion-orden-principal">
+        <li>
+          <h2><a class="topics-title topics-title--soon" href="javascript:void(0)"> Anatomía de una Regla CSS </a></h2>
+          <div class="topics-info">
+            <p>
+              Las Reglas, así como las etiquetas en HTML, son los ladrillos sobre los que se construyen las
+              aplicaciones, paginas y sitios webs.
+              <img class="" src="" width="30%" alt="" />
+            </p>
+          </div>
+        </li>
 
-          <br> <strong>BEM</strong> significa: <br>
-          <h4>Blocks</h4>
-          <ol>
-            <li>Los bloques son contenedores o el contexto donde están situados los elementos.</li>
-            <li>Suelen ser etiquetas semánticas. ejem: (main, section, header, footer, etc.)</li>
-            <li>Son independientes de otros bloques/elementos.</li>
-          </ol>
-          <br>
-          Código en CSS:
-          <pre>
-            <code class="language-css">
-.block {
+        <li>
+          <h2><a class="topics-title topics-title--ready" href="javascript:void(0)"> Metodología BEM </a></h2>
+          <div class="topics-info">
+            Existen varias metodologías o convenciones para nombrar a las classes en CSS. Entre las principales tenemos
+            a BEM, OOCSS, SMACSS, SUITCSS, etc. <br /><br />
+            Estas se utilizan para organizar nuestro código en CSS y ayuda a mantener CSSs extensos.
+            <h4>¿Qué es BEM?</h4>
+            BEM es una convención o standard para nombrar clases en CSS.
+            <h4>¿Porqué utilizar BEM?</h4>
+            Primero veamos por qué utilizarlo sobre las otras metodologías mencionadas líneas arriba, es menos confusa
+            que otros métodos (SMACSS) pero aun nos brinda una buena arquitectura(OOCSS) y con una terminología que
+            podemos reconocer.
+            <br /><br />
+            Podemos encontrar <strong>3 beneficios</strong> al utilizar BEM:
+            <ol>
+              <li>Comunica propósito o función.</li>
+              <li>Comunica estructura de compentes.</li>
+              <li>Proporciona una especificidad baja.</li>
+            </ol>
 
-}
-            </code>
-          </pre>
-          Ejemplo:
-          <pre>
-            <code class="language-css">
-.header {
-
-}
-            </code>
-          </pre>
-
-          <h4>Elements</h4>
-          <ol>
-            <li>Los elementos son parte de un bloque y no tienen significado semántico fuera de ese bloque.
-            </li>
-            <li>Los elementos son escritos usando el nombre del bloque conectado por dos guiones abajo (underscore) a ellos.</li>
-          </ol>
-          Código en CSS:
-          <pre>
-            <code class="language-css">
-.block__element {
-
-}
-            </code>
-          </pre>
-          Ejemplo:
-          <pre>
-            <code class="language-css">
-.header__navbar {
-
-}
-            </code>
-          </pre>
-
-          <h4>Modifiers</h4>
-          <ol>
-            <li>Los modificadores son un <i>flag</i> en un bloque o un elemento, se usa para cambiar apariencia, comportamiento  o estado.
-            </li>
-            <li>Ofrecen una gran ventaja: <i>Modularidad</i>.</li>
-            <li>Al usar modificadores se facilita la <i>reutilización de código</i> e incentiva a la <i>programación por componentes</i>.</li>
-            <br>
-          </ol>
-          
-          <div class="modifiers-code-division">
-            
-            <div class="modifiers-left">
-              Codigo en CSS(Modificador de un bloque):
-              <pre>
-                <code class="language-css">
-    .block--modifier {
-    
-    }
-                </code>
-              </pre>
-              ó Modificador de un elemento:
-              <pre>
-                <code class="language-css">
-    .block__element--modifier {
-    
-    }
-                </code>
-              </pre>
-            Ejemplo práctico: <br>
-            CSS:
+            <br />
+            <strong>BEM</strong> significa: <br />
+            <h4>Blocks</h4>
+            <ol>
+              <li>Los bloques son contenedores o el contexto donde están situados los elementos.</li>
+              <li>Suelen ser etiquetas semánticas. ejem: (main, section, header, footer, etc.)</li>
+              <li>Son independientes de otros bloques/elementos.</li>
+            </ol>
+            <br />
+            Código en CSS:
             <pre>
+            <code class="language-css">
+              .block {
+
+              }
+            </code>
+          </pre>
+            Ejemplo:
+            <pre>
+            <code class="language-css">
+              .header {
+
+              }
+            </code>
+          </pre>
+
+            <h4>Elements</h4>
+            <ol>
+              <li>Los elementos son parte de un bloque y no tienen significado semántico fuera de ese bloque.</li>
+              <li>
+                Los elementos son escritos usando el nombre del bloque conectado por dos guiones abajo (underscore) a
+                ellos.
+              </li>
+            </ol>
+            Código en CSS:
+            <pre>
+            <code class="language-css">
+              .block__element {
+
+              }
+            </code>
+          </pre>
+            Ejemplo:
+            <pre>
+            <code class="language-css">
+              .header__navbar {
+
+              }
+            </code>
+          </pre>
+
+            <h4>Modifiers</h4>
+            <ol>
+              <li>
+                Los modificadores son un <i>flag</i> en un bloque o un elemento, se usa para cambiar apariencia,
+                comportamiento o estado.
+              </li>
+              <li>Ofrecen una gran ventaja: <i>Modularidad</i>.</li>
+              <li>
+                Al usar modificadores se facilita la <i>reutilización de código</i> e incentiva a la
+                <i>programación por componentes</i>.
+              </li>
+            </ol>
+            <br />
+
+            <div class="modifiers-code-division">
+              <div class="modifiers-left">
+                Codigo en CSS(Modificador de un bloque):
+                <pre>
+                <code class="language-css">
+                  .block--modifier {
+                  
+                  }
+                </code>
+              </pre>
+                ó Modificador de un elemento:
+                <pre>
+                <code class="language-css">
+                    .block__element--modifier {
+                    
+                    }
+                </code>
+              </pre>
+                Ejemplo práctico: <br />
+                CSS:
+                <pre>
               <code class="language-css">
-  .hero__copy--languages {
-  
-  }
+                .hero__copy--languages {
+                
+                }
               </code>
             </pre>
+              </div>
 
-            </div>
-            
-            <div class="modifiers-right">
-              Codigo en HTML(Modificador de un bloque):
+              <div class="modifiers-right">
+                Codigo en HTML(Modificador de un bloque):
                 <pre>
                   <code class="language-markup">
-<textarea readonly>
-  <tag class ="block block--modifier">
-  </tag>
-</textarea>
+                    <label for="block--modifier"></label>
+                  <textarea readonly  id="block--modifier" title="language-markup">
+                      <tag class ="block block--modifier">
+                      </tag>
+                    </textarea>
                   </code>
                 </pre>
                 ó Modificador de un elemento:
                 <pre>
                   <code class="language-markup">
-<textarea readonly>
-  <tag class ="block__element block__element--modifier">
-  </tag>
-</textarea>
+                    <label for="block__element--modifier"></label>
+                  <textarea readonly  id="block__element--modifier" title="language-markup">
+                      <tag class ="block__element block__element--modifier">
+                      </tag>
+                    </textarea>
                   </code>
                 </pre>
-              Ejemplo práctico: <br>
-              HTML:
-              <pre>
+                Ejemplo práctico: <br />
+                HTML:
+                <pre>
                 <code class="language-markup">
-<textarea readonly>
-  <p class ="hero__copy hero__copy--languages">Contenido
-  </p>
-</textarea>
+                  <label for="hero__copy--languages"></label>
+                  <textarea readonly  id="hero__copy--languages" title="language-markup">
+                    <p class ="hero__copy hero__copy--languages">Contenido
+                    </p>
+                  </textarea>
                 </code>
               </pre>
-           </div>
-        </div>
+              </div>
+            </div>
 
-         </p>
+            <p>A continuación podemos ver un ejemplo visual de esta metodología:</p>
+            <figure>
+              <img
+                class="infografia"
+                src="https://i.postimg.cc/VvdRVKkf/GSVIDAL-WEB-5.gif"
+                alt="Ejemplo metodología BEM"
+              />
+            </figure>
+            <p>
+              Puedes ver la aplicación de la metodología BEM en el proyecto de maquetación del sitio web de la
+              plataforma <a class="enlaces-externos" href="https://www.codacy.com">CODACY</a>, codeada por el grupo
+              <strong
+                ><a class="enlaces-externos" href="https://github.com/bit-hug-learning/codacy-code-project"
+                  >Bit-Hug</a
+                ></strong
+              >. Puedes encontrar BEM en las siguientes secciones del repo/web:
+            </p>
+            <br /><br />
+            <ol>
+              <li>section-1 (hero)</li>
+              <li>section-2</li>
+              <li>section-7</li>
+              <li>footer</li>
+            </ol>
+          </div>
+        </li>
 
-         <p>
-           A continuación podemos ver un ejemplo visual de esta metodología:
-         </p>
-         <figure>
-           <img class="infografia" src="https://i.postimg.cc/VvdRVKkf/GSVIDAL-WEB-5.gif" alt="Ejemplo metodología BEM">
-         </figure>
-         <p>
-           Puedes ver la aplicación de la metodología BEM en el proyecto de maquetación del sitio web de la plataforma <a class="enlaces-externos" href="https://www.codacy.com">CODACY</a>, codeada por el grupo <strong><a class="enlaces-externos" href="https://github.com/bit-hug-learning/codacy-code-project">Bit-Hug</a></strong>. Puedes encontrar BEM en las siguientes secciones del repo/web: <br><br>
-           <ol>
-             <li>section-1 (hero)</li>
-             <li>section-2</li>
-             <li>section-7</li>
-             <li>footer</li>
-           </ol>
-         </p>
-        </div>  
-      </li>
+        <li>
+          <h2><a class="topics-title topics-title--ready" href="javascript:void(0)"> Orden de declaración </a></h2>
+          <div class="topics-info">
+            <p>
+              A continuación, las 3 formas de como controlar el orden al declarar en CSS son (prioridad va de mayor 1. a
+              menor 3.):
+            </p>
 
-      <li>
-        <h2><a class="topics-title topics-title--ready" href="javascript:void(0)">
-        Orden de declaración 
-      </a></h2>
-        <div class= "topics-info">
-          <p>
-          A continuación, las 3 formas de como controlar el orden al declarar en CSS son (prioridad va de mayor 1. a menor 3.):
-          </p>
-          
-          <ol>
-            <li>Origen e Importancia</li>
-            <li>Especificidad</li>
-            <li>Posición / Orden de las fuentes de codigo CSS</li>
-          </ol>
+            <ol>
+              <li>Origen e Importancia</li>
+              <li>Especificidad</li>
+              <li>Posición / Orden de las fuentes de codigo CSS</li>
+            </ol>
 
-          <p>Recordar que mientras más alta sea alguna de estas 3 formas, más alta la relevancia o prioridad será la declaración CSS</p>
-            
-          <h3 class='topics-subtitle'>Origen e Importancia</h3>
-          <ol>
-            <li>Primero se aplican los estilos del navegador</li>
-            <li>Luego se aplican los estilos de nuestras declaraciones en nuestros archivos .css</li>
-            <li>Finalmente se aplican las declaraciones con <code> !important</code></li>
-          </ol>
-          <p>Una regla práctica para recordar la importancia de las declaraciones CSS, es la siguiente:</p>
-          <ol>
-            <li>transitions</li>
-            <li>user-agent !important</li>
-            <li>user !important</li>
-            <li>author !important</li>
-            <li>animations</li>
-            <li>author</li>
-            <li>user</li>
-            <li>user-agent</li>
-          </ol>
-          <p>Donde la importancia es mayor en 1. y menor en 8.</p>
-          <p><strong>Notas: </strong>Recordar que el uso de !important es considerado una mala práctica, ya que puede romper nuestros estilos o llegar al punto de usarlo cada vez que no sepamos como funciona CSS</p>
-           
-          <h3 class='topics-subtitle'>
-            Especificidad
-          </h3>
+            <p>
+              Recordar que mientras más alta sea alguna de estas 3 formas, más alta la relevancia o prioridad será la
+              declaración CSS
+            </p>
 
-          <ol>
-            <li>inline</li>
-            <li>id</li>
-            <li>clases / selectores de atributo / pseudo-clases</li>
-            <li>tipo / pseudo-elementos</li>
-          </ol>
-          <p>Donde la especificidad es mayor en 1. y menor en 4.</p>
+            <h3 class="topics-subtitle">Origen e Importancia</h3>
+            <ol>
+              <li>Primero se aplican los estilos del navegador</li>
+              <li>Luego se aplican los estilos de nuestras declaraciones en nuestros archivos .css</li>
+              <li>Finalmente se aplican las declaraciones con <code> !important</code></li>
+            </ol>
+            <p>Una regla práctica para recordar la importancia de las declaraciones CSS, es la siguiente:</p>
+            <ol>
+              <li>transitions</li>
+              <li>user-agent !important</li>
+              <li>user !important</li>
+              <li>author !important</li>
+              <li>animations</li>
+              <li>author</li>
+              <li>user</li>
+              <li>user-agent</li>
+            </ol>
+            <p>Donde la importancia es mayor en 1. y menor en 8.</p>
+            <p>
+              <strong>Notas: </strong>Recordar que el uso de !important es considerado una mala práctica, ya que puede
+              romper nuestros estilos o llegar al punto de usarlo cada vez que no sepamos como funciona CSS
+            </p>
 
-          <h3 class='topics-subtitle'>
-            Posición / Orden de las fuentes de codigo CSS
-          </h3>
+            <h3 class="topics-subtitle">Especificidad</h3>
 
-          <ol>
-            <li>CSS internos (al utilizar la etiqueta &lt;style&gt; dentro de la etiqueta &lt;head&gt;) </li>
-            <li>CSS externos (al utilizar la etiqueta &lt;link&gt; haciendo referencia a un css externo)</li>
-            <li>Orden en declaraciones CSS</li>
-          </ol>
-          <p>Donde la posicion es mayor en 1. y menor en 3.</p>
+            <ol>
+              <li>inline</li>
+              <li>id</li>
+              <li>clases / selectores de atributo / pseudo-clases</li>
+              <li>tipo / pseudo-elementos</li>
+            </ol>
+            <p>Donde la especificidad es mayor en 1. y menor en 4.</p>
 
-          <p>
-          Aquí se aplica el algoritmo de Cascada que tiene CSS, las declaraciones y/o reglas CSS que estén por debajo sobreescribirán o anularán a las que estén por arriba, en caso de conflicto. <br><br><strong>Notas: </strong> También tener en cuenta que al llamar en el archivo .html varios archivos .css, los de abajo también pueden reescribir a los de arriba.
-          </p>
+            <h3 class="topics-subtitle">Posición / Orden de las fuentes de codigo CSS</h3>
 
-        </div>  
-      </li>
+            <ol>
+              <li>CSS internos (al utilizar la etiqueta &lt;style&gt; dentro de la etiqueta &lt;head&gt;)</li>
+              <li>CSS externos (al utilizar la etiqueta &lt;link&gt; haciendo referencia a un css externo)</li>
+              <li>Orden en declaraciones CSS</li>
+            </ol>
+            <p>Donde la posicion es mayor en 1. y menor en 3.</p>
 
-    </ol>
-  </section>
+            <p>
+              Aquí se aplica el algoritmo de Cascada que tiene CSS, las declaraciones y/o reglas CSS que estén por
+              debajo sobreescribirán o anularán a las que estén por arriba, en caso de conflicto. <br /><br /><strong
+                >Notas:
+              </strong>
+              También tener en cuenta que al llamar en el archivo .html varios archivos .css, los de abajo también
+              pueden reescribir a los de arriba.
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
 
-  <section class="quiz-container">
-    <p>Mide cuanto realmente aprendiste:</p>
-    <a class="quiz" href="javascript:void(0)">Quiz Time!
-    </a>
-  </section>  
+    <section class="quiz-container">
+      <p>Mide cuanto realmente aprendiste:</p>
+      <a class="quiz" href="javascript:void(0)">Quiz Time! </a>
+    </section>
 
-  <footer>
-    <p>
-      Diseñado y codeado por <br> <strong> <a href="https://gsvidal.github.io" target="_blank"> Gonzalo Vidal </a> </strong> <br>
-      Puedes encontrarme en estas plataformas:
+    <footer>
+      <p>
+        Diseñado y codeado por <br />
+        <strong> <a href="https://gsvidal.github.io" target="_blank" rel="noopener"> Gonzalo Vidal </a> </strong> <br />
+        Puedes encontrarme en estas plataformas:
+      </p>
       <div class="contact">
-        <a href="https://gsvidal.github.io" target="_blank"><img src="https://i.postimg.cc/WbLs5F6b/MIYMC01.gif" alt="Portafolio de Proyectos Web" width="45px" height="45px"></a>
-        <a href="https://github.com/gsvidal" target="_blank"><img src="https://i.postimg.cc/ncDt7Hyb/github.png" width="45px" height="45px" alt="Cuenta de GitHub: gsvidal"></a>
-        <a href="https://www.linkedin.com/in/gsvidal/" target="_blank"><img src="https://i.postimg.cc/P5bs3SfS/linkedin.png" width="45px" height="45px" alt="Cuenta de Linkedin"></a>
-        <a href="https://bio.torre.co/es/gsvidal" target="_blank"><img src="https://i.postimg.cc/VkPPWxwS/torre.png" width="45px" height="45px" alt="Cuenta de Torre"></a>
-        <a href="https://www.instagram.com/gsvidal.web/" target="_blank"><img src="https://i.postimg.cc/PqtGB1PT/instagram.png" width="45px" height="45px" alt="Cuenta de Instagram: @gsvidal.web"></a>
+        <a href="https://gsvidal.github.io" target="_blank" rel="noopener"
+          ><img
+            src="https://i.postimg.cc/WbLs5F6b/MIYMC01.gif"
+            alt="Portafolio de Proyectos Web"
+            width="45px"
+            height="45px"
+        /></a>
+        <a href="https://github.com/gsvidal" target="_blank" rel="noopener"
+          ><img
+            src="https://i.postimg.cc/ncDt7Hyb/github.png"
+            width="45px"
+            height="45px"
+            alt="Cuenta de GitHub: gsvidal"
+        /></a>
+        <a href="https://www.linkedin.com/in/gsvidal/" target="_blank" rel="noopener"
+          ><img src="https://i.postimg.cc/P5bs3SfS/linkedin.png" width="45px" height="45px" alt="Cuenta de Linkedin"
+        /></a>
+        <a href="https://bio.torre.co/es/gsvidal" target="_blank" rel="noopener"
+          ><img src="https://i.postimg.cc/VkPPWxwS/torre.png" width="45px" height="45px" alt="Cuenta de Torre"
+        /></a>
+        <a href="https://www.instagram.com/gsvidal.web/" target="_blank" rel="noopener"
+          ><img
+            src="https://i.postimg.cc/PqtGB1PT/instagram.png"
+            width="45px"
+            height="45px"
+            alt="Cuenta de Instagram: @gsvidal.web"
+        /></a>
       </div>
-    </p>
-  </footer>
-  <!-- Hacer preguntas al final de cada artículo, para probar los conocimientos -->
-</body>
+    </footer>
+    <!-- Hacer preguntas al final de cada artículo, para probar los conocimientos -->
+  </body>
 
-<script src="./blog.js"></script>
-<script src="./prism.js"></script>
-
+  <script src="./blog.js"></script>
+  <script src="./prism.js"></script>
 </html>
