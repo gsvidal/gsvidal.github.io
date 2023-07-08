@@ -13,6 +13,40 @@ const sectionsToReveal = document.querySelectorAll('.reveal');
 const buttonUp = document.querySelector('.button-up-container');
 const certificate = document.querySelector('.certificates');
 const certificateSlider = document.querySelector('.certificates__slider');
+const toolbox = document.querySelector('.toolbox');
+
+// Logo has a 3d hover effect
+const height = logo.clientHeight;
+const width = logo.clientWidth;
+
+logo.addEventListener('mousemove', (event) => {
+  const { layerX, layerY } = event;
+
+  const yRotation = ((layerX - width / 2) / width) * 15;
+
+  const xRotation = ((layerY - height / 2) / height) * 15;
+
+  const string = `
+    perspective(400px)
+    scale(1)
+    rotateX(${xRotation}deg)
+    rotatey(${yRotation}deg)
+  `;
+
+  logo.style.transform = string;
+});
+
+logo.addEventListener('mouseout', (event) => {
+  console.log('out');
+  const string2 = `
+    perspective(400px)
+    scale(1)
+    rotateX(0)
+    rotatey(0)
+  `;
+
+  logo.style.transform = string2;
+});
 
 //Titles changing color when dark-light mode turns
 const titles = document.querySelectorAll('.title-projects');
@@ -20,7 +54,9 @@ const titles = document.querySelectorAll('.title-projects');
 switchButtonContainer.addEventListener('click', lightDarkMode);
 
 // lightDarkMode toggle dark and light mode on each element when is clicked
-function lightDarkMode() {
+function lightDarkMode(event) {
+  console.log('click');
+  console.log(event.target);
   bodyBGColor.classList.toggle('light-dark-mode');
   switchButton.classList.toggle('light-dark-mode');
   switchButtonContainer.classList.toggle('light-dark-mode');
@@ -91,17 +127,17 @@ const githubIcon = document.querySelector('.project__github-image');
 
 images.forEach((image) =>
   image.addEventListener('mouseover', (event) => {
-    image?.parentNode.nextElementSibling.classList.add('show');
+    image?.parentNode?.nextElementSibling?.classList.add('show');
   })
 );
 
 images.forEach((image) =>
   image.addEventListener('mouseout', (event) => {
-    image?.parentNode.nextElementSibling.classList.remove('show');
+    image?.parentNode?.nextElementSibling?.classList.remove('show');
   })
 );
 
-const scrollToTop = (event) => {
+const scrollToTop = () => {
   window.scrollTo({
     top: 0,
     behavior: 'smooth',
@@ -136,4 +172,14 @@ window.addEventListener('scroll', () => {
   }
 });
 
-certificateSlider.addEventListener('click', lightDarkMode);
+const mediaQuery = window.matchMedia('(min-width: 1280px)');
+
+function handleViewportChange(event) {
+  if (event.matches) {
+    toolbox.classList.remove('reveal');
+  } else {
+    toolbox.classList.add('reveal');
+  }
+}
+
+mediaQuery.addListener(handleViewportChange);
