@@ -16,6 +16,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -39,7 +40,7 @@ body {
   background-size: 280px, 150px, 150px, 100%;
   background-position: top -100px right -80px, bottom 900px left -100px,
     top 900px right -80px, bottom left;
-  /* width: 100%; */
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -52,9 +53,46 @@ body {
   margin: 35px;
 }
 
-.switch_button_container {
+.nav-bar {
+  position: relative;
+  top: 0;
+  left: -55px;
+  margin: 45px 0;
+}
+
+.nav-bar__list {
+  display: flex;
+  list-style: none;
+  font-size: 2rem;
+}
+
+.nav-bar__item {
+  margin: 0 30px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar__item.light-dark-mode {
+  color: var(--main-color);
+}
+
+.nav-bar__item:active {
+  color: inherit;
+}
+
+.nav-bar__item:hover {
+  text-shadow: 3px 2px 10px var(--main-color);
+}
+
+.logo-switch {
   display: flex;
   justify-content: flex-start;
+  align-items: center;
+}
+
+.switch_button_container {
+  display: flex;
   align-items: center;
   width: 80px;
   height: 40px;
@@ -103,16 +141,6 @@ body {
 
 .welcome strong {
   color: #ffcc01;
-}
-
-.welcome__portfolio-react {
-  color: #98d3ff;
-  text-underline-offset: 3px;
-  font-size: 2.5rem;
-}
-
-.welcome__portfolio-react.light-dark-mode {
-  color: #32a6ff;
 }
 
 .welcome .descripcion_blog {
@@ -195,19 +223,14 @@ h3 {
 }
 
 .web__technologies {
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   text-align: center;
   margin-top: 0px;
-  margin-right: 190px;
-}
-
-.web__technologies.title__secondary {
-  margin-top: 30px;
-  margin-right: 155px;
 }
 
 .title-projects--web-technologies {
   margin-right: 0;
+  margin-bottom: 5px;
   color: rgb(255, 252, 205);
   text-shadow: 0 0 12px rgb(255, 249, 166);
 }
@@ -287,7 +310,11 @@ h3 {
     opacity: 100%;
     transform: rotateY(360deg);
   }
-} 
+}
+
+.clickable-section {
+  height: 0px;
+}
 
 .certificates {
   margin-bottom: 0px;
@@ -694,10 +721,6 @@ h3 {
 }
 
 @media screen and (max-width: 388px) {
-  .header {
-    margin-top: 80px;
-  }
-
   .button-up-container {
     right: 15px;
   }
@@ -709,9 +732,7 @@ h3 {
   }
 
   .header {
-    flex-direction: row-reverse;
-    justify-content: center;
-    margin: 120px 0px 40px 125px;
+    margin: 0px 0px 40px 125px;
   }
 
   .project_name {
@@ -802,12 +823,10 @@ h3 {
   }
 
   .header {
-    /* width: 100%; */
     margin: 0;
     margin-left: 60px;
     margin-right: 5px;
     justify-content: flex-end;
-    margin-top: 100px;
     margin-bottom: 20px;
   }
 
@@ -835,7 +854,7 @@ h3 {
   }
 
   .title-projects--web-technologies {
-    margin-right: 45px;
+    margin-right: 35px;
   }
 
   .toolbox__icons {
@@ -862,6 +881,17 @@ h3 {
   .blog {
     margin: 0;
   }
+
+  /* .title-projects--web-technologies {
+    margin-right: 
+  } */
+.web__technologies {
+  margin-right: 190px;
+}
+
+.web__technologies.title__secondary {
+  margin-right: 150px;
+}
 
   .projects-container-grid,
   .misc-projects-container {

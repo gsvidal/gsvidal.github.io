@@ -13,17 +13,25 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500;700&family=Roboto:wght@500;700&display=swap"
     rel="stylesheet">
-
-
   <title>Gonzalo Vidal - FrontEnd - Portfolio</title>
 </head>
 
 <body id="body" class="particle-container">
   <header class="header">
-    <nav class="switch_button_container">
-      <div class="switch_button"></div>
+    <nav class="nav-bar">
+      <ul class="nav-bar__list">
+        <li><a class="nav-bar__item" href="#about-nav">Experience</a></li>
+        <li><a class="nav-bar__item" href="#certificates-nav">Certificates</a></li>
+        <li><a class="nav-bar__item" href="#projects-nav">Projects</a></li>
+        <li><a class="nav-bar__item" href="#contact-nav">Contact</a></li>
+      </ul>
     </nav>
-    <span class="logo__bg"></span>
+    <div class="logo-switch">
+      <span class="logo__bg"></span>
+      <div class="switch_button_container">
+        <div class="switch_button"></div>
+      </div>
+    </div>
   </header>
 
   <section class="particles-bg">
@@ -44,7 +52,7 @@
     </div>
   </section>
 
-  <section class="body__top">
+  <section id="about-nav" class="body__top">
     <section class="welcome">
       <p class="welcome__intro">
         Hey there! I'm <strong>Gonzalo Vidal</strong>, a passionate Front-End Web Developer. I specialize in building
@@ -204,6 +212,8 @@
     </section>
   </section>
 
+  <div id="certificates-nav" class="clickable-section"></div>
+
   <section class="certificates reveal">
     <h3 class="title-projects title-projects--certificates">CERTIFICATES</h3>
     <div class="certificates__slider">
@@ -267,6 +277,8 @@
       </div>
     </div>
   </section>
+
+  <div id="projects-nav" class="clickable-section"></div>
 
   <section class="projects react-projects react-projects--fullstack reveal">
     <h3 class="title-projects title-projects--fullstack-react-projects">
@@ -809,7 +821,7 @@
     <span class="button-up"></span>
   </div>
 
-  <footer class="footer">
+  <footer id="contact-nav" class="footer">
     <p>
       Designed and coded by... <strong>Me!</strong>
     </p>

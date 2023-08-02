@@ -4,7 +4,6 @@ const switchButtonContainer = document.querySelector(
 );
 const switchButton = document.querySelector(".switch_button");
 const logo = document.querySelector(".logo__bg");
-const linkPortfolioReact = document.querySelector(".welcome__portfolio-react");
 const personalBlog = document.querySelector(".blog__link");
 const olderProjects = document.querySelectorAll(".older-projects");
 const olderProjectsImages = document.querySelectorAll(".older-projects-images");
@@ -14,6 +13,7 @@ const buttonUp = document.querySelector(".button-up-container");
 const certificate = document.querySelector(".certificates");
 const certificateSlider = document.querySelector(".certificates__slider");
 const toolbox = document.querySelector(".toolbox");
+const navItems = document.querySelectorAll(".nav-bar__item");
 
 // Logo has a 3d hover effect
 const height = logo.clientHeight;
@@ -56,7 +56,6 @@ switchButtonContainer.addEventListener("click", lightDarkMode);
 // lightDarkMode toggle dark and light mode on each element when is clicked
 let [red, green, blue] = [69, 11, 178];
 let isDarkMode = true;
-// console.log("red: ", red, "blue: ", blue, "green: ", green)
 
 function lightDarkMode(event) {
   isDarkMode = !isDarkMode;
@@ -66,7 +65,6 @@ function lightDarkMode(event) {
   switchButton.classList.toggle("light-dark-mode");
   switchButtonContainer.classList.toggle("light-dark-mode");
   logo.classList.toggle("light-dark-mode");
-  linkPortfolioReact.classList.toggle("light-dark-mode");
   personalBlog.classList.toggle("light-dark-mode");
 
   olderProjects.forEach((olderProject) =>
@@ -82,6 +80,10 @@ function lightDarkMode(event) {
   );
 
   titles.forEach((title) => title.classList.toggle("light-dark-mode"));
+
+  navItems.forEach((navItem) => navItem.classList.toggle("light-dark-mode"));
+
+  console.log("dark");
 
   // certificateSlider.classList.toggle('light-dark-mode');
 }
