@@ -1,25 +1,25 @@
-const bodyBGColor = document.getElementById('body');
+const bodyBGColor = document.getElementById("body");
 const switchButtonContainer = document.querySelector(
-  '.switch_button_container'
+  ".switch_button_container"
 );
-const switchButton = document.querySelector('.switch_button');
-const logo = document.querySelector('.logo__bg');
-const linkPortfolioReact = document.querySelector('.welcome__portfolio-react');
-const personalBlog = document.querySelector('.blog__link');
-const olderProjects = document.querySelectorAll('.older-projects');
-const olderProjectsImages = document.querySelectorAll('.older-projects-images');
-const projectNames = document.querySelectorAll('.project_name');
-const sectionsToReveal = document.querySelectorAll('.reveal');
-const buttonUp = document.querySelector('.button-up-container');
-const certificate = document.querySelector('.certificates');
-const certificateSlider = document.querySelector('.certificates__slider');
-const toolbox = document.querySelector('.toolbox');
+const switchButton = document.querySelector(".switch_button");
+const logo = document.querySelector(".logo__bg");
+const linkPortfolioReact = document.querySelector(".welcome__portfolio-react");
+const personalBlog = document.querySelector(".blog__link");
+const olderProjects = document.querySelectorAll(".older-projects");
+const olderProjectsImages = document.querySelectorAll(".older-projects-images");
+const projectNames = document.querySelectorAll(".project_name");
+const sectionsToReveal = document.querySelectorAll(".reveal");
+const buttonUp = document.querySelector(".button-up-container");
+const certificate = document.querySelector(".certificates");
+const certificateSlider = document.querySelector(".certificates__slider");
+const toolbox = document.querySelector(".toolbox");
 
 // Logo has a 3d hover effect
 const height = logo.clientHeight;
 const width = logo.clientWidth;
 
-logo.addEventListener('mousemove', (event) => {
+logo.addEventListener("mousemove", (event) => {
   const { layerX, layerY } = event;
 
   const yRotation = ((layerX - width / 2) / width) * 15;
@@ -36,8 +36,8 @@ logo.addEventListener('mousemove', (event) => {
   logo.style.transform = string;
 });
 
-logo.addEventListener('mouseout', (event) => {
-  console.log('out');
+logo.addEventListener("mouseout", (event) => {
+  console.log("out");
   const string2 = `
     perspective(400px)
     scale(1)
@@ -49,45 +49,45 @@ logo.addEventListener('mouseout', (event) => {
 });
 
 //Titles changing color when dark-light mode turns
-const titles = document.querySelectorAll('.title-projects');
+const titles = document.querySelectorAll(".title-projects");
 
-switchButtonContainer.addEventListener('click', lightDarkMode);
+switchButtonContainer.addEventListener("click", lightDarkMode);
 
 // lightDarkMode toggle dark and light mode on each element when is clicked
-let [red, green, blue] = [69, 11, 178]
+let [red, green, blue] = [69, 11, 178];
 let isDarkMode = true;
 // console.log("red: ", red, "blue: ", blue, "green: ", green)
 
 function lightDarkMode(event) {
-  isDarkMode = !isDarkMode
-  bodyBGColor.classList.toggle('light-dark-mode', !isDarkMode);
+  isDarkMode = !isDarkMode;
+  bodyBGColor.classList.toggle("light-dark-mode", !isDarkMode);
   updateBackgroundColor();
 
-  switchButton.classList.toggle('light-dark-mode');
-  switchButtonContainer.classList.toggle('light-dark-mode');
-  logo.classList.toggle('light-dark-mode');
-  linkPortfolioReact.classList.toggle('light-dark-mode');
-  personalBlog.classList.toggle('light-dark-mode');
+  switchButton.classList.toggle("light-dark-mode");
+  switchButtonContainer.classList.toggle("light-dark-mode");
+  logo.classList.toggle("light-dark-mode");
+  linkPortfolioReact.classList.toggle("light-dark-mode");
+  personalBlog.classList.toggle("light-dark-mode");
 
   olderProjects.forEach((olderProject) =>
-    olderProject.classList.toggle('light-dark-mode')
+    olderProject.classList.toggle("light-dark-mode")
   );
 
   olderProjectsImages.forEach((olderProjectsImage) =>
-    olderProjectsImage.classList.toggle('light-dark-mode')
+    olderProjectsImage.classList.toggle("light-dark-mode")
   );
 
   projectNames.forEach((projectName) =>
-    projectName.classList.toggle('light-dark-mode')
+    projectName.classList.toggle("light-dark-mode")
   );
 
-  titles.forEach((title) => title.classList.toggle('light-dark-mode'));
+  titles.forEach((title) => title.classList.toggle("light-dark-mode"));
 
   // certificateSlider.classList.toggle('light-dark-mode');
 }
 
 //Web Technologies - Logo Animations
-const icons = document.querySelectorAll('.toolbox__icon');
+const icons = document.querySelectorAll(".toolbox__icon");
 
 let lastIndex;
 function fadeRandomIcon() {
@@ -97,8 +97,8 @@ function fadeRandomIcon() {
       ? randomIconIndex++
       : randomIconIndex--;
   }
-  icons[lastIndex]?.classList.remove('toolbox__fade');
-  icons[randomIconIndex].classList.add('toolbox__fade');
+  icons[lastIndex]?.classList.remove("toolbox__fade");
+  icons[randomIconIndex].classList.add("toolbox__fade");
   lastIndex = randomIconIndex;
 }
 
@@ -108,57 +108,57 @@ function startAnimation() {
 setTimeout(startAnimation, 500);
 
 // Project_image animation when hover
-const imagesShadow = document.querySelectorAll('.project_image');
+const imagesShadow = document.querySelectorAll(".project_image");
 
 imagesShadow.forEach((image) => {
-  image.addEventListener('mouseover', (event) => {
-    if (!image.parentElement.classList.contains('p-none')) {
+  image.addEventListener("mouseover", (event) => {
+    if (!image.parentElement.classList.contains("p-none")) {
       image.parentElement.style.boxShadow =
-        '0px 0px 35px 2px #b8a5f2, 0px 0px 15px 2px #ffffff';
+        "0px 0px 35px 2px #b8a5f2, 0px 0px 15px 2px #ffffff";
     } else {
-      image.style.transform = 'none';
+      image.style.transform = "none";
     }
   });
-  image.addEventListener('mouseout', (event) => {
-    if (!image.parentElement.classList.contains('p-none')) {
-      image.parentElement.style.boxShadow = 'none';
+  image.addEventListener("mouseout", (event) => {
+    if (!image.parentElement.classList.contains("p-none")) {
+      image.parentElement.style.boxShadow = "none";
     }
   });
 });
 
 // Live/repo
-const images = document.querySelectorAll('.project_image-container');
-const githubIcon = document.querySelector('.project__github-image');
+const images = document.querySelectorAll(".project_image-container");
+const githubIcon = document.querySelector(".project__github-image");
 
 images.forEach((image) =>
-  image.addEventListener('mouseover', (event) => {
-    image?.parentNode?.nextElementSibling?.classList.add('show');
+  image.addEventListener("mouseover", (event) => {
+    image?.parentNode?.nextElementSibling?.classList.add("show");
   })
 );
 
 images.forEach((image) =>
-  image.addEventListener('mouseout', (event) => {
-    image?.parentNode?.nextElementSibling?.classList.remove('show');
+  image.addEventListener("mouseout", (event) => {
+    image?.parentNode?.nextElementSibling?.classList.remove("show");
   })
 );
 
 const scrollToTop = () => {
   window.scrollTo({
     top: 0,
-    behavior: 'smooth',
+    behavior: "smooth",
   });
 };
 
-buttonUp.addEventListener('click', scrollToTop);
+buttonUp.addEventListener("click", scrollToTop);
 
 // Sections to reveal when appear in viewport
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       // Element is in viewport
-      entry.target.classList.add('active');
+      entry.target.classList.add("active");
     } else {
-      entry.target.classList.remove('active');
+      entry.target.classList.remove("active");
     }
   });
 });
@@ -167,23 +167,23 @@ sectionsToReveal.forEach((element) => {
   observer.observe(element);
 });
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   var elementTop = certificate.getBoundingClientRect().top;
 
   if (elementTop < 0) {
-    buttonUp.classList.add('revealed');
+    buttonUp.classList.add("revealed");
   } else {
-    buttonUp.classList.remove('revealed');
+    buttonUp.classList.remove("revealed");
   }
 });
 
-const mediaQuery = window.matchMedia('(min-width: 1280px)');
+const mediaQuery = window.matchMedia("(min-width: 1280px)");
 
 function handleViewportChange(event) {
   if (event.matches) {
-    toolbox.classList.remove('reveal');
+    toolbox.classList.remove("reveal");
   } else {
-    toolbox.classList.add('reveal');
+    toolbox.classList.add("reveal");
   }
 }
 
@@ -191,14 +191,14 @@ mediaQuery.addListener(handleViewportChange);
 
 // Make background smoothly change color from main color to black
 function updateBackgroundColor() {
-  console.log("updating")
+  console.log("updating");
   const y = 1 + (window.scrollY || window.pageYOffset) / 2000;
   [red, green, blue] = isDarkMode ? [69, 11, 178] : [255, 255, 255];
-  const [r, g, b] = [red / y, green / y, blue / y].map(Math.round)
+  const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
   bodyBGColor.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
 
-window.addEventListener('scroll', () => {
+window.addEventListener("scroll", () => {
   updateBackgroundColor();
 });
 
