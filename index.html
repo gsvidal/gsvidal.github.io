@@ -16,41 +16,24 @@
   <title>Gonzalo Vidal - FrontEnd - Portfolio</title>
 </head>
 
-<body id="body" class="particle-container">
+<body id="body">    
   <header class="header">
     <nav class="nav-bar">
       <ul class="nav-bar__list">
-        <li><a class="nav-bar__item" href="#about-nav">Experience</a></li>
-        <li><a class="nav-bar__item" href="#certificates-nav">Certificates</a></li>
-        <li><a class="nav-bar__item" href="#projects-nav">Projects</a></li>
-        <li><a class="nav-bar__item" href="#contact-nav">Contact</a></li>
+        <li><a class="nav-bar__item item-about" href="#about-nav">About</a></li>
+        <li><a class="nav-bar__item item-certs" href="#certificates-nav">Certificates</a></li>
+        <li><a class="nav-bar__item item-projects" href="#projects-nav">Projects</a></li>
+        <li><a class="nav-bar__item item-contact" href="#contact-nav">Contact</a></li>
       </ul>
     </nav>
     <div class="logo-switch">
       <span class="logo__bg"></span>
-      <div class="switch_button_container">
-        <div class="switch_button"></div>
-      </div>
+    </div>
+    <div class="switch_button_container">
+      <div class="switch_button"></div>
     </div>
   </header>
 
-  <section class="particles-bg">
-    <div class="particle-wraper">
-      <div class="particle"></div>
-    </div>
-    <div class="particle-wraper particle-wraper-2">
-      <div class="particle particle-2"></div>
-    </div>
-    <div class="particle-wraper particle-wraper-3">
-      <div class="particle particle-3"></div>
-    </div>
-    <div class="particle-wraper particle-wraper-4">
-      <div class="particle particle-4"></div>
-    </div>
-    <div class="particle-wraper particle-wraper-5">
-      <div class="particle particle-5"></div>
-    </div>
-  </section>
 
   <section id="about-nav" class="body__top">
     <section class="welcome">
@@ -190,7 +173,7 @@
         </a>
 
       </div>
-      <h4 class="web__technologies title__secondary">Supplementary</h4>
+      <h4 class="web__technologies title__secondary">Complementary</h4>
       <div class="toolbox__icons">
         <a href="javascript:void(0)"
           data-title="C is a powerful and efficient programming language with low-level features">
@@ -205,6 +188,12 @@
             alt="Python logo image" width="40" height="40" />
         </a>
         <a href="javascript:void(0)"
+          data-title="Flask is a Python library">
+          <img class="toolbox__icon toolbox__icon--flask"
+            src="https://raw.githubusercontent.com/devicons/devicon/55609aa5bd817ff167afce0d965585c92040787a/icons/flask/flask-original-wordmark.svg"
+            alt="Flask logo image" width="40" height="40" />
+        </a>
+        <a href="javascript:void(0)"
           data-title="SQL is a Structured Query Language used for relational database management and data manipulation">
           <img class="toolbox__icon toolbox__icon--sql" src="https://cdn-icons-png.flaticon.com/512/4299/4299956.png"
             alt="SQL logo image" width="40" height="40" />
@@ -213,6 +202,7 @@
   </section>
 
   <div id="certificates-nav" class="clickable-section"></div>
+
 
   <section class="certificates reveal">
     <h3 class="title-projects title-projects--certificates">CERTIFICATES</h3>
@@ -228,8 +218,16 @@
           href="https://www.credly.com/badges/233abc1a-291e-43b4-9aa4-0d97c5d0297f/linked_in?t=rhm3ox"
           data-title="CertiProf: Scrum Foundation Certificate">
           <img
-            src="https://images.credly.com/size/340x340/images/3be57d7c-55de-4119-9ca9-738e20c0fae0/Scrum-Foundation-Professional-Certificate-SFPC-2021_.png"
+            src="https://images.credly.com/size/340x340/images/4e3d6f9f-55d7-4ea7-b0e6-f4d4ff543e22/image.png"
             alt="CertiProf Certificates" width="120" />
+        </a>
+
+        <a class="certificates__icons-item" rel="noopener" target="_blank"
+          href="https://certificates.cs50.io/d8442942-5daf-4ea7-99f5-8ee789cc3d01.pdf?size=letter"
+          data-title="Harvard's CS50 Introduction to Computer Science">
+          <img
+            src="./images/cs50.png"
+            alt="CS50 Certificate" width="120" />
         </a>
 
         <a class="certificates__icons-item" rel="noopener" target="_blank"
@@ -256,9 +254,17 @@
           href="https://www.credly.com/badges/233abc1a-291e-43b4-9aa4-0d97c5d0297f/linked_in?t=rhm3ox"
           data-title="CertiProf: Scrum Foundation Certificate">
           <img
-            src="https://images.credly.com/size/340x340/images/3be57d7c-55de-4119-9ca9-738e20c0fae0/Scrum-Foundation-Professional-Certificate-SFPC-2021_.png"
+            src="https://images.credly.com/size/340x340/images/4e3d6f9f-55d7-4ea7-b0e6-f4d4ff543e22/image.png"
             alt="CertiProf Certificates" width="120" />
         </a>
+
+        <a class="certificates__icons-item" rel="noopener" target="_blank"
+        href="https://certificates.cs50.io/d8442942-5daf-4ea7-99f5-8ee789cc3d01.pdf?size=letter"
+        data-title="Harvard's CS50 Introduction to Computer Science">
+        <img
+          src="./images/cs50.png"
+          alt="CS50 Certificate" width="120" />
+      </a>
 
         <a class="certificates__icons-item" rel="noopener" target="_blank"
           href="https://www.udemy.com/certificate/UC-689f3797-fd77-49ac-8350-a525e8dd6ffd/"
@@ -277,9 +283,9 @@
       </div>
     </div>
   </section>
-
+  
   <div id="projects-nav" class="clickable-section"></div>
-
+  
   <section class="projects react-projects react-projects--fullstack reveal">
     <h3 class="title-projects title-projects--fullstack-react-projects">
       FULLSTACK REACT PROJECTS
