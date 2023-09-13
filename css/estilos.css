@@ -367,8 +367,6 @@ h3 {
   max-width: 100%;
 }
 
-
-
 /* 
 
 .certificates__slider::before,
@@ -567,8 +565,12 @@ h3 {
 }
 
 .certificates__icons [data-title]:after {
-  top: 70px;
+  top: 50px;
   background-color: #ffcaa6af;
+}
+
+.certificates__icons .large[data-title]:after {
+  top: 120px;
 }
 
 .react-projects--fullstack [data-title]:after {
@@ -714,6 +716,36 @@ h3 {
     hue-rotate(261deg) brightness(67%) contrast(114%);
 }
 
+.title-projects--web-technologies.light-dark-mode {
+  color: rgb(254, 234, 52);
+  text-shadow: 0 0 12px rgb(118, 113, 35);
+}
+
+.title-projects--certificates.light-dark-mode {
+  color: rgb(228, 117, 48);
+  text-shadow: 0 0 12px rgb(170, 83, 30);
+}
+
+.title-projects--fullstack-react-projects.light-dark-mode {
+  color: rgb(39, 200, 52);
+  text-shadow: 0 0 12px rgb(30, 126, 37);
+}
+
+.title-projects--react-adv-projects.light-dark-mode {
+  color: rgb(119, 33, 231);
+  text-shadow: 0 0 12px rgb(68, 43, 166);
+}
+
+.title-projects--team-projects.light-dark-mode {
+  color: rgb(255, 113, 113);
+  text-shadow: 0 0 12px rgb(164, 55, 55);
+}
+
+.title-projects--react-projects.light-dark-mode {
+  color: rgb(52, 130, 241);
+  text-shadow: 0 0 12px rgb(34, 71, 122);
+}
+
 .subtitle-projects {
   margin-bottom: 20px;
   font-size: 13px;
@@ -794,6 +826,12 @@ h3 {
   }
 }
 
+@media screen and (min-width: 600px) {
+  .logo__bg {
+    margin-bottom: 0px;
+  }
+}
+
 @media screen and (min-width: 800px) {
   body {
     flex-direction: row;
@@ -825,8 +863,6 @@ h3 {
   }
 
   .logo__bg {
-    /* margin-right: 10px;
-    margin-top: 5px; */
     background-image: url("../images/gonzaPic.png");
     border-radius: 50%;
   }
