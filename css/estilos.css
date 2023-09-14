@@ -148,20 +148,35 @@ body {
 
 .logo__bg {
   display: inline-block;
-  width: 150px;
-  height: 150px;
-  margin-bottom: 40px;
+  width: 80px;
+  height: 80px;
+  margin: 40px 0px 70px 10px;
   background: url("https://i.postimg.cc/R0ZtsZxq/Z7x9Riw.gif") center/cover
     no-repeat;
-  box-shadow: 0px 0px 0px 0px white;;
-  animation: animated-glow 1s linear infinite alternate;
+  box-shadow: 0px 0px 0px 0px white;
   transition: box-shadow 0.9s linear;
 }
 
+@media screen and (min-width: 430px) {
+  .logo__bg {
+    width: 150px;
+    height: 150px;
+    margin: 0px 0px 40px 0px;
+  }
+  .logo__bg.logo__bg.light-dark-mode:hover {
+    animation: none;
+    box-shadow: 0px 0px 35px 0px var(--main-color);
+  }
+}
 
-.logo__bg:hover {
-  animation: none;
-  box-shadow: 0px 0px 35px 0px var(--main-color);
+@media screen and (min-width: 800px) {
+  .logo__bg {
+    animation: animated-glow 1s linear infinite alternate;
+  }
+  .logo__bg:hover {
+    animation: none;
+    box-shadow: 0px 0px 35px 0px var(--main-color);
+  }
 }
 
 .welcome {
@@ -839,11 +854,6 @@ h3 {
   }
 }
 
-@media screen and (min-width: 600px) {
-  .logo__bg {
-    margin-bottom: 0px;
-  }
-}
 
 @media screen and (min-width: 800px) {
   body {
