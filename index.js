@@ -14,6 +14,7 @@ const certificate = document.querySelector(".certificates");
 const certificateSlider = document.querySelector(".certificates__slider");
 const toolbox = document.querySelector(".toolbox");
 const navItems = document.querySelectorAll(".nav-bar__item");
+const hoverElement = document.querySelector(".hover-me");
 
 // Logo has a 3d hover effect
 const height = logo.clientHeight;
@@ -206,3 +207,9 @@ window.addEventListener("scroll", () => {
 
 // Initial call to set the correct background color when the page loads
 updateBackgroundColor();
+
+const hideHoverMe = () => {
+  hoverElement.classList.add("hide")
+}
+
+projectNames.forEach(project => project.addEventListener("mouseover", hideHoverMe))

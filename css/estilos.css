@@ -1038,3 +1038,56 @@ h3 {
     right: 200px;
   }
 }
+
+.hover-me {
+  display: block;
+  position: absolute;
+  bottom: 40px;
+  left: -160px;
+  font-size: 2rem;
+  font-style: italic;
+  animation: hover-me-text 1.5s linear infinite alternate;
+}
+
+.hide {
+  display: none;
+}
+
+.hover-me-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  top: 10px;
+  background: url("../images/navigation.png") center/cover no-repeat;
+  animation: hover-me-icon 1s linear infinite;
+}
+
+@media screen and (max-width: 600px) {
+  .hover-me {
+    bottom: 0px;
+    left: -50px;
+  }
+  .hover-me-icon {
+    top: -30px;
+    left: -110px
+  }
+}
+
+@keyframes hover-me-icon {
+  0% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(70px);
+  }
+}
+
+@keyframes hover-me-text {
+  0% {
+    text-shadow: 0px 0px 5px white;
+  }
+  100% {
+    text-shadow: 0px 0px 50px white;
+  }
+}
