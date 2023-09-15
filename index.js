@@ -194,7 +194,6 @@ mediaQuery.addListener(handleViewportChange);
 
 // Make background smoothly change color from main color to black
 function updateBackgroundColor() {
-  console.log("updating");
   const y = 1 + (window.scrollY || window.pageYOffset) / 2000;
   [red, green, blue] = isDarkMode ? [69, 11, 178] : [255, 255, 255];
   const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
@@ -209,7 +208,11 @@ window.addEventListener("scroll", () => {
 updateBackgroundColor();
 
 const hideHoverMe = () => {
-  hoverElement.classList.add("hide")
-}
+  setTimeout(() => {
+      hoverElement.classList.add("hide");
+  }, 1000);
+};
 
-projectNames.forEach(project => project.addEventListener("mouseover", hideHoverMe))
+projectNames.forEach((project) =>
+  project.addEventListener("mouseover", hideHoverMe)
+);
