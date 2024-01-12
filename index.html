@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bienvenido al Portafolio de Proyectos Web de Gonzalo Vidal"
+    />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://i.postimg.cc/zB2YkTrm/k4a0ecv.png"
+    />
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500;700&family=Roboto:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Gonzalo Vidal - FrontEnd - Portfolio</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Bienvenido al Portafolio de Proyectos Web de Gonzalo Vidal" />
-  <meta name="robots" content="index, follow" />
-  <link rel="icon" type="image/png" sizes="16x16" href="https://i.postimg.cc/zB2YkTrm/k4a0ecv.png" />
-  <link rel="stylesheet" href="./css/estilos.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;500;700&family=Roboto:wght@500;700&display=swap"
-    rel="stylesheet">
-  <title>Gonzalo Vidal - FrontEnd - Portfolio</title>
-</head>
-
-<body id="body">    
-  <header class="header">
+  <body id="body">
+    <header class="header">
     <nav class="nav-bar">
       <ul class="nav-bar__list">
         <li><a class="nav-bar__item item-about" href="#about-nav">About</a></li>
@@ -34,12 +42,10 @@
     </div>
   </header>
 
-
   <section id="about-nav" class="body__top">
     <section class="welcome">
       <p class="welcome__intro">
-        Hey there! I'm <strong>Gonzalo Vidal</strong>, a passionate Front-End Web Developer. I specialize in building
-        User Interfaces using React.
+        Hello! I'm </strong>Gonzalo Vidal</strong>, an enthusiastic Front-End Web Developer with a focus on building engaging User Interfaces using React and making sure of efficient client-side data workflow.
       </p>
       <p class="welcome__intro">
         During this journey, I've had the opportunity and pleasure of collaborating with talented developer teams, where
@@ -59,14 +65,9 @@
           <p class="experience__title globant">Ssr. Web UI Developer</p>
         </div>
       </div>
-      <!-- <p class="welcome__intro">
-        If you're curious to learn more about web development, I also maintain <a rel="noopener" class="blog__link"
-          href="./blog/blog.html" target="_blank">a personal blog</a> where I share insights into HTML, CSS, and
-        JavaScript, helping aspiring developers kickstart their own coding journey.
-      </p> -->
       <p class="welcome__intro">
         Feel free to explore my portfolio and get in touch if you'd like to discuss a project or just geek out about web
-        development! 😃"
+        development! 😃
       </p>
 
     </section>
@@ -136,7 +137,6 @@
             src="https://github.com/devicons/devicon/raw/master/icons/sass/sass-original.svg" alt="Sass logo image"
             width="40" height="40" />
         </a>
-        <!-- TODO: TEST -->
         <a href="javascript:void(0)" data-title="Tailwind CSS is a utility-first CSS framework">
           <img class="toolbox__icon toolbox__icon--tailwind"
             src="https://raw.githubusercontent.com/devicons/devicon/1119b9f84c0290e0f0b38982099a2bd027a48bf1/icons/tailwindcss/tailwindcss-plain.svg"
@@ -154,13 +154,13 @@
             alt="Git Hub logo image" width="40" height="40" />
         </a>
 
-        <!--  <a href="javascript:void(0)" data-title="Next JS is a react framework for the web">
+         <a href="javascript:void(0)" data-title="Next JS is a react framework for the web">
           <img class="toolbox__icon toolbox__icon--nextjs" src="https://github.com/devicons/devicon/raw/master/icons/nextjs/nextjs-original.svg" alt="Next JS logo image" width="40" height="40">
            </a>
          <a href="javascript:void(0)" data-title="Vite is a build tool + dev environment">
           <img class="toolbox__icon toolbox__icon--nextjs" src="https://vitejs.dev/logo-with-shadow.png" alt="Vite logo image" width="40" height="40">
          </a>
-         -->
+         
         <a href="javascript:void(0)" data-title="Node Package Manager is a software registry">
           <img class="toolbox__icon toolbox__icon--npm"
             src="https://github.com/devicons/devicon/raw/master/icons/npm/npm-original-wordmark.svg"
@@ -216,694 +216,1177 @@
     </section>
   </section>
 
-  <div id="certificates-nav" class="clickable-section"></div>
+    <div id="certificates-nav" class="clickable-section"></div>
 
+    <section class="certificates reveal">
+      <h3 class="title-projects title-projects--certificates">CERTIFICATES</h3>
+      <div class="certificates__slider">
+        <div class="certificates__icons">
+          <a
+            class="certificates__icons-item"
+            rel="noopener"
+            target="_blank"
+            href="https://platzi.com"
+            data-title="Platzi: 30+ Web Development Certificates"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Platzi.jpg/1200px-Platzi.jpg"
+              alt="Platzi Certificates"
+              width="120"
+            />
+          </a>
 
-  <section class="certificates reveal">
-    <h3 class="title-projects title-projects--certificates">CERTIFICATES</h3>
-    <div class="certificates__slider">
-      <div class="certificates__icons">
-        <a class="certificates__icons-item" rel="noopener" target="_blank" href="https://platzi.com"
-          data-title="Platzi: 30+ Web Development Certificates">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Platzi.jpg/1200px-Platzi.jpg"
-            alt="Platzi Certificates" width="120" />
-        </a>
+          <a
+            class="certificates__icons-item large"
+            rel="noopener"
+            target="_blank"
+            href="https://www.credly.com/badges/233abc1a-291e-43b4-9aa4-0d97c5d0297f/linked_in?t=rhm3ox"
+            data-title="CertiProf: Scrum Foundation Certificate"
+          >
+            <img
+              src="https://images.credly.com/size/340x340/images/4e3d6f9f-55d7-4ea7-b0e6-f4d4ff543e22/image.png"
+              alt="CertiProf Certificates"
+              width="120"
+            />
+          </a>
 
-        <a class="certificates__icons-item large" rel="noopener" target="_blank"
-          href="https://www.credly.com/badges/233abc1a-291e-43b4-9aa4-0d97c5d0297f/linked_in?t=rhm3ox"
-          data-title="CertiProf: Scrum Foundation Certificate">
-          <img
-            src="https://images.credly.com/size/340x340/images/4e3d6f9f-55d7-4ea7-b0e6-f4d4ff543e22/image.png"
-            alt="CertiProf Certificates" width="120" />
-        </a>
+          <a
+            class="certificates__icons-item large"
+            rel="noopener"
+            target="_blank"
+            href="https://certificates.cs50.io/d8442942-5daf-4ea7-99f5-8ee789cc3d01.pdf?size=letter"
+            data-title="Harvard's CS50 Introduction to Computer Science"
+          >
+            <img src="./images/cs50.png" alt="CS50 Certificate" width="120" />
+          </a>
 
-        <a class="certificates__icons-item large" rel="noopener" target="_blank"
-          href="https://certificates.cs50.io/d8442942-5daf-4ea7-99f5-8ee789cc3d01.pdf?size=letter"
-          data-title="Harvard's CS50 Introduction to Computer Science">
-          <img
-            src="./images/cs50.png"
-            alt="CS50 Certificate" width="120" />
-        </a>
+          <a
+            class="certificates__icons-item"
+            rel="noopener"
+            target="_blank"
+            href="https://www.udemy.com/certificate/UC-689f3797-fd77-49ac-8350-a525e8dd6ffd/"
+            data-title="Udemy TDD bootcamp Certificate"
+          >
+            <img
+              src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+              alt="Udemy Certificates"
+              width="120"
+            />
+          </a>
 
-        <a class="certificates__icons-item" rel="noopener" target="_blank"
-          href="https://www.udemy.com/certificate/UC-689f3797-fd77-49ac-8350-a525e8dd6ffd/"
-          data-title="Udemy TDD bootcamp Certificate">
-          <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Udemy Certificates"
-            width="120" />
-        </a>
+          <a
+            class="certificates__icons-item"
+            rel="noopener"
+            target="_blank"
+            href="https://learndigital.withgoogle.com/activate/validate-certificate-code"
+            data-title="Google - Web Development I & II Certificates"
+          >
+            <img
+              src="https://lh3.googleusercontent.com/5-yf7s6KGhPFu3hm8UwGnOwloyrEK5hVervmLKfbU1YVj5qwr0dqZ-I2BaleZ14smfc8sjIhnqHbmjS7VFAMZZwS9UQK_RlX6bFmAB8=-rw"
+              alt="Google Certificates - 2 parts"
+              width="120"
+            />
+          </a>
+          <a
+            class="certificates__icons-item"
+            rel="noopener"
+            target="_blank"
+            href="https://platzi.com"
+            data-title="Platzi: 30+ Web Development Certificates"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Platzi.jpg/1200px-Platzi.jpg"
+              alt="Platzi Certificates"
+              width="120"
+            />
+          </a>
 
-        <a class="certificates__icons-item" rel="noopener" target="_blank"
-          href="https://learndigital.withgoogle.com/activate/validate-certificate-code"
-          data-title="Google - Web Development I & II Certificates">
-          <img
-            src="https://lh3.googleusercontent.com/5-yf7s6KGhPFu3hm8UwGnOwloyrEK5hVervmLKfbU1YVj5qwr0dqZ-I2BaleZ14smfc8sjIhnqHbmjS7VFAMZZwS9UQK_RlX6bFmAB8=-rw"
-            alt="Google Certificates - 2 parts" width="120" />
-        </a>
-        <a class="certificates__icons-item" rel="noopener" target="_blank" href="https://platzi.com"
-          data-title="Platzi: 30+ Web Development Certificates">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Platzi.jpg/1200px-Platzi.jpg"
-            alt="Platzi Certificates" width="120" />
-        </a>
+          <a
+            class="certificates__icons-item large"
+            rel="noopener"
+            target="_blank"
+            href="https://www.credly.com/badges/233abc1a-291e-43b4-9aa4-0d97c5d0297f/linked_in?t=rhm3ox"
+            data-title="CertiProf: Scrum Foundation Certificate"
+          >
+            <img
+              src="https://images.credly.com/size/340x340/images/4e3d6f9f-55d7-4ea7-b0e6-f4d4ff543e22/image.png"
+              alt="CertiProf Certificates"
+              width="120"
+            />
+          </a>
 
-        <a class="certificates__icons-item large" rel="noopener" target="_blank"
-          href="https://www.credly.com/badges/233abc1a-291e-43b4-9aa4-0d97c5d0297f/linked_in?t=rhm3ox"
-          data-title="CertiProf: Scrum Foundation Certificate">
-          <img
-            src="https://images.credly.com/size/340x340/images/4e3d6f9f-55d7-4ea7-b0e6-f4d4ff543e22/image.png"
-            alt="CertiProf Certificates" width="120" />
-        </a>
+          <a
+            class="certificates__icons-item large"
+            rel="noopener"
+            target="_blank"
+            href="https://certificates.cs50.io/d8442942-5daf-4ea7-99f5-8ee789cc3d01.pdf?size=letter"
+            data-title="Harvard's CS50 Introduction to Computer Science"
+          >
+            <img src="./images/cs50.png" alt="CS50 Certificate" width="120" />
+          </a>
 
-        <a class="certificates__icons-item large" rel="noopener" target="_blank"
-        href="https://certificates.cs50.io/d8442942-5daf-4ea7-99f5-8ee789cc3d01.pdf?size=letter"
-        data-title="Harvard's CS50 Introduction to Computer Science">
-        <img
-          src="./images/cs50.png"
-          alt="CS50 Certificate" width="120" />
-      </a>
+          <a
+            class="certificates__icons-item"
+            rel="noopener"
+            target="_blank"
+            href="https://www.udemy.com/certificate/UC-689f3797-fd77-49ac-8350-a525e8dd6ffd/"
+            data-title="Udemy TDD bootcamp Certificate"
+          >
+            <img
+              src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg"
+              alt="Udemy Certificates"
+              width="120"
+            />
+          </a>
 
-        <a class="certificates__icons-item" rel="noopener" target="_blank"
-          href="https://www.udemy.com/certificate/UC-689f3797-fd77-49ac-8350-a525e8dd6ffd/"
-          data-title="Udemy TDD bootcamp Certificate">
-          <img src="https://www.udemy.com/staticx/udemy/images/v7/logo-udemy.svg" alt="Udemy Certificates"
-            width="120" />
-        </a>
-
-        <a class="certificates__icons-item" rel="noopener" target="_blank"
-          href="https://learndigital.withgoogle.com/activate/validate-certificate-code"
-          data-title="Google - Web Development I & II Certificates">
-          <img
-            src="https://lh3.googleusercontent.com/5-yf7s6KGhPFu3hm8UwGnOwloyrEK5hVervmLKfbU1YVj5qwr0dqZ-I2BaleZ14smfc8sjIhnqHbmjS7VFAMZZwS9UQK_RlX6bFmAB8=-rw"
-            alt="Google Certificates - 2 parts" width="120" />
-        </a>
-      </div>
-    </div>
-  </section>
-  
-  <div id="projects-nav" class="clickable-section"></div>
-  
-  <section class="projects react-projects react-projects--fullstack reveal">
-    <h3 class="title-projects title-projects--fullstack-react-projects">
-      FULLSTACK REACT PROJECTS
-    </h3>
-    <p class="subtitle-projects">
-      These Full Stack projects were developed using React and many kind of backends, such as Python (Django/Flask) , Node (Express), Firebase, and a PostgreSql Database.
-    </p>
-    <section class="projects-container-grid">
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank"
-        href="https://www.gonzalovidal.dev/aim-app/">
-        <div class="project_image-container">
-          <img class="project_image" src="https://i.postimg.cc/CKjBGmy6/aim-app.png" alt="Pet Finder Center"
-            width="250" height="150" />
+          <a
+            class="certificates__icons-item"
+            rel="noopener"
+            target="_blank"
+            href="https://learndigital.withgoogle.com/activate/validate-certificate-code"
+            data-title="Google - Web Development I & II Certificates"
+          >
+            <img
+              src="https://lh3.googleusercontent.com/5-yf7s6KGhPFu3hm8UwGnOwloyrEK5hVervmLKfbU1YVj5qwr0dqZ-I2BaleZ14smfc8sjIhnqHbmjS7VFAMZZwS9UQK_RlX6bFmAB8=-rw"
+              alt="Google Certificates - 2 parts"
+              width="120"
+            />
+          </a>
         </div>
-      </a>
-        <a rel="noopener" href="https://github.com/gsvidal/pet-finder-ts-tdd-client" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name"
-          data-title="React (TypeScript) - Flask (Python) application with a SQL (Postgres) database.">
-          Aim App
-        </p>
-        <p class="hover-me">Hover on titles<span class="hover-me-icon"></span></p>
-      </div>
-
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank"
-          href="https://pet-finder-client.onrender.com/">
-          <div class="project_image-container">
-            <img class="project_image" src="https://i.postimg.cc/cLvNryFM/pet-finder.png" alt="Pet Finder Center"
-              width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/pet-finder-ts-tdd-client" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name"
-          data-title="React + Typescript, Test Driven Development, Jest, React Testing Library, Context API, NodeJS, deployed in Render">
-          Pet Adoption Center
-        </p>
-      </div>
-
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://charming-dusk-1de24b.netlify.app/">
-          <div class="project_image-container">
-            <img class="project_image" src="https://i.postimg.cc/YSXGWKtj/toma-accion-flowers.png"
-              alt="Flowers ecommerce" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/toma-accion-flowers" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name" data-title="React, React Router, Sass, Firebase">
-          Flowers E-commerce
-        </p>
-      </div>
-
-      <!-- <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://github.com/gsvidal/pokeCRUD">
-          <div class="project_image-container">
-            <img class="project_image" src="https://i.postimg.cc/qvgjmc67/pokemon-crud.png" alt="Pokemon CRUD"
-              width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/pokeCRUD" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name" data-title="React, Redux + Redux Toolkit, Jest, Vite">
-          Pokemon CRUD
-        </p>
-      </div> -->
-    </section>
-  </section>
-
-  <section class="projects react-projects reveal">
-    <h3 class="title-projects title-projects--react-adv-projects">
-      REACT - ADVANCED INDIVIDUAL PROJECTS
-    </h3>
-    <p class="subtitle-projects">
-      These advanced React projects use Redux, TypeScript, and Unit Testing using Test Driven Development (TDD) methodology.
-    </p>
-    <div class="projects-container-grid">
-
-      <!-- Redux shopping cart -->
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank"
-          href="https://www.gonzalovidal.dev/redux-shopping-cart/">
-          <div class="project_image-container">
-            <img class="project_image" src="https://i.postimg.cc/43NJr3dN/redux-shopping-cart.png"
-              alt="Redux Shopping Cart" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/redux-shopping-cart" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name" data-title="React, Redux, CSS Modules, Firebase">
-          Shopping Cart (Redux & RTK)
-        </p>
-      </div>
-
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://www.gonzalovidal.dev/calculator-tdd/">
-          <div class="project_image-container">
-            <img class="project_image" src="https://i.postimg.cc/X7pV4bDc/rsz-sin-t-tulo-1-1.png"
-              alt="Calculator with TDD" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/calculator-tdd" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name" data-title="React, Vite, Test Driven Development, Vitest + React Testing Library">
-          Calculator (TDD)
-        </p>
-      </div>
-
-      <!-- Todo App TS -->
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank"
-          href="https://www.gonzalovidal.dev/todo-app-2.0-typescript/">
-          <div class="project_image-container">
-            <img class="project_image" src="https://i.postimg.cc/FRRpQwmX/todo-app-typescript.png"
-              alt="Calculator with TDD" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/todo-app-2.0-typescript" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name" data-title="React + TypeScript, CSS Modules">
-          Todo App (TypeScript)
-        </p>
-      </div>
-
-       <!-- Quiz App -->
-       <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://www.gonzalovidal.dev/quiz-app-ts-tdd/">
-          <div class="project_image-container">
-            <img class="project_image" src="https://i.postimg.cc/SNx1DYR7/quiz-app.png"
-              alt="Quiz App" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/quiz-app-ts-tdd" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name" data-title="React + Typescript + TDD + RTL">Quiz App (TS+TDD)</p>
-      </div>
-
-      <!-- Npm packages finder - redux & TS -->
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank"
-          href="https://www.gonzalovidal.dev/npm-packages-finder-redux-ts/">
-          <div class="project_image-container">
-            <img class="project_image" src="https://i.postimg.cc/kGrxPCYN/find-npm-package-ts.png"
-              alt="Npm packages finder" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/npm-packages-finder-redux-ts" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name" data-title="React + Typescript, Redux">
-          NpmFinder(Redux+Typescript)
-        </p>
-      </div>  
-    </div>
-
-  </section>
-
-  <section class="projects team-projects reveal">
-    <h3 class="title-projects title-projects--team-projects">
-      TEAM PROJECTS
-    </h3>
-    <p class="subtitle-projects">
-      Single Page Applications (SPA) and landing pages with diverse developer teams in Bithug.
-    </p>
-    <section class="projects-container-grid">
-      <div class="project team">
-        <a rel="noopener" class="project__link" target="_blank"
-          href="https://bit-hug-learning.github.io/codacy-code-project/public/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/codacy.png" alt="Codacy Project Logo" width="250"
-              height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/bit-hug-learning/codacy-code-project" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Codacy <br />(Codacy web page Layout)</p>
-      </div>
-
-      <div class="project team">
-        <a rel="noopener" class="project__link" target="_blank" href="https://apikachu.bit-hug.com/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/apikachu.png" alt="APIkachu Project Logo"
-              width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/bit-hug-learning/apikachu-store" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">APIkachu <br />(SPA Pokemon Store)</p>
-      </div>
-
-      <div class="project team">
-        <a rel="noopener" class="project__link" target="_blank" href="https://bit-hug-learning.github.io/blogr/public/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/blogr.png" alt="Blogr Project Logo" width="250"
-              height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/bit-hug-learning/blogr" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Blogr <br />(Blogr Landing page)</p>
-      </div>
-
-      <div class="project team">
-        <a rel="noopener" class="project__link" target="_blank"
-          href="https://bit-hug-learning.github.io/watch-web-app/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/watchwebapp.png" alt="Watch Web App Project Logo"
-              width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/bit-hug-learning/watch-web-app" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Watch Web App <br />(Watch, Countdown & timer)</p>
       </div>
     </section>
-  </section>
 
-  <section class="projects react-projects reveal">
-    <h3 class="title-projects title-projects--react-projects">
-      REACT JS - INDIVIDUAL PROJECTS
-    </h3>
-    <p class="subtitle-projects">
-      Basic React projects (State management, side effects, context, and custom hooks.)
-    </p>
-    <section class="projects-container-grid">
-      <!-- Budget Planner -->
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://www.gonzalovidal.dev/budget-planner-2.0/">
-          <div class="project_image-container">
-            <img class="project_image" src="https://i.postimg.cc/W4gJmCFb/budget-planner.png"
-              alt="Todo List Machine Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/budget-planner-2.0/tree/develop" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Budget Planner 2.0</p>
-      </div>
+    <div id="projects-nav" class="clickable-section"></div>
 
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://gsvidal.github.io/Todo-list-react/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/react-projects/todomachine.png"
-              alt="Todo List Machine Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/Todo-list-react" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Todo List Machine</p>
-      </div>
-      
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank"
-          href="https://gsvidal.github.io/cryptocurrency-converter/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/react-projects/cryptocurrency-converter.png"
-              alt="Crytocurrency Converter Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/cryptocurrency-converter/" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Crytocurrency Converter</p>
-      </div>
-
-      <!-- <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://gsvidal.github.io/artists-and-lyrics-app">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/react-projects/artists-lyrics-app.png"
-              alt="Artist & Lyrics App Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/artists-and-lyrics-app" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Artist & Lyrics App</p>
-      </div> -->
-      <!-- <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://gsvidal.github.io/drink-recipes">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/react-projects/drink-recipes.png"
-              alt="Drink Recipes App Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/drink-recipes" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Drink Recipes App</p>
-      </div> -->
-
-  
-
-      <!-- <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://gsvidal.github.io/budget-tracker/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/react-projects/budgettracker.png"
-              alt="Budget Tracker Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/budget-tracker/" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Budget Tracker</p>
-      </div> -->
-
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank"
-          href="https://gsvidal.github.io/administrador-de-citas/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/react-projects/appointmentsmanager.png"
-              alt="Appoinments Manager Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/administrador-de-citas/" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Appoinments Manager</p>
-      </div>
-
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://gsvidal.github.io/car-insurance-quote/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/react-projects/car-insurance-quote.png"
-              alt="Car Insurance Quote Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/car-insurance-quote/" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Car Insurance Quote</p>
-      </div>
-
-      <!-- <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://gsvidal.github.io/tv-series-quotes/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/react-projects/tv-series-quotes.png"
-              alt="TV Series Quotes Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/tv-series-quotes" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">TV Series Quotes</p>
-      </div> -->
-
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://gsvidal.github.io/weather-app/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/react-projects/weather-app.png"
-              alt="Weather App Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/weather-app/" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Weather App</p>
-      </div>
-
-      <!-- <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://github.com/gsvidal/news-app">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/react-projects/news-app.png"
-              alt="News App Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/news-app" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">News App</p>
-      </div>
-       -->
-      <!-- Monsters Rolodex -->
-      <!-- <div class="project">
-        <a rel="noopener" class="project__link" target="_blank"
-          href="https://www.gonzalovidal.dev/monsters-class-components/">
-          <div class="project_image-container">
-            <img class="project_image" src="https://i.postimg.cc/NF8fqfzg/monsters-rolodex.png"
-              alt="Todo List Machine Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/monsters-class-components" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Monsters (Class components)</p>
-      </div> -->
-    </section>
-  </section>
-
-  <section class="projects vanilla-projects reveal">
-    <h3 class="title-projects title-projects--vanilla-projects">
-      VANILLA JS - INDIVIDUAL PROJECTS
-    </h3>
-    <p class="subtitle-projects">
-      Basic Vanilla JavasScript projects ( using HTML, CSS and JS )
-    </p>
-    <section class="projects-container-grid">
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank"
-          href="https://www.gonzalovidal.dev/gradient-background-generator-vanilla-js/">
-          <div class="project_image-container">
-            <img class="project_image" src="https://i.postimg.cc/rmFx1SNS/gradient-bg-generator.png"
-              alt="Gradient Background Generator Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/gradient-background-generator-vanilla-js"
-          class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Gradient Generator</p>
-      </div>
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank"
-          href="https://gsvidal.github.io/drawing-canvas-paint/public/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/onlinepaint.png" alt="Online-Paint Project Logo"
-              width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/drawing-canvas-paint" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Online-Paint(Not mobile dev)</p>
-      </div>
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank"
-          href="https://gsvidal.github.io/SPA-Rick-And-Morty-API/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/sparick.png" alt="SPA - Rick and Morty Project Logo"
-              width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/SPA-Rick-And-Morty-API" class="project__github"
-          target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Rick and Morty (SPA)</p>
-      </div>
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://gsvidal.github.io/blog-materialize/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/blogmaterialize.png"
-              alt="Blog-Materialize Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/blog-materialize" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Blog (with Materialize)</p>
-      </div>
-      <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://gsvidal.github.io/TuPela-Landing/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/tupela2.png"
-              alt="Movies and series streaming Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/TuPela-Landing" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Movies and series streaming</p>
-      </div>
-      <div class="project p-none">
-        <a rel="noopener" class="project__link" target="_blank" href="https://gsvidal.github.io/Batatabit/">
-          <div class="project_image-container p-none">
-            <img class="project_image" src="./images/projects-logos/batatabit.svg" alt="Batatabit Logo" width="250"
-              height="150" />
-          </div>
-          <p class="project_name">Cryptocurrency Exchange</p>
-        </a>
-      </div>
-
-
-
-      <!-- <div class="project">
-        <a rel="noopener" class="project__link" target="_blank" href="https://gsvidal.github.io/Payment-Form/">
-          <div class="project_image-container">
-            <img class="project_image" src="./images/projects-logos/paymentform.png"
-              alt="Movies and series streaming Project Logo" width="250" height="150" />
-          </div>
-        </a>
-        <a rel="noopener" href="https://github.com/gsvidal/Payment-Form" class="project__github" target="_blank">
-          <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-            width="50" height="50" />
-        </a>
-        <p class="project_name">Payment Form</p>
-      </div> -->
-      <div class="project p-base">
-        <a rel="noopener" class="project__link" target="_blank" href="https://gsvidal.github.io/LandingLedexTech/">
-          <div class="project_image-container p-none">
-            <img class="project_image" src="./images/projects-logos/ledextech.png" alt="LedexTech Project Logo"
-              width="250" height="150" />
-          </div>
-          <p class="project_name">Web Development Landing Page (My first website)</p>
-        </a>
-      </div>
-    </section>
-  </section>
-
-  <section class="projects misc-projects-container reveal">
-    <h3 class="title-projects title-projects--misc-projects">
-      MISCELLANEOUS
-    </h3>
-    <div class="project">
-      <a rel="noopener" class="project__link" target="_blank" href="https://www.npmjs.com/package/factorial-calculator">
-        <div class="project_image-container">
-          <p class="npm-module">
-            <span class="npm-icon"></span> Factorial Calculator Module
+    <section class="projects react-projects react-projects--fullstack reveal">
+      <h3 class="title-projects title-projects--fullstack-react-projects">
+        FULLSTACK REACT PROJECTS
+      </h3>
+      <p class="subtitle-projects">
+        These Full Stack projects were developed using React and many kind of
+        backends, such as Python (Django/Flask) , Node (Express), Firebase, and
+        a PostgreSql Database.
+      </p>
+      <section class="projects-container-grid">
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://www.gonzalovidal.dev/aim-app/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="https://i.postimg.cc/CKjBGmy6/aim-app.png"
+                alt="Pet Finder Center"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/pet-finder-ts-tdd-client"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p
+            class="project_name"
+            data-title="React (TypeScript) - Flask (Python) application with a SQL (Postgres) database."
+          >
+            Aim App
+          </p>
+          <p class="hover-me">
+            Hover on titles<span class="hover-me-icon"></span>
           </p>
         </div>
-      </a>
-      <a rel="noopener" href="https://github.com/gsvidal/factorial-calculator" class="project__github project--misc"
-        target="_blank">
-        <img class="project__github-logo" src="https://i.postimg.cc/ncDt7Hyb/github.png" alt="Github Repo Logo"
-          width="50" height="50" />
-      </a>
+
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://pet-finder-client.onrender.com/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="https://i.postimg.cc/cLvNryFM/pet-finder.png"
+                alt="Pet Finder Center"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/pet-finder-ts-tdd-client"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p
+            class="project_name"
+            data-title="React + Typescript, Test Driven Development, Jest, React Testing Library, Context API, NodeJS, deployed in Render"
+          >
+            Pet Adoption Center
+          </p>
+        </div>
+
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://charming-dusk-1de24b.netlify.app/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="https://i.postimg.cc/YSXGWKtj/toma-accion-flowers.png"
+                alt="Flowers ecommerce"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/toma-accion-flowers"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p
+            class="project_name"
+            data-title="React, React Router, Sass, Firebase"
+          >
+            Flowers E-commerce
+          </p>
+        </div>
+
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://github.com/gsvidal/pokeCRUD"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="https://i.postimg.cc/qvgjmc67/pokemon-crud.png"
+                alt="Pokemon CRUD"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/pokeCRUD"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p
+            class="project_name"
+            data-title="React, Redux + Redux Toolkit, Jest, Vite"
+          >
+            Pokemon CRUD
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <section class="projects react-projects reveal">
+      <h3 class="title-projects title-projects--react-adv-projects">
+        REACT - ADVANCED INDIVIDUAL PROJECTS
+      </h3>
+      <p class="subtitle-projects">
+        These advanced React projects use Redux, TypeScript, and Unit Testing
+        using Test Driven Development (TDD) methodology.
+      </p>
+      <div class="projects-container-grid">
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://www.gonzalovidal.dev/redux-shopping-cart/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="https://i.postimg.cc/43NJr3dN/redux-shopping-cart.png"
+                alt="Redux Shopping Cart"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/redux-shopping-cart"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p
+            class="project_name"
+            data-title="React, Redux, CSS Modules, Firebase"
+          >
+            Shopping Cart (Redux & RTK)
+          </p>
+        </div>
+
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://www.gonzalovidal.dev/calculator-tdd/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="https://i.postimg.cc/X7pV4bDc/rsz-sin-t-tulo-1-1.png"
+                alt="Calculator with TDD"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/calculator-tdd"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p
+            class="project_name"
+            data-title="React, Vite, Test Driven Development, Vitest + React Testing Library"
+          >
+            Calculator (TDD)
+          </p>
+        </div>
+
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://www.gonzalovidal.dev/todo-app-2.0-typescript/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="https://i.postimg.cc/FRRpQwmX/todo-app-typescript.png"
+                alt="Calculator with TDD"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/todo-app-2.0-typescript"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name" data-title="React + TypeScript, CSS Modules">
+            Todo App (TypeScript)
+          </p>
+        </div>
+
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://www.gonzalovidal.dev/quiz-app-ts-tdd/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="https://i.postimg.cc/SNx1DYR7/quiz-app.png"
+                alt="Quiz App"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/quiz-app-ts-tdd"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name" data-title="React + Typescript + TDD + RTL">
+            Quiz App (TS+TDD)
+          </p>
+        </div>
+
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://www.gonzalovidal.dev/npm-packages-finder-redux-ts/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="https://i.postimg.cc/kGrxPCYN/find-npm-package-ts.png"
+                alt="Npm packages finder"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/npm-packages-finder-redux-ts"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name" data-title="React + Typescript, Redux">
+            NpmFinder(Redux+Typescript)
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects team-projects reveal">
+      <h3 class="title-projects title-projects--team-projects">
+        TEAM PROJECTS
+      </h3>
+      <p class="subtitle-projects">
+        Single Page Applications (SPA) and landing pages with diverse developer
+        teams in Bithug.
+      </p>
+      <section class="projects-container-grid">
+        <div class="project team">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://bit-hug-learning.github.io/codacy-code-project/public/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/codacy.png"
+                alt="Codacy Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/bit-hug-learning/codacy-code-project"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Codacy <br />(Codacy web page Layout)</p>
+        </div>
+
+        <div class="project team">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://apikachu.bit-hug.com/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/apikachu.png"
+                alt="APIkachu Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/bit-hug-learning/apikachu-store"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">APIkachu <br />(SPA Pokemon Store)</p>
+        </div>
+
+        <div class="project team">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://bit-hug-learning.github.io/blogr/public/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/blogr.png"
+                alt="Blogr Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/bit-hug-learning/blogr"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Blogr <br />(Blogr Landing page)</p>
+        </div>
+
+        <div class="project team">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://bit-hug-learning.github.io/watch-web-app/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/watchwebapp.png"
+                alt="Watch Web App Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/bit-hug-learning/watch-web-app"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">
+            Watch Web App <br />(Watch, Countdown & timer)
+          </p>
+        </div>
+      </section>
+    </section>
+
+    <section class="projects react-projects reveal">
+      <h3 class="title-projects title-projects--react-projects">
+        REACT JS - INDIVIDUAL PROJECTS
+      </h3>
+      <p class="subtitle-projects">
+        Basic React projects (State management, side effects, context, and
+        custom hooks.)
+      </p>
+      <section class="projects-container-grid">
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://www.gonzalovidal.dev/budget-planner-2.0/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="https://i.postimg.cc/W4gJmCFb/budget-planner.png"
+                alt="Todo List Machine Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/budget-planner-2.0/tree/develop"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Budget Planner 2.0</p>
+        </div>
+
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://gsvidal.github.io/Todo-list-react/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/react-projects/todomachine.png"
+                alt="Todo List Machine Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/Todo-list-react"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Todo List Machine</p>
+        </div>
+
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://gsvidal.github.io/cryptocurrency-converter/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/react-projects/cryptocurrency-converter.png"
+                alt="Crytocurrency Converter Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/cryptocurrency-converter/"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Crytocurrency Converter</p>
+        </div>
+
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://gsvidal.github.io/administrador-de-citas/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/react-projects/appointmentsmanager.png"
+                alt="Appoinments Manager Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/administrador-de-citas/"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Appoinments Manager</p>
+        </div>
+
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://gsvidal.github.io/car-insurance-quote/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/react-projects/car-insurance-quote.png"
+                alt="Car Insurance Quote Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/car-insurance-quote/"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Car Insurance Quote</p>
+        </div>
+
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://gsvidal.github.io/weather-app/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/react-projects/weather-app.png"
+                alt="Weather App Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/weather-app/"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Weather App</p>
+        </div>
+      </section>
+    </section>
+
+    <section class="projects vanilla-projects reveal">
+      <h3 class="title-projects title-projects--vanilla-projects">
+        VANILLA JS - INDIVIDUAL PROJECTS
+      </h3>
+      <p class="subtitle-projects">
+        Basic Vanilla JavasScript projects ( using HTML, CSS and JS )
+      </p>
+      <section class="projects-container-grid">
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://www.gonzalovidal.dev/gradient-background-generator-vanilla-js/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="https://i.postimg.cc/rmFx1SNS/gradient-bg-generator.png"
+                alt="Gradient Background Generator Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/gradient-background-generator-vanilla-js"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Gradient Generator</p>
+        </div>
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://gsvidal.github.io/drawing-canvas-paint/public/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/onlinepaint.png"
+                alt="Online-Paint Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/drawing-canvas-paint"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Online-Paint(Not mobile dev)</p>
+        </div>
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://gsvidal.github.io/SPA-Rick-And-Morty-API/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/sparick.png"
+                alt="SPA - Rick and Morty Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/SPA-Rick-And-Morty-API"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Rick and Morty (SPA)</p>
+        </div>
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://gsvidal.github.io/blog-materialize/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/blogmaterialize.png"
+                alt="Blog-Materialize Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/blog-materialize"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Blog (with Materialize)</p>
+        </div>
+        <div class="project">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://gsvidal.github.io/TuPela-Landing/"
+          >
+            <div class="project_image-container">
+              <img
+                class="project_image"
+                src="./images/projects-logos/tupela2.png"
+                alt="Movies and series streaming Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+          </a>
+          <a
+            rel="noopener"
+            href="https://github.com/gsvidal/TuPela-Landing"
+            class="project__github"
+            target="_blank"
+          >
+            <img
+              class="project__github-logo"
+              src="https://i.postimg.cc/ncDt7Hyb/github.png"
+              alt="Github Repo Logo"
+              width="50"
+              height="50"
+            />
+          </a>
+          <p class="project_name">Movies and series streaming</p>
+        </div>
+        <div class="project p-none">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://gsvidal.github.io/Batatabit/"
+          >
+            <div class="project_image-container p-none">
+              <img
+                class="project_image"
+                src="./images/projects-logos/batatabit.svg"
+                alt="Batatabit Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+            <p class="project_name">Cryptocurrency Exchange</p>
+          </a>
+        </div>
+
+        <div class="project p-base">
+          <a
+            rel="noopener"
+            class="project__link"
+            target="_blank"
+            href="https://gsvidal.github.io/LandingLedexTech/"
+          >
+            <div class="project_image-container p-none">
+              <img
+                class="project_image"
+                src="./images/projects-logos/ledextech.png"
+                alt="LedexTech Project Logo"
+                width="250"
+                height="150"
+              />
+            </div>
+            <p class="project_name">
+              Web Development Landing Page (My first website)
+            </p>
+          </a>
+        </div>
+      </section>
+    </section>
+
+    <section class="projects misc-projects-container reveal">
+      <h3 class="title-projects title-projects--misc-projects">
+        MISCELLANEOUS
+      </h3>
+      <div class="project">
+        <a
+          rel="noopener"
+          class="project__link"
+          target="_blank"
+          href="https://www.npmjs.com/package/factorial-calculator"
+        >
+          <div class="project_image-container">
+            <p class="npm-module">
+              <span class="npm-icon"></span> Factorial Calculator Module
+            </p>
+          </div>
+        </a>
+        <a
+          rel="noopener"
+          href="https://github.com/gsvidal/factorial-calculator"
+          class="project__github project--misc"
+          target="_blank"
+        >
+          <img
+            class="project__github-logo"
+            src="https://i.postimg.cc/ncDt7Hyb/github.png"
+            alt="Github Repo Logo"
+            width="50"
+            height="50"
+          />
+        </a>
+      </div>
+    </section>
+
+    <div class="button-up-container">
+      <span class="button-up"></span>
     </div>
-  </section>
 
-  <div class="button-up-container">
-    <span class="button-up"></span>
-  </div>
+    <footer id="contact-nav" class="footer">
+      <p>Designed and coded by... <strong>me!</strong></p>
+      <p>Meet me in these platforms:</p>
 
-  <footer id="contact-nav" class="footer">
-    <p>
-      Designed and coded by... <strong>me!</strong>
-    </p>
-    <p>
-      Meet me in these platforms:
-    </p>
+      <div class="contact">
+        <a rel="noopener" href="https://github.com/gsvidal" target="_blank"
+          ><img
+            src="https://i.postimg.cc/ncDt7Hyb/github.png"
+            width="45px"
+            height="45px"
+            alt="GitHub account: gsvidal"
+        /></a>
+        <a
+          rel="noopener"
+          href="https://www.linkedin.com/in/gsvidal/"
+          target="_blank"
+          ><img
+            src="https://i.postimg.cc/P5bs3SfS/linkedin.png"
+            width="45px"
+            height="45px"
+            alt="Linkedin account"
+        /></a>
+        <a rel="noopener" href="https://bio.torre.co/es/gsvidal" target="_blank"
+          ><img
+            src="https://i.postimg.cc/VkPPWxwS/torre.png"
+            width="45px"
+            height="45px"
+            alt="Torre account"
+        /></a>
+        <a
+          rel="noopener"
+          href="https://www.instagram.com/gsvidal.web/"
+          target="_blank"
+          ><img
+            src="https://i.postimg.cc/QNycccgD/Webp-net-resizeimage-4.png"
+            width="50px"
+            height="50px"
+            alt="Instagram account: @gsvidal.web"
+        /></a>
+      </div>
+    </footer>
 
-    <div class="contact">
-      <a rel="noopener" href="https://github.com/gsvidal" target="_blank"><img
-          src="https://i.postimg.cc/ncDt7Hyb/github.png" width="45px" height="45px" alt="GitHub account: gsvidal" /></a>
-      <a rel="noopener" href="https://www.linkedin.com/in/gsvidal/" target="_blank"><img
-          src="https://i.postimg.cc/P5bs3SfS/linkedin.png" width="45px" height="45px" alt="Linkedin account" /></a>
-      <a rel="noopener" href="https://bio.torre.co/es/gsvidal" target="_blank"><img
-          src="https://i.postimg.cc/VkPPWxwS/torre.png" width="45px" height="45px" alt="Torre account" /></a>
-      <a rel="noopener" href="https://www.instagram.com/gsvidal.web/" target="_blank"><img
-          src="https://i.postimg.cc/QNycccgD/Webp-net-resizeimage-4.png" width="50px" height="50px"
-          alt="Instagram account: @gsvidal.web" /></a>
-    </div>
-  </footer>
-
-  <script src="./index.js"></script>
-</body>
-
+    <script src="./index.js"></script>
+  </body>
 </html>
