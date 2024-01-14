@@ -150,6 +150,21 @@ body {
   transition: 0.25s linear;
 }
 
+.switch_button-text {
+  position: relative;
+  top: 1px;
+  left: 8px;
+  z-index: 2;
+  font-size: 1.5rem;
+  color: var(--main-color);
+  transition: left 0.05s linear;
+}
+
+.switch_button-text.light-dark-mode {
+  color: white;
+  left: -25px;
+}
+
 @keyframes animated-glow {
   0% {
     box-shadow: 0px 0px 35px 0px rgb(255, 255, 255);
@@ -200,13 +215,11 @@ body {
 }
 
 .welcome__intro {
-  margin: 70px 0 40px 0;
+  margin: 60px 0 40px 0;
 }
 
 @media screen and (min-width: 560px) {
-  .welcome__intro {
-    margin: 10px 0 40px 0;
-  }
+  
   .welcome__intro:nth-of-type(3) {
     margin-top: 70px;
   }
@@ -222,7 +235,9 @@ body {
 }
 
 .welcome__logobithug {
-  /* display: none; */
+  position: relative;
+  top: 0;
+  left: 25px;
   margin: 20px;
   border-radius: 50%;
   cursor: pointer;
@@ -234,16 +249,20 @@ body {
   align-items: center;
 }
 
-.experience__title.globant {
-  position: relative;
-  left: 12px;
-  top: 0px;
+.experience__title {
+  font-size: 1.5rem;
 }
 
 .experience__title.bithug {
   position: relative;
-  left: 0;
   top: -20px;
+  left: 0;
+}
+
+.experience__title.globant {
+  position: relative;
+  /* left: 12px; */
+  top: 0px;
 }
 
 @media screen and (min-width: 560px) {
@@ -279,11 +298,6 @@ body {
   transition: transform 0.25s ease-out;
 }
 
-.experience__title {
-  font-size: 12px;
-  font-weight: 700;
-}
-
 .blog {
   margin: 25px 0 80px;
   font-size: 2rem;
@@ -303,17 +317,19 @@ body {
 
 @media screen and (max-width: 1280px) {
   #certificates-nav {
-    top: -280px;
+    position: relative;
+    top: -180px;
   }
 
   #projects-nav {
-    top: 150px;
+    position: relative;
+    top: 200px;
   }
 }
 @media screen and (max-width: 800px) {
   #certificates-nav {
     position: relative;
-    top: -20px;
+    top: -220px;
   }
 
   #projects-nav {
@@ -343,6 +359,19 @@ h3 {
   margin-top: 0px;
 }
 
+.title-projects--projects {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 12px rgb(255, 255, 255);
+  font-size: 3.5rem;
+}
+
+.title-projects--experience {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 12px rgb(255, 255, 255);
+  font-size: 3.5rem;
+  margin-bottom: 45px;
+}
+
 .title-projects--web-technologies {
   margin-right: 0;
   margin-bottom: 5px;
@@ -355,34 +384,39 @@ h3 {
   text-shadow: 0 0 12px rgb(255, 171, 118);
 }
 
-.title-projects--team-projects {
+/* .title-projects--team-projects {
   color: rgb(255, 187, 187);
   text-shadow: 0 0 12px rgb(255, 118, 118);
-}
+} */
 
 .title-projects--fullstack-react-projects {
   color: rgb(130, 209, 136);
   text-shadow: 0 0 12px rgb(81, 255, 92);
+  font-size: 2.4rem;
 }
 
 .title-projects--react-adv-projects {
   color: rgb(192, 156, 238);
   text-shadow: 0 0 12px rgb(122, 89, 255);
+  font-size: 2.4rem;
 }
 
 .title-projects--react-projects {
   color: rgb(205, 226, 255);
   text-shadow: 0 0 12px rgb(106, 168, 255);
+  font-size: 2.4rem;
 }
 
 .title-projects--vanilla-projects {
-  color: rgb(255, 255, 255);
-  text-shadow: 0 0 12px rgb(255, 255, 255);
+  color: rgb(255, 252, 205);
+  text-shadow: 0 0 12px rgb(255, 249, 166);
+  font-size: 2.4rem;
 }
 
 .title-projects--misc-projects {
   color: rgb(202, 202, 202);
   text-shadow: 0 0 3px;
+  font-size: 2.4rem;
 }
 
 .toolbox__icons {
@@ -390,6 +424,7 @@ h3 {
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   justify-items: center;
+  place-items: center;
   width: 100%;
   max-width: 380px;
   row-gap: 20px;
@@ -442,7 +477,6 @@ h3 {
 }
 
 /* 
-
 .certificates__slider::before,
 .certificates__slider::after {
   content: '';
@@ -453,9 +487,9 @@ h3 {
   background: linear-gradient(to right,
       var(--main-color) 0%,
       var(--main-color-op0) 100%);
-} */
+}
 
-/* .certificates__slider.light-dark-mode::before,
+ .certificates__slider.light-dark-mode::before,
 .certificates__slider.light-dark-mode::after {
   background: none;
 }
@@ -477,22 +511,23 @@ h3 {
   }
 
   100% {
-    transform: translateX(calc(-160px * 5));
+    transform: translateX(calc(-160px * 6));
   }
 }
 .certificates__slider {
-  display: none;
   height: 250px;
   margin-top: 50px;
   overflow: hidden;
-  position: relative;
+  /* position: relative; */
   width: 90%;
-  /* max-width: 700px; */
+  margin: 0 auto;
+  max-width: 700px;
 }
 .certificates__icons {
   display: flex;
   align-items: center;
-  animation: scroll 10s linear infinite;
+  height: 120px;
+  animation: scroll 12.5s linear infinite;
 }
 
 .certificates__icons-item {
@@ -537,7 +572,7 @@ h3 {
   overflow: hidden;
   width: 100%;
   height: 150px;
-  border-radius: 15px;
+  border-radius: 8px;
   transition: box-shadow 0.75s;
 }
 
@@ -558,7 +593,7 @@ h3 {
 
 .project .project__github {
   position: absolute;
-  top: 123px;
+  top: 123.5px;
   left: 0;
   width: 50px;
   height: 50px;
@@ -594,7 +629,7 @@ h3 {
 }
 
 .project__github-logo {
-  border-bottom-left-radius: 15px;
+  border-bottom-left-radius: 8px;
 }
 
 .project_name {
@@ -634,7 +669,7 @@ h3 {
 }
 
 .toolbox__icons [data-title]:after {
-  top: 70px;
+  top: 60px;
   width: 200px;
   background-color: #ffffa5d0;
   pointer-events: none;
@@ -646,7 +681,7 @@ h3 {
 }
 
 .certificates__icons .large[data-title]:after {
-  top: 120px;
+  top: 130px;
 }
 
 .react-projects--fullstack [data-title]:after {
@@ -740,10 +775,10 @@ h3 {
 }
 
 .npm-module {
-  padding: 10px 19px;
+  padding: 14px 19px;
   background-color: white;
-  border: 1px solid red;
-  border-radius: 15px;
+  border: 3px solid rgb(255, 130, 130);
+  border-radius: 5px;
   color: var(--main-color);
   opacity: 0.7;
 }
@@ -792,24 +827,29 @@ h3 {
     hue-rotate(261deg) brightness(67%) contrast(114%);
 }
 
+.title-projects--experience.light-dark-mode {
+  color: rgb(105, 105, 105);
+  text-shadow: 0 0 12px rgb(126, 126, 126);
+}
+
 .title-projects--web-technologies.light-dark-mode {
-  color: rgb(254, 234, 52);
-  text-shadow: 0 0 12px rgb(118, 113, 35);
+  color: rgb(255, 244, 148);
+  text-shadow: 0 0 12px rgb(201, 196, 134);
 }
 
 .title-projects--certificates.light-dark-mode {
   color: rgb(228, 117, 48);
-  text-shadow: 0 0 12px rgb(170, 83, 30);
+  text-shadow: 0 0 12px rgb(190, 137, 103);
 }
 
 .title-projects--fullstack-react-projects.light-dark-mode {
-  color: rgb(39, 200, 52);
-  text-shadow: 0 0 12px rgb(30, 126, 37);
+  color: rgb(65, 129, 70);
+  text-shadow: 0 0 12px rgb(128, 201, 133);
 }
 
 .title-projects--react-adv-projects.light-dark-mode {
-  color: rgb(119, 33, 231);
-  text-shadow: 0 0 12px rgb(68, 43, 166);
+  color: rgb(79, 27, 146);
+  text-shadow: 0 0 12px rgb(108, 91, 180);
 }
 
 .title-projects--team-projects.light-dark-mode {
@@ -818,7 +858,7 @@ h3 {
 }
 
 .title-projects--react-projects.light-dark-mode {
-  color: rgb(52, 130, 241);
+  color: rgb(101, 160, 241);
   text-shadow: 0 0 12px rgb(34, 71, 122);
 }
 
@@ -925,11 +965,16 @@ h3 {
   }
 
   .header {
-    margin-bottom: 45px;
+    margin-bottom: 25px;
   }
 
   .switch_button_container {
-    margin-bottom: 25px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+
+  .welcome__intro {
+    margin: 10px 0 40px 0;
   }
 
   .logo__bg {
@@ -981,7 +1026,6 @@ h3 {
     margin-left: 60px;
     margin-right: 5px;
     justify-content: flex-end;
-    margin-bottom: 20px;
   }
 
   .body__top {
@@ -1026,6 +1070,7 @@ h3 {
 
   .welcome__logobithug {
     display: block;
+    left: 20px;
   }
 
   .welcome .descripcion_blog {
@@ -1036,9 +1081,6 @@ h3 {
     margin: 0;
   }
 
-  /* .title-projects--web-technologies {
-    margin-right: 
-  } */
   .web__technologies {
     margin-right: 190px;
   }

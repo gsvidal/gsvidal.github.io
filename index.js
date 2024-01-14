@@ -15,6 +15,7 @@ const certificateSlider = document.querySelector(".certificates__slider");
 const toolbox = document.querySelector(".toolbox");
 const navItems = document.querySelectorAll(".nav-bar__item");
 const hoverElement = document.querySelector(".hover-me");
+const switchButtonText = document.querySelector(".switch_button-text");
 
 // Logo has a 3d hover effect
 const height = logo.clientHeight;
@@ -38,7 +39,6 @@ logo.addEventListener("mousemove", (event) => {
 });
 
 logo.addEventListener("mouseout", (event) => {
-  console.log("out");
   const string2 = `
     perspective(400px)
     scale(1)
@@ -50,7 +50,7 @@ logo.addEventListener("mouseout", (event) => {
 });
 
 //Titles changing color when dark-light mode turns
-const titles = document.querySelectorAll(".title-projects");
+// console.log(titles)
 
 switchButtonContainer.addEventListener("click", lightDarkMode);
 
@@ -59,14 +59,21 @@ let [red, green, blue] = [69, 11, 178];
 let isDarkMode = true;
 
 function lightDarkMode(event) {
+  const titles = document.querySelectorAll(".title-projects");
   isDarkMode = !isDarkMode;
   bodyBGColor.classList.toggle("light-dark-mode", !isDarkMode);
   updateBackgroundColor();
 
-  switchButton.classList.toggle("light-dark-mode");
   switchButtonContainer.classList.toggle("light-dark-mode");
+  switchButton.classList.toggle("light-dark-mode");
+  switchButtonText.classList.toggle("light-dark-mode");
+  if (switchButton.classList.contains("light-dark-mode")) {
+    switchButtonText.textContent = "OFF";
+  } else {
+    switchButtonText.textContent = "ON";
+  }
   logo.classList.toggle("light-dark-mode");
-  personalBlog.classList.toggle("light-dark-mode");
+  // personalBlog.classList.toggle("light-dark-mode");
 
   olderProjects.forEach((olderProject) =>
     olderProject.classList.toggle("light-dark-mode")
@@ -209,7 +216,7 @@ updateBackgroundColor();
 
 const hideHoverMe = () => {
   setTimeout(() => {
-      hoverElement.classList.add("hide");
+    hoverElement.classList.add("hide");
   }, 1000);
 };
 
