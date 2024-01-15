@@ -58,7 +58,7 @@ switchButtonContainer.addEventListener("click", lightDarkMode);
 let [red, green, blue] = [69, 11, 178];
 let isDarkMode = true;
 
-function lightDarkMode(event) {
+function lightDarkMode() {
   const titles = document.querySelectorAll(".title-projects");
   isDarkMode = !isDarkMode;
   bodyBGColor.classList.toggle("light-dark-mode", !isDarkMode);
