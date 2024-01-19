@@ -68,9 +68,9 @@ function lightDarkMode() {
   switchButton.classList.toggle("light-dark-mode");
   switchButtonText.classList.toggle("light-dark-mode");
   if (switchButton.classList.contains("light-dark-mode")) {
-    switchButtonText.textContent = "OFF";
+    switchButtonText.textContent = "LIGHT";
   } else {
-    switchButtonText.textContent = "ON";
+    switchButtonText.textContent = "DARK";
   }
   logo.classList.toggle("light-dark-mode");
   // personalBlog.classList.toggle("light-dark-mode");
@@ -206,9 +206,18 @@ function updateBackgroundColor() {
   const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
   bodyBGColor.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
+function updateColor() {
+  const y = 100* (window.scrollY || window.pageYOffset);
+  [red, green, blue] = [69, 11, 178];
+  const [r, g, b] = [red * y, green * y, blue * y].map(Math.round);
+  bodyBGColor.style.color = `rgb(${r}, ${g}, ${b})`;
+}
 
 window.addEventListener("scroll", () => {
   updateBackgroundColor();
+  if (!isDarkMode) {
+    updateColor();
+  }
 });
 
 // Initial call to set the correct background color when the page loads
