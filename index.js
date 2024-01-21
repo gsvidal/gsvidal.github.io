@@ -206,18 +206,9 @@ function updateBackgroundColor() {
   const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
   bodyBGColor.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
 }
-function updateColor() {
-  const y = 100* (window.scrollY || window.pageYOffset);
-  [red, green, blue] = [69, 11, 178];
-  const [r, g, b] = [red * y, green * y, blue * y].map(Math.round);
-  bodyBGColor.style.color = `rgb(${r}, ${g}, ${b})`;
-}
 
 window.addEventListener("scroll", () => {
   updateBackgroundColor();
-  if (!isDarkMode) {
-    updateColor();
-  }
 });
 
 // Initial call to set the correct background color when the page loads
