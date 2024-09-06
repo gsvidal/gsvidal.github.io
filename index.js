@@ -16,6 +16,7 @@ const toolbox = document.querySelector(".toolbox");
 const navItems = document.querySelectorAll(".nav-bar__item");
 const hoverElement = document.querySelector(".hover-me");
 const switchButtonText = document.querySelector(".switch_button-text");
+// const projectImage =
 
 // Logo has a 3d hover effect
 const height = logo.clientHeight;
@@ -128,10 +129,19 @@ imagesShadow.forEach((image) => {
     } else {
       image.style.transform = "none";
     }
+    if (image.getAttribute("data-hover")) {
+      const originalSrc = image.src;
+      image.src = image.getAttribute("data-hover");
+      image.setAttribute("data-original-src", originalSrc); // Store the original src
+      image.style.transform = 'scale(1)';
+    }
   });
   image.addEventListener("mouseout", (event) => {
     if (!image.parentElement.classList.contains("p-none")) {
       image.parentElement.style.boxShadow = "none";
+    }
+    if (image.getAttribute("data-hover")) {
+        image.src = image.getAttribute("data-original-src"); // Revert to the original src
     }
   });
 });
