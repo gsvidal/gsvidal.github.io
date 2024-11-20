@@ -119,39 +119,6 @@ function startAnimation() {
 setTimeout(startAnimation, 500);
 
 // Project_image animation when hover
-// Ensure the DOM is fully loaded before running the script
-document.addEventListener("DOMContentLoaded", () => {
-  // Select all project images
-  const images = document.querySelectorAll(".project_image");
-
-  // Preload GIFs and store them in a Map for quick access
-  const gifCache = new Map();
-  images.forEach((image) => {
-    const hoverSrc = image.getAttribute("data-hover");
-    if (hoverSrc) {
-      const img = new Image();
-      img.src = hoverSrc; // Preload the GIF
-      gifCache.set(hoverSrc, img); // Cache the preloaded GIF
-    }
-  });
-
-  // Add event listeners for hover effects
-  images.forEach((image) => {
-    image.addEventListener("mouseover", () => {
-      const hoverSrc = image.getAttribute("data-hover");
-      if (hoverSrc && gifCache.has(hoverSrc)) {
-        image.src = hoverSrc; // Use the preloaded GIF
-      }
-    });
-
-    image.addEventListener("mouseout", () => {
-      const originalSrc = image.getAttribute("data-original-src");
-      if (originalSrc) {
-        image.src = originalSrc; // Revert to the original image
-      }
-    });
-  });
-});
 
 
 // Live/repo
@@ -219,7 +186,7 @@ mediaQuery.addListener(handleViewportChange);
 
 // Make background smoothly change color from main color to black
 function updateBackgroundColor() {
-  const y = 1 + (window.scrollY || window.pageYOffset) / 2000;
+  const y = 1 + (window.scrollY || window.pageYOffset) / 3500;
   [red, green, blue] = isDarkMode ? [69, 11, 178] : [255, 255, 255];
   const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
   bodyBGColor.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;

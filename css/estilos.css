@@ -352,13 +352,13 @@ h3 {
 
 .title-projects--projects {
   color: rgb(255, 255, 255);
-  text-shadow: 0 0 12px rgb(255, 255, 255);
+  text-shadow: 0 0 6px rgb(255, 255, 255);
   font-size: 3.5rem;
 }
 
 .title-projects--experience {
   color: rgb(255, 255, 255);
-  text-shadow: 0 0 12px rgb(255, 255, 255);
+  text-shadow: 0 0 6px rgb(255, 255, 255);
   font-size: 3.5rem;
   margin-top: 120px;
 }
@@ -367,40 +367,40 @@ h3 {
   margin-right: 0;
   margin-bottom: 5px;
   color: rgb(255, 252, 205);
-  text-shadow: 0 0 12px rgb(255, 249, 166);
+  text-shadow: 0 0 6px rgb(255, 249, 166);
 }
 
 .title-projects--certificates {
   color: rgb(255, 194, 156);
-  text-shadow: 0 0 12px rgb(255, 171, 118);
+  text-shadow: 0 0 6px rgb(255, 171, 118);
 }
 
 /* .title-projects--team-projects {
   color: rgb(255, 187, 187);
-  text-shadow: 0 0 12px rgb(255, 118, 118);
+  text-shadow: 0 0 6px rgb(255, 118, 118);
 } */
 
 .title-projects--fullstack-react-projects {
   color: rgb(130, 209, 136);
-  text-shadow: 0 0 12px rgb(81, 255, 92);
+  text-shadow: 0 0 6px rgb(81, 255, 92);
   font-size: 2.4rem;
 }
 
 .title-projects--react-adv-projects {
   color: rgb(192, 156, 238);
-  text-shadow: 0 0 12px rgb(122, 89, 255);
+  text-shadow: 0 0 6px rgb(122, 89, 255);
   font-size: 2.4rem;
 }
 
 .title-projects--react-projects {
   color: rgb(205, 226, 255);
-  text-shadow: 0 0 12px rgb(106, 168, 255);
+  text-shadow: 0 0 6px rgb(106, 168, 255);
   font-size: 2.4rem;
 }
 
 .title-projects--vanilla-projects {
   color: rgb(255, 252, 205);
-  text-shadow: 0 0 12px rgb(255, 249, 166);
+  text-shadow: 0 0 6px rgb(255, 249, 166);
   font-size: 2.4rem;
 }
 
@@ -819,38 +819,38 @@ h3 {
 }
 
 .title-projects--experience.light-dark-mode {
-  color: rgb(105, 105, 105);
-  text-shadow: 0 0 12px rgb(126, 126, 126);
+  color: rgb(112, 112, 112);
+  text-shadow: 0 0 6px rgb(126, 126, 126);
 }
 
 .title-projects--web-technologies.light-dark-mode {
   color: rgb(74, 174, 255);
-  text-shadow: 0 0 12px rgb(151, 200, 255);
+  text-shadow: 0 0 6px rgb(151, 200, 255);
 }
 
 .title-projects--certificates.light-dark-mode {
   color: rgb(228, 117, 48);
-  text-shadow: 0 0 12px rgb(190, 137, 103);
+  text-shadow: 0 0 6px rgb(190, 137, 103);
 }
 
 .title-projects--fullstack-react-projects.light-dark-mode {
   color: rgb(65, 129, 70);
-  text-shadow: 0 0 12px rgb(128, 201, 133);
+  text-shadow: 0 0 6px rgb(128, 201, 133);
 }
 
 .title-projects--react-adv-projects.light-dark-mode {
   color: rgb(79, 27, 146);
-  text-shadow: 0 0 12px rgb(108, 91, 180);
+  text-shadow: 0 0 6px rgb(108, 91, 180);
 }
 
 .title-projects--team-projects.light-dark-mode {
   color: rgb(255, 113, 113);
-  text-shadow: 0 0 12px rgb(164, 55, 55);
+  text-shadow: 0 0 6px rgb(164, 55, 55);
 }
 
 .title-projects--react-projects.light-dark-mode {
   color: rgb(101, 160, 241);
-  text-shadow: 0 0 12px rgb(34, 71, 122);
+  text-shadow: 0 0 6px rgb(34, 71, 122);
 }
 
 .subtitle-projects {
