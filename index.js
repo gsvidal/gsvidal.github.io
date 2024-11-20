@@ -119,32 +119,40 @@ function startAnimation() {
 setTimeout(startAnimation, 500);
 
 // Project_image animation when hover
-const imagesShadow = document.querySelectorAll(".project_image");
+// Ensure the DOM is fully loaded before running the script
+document.addEventListener("DOMContentLoaded", () => {
+  // Select all project images
+  const images = document.querySelectorAll(".project_image");
 
-imagesShadow.forEach((image) => {
-  image.addEventListener("mouseover", (event) => {
-    if (!image.parentElement.classList.contains("p-none")) {
-      image.parentElement.style.boxShadow =
-        "0px 0px 35px 2px #b8a5f2, 0px 0px 15px 2px #ffffff";
-    } else {
-      image.style.transform = "none";
-    }
-    if (image.getAttribute("data-hover")) {
-      const originalSrc = image.src;
-      image.src = image.getAttribute("data-hover");
-      image.setAttribute("data-original-src", originalSrc); // Store the original src
-      image.style.transform = 'scale(1)';
+  // Preload GIFs and store them in a Map for quick access
+  const gifCache = new Map();
+  images.forEach((image) => {
+    const hoverSrc = image.getAttribute("data-hover");
+    if (hoverSrc) {
+      const img = new Image();
+      img.src = hoverSrc; // Preload the GIF
+      gifCache.set(hoverSrc, img); // Cache the preloaded GIF
     }
   });
-  image.addEventListener("mouseout", (event) => {
-    if (!image.parentElement.classList.contains("p-none")) {
-      image.parentElement.style.boxShadow = "none";
-    }
-    if (image.getAttribute("data-hover")) {
-        image.src = image.getAttribute("data-original-src"); // Revert to the original src
-    }
+
+  // Add event listeners for hover effects
+  images.forEach((image) => {
+    image.addEventListener("mouseover", () => {
+      const hoverSrc = image.getAttribute("data-hover");
+      if (hoverSrc && gifCache.has(hoverSrc)) {
+        image.src = hoverSrc; // Use the preloaded GIF
+      }
+    });
+
+    image.addEventListener("mouseout", () => {
+      const originalSrc = image.getAttribute("data-original-src");
+      if (originalSrc) {
+        image.src = originalSrc; // Revert to the original image
+      }
+    });
   });
 });
+
 
 // Live/repo
 const images = document.querySelectorAll(".project_image-container");
