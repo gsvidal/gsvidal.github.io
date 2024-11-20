@@ -136,15 +136,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add event listeners for hover effects
   images.forEach((image) => {
+    let originalSrc;
     image.addEventListener("mouseover", () => {
       const hoverSrc = image.getAttribute("data-hover");
       if (hoverSrc && gifCache.has(hoverSrc)) {
+        originalSrc = image.src;
         image.src = hoverSrc; // Use the preloaded GIF
       }
     });
 
     image.addEventListener("mouseout", () => {
-      const originalSrc = image.getAttribute("data-original-src");
       if (originalSrc) {
         image.src = originalSrc; // Revert to the original image
       }

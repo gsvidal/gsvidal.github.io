@@ -578,7 +578,7 @@ h3 {
 
 .project_image:hover {
   transform: scale(1.2);
-  transition: transform 0.5s;
+  transition: transform 0.35s;
   opacity: 1;
 }
 
@@ -678,7 +678,9 @@ h3 {
 .react-projects--fullstack [data-title]:after {
   background-color: #b6ffb4af;
 }
-
+/* .title-projects--misc-projects [data-title]:after {
+  background-color: red;
+} */
 .p-none img {
   box-shadow: none;
 }
