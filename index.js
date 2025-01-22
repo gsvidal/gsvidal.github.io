@@ -234,7 +234,7 @@ updateBackgroundColor();
 
 const hideHoverMe = () => {
   setTimeout(() => {
-    hoverElement.classList.add("hide");
+    hoverElement?.classList.add("hide");
   }, 1000);
 };
 
