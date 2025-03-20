@@ -1195,3 +1195,7 @@ h3 {
     text-shadow: 5px 5px 36px rgb(255, 255, 255);
   }
 }
+
+.disclaimer {
+  font-size: 1.3rem;
+}
