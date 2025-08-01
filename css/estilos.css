@@ -436,6 +436,9 @@ h3 {
   filter: brightness(0) saturate(100%);
 }
 
+.toolbox__icon--node {
+  height: 20px;
+}
 .toolbox__icon--react-router {
   width: 55px;
   height: 30px;
@@ -1040,6 +1043,10 @@ h3 {
     margin-bottom: 60px;
   }
 
+  .experience {
+    position: relative;
+    left: -23px;
+  }
   /* .experience__title.globant {
     top: 50px;
   } */
@@ -1047,7 +1054,7 @@ h3 {
   .toolbox {
     margin: 0;
     margin-right: 40px;
-    margin-left: 0;
+    margin-left: 20px;
     align-items: flex-end;
   }
 
@@ -1123,7 +1130,7 @@ h3 {
 
 @media screen and (min-width: 1480px) {
   body {
-    max-width: 1200px;
+    /* max-width: 1200px; */
   }
 
   .button-up-container {
