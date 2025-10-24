@@ -124,3 +124,114 @@ pre[class*='language-'] {
 .token.entity {
   cursor: help;
 }
+
+/* Fallback para lenguajes no soportados por Prism - Todo en rojo */
+/* Detecta cuando no hay tokens de resaltado (lenguaje no reconocido) */
+pre[class*='language-']:not(:has(.token)),
+code[class*='language-']:not(:has(.token)) {
+  color: #ff0000 !important;
+  background: #1a1222;
+}
+
+/* Fallback para lenguajes específicos no soportados */
+code[class*='language-python'],
+code[class*='language-php'],
+code[class*='language-ruby'],
+code[class*='language-java'],
+code[class*='language-cpp'],
+code[class*='language-c'],
+code[class*='language-go'],
+code[class*='language-rust'],
+code[class*='language-swift'],
+code[class*='language-kotlin'],
+code[class*='language-scala'],
+code[class*='language-sql'],
+code[class*='language-bash'],
+code[class*='language-powershell'],
+code[class*='language-yaml'],
+code[class*='language-json'],
+code[class*='language-xml'],
+code[class*='language-dockerfile'],
+code[class*='language-nginx'],
+code[class*='language-apache'],
+code[class*='language-xxx'],
+pre[class*='language-python'],
+pre[class*='language-php'],
+pre[class*='language-ruby'],
+pre[class*='language-java'],
+pre[class*='language-cpp'],
+pre[class*='language-c'],
+pre[class*='language-go'],
+pre[class*='language-rust'],
+pre[class*='language-swift'],
+pre[class*='language-kotlin'],
+pre[class*='language-scala'],
+pre[class*='language-sql'],
+pre[class*='language-bash'],
+pre[class*='language-powershell'],
+pre[class*='language-yaml'],
+pre[class*='language-json'],
+pre[class*='language-xml'],
+pre[class*='language-dockerfile'],
+pre[class*='language-nginx'],
+pre[class*='language-apache'],
+pre[class*='language-xxx'] {
+  color: #ff0000 !important;
+  background: #1a1222;
+}
+
+/* Fallback para cualquier token dentro de lenguajes no soportados */
+code[class*='language-python'] .token,
+code[class*='language-php'] .token,
+code[class*='language-ruby'] .token,
+code[class*='language-java'] .token,
+code[class*='language-cpp'] .token,
+code[class*='language-c'] .token,
+code[class*='language-go'] .token,
+code[class*='language-rust'] .token,
+code[class*='language-swift'] .token,
+code[class*='language-kotlin'] .token,
+code[class*='language-scala'] .token,
+code[class*='language-sql'] .token,
+code[class*='language-bash'] .token,
+code[class*='language-powershell'] .token,
+code[class*='language-yaml'] .token,
+code[class*='language-json'] .token,
+code[class*='language-xml'] .token,
+code[class*='language-dockerfile'] .token,
+code[class*='language-nginx'] .token,
+code[class*='language-apache'] .token,
+code[class*='language-xxx'] .token,
+pre[class*='language-python'] .token,
+pre[class*='language-php'] .token,
+pre[class*='language-ruby'] .token,
+pre[class*='language-java'] .token,
+pre[class*='language-cpp'] .token,
+pre[class*='language-c'] .token,
+pre[class*='language-go'] .token,
+pre[class*='language-rust'] .token,
+pre[class*='language-swift'] .token,
+pre[class*='language-kotlin'] .token,
+pre[class*='language-scala'] .token,
+pre[class*='language-sql'] .token,
+pre[class*='language-bash'] .token,
+pre[class*='language-powershell'] .token,
+pre[class*='language-yaml'] .token,
+pre[class*='language-json'] .token,
+pre[class*='language-xml'] .token,
+pre[class*='language-dockerfile'] .token,
+pre[class*='language-nginx'] .token,
+pre[class*='language-apache'] .token,
+pre[class*='language-xxx'] .token {
+  color: #ff0000 !important;
+}
+
+/* Indicador visual adicional para lenguajes no soportados */
+pre[class*='language-']:not([class*='language-html']):not(
+    [class*='language-css']
+  ):not([class*='language-javascript']):not([class*='language-jsx']):not(
+    [class*='language-js']
+  ):not([class*='language-markup']):not([class*='language-clike'])
+  .token {
+  color: #ff0000 !important;
+}
