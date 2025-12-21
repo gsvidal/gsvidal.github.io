@@ -218,12 +218,12 @@ function handleViewportChange(event) {
 mediaQuery.addListener(handleViewportChange);
 
 // Make background smoothly change color from main color to black
-function updateBackgroundColor() {
-  const y = 1 + (window.scrollY || window.pageYOffset) / 3500;
-  [red, green, blue] = isDarkMode ? [69, 11, 178] : [255, 255, 255];
-  const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
-  bodyBGColor.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-}
+// function updateBackgroundColor() {
+//   const y = 1 + (window.scrollY || window.pageYOffset) / 15000;
+//   [red, green, blue] = isDarkMode ? [69, 11, 178] : [255, 255, 255];
+//   const [r, g, b] = [red / y, green / y, blue / y].map(Math.round);
+//   bodyBGColor.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+// }
 
 window.addEventListener("scroll", () => {
   updateBackgroundColor();
