@@ -85,19 +85,184 @@ a:hover {
   position: sticky;
   top: 0;
   z-index: 50;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'brand tools'
+    'menu menu';
   align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem 1rem;
-  padding: 0.875rem 0;
+  column-gap: 0.75rem;
+  row-gap: 0;
+  padding: 0.875rem;
   margin-bottom: 0.25rem;
   background: color-mix(in srgb, var(--bg) 88%, transparent);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
 
+.site-header-panel {
+  grid-area: menu;
+}
+
+.header-toolbar {
+  grid-area: tools;
+  justify-self: end;
+}
+
+.nav-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  margin: 0;
+  cursor: pointer;
+  border: 0;
+  padding: 0;
+  background: rgba(0, 0, 0, 0.42);
+}
+
+:root[data-theme='light'] .nav-backdrop {
+  background: rgba(15, 23, 42, 0.28);
+}
+
+@media (max-width: 1024px) {
+  .site-header-panel:not(.is-open) {
+    display: none;
+  }
+
+  .site-header-panel.is-open {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    padding: .5rem .8rem 1.5rem .8rem;
+    margin: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--bg) 96%, transparent);
+    backdrop-filter: blur(12px);
+    position: relative;
+    z-index: 52;
+  }
+
+  .site-header-panel.is-open .nav-links {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    flex-wrap: nowrap;
+  }
+
+  .site-header-panel.is-open .nav-links li {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .site-header-panel.is-open .nav-links li:last-child {
+    border-bottom: 0;
+  }
+
+  .site-header-panel.is-open .nav-links a {
+    display: block;
+    padding: 0.75rem 0;
+  }
+
+  .site-header-panel.is-open .nav-links a:hover {
+    color: var(--accent);
+  }
+
+  .site-header-panel.is-open .header-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .site-header-panel.is-open .external-pill {
+    justify-content: center;
+  }
+}
+
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+  cursor: pointer;
+  color: var(--text);
+}
+
+.nav-toggle:hover {
+  border-color: var(--accent);
+}
+
+.nav-toggle-bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.125rem;
+  height: 0.6875rem;
+}
+
+.nav-toggle-bars span {
+  display: block;
+  height: 2px;
+  border-radius: 1px;
+  background: currentColor;
+  transition:
+    transform 0.22s ease,
+    opacity 0.18s ease;
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle-bars span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle-bars span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle-bars span:nth-child(3) {
+  transform: translateY(-4px) rotate(-45deg);
+}
+
+.header-toolbar {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .site-header {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: 'brand menu tools';
+    column-gap: 1rem;
+  }
+
+  .site-header-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.85rem 1.25rem;
+    justify-self: stretch;
+  }
+
+  .logo-link {
+    margin-inline-end: 0.35rem;
+  }
+
+  .header-toolbar {
+    margin-inline-start: 0.35rem;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+}
+
 .logo-link {
+  grid-area: brand;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -185,6 +350,7 @@ main {
 
 section {
   scroll-margin-top: 5rem;
+  margin: 4rem 0;
 }
 
 .section-heading {
@@ -201,10 +367,27 @@ section {
   font-size: 1rem;
 }
 
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .hero {
   display: grid;
   gap: 2rem;
   padding: 2.5rem 0 1rem;
+}
+
+.hero-copy {
+  opacity: 0;
+  animation: heroFadeUp 1s ease-out forwards;
 }
 
 @media (min-width: 720px) {
@@ -242,7 +425,47 @@ section {
   background: var(--bg-elevated);
   box-shadow: var(--shadow);
   overflow: hidden;
+  opacity: 0;
+  animation: heroFadeUp .5s linear .5s forwards;
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.28s ease;
 }
+
+/* @media (hover: hover) and (pointer: fine) {
+  .hero-card:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow:
+      0 20px 48px rgba(0, 0, 0, 0.22),
+      0 0 0 1px color-mix(in srgb, var(--accent) 28%, transparent);
+  }
+}
+
+:root[data-theme='light'] .hero-card:hover {
+  box-shadow:
+    0 18px 44px rgba(15, 23, 42, 0.12),
+    0 0 0 1px color-mix(in srgb, var(--accent) 22%, transparent);
+} */
+
+/* @media (prefers-reduced-motion: reduce) {
+  .hero-copy,
+  .hero-card {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-card {
+    transition: none;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .hero-card:hover {
+      transform: none;
+      box-shadow: var(--shadow);
+    }
+  }
+} */
 
 .hero-card img {
   width: 100%;
@@ -303,7 +526,7 @@ section {
 .exp-card {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  justify-content: space-between;
   gap: 0.75rem;
   padding: 1.25rem;
   border-radius: 14px;
@@ -383,22 +606,27 @@ section {
   border-color: var(--accent);
 }
 
+/* Logos incl. Udemy SVG: without min width, svg-as-img under flex can compute width≈0. */
 .cert-badge img {
+  display: block;
+  flex-shrink: 0;
+  box-sizing: content-box;
   max-height: 48px;
-  width: auto;
-  max-width: 120px;
+  width: clamp(72px, 34vw, 120px);
+  height: auto;
   object-fit: contain;
 }
 
 .project-grid {
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
+  /* width: 500px; */
   border-radius: 16px;
   border: 1px solid var(--border);
   background: var(--bg-elevated);
@@ -407,13 +635,15 @@ section {
 
 .project-thumb {
   display: block;
-  aspect-ratio: 5 / 3;
+  /* aspect-ratio: 5 / 3; */
+  height: 240px;
   background: color-mix(in srgb, var(--text) 4%, transparent);
 }
 
 .project-thumb img {
   width: 100%;
   height: 100%;
+  /* height: 160px; */
   object-fit: cover;
 }
 

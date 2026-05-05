@@ -1,6 +1,6 @@
-import { Header } from './components/Header'
-import { Footer } from './components/Footer'
-import { ProjectCard } from './components/ProjectCard'
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { ProjectCard } from './components/ProjectCard';
 import {
   about,
   certificates,
@@ -11,9 +11,12 @@ import {
   site,
   technologiesComplementary,
   technologiesMain,
-} from './data/content'
+} from './data/content';
+import { useTheme } from './hooks/useTheme';
 
 export default function App() {
+  const { theme } = useTheme();
+
   return (
     <div className="app-shell">
       <Header />
@@ -52,15 +55,23 @@ export default function App() {
           <div className="card-grid">
             {experience.map((exp) => (
               <article key={exp.company} className="exp-card">
-                <a
-                  href={exp.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`${exp.company} website`}
-                >
-                  <img src={exp.logo} alt={exp.logoAlt} height={40} loading="lazy" />
-                </a>
-                <p className="exp-role">{exp.role}</p>
+                <div>
+                  <a
+                    href={exp.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${exp.company} website`}
+                  >
+                    <img
+                      src={exp.logo}
+                      alt={exp.logoAlt}
+                      height={40}
+                      loading="lazy"
+                      style={{ marginBottom: '.5rem' }}
+                    />
+                  </a>
+                  <p className="exp-role">{exp.role}</p>
+                </div>
                 <a
                   href={exp.url}
                   target="_blank"
@@ -84,7 +95,13 @@ export default function App() {
           <div className="tech-grid">
             {technologiesMain.map((t) => (
               <span key={t.name} className="tech-chip" title={t.name}>
-                <img src={t.icon} alt="" width={22} height={22} loading="lazy" />
+                <img
+                  src={t.icon}
+                  alt=""
+                  width={22}
+                  height={22}
+                  loading="lazy"
+                />
                 {t.name}
               </span>
             ))}
@@ -93,7 +110,13 @@ export default function App() {
           <div className="tech-grid">
             {technologiesComplementary.map((t) => (
               <span key={t.name} className="tech-chip" title={t.name}>
-                <img src={t.icon} alt="" width={22} height={22} loading="lazy" />
+                <img
+                  src={t.icon}
+                  alt=""
+                  width={12}
+                  height={22}
+                  loading="lazy"
+                />
                 {t.name}
               </span>
             ))}
@@ -116,7 +139,13 @@ export default function App() {
                 title={c.label}
               >
                 <span className="sr-only">{c.label}</span>
-                <img src={c.image} alt={c.imageAlt} loading="lazy" />
+                <img
+                  src={
+                    theme === 'dark' && c.imageOnDark ? c.imageOnDark : c.image
+                  }
+                  alt={c.imageAlt}
+                  loading="lazy"
+                />
               </a>
             ))}
           </div>
@@ -147,5 +176,5 @@ export default function App() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }

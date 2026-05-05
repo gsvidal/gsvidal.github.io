@@ -1,4 +1,4 @@
-import { site, socialLinks } from '../data/content'
+import { socialLinks } from '../data/content'
 
 export function Footer() {
   return (
@@ -22,7 +22,7 @@ export function Footer() {
         ))}
       </ul>
       <p style={{ marginTop: '1.25rem', fontSize: '0.85rem' }}>
-        <a href={site.domain}>{site.domain.replace('https://', '')}</a>
+        {/* <a href={site.domain}>{site.domain.replace('https://', '')}</a> */}
       </p>
     </footer>
   )
