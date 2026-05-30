@@ -1,4 +1,4 @@
-/** Files under `public/` — prefix with Vite `base` (e.g. `/new/…`) for GitHub Pages. */
+/** Files under `public/` — prefix with Vite `base` for GitHub Pages. */
 function asset(relativePath: string) {
   const path = relativePath.replace(/^\/+/, '');
   return `${import.meta.env.BASE_URL}${path}`;
@@ -8,7 +8,7 @@ export const site = {
   name: 'Gonzalo Vidal',
   title: 'Front-End Web Developer',
   domain: 'https://www.gonzalovidal.dev',
-  oldPortfolioPath: '/',
+  oldPortfolioPath: '/old/',
   blogPath: '/blog/blog.html',
   heroImage: asset('images/gonzaPic-transparency.png'),
 };

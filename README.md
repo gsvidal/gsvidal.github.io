@@ -2,8 +2,8 @@
 
 ## Portfolio
 
-- **New (React)**: [gonzalovidal.dev/new/](https://www.gonzalovidal.dev/new/) — source in [`new-portfolio/`](new-portfolio/), production build output in [`new/`](new/).
-- **Classic (vanilla)**: [gonzalovidal.dev](https://www.gonzalovidal.dev/) — [`index.html`](index.html), [`css/estilos.css`](css/estilos.css), [`index.js`](index.js).
+- **Current (React)**: [gonzalovidal.dev](https://www.gonzalovidal.dev/) — source in [`new-portfolio/`](new-portfolio/), production build output in the repository root.
+- **Classic (vanilla)**: [gonzalovidal.dev/old/](https://www.gonzalovidal.dev/old/) — [`old/index.html`](old/index.html), [`css/estilos.css`](css/estilos.css), [`index.js`](index.js).
 - **Tech blog**: [`blog/blog.html`](blog/blog.html)
 
 ## New portfolio — develop and build
@@ -14,14 +14,14 @@ npm install
 npm run dev
 ```
 
-Production build (writes to `../new` for GitHub Pages at `/new/`):
+Production build (writes to a temporary `.react-build/`, then publishes the generated `index.html`, `assets/`, and public assets to the repository root for GitHub Pages at `/`):
 
 ```bash
 cd new-portfolio
 npm run build
 ```
 
-Vite is configured with `base: '/new/'` and `build.outDir: '../new'`. Commit the updated `new/` folder when you deploy.
+Vite is configured with `base: '/'` and `build.outDir: '../.react-build'`. The `npm run build` script runs [`new-portfolio/scripts/publish-root-build.mjs`](new-portfolio/scripts/publish-root-build.mjs), which copies the safe build outputs into the repository root and removes `.react-build/`.
 
 ## Classic site — architecture
 
