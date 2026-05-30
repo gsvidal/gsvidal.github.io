@@ -32,9 +32,6 @@ export default function App() {
               <a className="btn-primary" href="#projects">
                 View projects
               </a>
-              {/* <a className="btn-ghost" href={site.oldPortfolioPath}>
-                Classic layout
-              </a> */}
               <a className="btn-ghost" href={site.blogPath}>
                 Tech blog
               </a>

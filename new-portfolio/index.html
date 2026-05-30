@@ -16,11 +16,7 @@
     <script>
       ;(function () {
         var stored = localStorage.getItem('gv-theme')
-        var theme =
-          stored ||
-          (window.matchMedia('(prefers-color-scheme: dark)').matches
-            ? 'dark'
-            : 'light')
+        var theme = stored || 'dark'
         document.documentElement.dataset.theme = theme
       })()
     </script>
